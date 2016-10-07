@@ -3,8 +3,9 @@
 <%namespace name='static' file='/static_content.html'/>
 <%namespace file='theme-variables.html' import="get_global_settings" />
 <%! from openedx.core.djangoapps.site_configuration.helpers import get_value %>
-<link rel="stylesheet" type="text/css" href="${static.url('css/main.css')}">
-<link rel="stylesheet" type="text/css" href="${static.url('css/font-awesome/css/font-awesome.min.css')}">
+<%! from django.contrib.staticfiles.templatetags.staticfiles import static %>
+<link rel="stylesheet" type="text/css" href="${static('css/main.css')}">
+<link rel="stylesheet" type="text/css" href="${static('font-awesome/css/font-awesome.min.css')}">
 <link href="${get_global_settings()['google_fonts_to_import']}" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 % if apple_app_id:

@@ -1,5 +1,6 @@
 <%page args="theme_folder, footer_links, footer_logo, footer_copyright_text, display_edx_disclaimer, edx_disclaimer, display_poweredby" />
-<%namespace file='../../theme-variables.html' import="get_footer_settings" />
+<%namespace file='/theme-variables.html' import="get_footer_settings" />
+<%! from django.contrib.staticfiles.templatetags.staticfiles import static %>
 <%! from django.utils.translation import ugettext as _ %>
 
 <footer class="a--footer">
@@ -35,10 +36,10 @@
             Powered by:
           </p>
           <a href="https://www.appsembler.com" target="_blank" id="footer-appsembler-logo" alt="Appsembler">
-            <img src="/static/themes/${theme_folder}/images/appsembler-icon.svg" />
+            <img src="${static('images/appsembler-icon.svg')}" />
           </a>
           <a href="http://open.edx.org" target="_blank" id="footer-openedx-logo" alt="Open edX">
-            <img src="/static/themes/${theme_folder}/images/openedx-logo.svg" />
+            <img src="${static('images/openedx-logo.svg')}" />
           </a>
         </div>
       % endif
