@@ -1,0 +1,146 @@
+.wrapper-account-settings {
+	padding: 30px 20px;
+	min-width: 0;
+
+	.wrapper-header {
+		width: 100%;
+
+		.header-title {
+			font-size: 2.2rem;
+			color: $brand-primary-color;
+			@include primary-font-bold;
+			letter-spacing: 0;
+			width: 100%;
+		}
+
+		.account-settings-header-subtitle {
+			margin: 10px 0 5px;
+			font-size: 1.6rem;
+			@include primary-font;
+			color: rgba($base-text-color, 0.85);
+			width: 100%;
+		}
+	}
+}
+
+.account-settings-sections {
+
+	.section {
+		background-color: #fff;
+		border: none;
+		border-top: 0.1rem solid #ccc;
+		box-shadow: none;
+		padding: 20px 0;
+
+		.u-field {
+			border-bottom: 1px solid rgba(#ccc, 0.6);
+			@include display(flex);
+			@include flex-wrap(wrap);
+			@include align-items(center);
+
+			&:last-of-type {
+				border-bottom: none;
+			}
+		}
+
+		.u-field-title {
+			@include primary-font-bold;
+      font-size: 1.4rem;
+			color: rgba($base-text-color, 0.7);
+			width: 27.5%;
+			margin: 5px 0;
+
+			@media(max-width:$screen-sm-max) {
+				width: 40%;
+			}
+
+			@media(max-width:$screen-xs-max) {
+				width: 100%;
+			}
+		}
+
+		.u-field-value {
+			@include primary-font;
+			color: rgba($base-text-color, 1);
+			width: 27.5%;
+
+			@media(max-width:$screen-sm-max) {
+				width: 60%;
+			}
+
+			@media(max-width:$screen-xs-max) {
+				width: 100%;
+			}
+
+			input, select {
+				border-radius: 0;
+				box-shadow: none;
+				@include primary-font;
+				width: 100%;
+				height: auto;
+				padding: 10px 5px;
+				font-size: 16px;
+        height: auto;
+				@include transition(all 0.3s ease-in-out);
+				border: none;
+				border-bottom: 1px solid #ddd;
+				position: relative;
+				top: 0;
+
+				&:focus {
+					outline: none;
+					border-bottom: 2px solid $brand-primary-color;
+					margin-bottom: 13px;
+				}
+
+				&:hover {
+					opacity: 0.5;
+				}
+			}
+
+			input:read-only {
+				border: none;
+				opacity: 0.8;
+				margin-bottom: 0;
+			}
+		}
+
+		.u-field-message {
+			@include primary-font;
+			color: $base-text-color;
+			width: 40%;
+			@include transition(all 0.3s ease-in-out);
+			opacity: 0.55;
+			margin-left: 5%;
+
+			@media(max-width:$screen-sm-max) {
+				display: none;
+			}
+
+			&:hover, &:focus {
+				opacity: 0.85;
+			}
+		}
+
+		.u-field-message-help {
+			color: $base-text-color;
+		}
+	}
+
+	.section-header {
+		@include primary-font-bold;
+		font-size: 1.8rem;
+		color: rgba($base-text-color, 0.7);
+		margin-bottom: 10px;
+		padding-bottom: 20px;
+	}
+
+	a, a span {
+		color: $brand-primary-color;
+		@include transition(all 0.3s ease-in-out);
+
+		&:hover, &:focus {
+			color: darken($brand-primary-color, 15%);
+		}
+	}
+}

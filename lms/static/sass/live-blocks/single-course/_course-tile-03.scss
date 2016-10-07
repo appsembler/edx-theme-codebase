@@ -1,0 +1,88 @@
+.a--course-tile-03 {
+  margin: 1.5rem;
+  display: block;
+  max-width: 92rem;
+  width: 100%;
+  @include transition(all 0.3s ease-in-out);
+  border: 0.1rem solid #dedede;
+  text-align: left;
+  position: relative;
+
+  &:hover, &:focus {
+    -webkit-box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    -moz-box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    z-index: 10;
+  }
+
+  @media(min-width: $screen-sm-min) {
+    @include display(flex);
+    margin: 1.5rem 0;
+
+    &__image {
+      display: block;
+      width: 26rem;
+      @include flex-shrink(0);
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__image {
+    background-size: cover;
+    background-position: center center;
+  }
+
+  &__info-container {
+    padding: 3rem 1.5rem;
+    background-color: #fff;
+    width: 100%;
+  }
+
+  &__code {
+    @include primary-font;
+    font-size: 1.4rem;
+    color: rgba($base-text-color, 0.8);
+    margin: 0;
+  }
+
+  &__title {
+    @include primary-font-light;
+    font-size: 2.8rem;
+    margin: 0 0 1.5rem;
+    color: $brand-primary-color;
+    display: block;
+  }
+
+  &__separator-line {
+    width: 10rem;
+    height: 0.2rem;
+    background-color: $brand-primary-color;
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+
+  &__start-date {
+    @include primary-font;
+    color: rgba($base-text-color, 0.8);
+    font-size: 1.4rem;
+    text-transform: none;
+    margin: 0;
+
+    span {
+      text-transform: none;
+      margin-right: 0.5rem;
+      color: rgba($base-text-color, 0.5);
+    }
+  }
+
+  &__description {
+    @include primary-font;
+    line-height: 180%;
+    margin: 1rem 0;
+  }
+
+  &__more-info {
+    @include primary-font-bold;
+    font-size: 1.6rem;
+  }
+}

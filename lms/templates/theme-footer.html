@@ -1,0 +1,20 @@
+## mako
+<%! from django.core.urlresolvers import reverse %>
+<%namespace name='static' file='/static_content.html'/>
+<%! from datetime import datetime %>
+<%! from pytz import UTC %>
+<%namespace file='theme-variables.html' import="get_header_footer_templates, get_footer_menu_items, get_footer_settings" />
+
+
+<%
+  theme_folder = settings.THEME_NAME
+  footer_logo = get_footer_settings().get('footer_logo')
+  footer_copyright_text = get_footer_settings().get('footer_copyright_text')
+  display_edx_disclaimer = get_footer_settings().get('display_edx_disclaimer')
+  edx_disclaimer = get_footer_settings().get('edx_disclaimer')
+  display_poweredby = get_footer_settings().get('display_poweredby')
+%>
+
+<%include file = "${get_header_footer_templates()['footer_template']}" args="theme_folder = theme_folder, footer_links = get_footer_menu_items(), footer_logo = footer_logo, footer_copyright_text = footer_copyright_text, display_edx_disclaimer = display_edx_disclaimer, edx_disclaimer = edx_disclaimer, display_poweredby = display_poweredby" />
+
+<%include file = 'footer-extra.html' args="theme_folder = theme_folder" />

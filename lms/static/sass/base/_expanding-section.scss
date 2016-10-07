@@ -1,0 +1,17 @@
+.a--expanding-section {
+
+  &__target {
+    @include transition(all 0.3s ease-in-out);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+  }
+
+  &.a--expanded {
+
+    .a--expanding-section__target {
+      max-height: 100rem;
+      opacity: 1;
+    }
+  }
+}

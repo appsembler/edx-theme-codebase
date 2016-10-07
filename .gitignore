@@ -1,0 +1,4 @@
+prepros.cfg
+.DS_Store
+/customer_specific
+lms/static/css/*

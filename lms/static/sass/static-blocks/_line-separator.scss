@@ -1,0 +1,19 @@
+.a--line-separator {
+
+    &__container {
+      background-color: rgba($base-text-color, 0.2);
+      height: 0.1rem;
+
+      &.2px {
+        height: 0.2rem;
+      }
+
+      &.5px {
+        height: 0.5rem;
+      }
+
+      &.8px {
+        height: 0.8rem;
+      }
+    }
+}

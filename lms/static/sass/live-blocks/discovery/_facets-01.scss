@@ -1,0 +1,74 @@
+.a--discovery-facets {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+
+  &__heading {
+    @include primary-font-bold;
+    color: rgba($base-text-color, 0.7);
+    font-size: $facets-big-heading-font-size;
+    margin: $facets-big-heading-margin;
+    border-bottom: 0.1rem solid rgba($base-text-color, 0.2);
+    padding: $facets-big-heading-padding;
+  }
+
+  &__group-title {
+    @include primary-font;
+    color: $facets-group-title-color;
+    font-size: $facets-group-title-font-size;
+    margin: $facets-group-title-margin;
+  }
+
+  &__list {
+    margin: 0;
+    padding: $facets-group-list-padding;
+    border-bottom: $single-facet-bottom-border;
+
+    li {
+      list-style-type: none;
+    }
+  }
+
+  &__toggle {
+
+    button {
+      @include edx_style_killer;
+      @include no_damn_focus_glow;
+      padding: 1rem 0 2rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  &__facet-option {
+    @include edx_style_killer;
+    @include no_damn_focus_glow;
+    list-style-type: none;
+    padding: $single-facet-padding;
+    @include display(flex);
+    @include align-items(center);
+    @include justify-content(space-between);
+    width: 100%;
+
+    &.selected {
+      opacity: $single-facet-selected-opacity;
+    }
+
+      span.name {
+        @include display(flex);
+        @include flex-shrink(1);
+        @include primary-font;
+        width: 100%;
+        font-size: $facet-font-size;
+      }
+
+      span.count {
+        @include display(flex);
+        @include flex-shrink(0);
+        @include primary-font-bold;
+        background-color: $facet-results-count-bg-color;
+        padding: $facet-results-count-padding;
+        border-radius: $facet-results-count-border-radius;
+        font-size: $facet-results-count-font-size;
+        color: $facet-results-count-text-color;
+      }
+  }
+}

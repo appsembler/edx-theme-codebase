@@ -1,0 +1,22 @@
+<%page args="template_settings" />
+
+<%
+  content = template_settings['content']
+  optional_classes = template_settings['optional_classes']
+  extra_css = template_settings['extra_css']
+%>
+
+<section class="a--expanding-sections-list-01 ${optional_classes}" style="${extra_css}">
+  <ul class="bs-container a--container a--expanding-sections-list-01__container">
+    % for item in content:
+      <li class="a--expanding-sections-list-01__item a--expanding-section">
+        <h3 class="a--expanding-sections-list-01__item__title">
+          ${item[0]}
+        </h3>
+        <div class="a--expanding-sections-list-01__item__content a--expanding-section__target">
+          ${item[1]}
+        </div>
+      </li>
+    % endfor
+  </ul>
+</section>

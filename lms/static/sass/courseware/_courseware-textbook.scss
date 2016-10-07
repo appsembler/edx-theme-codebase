@@ -1,0 +1,39 @@
+div.book-wrapper {
+  @extend .bs-container;
+  @extend .a--container;
+  @extend .a--courseware-wrapper;
+  @extend .a--courseware-wrapper__content;
+  max-width: none;
+
+  section.book-sidebar {
+    border: none;
+    background: none;
+    width: 20%;
+    max-width: 15rem;
+    padding-right: 3rem;
+    margin-right: 3rem;
+    border-right: 0.1rem solid #ddd;
+    @include flex-shrink(0);
+
+    @media(max-width: $screen-sm-max) {
+      width: 100%;
+      padding-right: 0;
+      margin-right: 0;
+      border-right: none;
+      padding-bottom: 3rem;
+      margin-bottom: 3rem;
+      border-bottom: 0.1rem solid #ddd;
+      max-height: 15rem;
+      overflow-x: auto;
+    }
+  }
+
+  .book {
+    width: 100%;
+    @include flex-shrink(1);
+
+    iframe {
+      width: 100%;
+    }
+  }
+}

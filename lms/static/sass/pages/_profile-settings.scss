@@ -1,0 +1,156 @@
+.view-profile {
+
+	.wrapper-profile {
+		width: 100%;
+	}
+
+	.profile-self {
+
+		.wrapper-profile-field-account-privacy {
+			background-color: rgba($base-text-color, 0.2);
+			padding-top: 20px;
+			opacity: 0.7;
+			@include transition(all 0.3s ease-in-out);
+
+			@media(max-width: $screen-sm-max) {
+				opacity: 1;
+			}
+
+			&:hover, &:focus {
+				opacity: 1;
+			}
+
+			.u-field {
+				width: 100%;
+				min-width: 0;
+			}
+
+      .u-field-message-notification {
+        margin: 1rem 0 0;
+        display: block;
+      }
+
+			.u-field-title {
+				@include primary-font;
+				color: rgba($base-text-color, 0.8);
+				text-shadow: none;
+				margin: 5px 15px 5px 0;
+        font-size: 1.4rem;
+			}
+
+			.u-field-value {
+				margin: 0px 0px 5px;
+
+				select {
+					@include primary-font-bold;
+					padding: 5px;
+					background: transparent;
+					border: none;
+					border-bottom: 1px solid rgba($base-text-color, 0.6);
+
+					&:focus {
+						outline: none;
+					}
+				}
+			}
+		}
+	}
+
+	.wrapper-profile-sections {
+		@include display(flex);
+		@include flex-wrap(wrap);
+		padding: 30px;
+		min-width: 0;
+	}
+
+	.wrapper-profile-section-one {
+		@include display(flex);
+    @include align-items(center);
+		width: 40%;
+		padding-right: 20px;
+		border-right: 1px solid rgba($base-text-color, 0.2);
+		margin: 0;
+
+		@media(max-width:$screen-xs-max) {
+			width: 100%;
+			padding: 0 0 20px 0;
+			border: none;
+			border-bottom: 1px solid rgba($base-text-color, 0.2);
+		}
+	}
+
+	.wrapper-profile-section-two {
+		width: 60%;
+		padding-left: 20px;
+
+		@media(max-width:$screen-xs-max) {
+			width: 100%;
+			padding: 20px 0 0 0;
+		}
+	}
+
+	.profile-image-field {
+		@include flex-shrink(0);
+	}
+
+	.profile-section-one-fields {
+		@include flex-grow(1);
+
+		.u-field-title {
+			display: none;
+		}
+
+		.u-field-value {
+			width: auto;
+		}
+
+		.editable-toggle {
+			padding: 5px;
+			@include transition(all 0.2s ease-in-out);
+
+			&:hover, &:focus {
+				background-color: rgba($brand-primary-color, 0.05);
+			}
+		}
+
+		.message-can-edit {
+			position: relative;
+		    top: -3px;
+		    right: 3px;
+		    color: $brand-primary-color !important;
+		}
+	}
+
+	.profile-section-two-fields {
+
+		.u-field-title {
+			width: 80%;
+			color: $brand-primary-color;
+		}
+
+		.editable-toggle {
+			padding: 5px;
+			@include transition(all 0.2s ease-in-out);
+
+			&:hover, &:focus {
+				background-color: rgba($brand-primary-color, 0.05);
+			}
+		}
+
+		.message-can-edit {
+			position: relative;
+		    top: -3px;
+		    right: 3px;
+		    color: $brand-primary-color !important;
+		}
+
+		.u-field-message {
+
+		}
+	}
+
+	input {
+		@include primary-font;
+		height: auto;
+	}
+}

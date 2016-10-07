@@ -1,0 +1,25 @@
+.a--courseware-banner {
+
+  &__wrapper {
+    padding: 2rem;
+    background-color: #dedede;
+  }
+
+  &__container {
+
+    h2 {
+      font-size: 2rem;
+      @include primary-font-bold;
+      margin: 0.5rem 0 1rem;
+    }
+
+    p {
+      margin: 0.5rem 0;
+
+      a {
+        @include primary-font-bold;
+        color: $brand-primary-color;
+      }
+    }
+  }
+}

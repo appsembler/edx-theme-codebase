@@ -1,0 +1,439 @@
+.a--course-content {
+
+  &__nav {
+    @include flex-shrink(0);
+    min-width: 24rem;
+    max-width: 28rem;
+    padding-right: 3rem;
+    margin-right: 3rem;
+    border-right: 0.1rem solid #ddd;
+
+    &__mobile-toggle {
+      text-align: center;
+      display: block;
+      padding: 1.5rem 1rem;
+      background-color: #eee;
+      border-radius: 4rem;
+      color: rgba($base-text-color, 0.7);
+      margin: 1.5rem 0;
+
+      @media(min-width: $screen-md-min) {
+        display: none;
+      }
+    }
+
+    &__wrapper {
+
+      @media(max-width: $screen-sm-max) {
+        display: none;
+      }
+    }
+
+    @media(max-width: $screen-sm-max) {
+      max-width: none;
+      width: 100%;
+      margin-right: 0;
+      padding-right: 0;
+      border-right: none;
+      border-bottom: 0.1rem solid #ddd;
+    }
+
+    .courseware-search-bar {
+      box-shadow: none;
+      margin-bottom: 2rem;
+      padding: 0.9rem 0 ($sequence-nav-bottom-padding + 0.1rem);
+      border-bottom: 0.2rem solid #ddd;
+
+      .search-field-wrapper {
+        @include display(flex);
+        @include align-items(center);
+        border: 0.1rem solid #ddd;
+      }
+
+      .search-field {
+        top: 0;
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+        padding: 1rem 1rem;
+        height: auto;
+        font-size: 1.6rem;
+        @include transition(all 0.3s ease-in-out);
+
+        &:hover, &:focus {
+          box-shadow: none;
+          outline: none;
+          border: none;
+          padding: 2rem 1rem;
+        }
+      }
+
+      .search-button {
+        position: relative;
+        top: 0;
+        right: 1rem;
+        width: auto;
+        height: auto;
+
+        &:hover, &:focus {
+          box-shadow: none;
+          outline: none;
+          border: none;
+          color: $brand-primary-color;
+        }
+      }
+    }
+
+    .accordion {
+
+      .course-navigation {
+
+        .button-chapter {
+          display: block;
+          padding: 1.5rem 0;
+          @include primary-font-bold;
+          color: $base-text-color;
+          font-size: 1.6rem;
+          border-bottom: 0.1rem solid #eee;
+          @include transition(all 0.3s ease-in-out);
+
+          @if $courseware-link-hover == "expanding-underline" {
+              @include underline_expanding_hover($brand-primary-color, 0.2rem);
+          } @else if $courseware-link-hover == "hover-pop" {
+              @include hover_pop(0, -0.5rem);
+          } @else if $courseware-link-hover == "hover-custom-color" {
+              &:hover, &:focus {
+                color: $brand-primary-color;
+              }
+          } @else if $courseware-link-hover == "opacity" {
+              opacity: 1;
+              &:hover, &:focus {
+                opacity: 0.5;
+              }
+          }
+
+          .group-heading {
+            @include display(flex);
+            @include align-items(center);
+            width: 100%;
+            padding-right: 2rem;
+          }
+
+          .icon {
+            width: 2rem;
+            @include flex-shrink(0);
+            @include transition(all 0.3s ease-in-out);
+          }
+
+          &.active {
+            position: relative;
+
+            .group-heading {
+              position: relative;
+
+              &:after {
+                width: 0.8rem;
+                height: 0.8rem;
+                content: "";
+                background-color: $brand-primary-color;
+                border-radius: 0.5rem;
+                @include transition(all 0.3s ease-in-out);
+                opacity: 1;
+                @include flex-shrink(0);
+                position: absolute;
+                right: 0;
+                top: 0.8rem;
+              }
+            }
+          }
+
+          &.is-open {
+            color: rgba($base-text-color, 0.7);
+
+            .icon {
+              width: 2.5rem;
+            }
+
+            .group-heading {
+
+              &:after {
+                opacity: 0;
+              }
+            }
+          }
+        }
+
+        .chapter-content-container {
+          padding-left: 2.5rem;
+
+          .chapter-menu {
+            display: none;
+            overflow: hidden;
+          }
+
+          &.is-open {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 0.1rem solid #eee;
+
+            .chapter-menu {
+              display: block;
+            }
+          }
+
+          .menu-item {
+
+            a {
+              display: block;
+              padding: 0.8rem 0;
+              font-size: 1.4rem;
+              color: $base-text-color;
+
+              &:hover, &:focus {
+                color: $brand-primary-color;
+              }
+            }
+
+            &.active {
+
+              a {
+                @include primary-font-bold;
+                color: $brand-primary-color;
+              }
+            }
+
+            .subtitle {
+              margin-top: 0.5rem;
+              font-size: 1.2rem;
+              @include primary-font-italic;
+              color: rgba($base-text-color, 0.7);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__main-content {
+    width: 100%;
+    @include flex-shrink(1);
+
+    label {
+      font-size: 1.6rem;
+    }
+
+    @media(max-width:$screen-sm-max) {
+      overflow-y: auto;
+    }
+
+    .xmodule_display.xmodule_HtmlModule p {
+      @include primary-font;
+      font-size: $courseware-content-font-size;
+      line-height: $courseware-content-line-height !important;
+    }
+
+    .course-content {
+      padding: 0;
+      margin-top: 1.1rem;
+
+      // top nav inside course-content
+
+      .sequence-nav {
+        border-bottom: 0.2rem solid #ddd;
+        padding-bottom: $sequence-nav-bottom-padding;
+        @include display(flex);
+        @include align-items(center);
+        @include justify-content(space-between);
+
+        .sequence-nav-button {
+          border: none;
+          background: none;
+          cursor: pointer;
+          @include transition(all 0.3s ease-in-out);
+          @include flex-shrink(0);
+
+          @if $courseware-link-hover == "expanding-underline" {
+              @include underline_expanding_hover($brand-primary-color, 0.2rem);
+          } @else if $courseware-link-hover == "hover-pop" {
+              @include hover_pop(-0.5rem, 0);
+          } @else if $courseware-link-hover == "hover-custom-color" {
+              &:hover, &:focus {
+                color: $brand-primary-color;
+              }
+          } @else if $courseware-link-hover == "opacity" {
+              opacity: 1;
+              &:hover, &:focus {
+                opacity: 0.5;
+              }
+          }
+
+          &:hover, &:focus {
+            color: $base-text-color;
+          }
+        }
+
+        .sequence-list-wrapper {
+          background: none;
+          box-shadow: none;
+          border: none;
+          @include flex-shrink(1);
+          width: 100%;
+          margin: 0 1.5rem;
+          height: auto;
+
+          @media(max-width: $screen-xs-max) {
+            display: none;
+          }
+        }
+
+        ol {
+          position: relative;
+          padding: 0;
+          @include display(flex);
+          @include align-items(center);
+          border: none;
+          border-left: 0.2rem solid #ddd;
+          border-right: 0.2rem solid #ddd;
+
+            li {
+              width: 100%;
+              display: block;
+              text-align: center;
+              border: none;
+              padding: 0 1.5rem;
+              border-right: 0.1rem solid #ddd;
+
+              &:last-child {
+                border-right: none;
+              }
+
+              a {
+                position: relative;
+                border: none;
+                @include transition(all 0.3s ease-in-out);
+
+                &:hover, &:focus {
+                  background-color: #efefef;
+                }
+
+                @if $courseware-link-hover == "expanding-underline" {
+                    @include underline_expanding_hover($brand-primary-color, 0.2rem);
+                } @else if $courseware-link-hover == "hover-pop" {
+                    .icon {
+                      @include hover_pop(-0.5rem, 0);
+                    }
+                } @else if $courseware-link-hover == "hover-custom-color" {
+                    &:hover, &:focus {
+                      color: $brand-primary-color;
+                    }
+                } @else if $courseware-link-hover == "opacity" {
+                    opacity: 1;
+                    &:hover, &:focus {
+                      opacity: 0.5;
+                    }
+                }
+
+                &.active {
+                  background-color: #efefef;
+
+                  .icon {
+                    color: $brand-primary-color;
+                  }
+
+                  &:hover, &:focus {
+                    background-color: #efefef;
+                  }
+
+                  &:after {
+                    width: 100%;
+                    height: 0.2rem;
+                    background-color: $brand-primary-color;
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: -$sequence-nav-bottom-padding - 0.4rem;
+                  }
+                }
+
+                p {
+                  white-space: inherit;
+                  width: 24rem;
+                  padding: 2rem;
+                  z-index: 1000;
+                  background-color: $brand-primary-color;
+
+                  &:after {
+                    background-color: $brand-primary-color;
+                  }
+                }
+              }
+            }
+        }
+
+        .left-shadow, .right-shadow {
+          display: none;
+        }
+      }
+
+      // bottom nav in course content
+
+      nav.sequence-bottom {
+        border-top: 0.2rem solid #ddd;
+        padding: 3rem 2rem 0;
+        width: $courseware-content-bottom-nav-width;
+        height: auto;
+        margin: 3rem auto 2rem;
+        @include display(flex);
+        @include align-items(center);
+        @include justify-content(space-around);
+
+        @media(max-width: $screen-xs-max) {
+          width: $courseware-content-bottom-nav-width*2;
+        }
+
+        .sequence-nav-button {
+          border: none;
+          background: none;
+          cursor: pointer;
+          position: relative;
+          @include transition(all 0.3s ease-in-out);
+          top: 0;
+          @include flex-shrink(0);
+
+          span {
+            font-size: 1.6rem;
+          }
+
+          &:hover, &:focus {
+            color: $base-text-color;
+            top: -0.5rem;
+          }
+        }
+      }
+
+      // overall course content default stylings
+
+      h2 {
+        text-transform: none;
+        @include primary-font;
+        font-size: 1.8 * $courseware-content-font-size;
+        color: $brand-primary-color;
+        letter-spacing: 0;
+      }
+
+      h3 {
+        text-transform: none;
+        @include small-headings-font;
+        color: $brand-primary-color;
+        letter-spacing: 0;
+      }
+
+      h4 {
+        text-transform: none;
+        @include small-headings-font;
+        color: rgba($base-text-color, 0.75);
+        letter-spacing: 0;
+      }
+    }
+  }
+}

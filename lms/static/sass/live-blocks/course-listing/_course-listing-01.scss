@@ -1,0 +1,45 @@
+.a--course-listing-01 {
+
+  &__container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    &.centered {
+      text-align: center;
+
+      .a--course-listing-01 {
+
+        &__header {
+          max-width: 100%;
+        }
+      }
+
+      .a--course-tile-03 {
+        margin: 1rem auto;
+      }
+    }
+  }
+
+  &__header {
+    margin-bottom: 5rem;
+    max-width: 78rem;
+  }
+
+  &__section-heading {
+    @include big-headings-font;
+    font-size: 4.2rem;
+    margin: 0 0 2rem;
+    color: $brand-primary-color;
+    text-transform: none;
+    text-align: inherit;
+  }
+
+  &__section-text {
+
+  }
+
+  &__courses {
+    @include display(flex);
+    @include flex-wrap(wrap);
+  }
+}

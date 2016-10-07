@@ -1,0 +1,83 @@
+.a--dashboard__content {
+
+  .search-info {
+    margin: 1rem 0 3.5rem;
+
+    .search-back-to-courses {
+      display: inline-block;
+      padding: 0 0 0.5rem;
+      border-bottom: 0.2rem solid rgba($base-text-color, 0.7);
+      color: rgba($base-text-color, 0.7);
+      margin-bottom: 3rem;
+      @include primary-font-bold;
+
+      &:hover, &:focus {
+        border-color: $brand-primary-color;
+        color: $brand-primary-color;
+      }
+    }
+
+    h2 {
+      font-size: 2.8rem;
+      margin: 0 0 1rem;
+    }
+
+    .search-count {
+      color: rgba($base-text-color, 0.7);
+      @include primary-font-bold;
+    }
+  }
+
+  .search-result-list {
+    margin: 2rem 0 0;
+    padding: 0;
+
+    li.search-results-item {
+      list-style-type: none;
+      padding: 3rem 0;
+      border-top: 0.1rem solid rgba($base-text-color, 0.25);
+
+      .result-excerpt {
+        margin-bottom: 1.5rem;
+      }
+
+      .result-link {
+
+        i {
+          margin: 0 1rem 0 0.5rem;
+        }
+      }
+
+      .result-course-name {
+        @include primary-font-bold;
+        color: rgba($base-text-color, 0.75);
+      }
+
+      .result-location {
+        @include primary-font;
+        color: rgba($base-text-color, 0.75);
+      }
+
+      .result-type {
+        @include primary-font-bold-italic;
+        margin-left: 1rem;
+        display: inline-block;
+        color: rgba($base-text-color, 0.5);
+      }
+    }
+  }
+
+  .search-load-next {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    border: 0.2rem solid rgba($base-text-color, 0.7);
+    color: rgba($base-text-color, 0.7);
+    margin-top: 3rem;
+    @include primary-font-bold;
+
+    &:hover, &:focus {
+      border-color: $brand-primary-color;
+      color: $brand-primary-color;
+    }
+  }
+}

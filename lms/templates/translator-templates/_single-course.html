@@ -1,0 +1,29 @@
+## mako
+<%namespace name='static' file='static_content.html'/>
+<%!
+from django.utils.translation import ugettext as _
+from django.core.urlresolvers import reverse
+from courseware.courses import get_course_about_section
+%>
+<%namespace name='static' file='/static_content.html'/>
+<%page args="course" />
+
+## define logo files
+
+<%def name="get_course_info(course_in)">
+  <%
+  course = course_in
+  return {
+    'course_id' : course.id,
+    'course_url' : reverse('about_course', args=[course.id.to_deprecated_string()]),
+    'course_image' : course.course_image_url,
+    'course_organization' : course.display_org_with_default,
+    'course_code' : course.display_number_with_default,
+    'course_title' : course.display_name_with_default,
+    'course_start_date' : course.start_datetime_text(),
+    'course_end_date' : course.end_datetime_text(),
+    'course_short_description' : course.short_description,
+    'course_number' : course.display_number_with_default
+  }
+  %>
+</%def>

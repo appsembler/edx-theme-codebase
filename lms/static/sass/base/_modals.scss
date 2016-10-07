@@ -1,0 +1,151 @@
+.a--modal {
+  background-color: rgba(darken($brand-primary-color, 40%), 0.65);
+
+  &__outer-container {
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    @include display(flex);
+    @include align-items(center);
+  }
+
+  & .a--container {
+    position: relative;
+  }
+
+  &__close-button {
+    position: absolute;
+    top: -1.6rem;
+    right: -1.6rem;
+    z-index: 10001;
+    width: 3.2rem;
+    height: 3.2rem;
+    padding: 0.2rem;
+    border-radius: 100%;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    text-shadow: none;
+    background-color: $brand-primary-color;
+    color: #fff;
+    @include transition(all 0.15s ease-in-out);
+
+    &:hover, &:focus, &:hover:not(:disabled), &:focus:not(:disabled) {
+      @include transform(scale(1.2));
+      background: none;
+      outline: none;
+      background-color: $brand-primary-color;
+    }
+  }
+
+  &__video {
+
+    &__container {
+      padding: 0;
+      -webkit-box-shadow: 0 0 2rem 0 rgba(0,0,0,0.4);
+      -moz-box-shadow: 0 0 2rem 0 rgba(0,0,0,0.4);
+      box-shadow: 0 0 2rem 0 rgba(0,0,0,0.4);
+    }
+  }
+}
+
+.modal-backdrop {
+  opacity: 0 !important;
+}
+
+
+.a--bottom-slideout-modal {
+  background-color: rgba(darken($brand-primary-color, 40%), 0.01);
+  @include transition(all 0.3s ease-in-out);
+  left: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  margin: 0 !important;
+
+  &__wrapper {
+    @include display(flex);
+    @include align-items(center);
+    min-height: 25vh;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 3rem;
+    @include material-card(1);
+  }
+
+  &__container {
+
+  }
+
+  &__title {
+    @include big-headings-font;
+    font-size: 3.2rem;
+
+    @media(max-width: $screen-xs-max) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__controls {
+    margin-top: 3rem;
+  }
+
+  &__content {
+    font-size: 1.6rem;
+    @include primary-font;
+
+    input[type="checkbox"], input[type="radio"] {
+      margin: 1rem;
+    }
+  }
+
+  &__control-button {
+    @include edx_style_killer;
+    @include no_damn_focus_glow;
+    border: $cta-button-border;
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin: 1rem 1rem 1rem 0;;
+    font-size: 1.8rem;
+    @include primary-font;
+    color: #fff;
+    @include button_radius;
+    @include button_splash($buttons-border-radius);
+
+    &:hover, &:focus, &:hover:not(:disabled), &:focus:not(:disabled) {
+      color: rgba(#fff, 0.8);
+    }
+
+    &.action {
+      background-color: $cta-button-bg;
+
+      &:hover, &:focus, &:hover:not(:disabled), &:focus:not(:disabled) {
+        background-color: $cta-button-bg;
+      }
+    }
+
+    &.dismiss {
+      border: 0.2rem solid rgba($base-text-color, 0.8) !important;
+      color: rgba($base-text-color, 0.8);
+      padding: 0.8rem 1.8rem;
+
+      &:hover, &:focus, &:hover:not(:disabled), &:focus:not(:disabled) {
+        border: 0.2rem solid rgba($base-text-color, 0.8) !important;
+        color: rgba($base-text-color, 0.8);
+      }
+    }
+
+    &.warning {
+      background-color: #e74c3c;
+
+      &:hover, &:focus, &:hover:not(:disabled), &:focus:not(:disabled) {
+        background-color: #e74c3c;
+      }
+    }
+  }
+}

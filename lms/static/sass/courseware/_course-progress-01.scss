@@ -1,0 +1,141 @@
+.a--course-progress {
+  @include flex-wrap(wrap);
+
+  &__main-title {
+    @include big-headings-font;
+    font-size: 3.2rem;
+    color: $brand-primary-color;
+    margin: 0 0 4.5rem;
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__info {
+    width: 100%;
+    padding-bottom: 4rem;
+    margin-bottom: 2rem;
+    border-bottom: 0.1rem solid #ddd;
+
+    .grade-detail-graph {
+      width: 100%;
+      height: 36rem;
+      margin: 2rem 0 5rem;
+    }
+  }
+
+  &__chapters-container {
+    width: 100%;
+  }
+
+  &__chapter {
+    @include display(flex);
+    width: 100%;
+    margin: 4rem 0;
+
+    @media(max-width: $screen-xs-max) {
+      @include flex-wrap(wrap);
+      border-bottom: 0.2rem solid #eee;
+      padding-bottom: 3rem;
+    }
+
+    &__info {
+      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 0.1rem solid #ddd;
+
+      @media (min-width: $screen-sm-min) {
+        margin-bottom: 0;
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-right: 3rem;
+        padding-right: 3rem;
+        border-right: 0.1rem solid #ddd;
+        width: 30%;
+        max-width: 36rem;
+      }
+
+      .chapter-name {
+        @include small-headings-font;
+        color: rgba($base-text-color, 0.75);
+        margin: 0;
+      }
+    }
+
+    &__section {
+      margin-bottom: 3rem;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    &__data {
+      width: 100%;
+      @include flex-shrink(1);
+
+      .chapter-section-name {
+        margin: 0 0 2rem;
+
+        a {
+          @include primary-font;
+          color: $brand-primary-color;
+          font-size: 1.8rem;
+        }
+
+        span {
+          @include primary-font-bold;
+          margin-left: 0.5rem;
+          font-size: 1.4rem;
+          color: $base-text-color;
+        }
+      }
+
+      .chapter-due-date {
+        display: block;
+        padding: 1.5rem 0;
+        margin: 0 0 2rem;
+        border-top: 0.1rem solid #eee;
+        border-bottom: 0.1rem solid #eee;
+        @include primary-font-bold;
+      }
+
+      .chapter-scores {
+        font-size: 1.4rem;
+
+        h3 {
+          font-size: 1.4rem;
+          @include primary-font;
+          color: $base-text-color;
+          margin: 0 0 1.2rem;
+        }
+
+        .no-scores {
+          font-size: 1.4rem;
+          @include primary-font-italic;
+          color: rgba($base-text-color, 0.6);
+        }
+
+        ol {
+          padding: 0;
+          margin: 0;
+
+          li {
+            list-style-type: none;
+            margin: 0.5rem 1rem 0.5rem 0;
+            padding: 0.25rem 1rem 0.25rem 0;
+            display: inline-block;
+            border-right: 0.1rem solid #ddd;
+            @include primary-font-bold;
+            color: $base-text-color;
+
+            &:last-child {
+              border-right: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

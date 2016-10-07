@@ -1,0 +1,123 @@
+.a--discovery-search-01 {
+  width: 100%;
+  margin-top: $search-bar-vertical-margin;
+  margin-bottom: $search-bar-vertical-margin;
+  padding: $search-bar-wrapper-padding;
+  border-bottom: $search-bar-bottom-border;
+
+  &__main {
+    @include display(flex);
+    @include align-items(center);
+    padding: $search-bar-inner-container-padding;
+
+    h2 {
+      margin: 0 3rem 0 0;
+      font-size: $search-bar-big-message-text-size;
+      @include primary-font-bold;
+      color: $search-bar-big-message-text-color;
+    }
+
+    &__content {
+      width: 100%;
+      @include flex-shrink(1);
+    }
+  }
+
+  &__expand-area-wrapper {
+    display: none;
+  }
+
+  &__expand-button {
+    @include edx_style_killer;
+    @include no_damn_focus_glow;
+    @include flex-shrink(0);
+    font-size: $search-bar-icon-button-font-size;
+    color: $search-bar-icon-button-color;
+
+    .inactive {
+      display: block;
+    }
+
+    .active {
+      display: none;
+    }
+
+
+    &:hover, &:focus, &:hover:not(:disabled), &:focus:not(:disabled) {
+
+    }
+
+    &.activated {
+      color: rgba($base-text-color, 0.3);
+
+      .inactive {
+        display: none;
+      }
+
+      .active {
+        display: block;
+      }
+    }
+  }
+
+  &__expand-area {
+    @include display(flex);
+    @include align-items(center);
+    padding: 3rem 0;
+    border-bottom: $search-bar-bottom-border;
+  }
+
+  &__search-button {
+    @include edx_style_killer;
+    @include no_damn_focus_glow;
+    @include flex-shrink(0);
+    font-size: $search-bar-icon-button-font-size;
+    color: $search-bar-icon-button-color;
+  }
+
+  input[type="text"] {
+    @include edx_style_killer;
+    @include no_damn_focus_glow;
+    width: 100%;
+    @include flex-shrink(1);
+    font-size: 1.6rem;
+    @include primary-font;
+    color: $base-text-color;
+
+    &:hover, &:focus {
+
+    }
+  }
+
+  &__filters {
+    padding: 3rem 0;
+
+    button.clear-filters, button.facet-option {
+      @include edx_style_killer;
+      @include no_damn_focus_glow;
+      background-color: $search-filter-bg-color;
+      color: $search-filter-text-color;
+      @include transition(all 0.3s ease-in-out);
+      padding: $search-filter-padding;
+      margin: $search-filter-margin;
+
+      &:hover, &:focus {
+        background-color: $brand-primary-color;
+        color: #fff;
+        padding: $search-filter-padding;
+      }
+    }
+
+    ul.active-filters {
+      padding: 0;
+      margin: 0;
+      display: inline-block;
+
+      li {
+        list-style-type: none;
+        display: inline-block;
+        margin: $search-filter-margin;
+      }
+    }
+  }
+}

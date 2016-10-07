@@ -1,0 +1,33 @@
+.a--modal {
+	padding: 0;
+	width: auto;
+	border-radius: 0;
+	box-shadow: 0;
+	background: none;
+	color: none;
+}
+
+h2 {
+	@include primary-font;
+	text-transform: none;
+	letter-spacing: 0;
+}
+
+.a--container {
+
+	input[type="submit"]:hover:not(:disabled), input[type="button"]:hover:not(:disabled), button:hover:not(:disabled), .button:hover:not(:disabled) {
+		background: none;
+		box-shadow: none;
+		text-shadow: none;
+		border: none;
+		outline: none;
+	}
+
+	input[type="submit"]:active:not(:disabled), input[type="submit"]:focus:not(:disabled), input[type="button"]:active:not(:disabled), input[type="button"]:focus:not(:disabled), button:active:not(:disabled), button:focus:not(:disabled), .button:active:not(:disabled) {
+		box-shadow: none;
+	}
+}
+
+.window-wrap {
+	min-width: 10rem !important;
+}

@@ -1,0 +1,16 @@
+<h3 class="a--discovery-facets__group-title header-facet">
+  <%= displayName %>
+</h3>
+<ul data-facet="<%= name %>" class="a--discovery-facets__list facet-list">
+  <%= options %>
+</ul>
+<% if (listIsHuge) { %>
+    <div class="a--discovery-facets__toggle toggle">
+        <button class="show-more discovery-button">
+            <%= gettext("More") %>
+        </button>
+        <button class="show-less hidden discovery-button">
+            <%= gettext("Less") %>
+        </button>
+    </div>
+<% } %>

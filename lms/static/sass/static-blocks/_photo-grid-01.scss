@@ -1,0 +1,24 @@
+.a--photo-grid-01 {
+  padding: 6rem 0;
+
+  &__container {
+
+  }
+
+  &__single-container {
+    overflow: hidden;
+  }
+
+  &__photo {
+    background-size: cover;
+    width: 100%;
+    display: block;
+    @include responsive_square_div;
+    margin: 1.5rem 0;
+    @include transition(all 0.3s ease-in-out);
+
+    &:hover, &:focus {
+      @include transform(scale(1.05));
+    }
+  }
+}

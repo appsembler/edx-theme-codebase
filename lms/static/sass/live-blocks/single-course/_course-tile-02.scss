@@ -1,0 +1,357 @@
+.a--course-tile-02 {
+
+  &__wrapper {
+    padding: 1.5rem;
+    width: 25%;
+    @include display(flex);
+    @include flex-wrap(wrap);
+
+    @media(min-width:$screen-lg-min) {
+
+      &:first-of-type {
+        width: 50%;
+
+        .a--course-tile-02 {
+
+          &__container {
+            background-color: $brand-primary-color;
+            border: none;
+            text-align: left;
+          }
+
+          &__code, &__organization {
+            color: rgba(#fff, 0.8);
+          }
+
+          &__title, &__start-date {
+            color: #fff;
+          }
+
+          &__image {
+            opacity: 1;
+          }
+
+          &__info {
+            width: 36rem;
+          }
+
+          &__title {
+            font-size: 3.2rem;
+            @include primary-font-light;
+          }
+        }
+      }
+    }
+
+    @media(max-width:$screen-md-max) {
+      width: 33.3%;
+    }
+
+    @media(max-width:$screen-sm-max) {
+      width: 50%;
+    }
+
+    @media(max-width:$screen-xs-max) {
+      width: 100%;
+    }
+  }
+
+  &__container {
+    border: 0.1rem solid #dedede;
+    padding: 0;
+    @include transition(all 0.3s ease-in-out);
+    background-color: #fff;
+    display: block;
+    width: 100%;
+    min-height: 28rem;
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+
+    &:hover, &:focus {
+      -webkit-box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+      -moz-box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+      box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    }
+  }
+
+  &__image {
+    @include flex-shrink(0);
+    border-radius: 100%;
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    opacity: 0.1;
+
+    $tile-image-size: 280px;
+    width: $tile-image-size;
+    height: $tile-image-size;
+    bottom: -($tile-image-size/5);
+    right: -($tile-image-size/7);
+
+    @media(max-width:$screen-md-max) {
+      $tile-image-size: 280px;
+      width: $tile-image-size;
+      height: $tile-image-size;
+      bottom: -($tile-image-size/5);
+      right: -($tile-image-size/7);
+    }
+
+    @media(max-width:$screen-sm-max) {
+      $tile-image-size: 260px;
+      width: $tile-image-size;
+      height: $tile-image-size;
+      bottom: -($tile-image-size/5);
+      right: -($tile-image-size/7);
+    }
+
+    @media(max-width:$screen-xs-max) {
+      $tile-image-size: 140px;
+      width: $tile-image-size;
+      height: $tile-image-size;
+      bottom: -($tile-image-size/5);
+      right: -($tile-image-size/7);
+    }
+  }
+
+  &__info {
+    padding: 3rem 2rem;
+  }
+
+  &__code, &__organization {
+    @include primary-font-bold;
+    font-size: 1.4rem;
+    color: rgba($base-text-color, 0.8);
+    margin: 0 0 0.5rem;
+  }
+
+  &__title {
+    @include primary-font;
+    font-size: 2rem;
+    margin: 0 0 1.5rem;
+    padding-bottom: 1.5rem;
+    color: $brand-primary-color;
+    display: block;
+    border-bottom: 0.1rem solid rgba($base-text-color, 0.2);
+  }
+
+  &__start-date {
+    @include primary-font-bold;
+    color: $brand-primary-color;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin: 0;
+  }
+}
+
+.a--course-tile-02-parent-element {
+  @include display(flex);
+  @include flex-wrap(wrap);
+
+  &.courses-listing-narrower {
+
+    li.courses-listing-item {
+      padding: 1.5rem;
+      width: 50%;
+      @include display(flex);
+      @include flex-wrap(wrap);
+
+      @media(min-width:$screen-lg-min) {
+
+        &:first-of-type {
+          width: 100%;
+
+          .a--course-tile-02 {
+
+            &__container {
+              background-color: $brand-primary-color;
+              border: none;
+            }
+
+            &__code, &__organization {
+              color: rgba(#fff, 0.8);
+            }
+
+            &__title, &__start-date {
+              color: #fff;
+            }
+
+            &__image {
+              opacity: 1;
+            }
+
+            &__info {
+              width: 36rem;
+            }
+
+            &__title {
+              font-size: 3.2rem;
+              @include primary-font-light;
+            }
+          }
+        }
+      }
+
+      @media(max-width:$screen-md-max) {
+        width: 50%;
+      }
+
+      @media(max-width:$screen-sm-max) {
+        width: 50%;
+      }
+
+      @media(max-width:$screen-xs-max) {
+        width: 100%;
+      }
+    }
+  }
+
+  li.courses-listing-item {
+    padding: 1.5rem;
+    width: 25%;
+    @include display(flex);
+    @include flex-wrap(wrap);
+
+    @media(min-width:$screen-lg-min) {
+
+      &:first-of-type {
+        width: 50%;
+
+        .a--course-tile-02 {
+
+          &__container {
+            background-color: $brand-primary-color;
+            border: none;
+          }
+
+          &__code, &__organization {
+            color: rgba(#fff, 0.8);
+          }
+
+          &__title, &__start-date {
+            color: #fff;
+          }
+
+          &__image {
+            opacity: 1;
+          }
+
+          &__info {
+            width: 36rem;
+          }
+
+          &__title {
+            font-size: 3.2rem;
+            @include primary-font-light;
+          }
+        }
+      }
+    }
+
+    @media(max-width:$screen-md-max) {
+      width: 33.3%;
+    }
+
+    @media(max-width:$screen-sm-max) {
+      width: 50%;
+    }
+
+    @media(max-width:$screen-xs-max) {
+      width: 100%;
+    }
+
+    .a--course-tile-02__wrapper {
+      padding: 0;
+      width: 100% !important;
+
+      .a--course-tile-02 {
+
+        &__container {
+          border: 0.1rem solid #dedede;
+          padding: 0;
+          @include transition(all 0.3s ease-in-out);
+          background-color: #fff;
+          display: block;
+          width: 100%;
+          min-height: 28rem;
+          position: relative;
+          overflow: hidden;
+
+          &:hover, &:focus {
+            -webkit-box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+            -moz-box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+            box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+          }
+        }
+
+        &__image {
+          @include flex-shrink(0);
+          border-radius: 100%;
+          background-size: cover;
+          background-position: center center;
+          position: absolute;
+          opacity: 0.1;
+
+          $tile-image-size: 280px;
+          width: $tile-image-size;
+          height: $tile-image-size;
+          bottom: -($tile-image-size/5);
+          right: -($tile-image-size/7);
+
+          @media(max-width:$screen-md-max) {
+            $tile-image-size: 280px;
+            width: $tile-image-size;
+            height: $tile-image-size;
+            bottom: -($tile-image-size/5);
+            right: -($tile-image-size/7);
+          }
+
+          @media(max-width:$screen-sm-max) {
+            $tile-image-size: 260px;
+            width: $tile-image-size;
+            height: $tile-image-size;
+            bottom: -($tile-image-size/5);
+            right: -($tile-image-size/7);
+          }
+
+          @media(max-width:$screen-xs-max) {
+            $tile-image-size: 140px;
+            width: $tile-image-size;
+            height: $tile-image-size;
+            bottom: -($tile-image-size/5);
+            right: -($tile-image-size/7);
+          }
+        }
+
+        &__info {
+          padding: 3rem 2rem;
+        }
+
+        &__code, &__organization {
+          @include primary-font-bold;
+          font-size: 1.4rem;
+          color: rgba($base-text-color, 0.8);
+          margin: 0 0 0.5rem;
+        }
+
+        &__title {
+          @include primary-font;
+          font-size: 2rem;
+          margin: 0 0 1.5rem;
+          padding-bottom: 1.5rem;
+          color: $brand-primary-color;
+          display: block;
+          border-bottom: 0.1rem solid rgba($base-text-color, 0.2);
+        }
+
+        &__start-date {
+          @include primary-font-bold;
+          color: $brand-primary-color;
+          font-size: 1.4rem;
+          text-transform: uppercase;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

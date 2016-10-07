@@ -1,0 +1,41 @@
+@mixin primary-font-light {
+	font-family: $primary-font-name, sans-serif;
+	font-style: normal;
+	font-weight: $primary-font-weight-light;
+}
+
+@mixin primary-font {
+	font-family: $primary-font-name, sans-serif;
+	font-style: normal;
+	font-weight: $primary-font-weight-regular;
+}
+
+@mixin primary-font-bold {
+	font-family: $primary-font-name, sans-serif;
+	font-style: normal;
+	font-weight: $primary-font-weight-bold;
+}
+
+@mixin primary-font-black {
+	font-family: $primary-font-name, sans-serif;
+	font-style: normal;
+	font-weight: $primary-font-weight-black;
+}
+
+@mixin primary-font-light-italic {
+	font-family: $primary-font-name, sans-serif;
+	font-style: italic;
+	font-weight: $primary-font-weight-light;
+}
+
+@mixin primary-font-italic {
+	font-family: $primary-font-name, sans-serif;
+	font-style: italic;
+	font-weight: $primary-font-weight-regular;
+}
+
+@mixin primary-font-bold-italic {
+	font-family: $primary-font-name, sans-serif;
+	font-style: italic;
+	font-weight: $primary-font-weight-bold;
+}

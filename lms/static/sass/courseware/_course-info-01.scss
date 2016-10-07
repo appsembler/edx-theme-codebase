@@ -1,0 +1,17 @@
+.a--course-info {
+
+  &__main-title {
+    @include primary-font;
+    font-size: 3.2rem;
+    color: $brand-primary-color;
+    margin: 0 0 2.5rem;
+  }
+
+  &>ol {
+    padding: 0;
+
+    li {
+      list-style-type: none;
+    }
+  }
+}

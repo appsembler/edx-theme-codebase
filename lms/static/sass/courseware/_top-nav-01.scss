@@ -1,0 +1,112 @@
+.a--courseware-top-nav {
+
+  &__container {
+    border-bottom: 0.1rem solid #ddd;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin: $courseware-top-nav-top-margin auto $courseware-top-nav-bottom-margin;
+    position: relative;
+  }
+
+  &__mobile-scroll-indicator {
+    width: 7rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    font-size: 2rem;
+    @include linear-gradient(to right, rgba(#fafafa, 0) 0%, rgba(#fafafa, 1) 40%);
+    padding-left: 3rem;
+    display: none;
+
+    &.visible {
+      @include display(flex);
+      @include align-items(center);
+      @include justify-content(space-around);
+    }
+  }
+
+  &__list-container {
+    overflow-y: auto;
+    position: relative;
+
+    &.a--animated {
+      opacity: 0;
+      @include transition(all 0.3s ease-in-out);
+      position: relative;
+      top: -2rem;
+
+      &.a--do-animate {
+        opacity: 1;
+        top: 0;
+      }
+    }
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    @include display(flex);
+    @include align-items(center);
+  }
+
+  &__item {
+    list-style-type: none;
+    display: inline-block;
+    margin: 1rem 0;
+    @include flex-shrink(0);
+
+    &:last-child {
+      padding-right: 4rem;
+    }
+
+    a {
+      display: block;
+      @include primary-font;
+      color: $base-text-color;
+      font-size: 1.6rem;
+      padding: 1rem 1.5rem;
+
+      @if $courseware-link-hover == "expanding-underline" {
+          @include underline_expanding_hover($brand-primary-color, 1rem);
+      } @else if $courseware-link-hover == "hover-pop" {
+          @include hover_pop(-0.5rem, 0);
+      } @else if $courseware-link-hover == "hover-custom-color" {
+          &:hover, &:focus {
+            color: $brand-primary-color;
+          }
+      } @else if $courseware-link-hover == "opacity" {
+          opacity: 1;
+          &:hover, &:focus {
+            opacity: 0.5;
+          }
+      }
+
+      &.active {
+        background-color: $base-text-color;
+        color: #fff;
+        border-radius: 0.5rem;
+
+        &:hover, &:focus {
+          top: 0;
+        }
+      }
+    }
+  }
+
+  &__preview-menu-wrapper {
+    padding: 2rem !important;
+    background-color: darken($brand-primary-color, 20%);
+    color: #fff;
+
+    .preview-actions .action-preview .action-preview-label {
+      font-size: 1.4rem;
+      text-shadow: none;
+      color: #fff;
+    }
+
+    select {
+      color: $base-text-color;
+    }
+  }
+}

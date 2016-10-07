@@ -1,0 +1,17 @@
+<article class="a--course-tile-02__wrapper" aria-label="<%= content.display_name %>">
+  <a href="/courses/<%- course %>/about" class="a--course-tile-02__container">
+    <div class="a--course-tile-02__image" style="background-image: url('<%- image_url %>');">
+    </div>
+    <div class="a--course-tile-02__info">
+      <p class="a--course-tile-02__code"><%= content.number %></p>
+      <p class="a--course-tile-02__title"><%= content.display_name %></p>
+      <p class="a--course-tile-02__organization"><%= org %></p>
+      <p class="a--course-tile-02__start-date">
+        <%= interpolate(
+          gettext("Starts: %(start_date)s"),
+          { start_date: start }, true
+        ) %>
+      </p>
+    </div>
+  </a>
+</article>

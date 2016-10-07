@@ -1,0 +1,87 @@
+@function calcNavbarBg ($navbar-style, $brand-primary-color) {
+	@if $navbar-style == "white" {
+		$navbar-bg-color: #fff;
+		@return $navbar-bg-color;
+	} @else {
+		@return $brand-primary-color;
+	}
+}
+
+@function calcNavbarUnderlineColor ($navbar-style, $brand-primary-color) {
+	@if $navbar-style == "brand" {
+		$underline-color: #fff;
+		@return $underline-color;
+	} @else {
+		@return $brand-primary-color;
+	}
+}
+
+@function calcNavbarTextColor ($navbar-style, $base-text-color) {
+	@if $navbar-style == "white" {
+		@return $base-text-color;
+	} @else {
+		$navbar-text-color: #fff;
+		@return $navbar-text-color;
+	}
+}
+
+@function calcNavbarButtonBorder ($navbar-style) {
+	@if $navbar-style == "white" {
+		$navbar-button-border: none;
+		@return $navbar-button-border;
+	} @else {
+		$navbar-button-border: 0.2rem solid #fff;
+		@return $navbar-button-border;
+	}
+}
+
+@function calcNavbarButtonBg ($navbar-style, $brand-primary-color) {
+	@if $navbar-style == "white" {
+		@return $brand-primary-color;
+	} @else {
+	    $navbar-button-bg: $brand-primary-color;
+		@return $navbar-button-bg;
+	}
+}
+
+@function calcDisplayLogoPositive($navbar-style) {
+	@if $navbar-style == "white" {
+		$display-navbar-logo-positive: inline-block;
+		@return $display-navbar-logo-positive;
+	} @else {
+	    $display-navbar-logo-positive: none;
+		@return $display-navbar-logo-positive;
+	}
+}
+
+@function calcDisplayLogoNegative($navbar-style) {
+	@if $navbar-style == "white" {
+		$display-navbar-logo-negative: none;
+		@return $display-navbar-logo-negative;
+	} @else {
+	    $display-navbar-logo-negative: inline-block;
+		@return $display-navbar-logo-negative;
+	}
+}
+
+/// Computes a top-shadow for a card effect.
+/// @param {Number} $depth - depth level
+/// @return {List}
+@function top-shadow($depth) {
+  $primary-offset: nth(1.5 3 10 14 19, $depth) * 1px;
+  $blur: nth(1.5 3 10 14 19, $depth) * 4px;
+  $color: rgba(black, nth(.12 .16 .19 .25 .30, $depth));
+
+  @return 0 $primary-offset $blur $color;
+}
+
+/// Computes a bottom-shadow for a card effect.
+/// @param {Number} $depth - depth level
+/// @return {List}
+@function bottom-shadow($depth) {
+  $primary-offset: nth(1.5 3 6 10 15, $depth) * 1px;
+  $blur: nth(1 3 3 5 6, $depth) * 4px;
+  $color: rgba(black, nth(.24 .23 .23 .22 .22, $depth));
+
+  @return 0 $primary-offset $blur $color;
+}

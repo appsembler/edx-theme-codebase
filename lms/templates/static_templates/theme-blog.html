@@ -1,0 +1,10 @@
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%namespace file='../theme-variables.html' import="get_blog_content" />
+
+<%block name="pagetitle">${_("Blog")}</%block>
+
+% for section in get_blog_content():
+    <%include file = '../design-templates/${section[1]}' args = 'template_settings = section[2]' />
+% endfor

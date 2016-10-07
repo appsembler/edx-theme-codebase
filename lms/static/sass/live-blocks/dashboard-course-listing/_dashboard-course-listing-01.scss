@@ -1,0 +1,144 @@
+.a--dashboard-course-listing-01 {
+  list-style-type: none;
+  padding: 1.5rem 0;
+  border-bottom: 0.1rem solid rgba($base-text-color, 0.3);
+
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 5rem;
+  }
+
+  &__container {
+    @include display(flex);
+
+    @media (max-width: $screen-xs-max) {
+      @include flex-wrap(wrap);
+    }
+  }
+
+  &__course-image {
+    width: 24rem;
+    margin-right: 3rem;
+    min-height: 18rem;
+    @include display(flex);
+    @include align-items(center);
+    @include flex-shrink(0);
+    background-size: cover;
+    background-position: center center;
+    opacity: 1;
+    position: relative;
+
+    &:hover, &:focus {
+      opacity: 0.8;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      width: 100%;
+      margin: 0 0 2rem;
+    }
+
+    .course-blocked-overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      @include linear-gradient(to top, darken($brand-primary-color, 40%), darken($brand-primary-color, 20%));
+      opacity: 0.7;
+    }
+
+    .course-blocked-label {
+      font-size: 2.2rem;
+      @include primary-font-bold;
+      letter-spacing: 0.1rem;
+      color: rgba(#fff, 0.8);
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__details-wrapper {
+    padding: 1rem 0;
+    @include display(flex);
+    @include align-items(center);
+    @include flex-shrink(1);
+    width: 100%;
+  }
+
+  &__course-name {
+    display: block;
+    color: $brand-primary-color;
+    @include small-headings-font;
+    margin: 0 0 1rem;
+    font-size: 2rem;
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__course-organisation-id {
+    color: rgba($base-text-color, 0.7);
+    @include small-headings-font;
+    margin: 0 0 1.5rem;
+    font-size: 1.6rem;
+  }
+
+  &__course-dates {
+    padding: 1.5rem 0;
+    border-top: 0.1rem solid rgba($base-text-color, 0.2);
+    border-bottom: 0.1rem solid rgba($base-text-color, 0.2);
+
+    .course-ended {
+      color: #c0392b;
+    }
+
+    .course-started {
+      color: #27ae60;
+    }
+
+    .course-coming-soon {
+      color: rgba($base-text-color, 0.7);
+    }
+
+    .course-starts-soon {
+      color: $brand-primary-color;
+    }
+  }
+
+  &__course-options {
+    padding: 1rem 0 0 0;
+    margin: 0;
+
+    li {
+      display: inline-block;
+      margin: 0.5rem 2rem 0 0;
+      list-style-type: none;
+      @include primary-font-bold;
+    }
+  }
+
+  &__courseware-link {
+    @include display(flex);
+    @include align-items(center);
+    @include flex-shrink(0);
+
+    @media(max-width: $screen-sm-max) {
+      display: none;
+    }
+
+    a {
+      font-size: 3.6rem;
+      color: rgba($base-text-color, 0.35);
+      position: relative;
+      left: 0;
+
+      &:hover, &:focus {
+        color: $brand-primary-color;
+        left: 0.8rem;
+      }
+    }
+  }
+
+}

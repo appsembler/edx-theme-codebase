@@ -1,0 +1,10 @@
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%namespace file='../theme-variables.html' import="get_press_content" />
+
+<%block name="pagetitle">${_("Press")}</%block>
+
+% for section in get_press_content():
+    <%include file = '../design-templates/${section[1]}' args = 'template_settings = section[2]' />
+% endfor

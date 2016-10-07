@@ -1,0 +1,31 @@
+<%page args="template_settings" />
+
+<%
+  class_lg = 12 / template_settings['photos_per_row_lg']
+  class_md = 12 / template_settings['photos_per_row_md']
+  class_sm = 12 / template_settings['photos_per_row_sm']
+  class_xs = 12 / template_settings['photos_per_row_xs']
+  double_class_lg = class_lg * 2
+  double_class_md = class_md * 2
+  double_class_sm = class_sm * 2
+  double_class_xs = class_xs * 2
+  double_sized_first_photo = template_settings['double_sized_first_photo']
+%>
+
+
+<section class="a--photo-grid-01 ${template_settings['optional_classes']}" style="${template_settings['extra_css']}">
+  <div class="bs-container a--container a--photo-grid-01__container">
+    % for photo in template_settings['photos']:
+      % if double_sized_first_photo:
+        <div class="col-xs-${double_class_xs} col-sm-${double_class_sm} col-md-${double_class_md} col-lg-${double_class_lg} a--photo-grid-01__single-container" >
+          <span class="a--photo-grid-01__photo" style="background-image: url('${photo[0]}');" title="${photo[1]}"></span>
+        </div>
+        <% double_sized_first_photo = False %>
+      % else:
+        <div class="col-xs-${class_xs} col-sm-${class_sm} col-md-${class_md} col-lg-${class_lg} a--photo-grid-01__single-container">
+          <span class="a--photo-grid-01__photo" style="background-image: url('${photo[0]}');" title="${photo[1]}"></span>
+        </div>
+      % endif
+    % endfor
+  </div>
+</section>

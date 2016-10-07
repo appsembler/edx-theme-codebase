@@ -1,0 +1,18 @@
+<%inherit file="/main.html" />
+<%block name="bodyclass">view-in-course view-statictab ${course.css_class or ''}</%block>
+<%namespace name='static' file='/static_content.html'/>
+
+<%block name="headextra">
+<%static:css group='style-course-vendor'/>
+<%static:css group='style-course'/>
+</%block>
+
+<%block name="pagetitle">${tab['name']} | ${course.display_number_with_default | h}</%block>
+
+<%include file="/courseware/course_navigation.html" args="active_page='static_tab_{0}'.format(tab['url_slug'])" />
+
+<section class="a--courseware-wrapper">
+  <div class="a--courseware-wrapper__content bs-container a--container a--course-static-page">
+    ${tab_contents}
+  </div>
+</section>
