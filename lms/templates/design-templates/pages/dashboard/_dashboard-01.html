@@ -5,7 +5,7 @@ from django.core.urlresolvers import reverse
 
 <%page args="course_enrollments, template_settings" />
 
-<%namespace file='../../../theme-variables.html' import="get_dashboard_settings" />
+<%namespace file='/theme-variables.html' import="get_dashboard_settings" />
 
 <%
   if get_dashboard_settings()['promote_course_catalog']:
