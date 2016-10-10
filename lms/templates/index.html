@@ -6,7 +6,7 @@ from django.core.urlresolvers import reverse
 from microsite_configuration import microsite
 %>
 
-<%namespace file='theme-variables.html' import="get_index_content" />
+<%namespace file='/theme-variables.html' import="get_index_content" />
 
 % for section in get_index_content():
   % if 'courses-list' in section[0]:
