@@ -40,10 +40,12 @@ $(document).ready(function(){
 <section class="a--courseware-wrapper">
   % if user.is_authenticated():
 
-    <div class="a--courseware-wrapper__admin-notifications bs-container a--container">
-      <a class="a--courseware-wrapper__admin-notifications__cta" href="${studio_url}">${_("View Updates in Studio")}</a>
-    </div>
-    
+    % if studio_url is not None and masquerade and masquerade.role == 'staff':
+      <div class="a--courseware-wrapper__admin-notifications bs-container a--container">
+        <a class="a--courseware-wrapper__admin-notifications__cta" href="${studio_url}">${_("View Updates in Studio")}</a>
+      </div>
+    % endif
+
   % endif
 
 
@@ -51,25 +53,33 @@ $(document).ready(function(){
     % if user.is_authenticated():
       <section class="a--courseware-wrapper__content__main-content a--course-info">
         <h1 class="a--course-info__main-title">${_("Course Updates &amp; News")}</h1>
-        ${get_course_info_section(request, course, 'updates')}
+        ${get_course_info_section(request, masquerade_user, course, 'updates')}
+
+        ## CourseTalk widget
+        % if show_coursetalk_widget:
+        <div class="coursetalk-write-reviews">
+          <div id="ct-custom-read-review-widget" data-provider="${platform_key}" data-course="${course_review_key}"></div>
+        </div>
+        % endif
+
       </section>
       <section aria-label="${_('Handout Navigation')}" class="a--courseware-wrapper__content__sidebar a--course-handouts">
-        % if False:
+        % if SelfPacedConfiguration.current().enable_course_home_improvements:
           <h1 class="a--courseware-wrapper__content__sidebar__main-title">${_("Important Course Dates")}</h1>
           ${get_course_date_summary(course, user)}
         % endif
 
         <h1 class="a--courseware-wrapper__content__sidebar__main-title">${_(course.info_sidebar_name)}</h1>
-        ${get_course_info_section(request, course, 'handouts')}
+        ${get_course_info_section(request, masquerade_user, course, 'handouts')}
       </section>
       % else:
       <section class="updates">
         <h1 class="a--courseware-wrapper__content__sidebar__main-title">${_("Course Updates &amp; News")}</h1>
-        ${get_course_info_section(request, course, 'guest_updates')}
+        ${get_course_info_section(request, masquerade_user, course, 'guest_updates')}
       </section>
       <section aria-label="${_('Handout Navigation')}" class="handouts">
         <h1 class="a--courseware-wrapper__content__sidebar__main-title">${_("Course Handouts")}</h1>
-        ${get_course_info_section(request, course, 'guest_handouts')}
+        ${get_course_info_section(request, masquerade_user, course, 'guest_handouts')}
       </section>
     % endif
   </div>
