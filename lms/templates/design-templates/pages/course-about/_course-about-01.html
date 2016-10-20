@@ -45,7 +45,7 @@ from django.utils.translation import ugettext as _
       <div class="a--course-about-01__courseware-button-wrapper">
         % if course_vars['user_authenticated'] and course_vars['course_registered']:
           % if course_vars['show_courseware_link']:
-            <a href="${course_vars['course_href_target']}" class="a--course-about-01__courseware-btn register">
+            <a href="${course_vars['course_href_target']}" class="a--course-about-01__courseware-btn">
               ${courseware_button_view_courseware_text}
             </a>
           % else:
