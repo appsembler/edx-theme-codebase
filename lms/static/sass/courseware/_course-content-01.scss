@@ -16,6 +16,7 @@
       border-radius: 4rem;
       color: rgba($base-text-color, 0.7);
       margin: 1.5rem 0;
+      width: 100%;
 
       @media(min-width: $screen-md-min) {
         display: none;
@@ -38,11 +39,54 @@
       border-bottom: 0.1rem solid #ddd;
     }
 
+    &__bookmarks-btn {
+      width: 100%;
+
+      .bookmarks-list-button {
+        @include display(flex);
+        @include align-items(center);
+        width: 100%;
+        border-radius: 3rem;
+        padding: 0.8rem 2.5rem;
+        border: 0.1rem solid #ccc;
+        background-color: #eee;
+        color: $base-text-color;
+        margin-bottom: 1rem;
+
+        &:before {
+          margin-right: 1rem;
+        }
+
+        &:focus {
+          outline: none;
+        }
+
+        &:hover, &:hover:not(:disabled) {
+          background-color: $brand-primary-color;
+          color: #fff;
+          outline: none;
+        }
+
+        &.is-active {
+          background-color: $brand-primary-color;
+          color: #fff;
+          border: none;
+
+          &:hover, &:focus {
+            background-color: #eee;
+            color: $base-text-color;
+            border: 0.1rem solid #ccc;
+          }
+        }
+      }
+    }
+
     .courseware-search-bar {
       box-shadow: none;
       margin-bottom: 2rem;
       padding: 0.9rem 0 ($sequence-nav-bottom-padding + 0.1rem);
       border-bottom: 0.2rem solid #ddd;
+      width: 100%;
 
       .search-field-wrapper {
         @include display(flex);
@@ -238,6 +282,15 @@
 
       // top nav inside course-content
 
+      .path {
+        margin-bottom: 3.2rem;
+        color: rgba($base-text-color, 0.5);
+
+        &:hover, &:focus {
+          color: $base-text-color;
+        }
+      }
+
       .sequence-nav {
         border-bottom: 0.2rem solid #ddd;
         padding-bottom: $sequence-nav-bottom-padding;
@@ -303,17 +356,33 @@
               padding: 0 1.5rem;
               border-right: 0.1rem solid #ddd;
 
+              &:focus {
+                outline: none;
+              }
+
               &:last-child {
                 border-right: none;
               }
 
-              a {
+              button {
                 position: relative;
                 border: none;
                 @include transition(all 0.3s ease-in-out);
 
                 &:hover, &:focus {
                   background-color: #efefef;
+                  outline: none;
+                }
+
+                .is-hidden {
+                  display: none;
+                }
+
+                .bookmark-icon {
+                  position: absolute;
+                  top: 0;
+                  right: 1rem;
+                  color: $brand-primary-color;
                 }
 
                 @if $courseware-link-hover == "expanding-underline" {
