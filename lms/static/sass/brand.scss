@@ -1,0 +1,142 @@
+@import "base/functions";
+@import "base/variables";
+@import "base/mixins";
+@import "base/branding-basics";
+
+.brand-primary-color { content: $brand-primary-color }
+.brand-accent-color { content: $brand-accent-color }
+.navbar-style { content: $navbar-style }
+.base-text-color { content: $base-text-color }
+
+.primary-font-name { content: $primary-font-name }
+.primary-font-weight-light { content: $primary-font-weight-light }
+.primary-font-weight-regular { content: $primary-font-weight-regular }
+.primary-font-weight-bold { content: $primary-font-weight-bold }
+.primary-font-weight-black { content: $primary-font-weight-black }
+
+.cta-button-bg { content: $cta-button-bg }
+.cta-button-text-color { content: $cta-button-text-color }
+.cta-button-border { content: $cta-button-border }
+
+.header-bg-color { content: $header-bg-color }
+.header-logo-height { content: $header-logo-height }
+.header-padding-top { content: $header-padding-top }
+.header-padding-bottom { content: $header-padding-bottom }
+.header-padding-sm-top { content: $header-padding-sm-top }
+.header-padding-sm-bottom { content: $header-padding-sm-bottom }
+.header-group-separation { content: $header-group-separation }
+.header-font-size { content: $header-font-size }
+.header-text-color { content: $header-text-color }
+.navbar-button-border { content: $navbar-button-border }
+.navbar-button-bg { content: $navbar-button-bg }
+.navbar-anchor-underline-color { content: $navbar-anchor-underline-color }
+.navbar-link-hover { content: $navbar-link-hover }
+
+.display-navbar-logo-positive { content: $display-navbar-logo-positive }
+.display-navbar-logo-negative { content: $display-navbar-logo-negative }
+
+.nav-toggle-bar-width { content: $nav-toggle-bar-width }
+.nav-toggle-bar-height { content: $nav-toggle-bar-height }
+.nav-toggle-bar-radius { content: $nav-toggle-bar-radius }
+.nav-toggle-bar-margin { content: $nav-toggle-bar-margin }
+.nav-toggle-bar-color { content: $nav-toggle-bar-color }
+.nav-toggle-bar-separation { content: $nav-toggle-bar-separation }
+.nav-toggle-bar-pulsar-color { content: $nav-toggle-bar-pulsar-color }
+.nav-toggle-bar-pulsar-visible { content: $nav-toggle-bar-pulsar-visible }
+
+.slideout-menu-text-color { content: $slideout-menu-text-color }
+.slideout-menu-background-color { content: $slideout-menu-background-color }
+.slideout-menu-text-size { content: $slideout-menu-text-size }
+.slideout-menu-item-padding { content: $slideout-menu-item-padding }
+
+.base-letter-spacing { content: $base-letter-spacing }
+
+.buttons-border-radius { content: $buttons-border-radius }
+
+
+.footer-padding-top { content: $footer-padding-top }
+.footer-padding-bottom { content: $footer-padding-bottom }
+.footer-bg-color { content: $footer-bg-color }
+.footer-top-border { content: $footer-top-border }
+.footer-text-color { content: $footer-text-color }
+.footer-link-color { content: $footer-link-color }
+.footer-link-hover-color { content: $footer-link-hover-color }
+.footer-link-breathe-space { content: $footer-link-breathe-space }
+.footer-logo-breathe-space { content: $footer-logo-breathe-space }
+.footer-logo-padding-vertical { content: $footer-logo-padding-vertical }
+.footer-logo-width { content: $footer-logo-width }
+.footer-logo-opacity { content: $footer-logo-opacity }
+.footer-copyright-text-size { content: $footer-copyright-text-size }
+.footer-copyright-text-color { content: $footer-copyright-text-color }
+.footer-copyright-breathe-space { content: $footer-copyright-breathe-space }
+
+
+// search elements settings
+.search-bar-vertical-margin { content: $search-bar-vertical-margin }
+.search-bar-wrapper-padding { content: $search-bar-wrapper-padding }
+.search-bar-bottom-border { content: $search-bar-bottom-border }
+.search-bar-inner-container-padding { content: $search-bar-inner-container-padding }
+.search-bar-big-message-text-size { content: $search-bar-big-message-text-size }
+.search-bar-big-message-text-color { content: $search-bar-big-message-text-color }
+.search-bar-icon-button-color { content: $search-bar-icon-button-color }
+.search-bar-icon-button-color-lighter { content: $search-bar-icon-button-color-lighter }
+.search-bar-icon-button-font-size { content: $search-bar-icon-button-font-size }
+.search-filter-padding { content: $search-filter-padding }
+.search-filter-margin { content: $search-filter-margin }
+.search-filter-bg-color { content: $search-filter-bg-color }
+.search-filter-text-color { content: $search-filter-text-color }
+.facets-big-heading-font-size { content: $facets-big-heading-font-size }
+.facets-big-heading-margin { content: $facets-big-heading-margin }
+.facets-big-heading-padding { content: $facets-big-heading-padding }
+.facets-group-title-font-size { content: $facets-group-title-font-size }
+.facets-group-title-margin { content: $facets-group-title-margin }
+.facets-group-title-color { content: $facets-group-title-color }
+.facets-group-list-padding { content: $facets-group-list-padding }
+.single-facet-bottom-border { content: $single-facet-bottom-border }
+.single-facet-padding { content: $single-facet-padding }
+.single-facet-selected-opacity { content: $single-facet-selected-opacity }
+.facet-font-size { content: $facet-font-size }
+.facet-results-count-font-size { content: $facet-results-count-font-size }
+.facet-results-count-bg-color { content: $facet-results-count-bg-color }
+.facet-results-count-text-color { content: $facet-results-count-text-color }
+.facet-results-count-padding { content: $facet-results-count-padding }
+.facet-results-count-border-radius { content: $facet-results-count-border-radius }
+
+
+// login-register settings
+.login-register-wrapper-margin { content: $login-register-wrapper-margin }
+.login-register-section-title-spacing { content: $login-register-section-title-spacing }
+.login-register-section-title-border-bottom { content: $login-register-section-title-border-bottom }
+.login-register-section-title-font-size { content: $login-register-section-title-font-size }
+.login-register-section-title-color { content: $login-register-section-title-color }
+.login-register-section-title-alignment { content: $login-register-section-title-alignment }
+.login-register-single-input-wrapper-margin { content: $login-register-single-input-wrapper-margin }
+.login-register-label-font-size { content: $login-register-label-font-size }
+.login-register-input-padding { content: $login-register-input-padding }
+.login-register-input-border { content: $login-register-input-border }
+.login-register-input-border-bottom { content: $login-register-input-border-bottom }
+.login-register-input-border-top { content: $login-register-input-border-top }
+.login-register-input-border-left { content: $login-register-input-border-left }
+.login-register-input-border-right { content: $login-register-input-border-right }
+.login-register-hover-border-color { content: $login-register-hover-border-color }
+.login-register-textarea-min-height { content: $login-register-textarea-min-height }
+.login-register-input-text-size { content: $login-register-input-text-size }
+.login-register-tip-text-color { content: $login-register-tip-text-color }
+.login-register-tip-top-spacing { content: $login-register-tip-top-spacing }
+.login-register-field-link-font-size { content: $login-register-field-link-font-size }
+.login-register-field-link-color { content: $login-register-field-link-color }
+.login-register-toggle-title-font-size { content: $login-register-toggle-title-font-size }
+.login-register-toggle-title-color { content: $login-register-toggle-title-color }
+
+
+// courseware
+
+.courseware-top-nav-top-margin { content: $courseware-top-nav-top-margin }
+.courseware-top-nav-bottom-margin { content: $courseware-top-nav-bottom-margin }
+
+.sequence-nav-bottom-padding { content: $sequence-nav-bottom-padding }
+.courseware-content-bottom-nav-width { content: $courseware-content-bottom-nav-width }
+
+.courseware-link-hover { content: $courseware-link-hover }
+.courseware-content-font-size { content: $courseware-content-font-size }
+.courseware-content-line-height { content: $courseware-content-line-height }
