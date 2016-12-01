@@ -1,0 +1,13 @@
+.amc--layout {
+
+  &__container {
+    padding: 0;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__column {
+    padding: 0 1.5rem;
+  }
+}

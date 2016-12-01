@@ -1,0 +1,11 @@
+## mako
+<%page args="options" />
+
+<%
+  element_style = ""
+  element_style = element_style + "color: " + options['text-color'] + ";"
+%>
+
+<p class="amc--element--paragraph-text amc--style-classes ${options['font-size']} ${options['font-family']} ${options['text-alignment']} ${options['margin-top']} ${options['margin-right']} ${options['margin-bottom']} ${options['margin-left']}" style="${element_style}">
+  ${options['text-content']}
+</p>

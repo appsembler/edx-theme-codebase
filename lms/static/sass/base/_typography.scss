@@ -39,3 +39,8 @@
 	font-style: italic;
 	font-weight: $primary-font-weight-bold;
 }
+
+@mixin accent-font {
+	font-family: $accent-font-name, cursive;
+	font-weight: normal;
+}

@@ -8,14 +8,11 @@ from microsite_configuration import microsite
 
 <%namespace file='/theme-variables.html' import="get_index_content" />
 
-% for section in get_index_content():
-  % if 'courses-list' in section[0]:
-    <%include file = 'design-templates/${section[1]}' args = "template_settings = section[2], courses = courses" />
-  % else:
-    <%include file = 'design-templates/${section[1]}' args = 'template_settings = section[2]' />
+% for element in get_index_content():
+  % if (element['element-type']=='layout'):
+    <%include file = '/${element["element-path"]}' args = "options = element['options'], children = element['children'], page_specific_args = courses" />
   % endif
 % endfor
-
 
 
 <%block name="js_extra">

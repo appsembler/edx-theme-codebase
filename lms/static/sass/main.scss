@@ -79,5 +79,6 @@
 @import "pages/sysadmin-dashboard";
 @import "pages/dashboard-01";
 
-// Imported from edx-theme-customers
-@import "customer-specific";
+
+// Import page builder sass
+@import "page-builder/page-builder";

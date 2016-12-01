@@ -1,0 +1,37 @@
+.amc--style-classes {
+
+  &.border-width {
+
+    &--none {
+      border: none;
+    }
+
+    &--1px {
+      border-width: 0.1rem;
+    }
+
+    &--2px {
+      border-width: 0.2rem;
+    }
+
+    &--3px {
+      border-width: 0.3rem;
+    }
+
+    &--4px {
+      border-width: 0.4rem;
+    }
+
+    &--5px {
+      border-width: 0.5rem;
+    }
+
+    &--8px {
+      border-width: 0.8rem;
+    }
+
+    &--10px {
+      border-width: 1rem;
+    }
+  }
+}

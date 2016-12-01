@@ -1,0 +1,10 @@
+.amc--layout--three-col {
+
+  &__column {
+    width: 100%;
+
+    @media (min-width: $screen-sm-min) {
+      width: 33.3%;
+    }
+  }
+}

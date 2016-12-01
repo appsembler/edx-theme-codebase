@@ -1,0 +1,10 @@
+.amc--layout--two-col-50-50 {
+
+  &__column {
+    width: 100%;
+
+    @media (min-width: $screen-sm-min) {
+      width: 50%;
+    }
+  }
+}

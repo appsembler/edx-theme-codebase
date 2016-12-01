@@ -1,0 +1,26 @@
+.amc--style-classes {
+
+  &.align-content {
+
+    &-center {
+
+      &>.amc--layout__container {
+        align-items: center;
+      }
+    }
+
+    &-top {
+
+      &>.amc--layout__container {
+        align-items: flex-start;
+      }
+    }
+
+    &-bottom {
+
+      &>.amc--layout__container {
+        align-items: flex-end;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.amc--element--popup-video-cta-button {
+  display: inline-block;
+  border-radius: $buttons-border-radius;
+  text-decoration: none;
+  border-style: solid;
+
+  &:hover, &:focus {
+    opacity: 0.7;
+  }
+}

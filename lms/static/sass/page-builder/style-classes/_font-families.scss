@@ -1,0 +1,34 @@
+.amc--style-classes {
+
+  &.font--primary--light {
+    @include primary-font-light;
+  }
+
+  &.font--primary--light-italic {
+    @include primary-font-light-italic;
+  }
+
+  &.font--primary--regular {
+    @include primary-font;
+  }
+
+  &.font--primary--regular-italic {
+    @include primary-font-italic;
+  }
+
+  &.font--primary--bold {
+    @include primary-font-bold;
+  }
+
+  &.font--primary--bold-italic {
+    @include primary-font-bold-italic;
+  }
+
+  &.font--primary--black {
+    @include primary-font-black;
+  }
+
+  &.font--accent {
+    @include accent-font;
+  }
+}
