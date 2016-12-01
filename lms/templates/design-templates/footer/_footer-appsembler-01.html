@@ -24,7 +24,11 @@
             % endif
             % for item in footer_links:
             <li class="">
-              <a href="${item[1]}" class="${item[2]}" ${item[3]}>${item[0]}</a>
+              <a href="${item['link_URL']}" class="${item['special_class']}"
+              % if item['open_in_new_tab']:
+                target="_blank"
+              % endif
+              >${item['link_title']}</a>
             </li>
             % endfor
           </ul>

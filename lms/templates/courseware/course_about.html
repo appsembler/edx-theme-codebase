@@ -184,13 +184,11 @@ from openedx.core.lib.courses import course_image_url
   course_about_vars['course_end_date'] = course.end_datetime_text()
 %>
 
-% for section in get_course_about_content():
-  % if 'about-course-template' in section[0]:
-    <%include file = '../design-templates/${section[1]}' args = "template_settings = section[2], course_vars = course_about_vars" />
-  % else:
-    <%include file = '../design-templates/${section[1]}' args = 'template_settings = section[2]' />
+% for element in get_course_about_content():
+  % if (element['element-type'].startswith('layout')):
+    <%include file = '/${element["element-path"]}' args = "options = element['options'], children = element['children'], page_specific_args = course_about_vars" />
   % endif
-% endfor}
+% endfor
 
 
 

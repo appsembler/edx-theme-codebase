@@ -5,6 +5,8 @@
 
 <%block name="pagetitle">${_("Honor")}</%block>
 
-% for section in get_honor_content():
-    <%include file = '../design-templates/${section[1]}' args = 'template_settings = section[2]' />
+% for element in get_honor_content():
+  % if (element['element-type'].startswith('layout')):
+    <%include file = '/${element["element-path"]}' args = "options = element['options'], children = element['children'], page_specific_args = []" />
+  % endif
 % endfor
