@@ -9,7 +9,7 @@ from microsite_configuration import microsite
 <%namespace file='/theme-variables.html' import="get_index_content" />
 
 % for element in get_index_content():
-  % if (element['element-type']=='layout'):
+  % if (element['element-type'].startswith('layout')):
     <%include file = '/${element["element-path"]}' args = "options = element['options'], children = element['children'], page_specific_args = courses" />
   % endif
 % endfor
