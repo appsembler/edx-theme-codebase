@@ -44,6 +44,10 @@
     &-300 {
       padding-top: 30rem;
     }
+
+    &-500 {
+      padding-top: 50rem;
+    }
   }
 
   &.padd-r {
@@ -85,11 +89,15 @@
     }
 
     &-200 {
-      padding-top: 20rem;
+      padding-right: 20rem;
     }
 
     &-300 {
-      padding-top: 30rem;
+      padding-right: 30rem;
+    }
+
+    &-500 {
+      padding-right: 50rem;
     }
   }
 
@@ -132,11 +140,15 @@
     }
 
     &-200 {
-      padding-top: 20rem;
+      padding-bottom: 20rem;
     }
 
     &-300 {
-      padding-top: 30rem;
+      padding-bottom: 30rem;
+    }
+
+    &-500 {
+      padding-bottom: 50rem;
     }
   }
 
@@ -179,11 +191,15 @@
     }
 
     &-200 {
-      padding-top: 20rem;
+      padding-left: 20rem;
     }
 
     &-300 {
-      padding-top: 30rem;
+      padding-left: 30rem;
+    }
+
+    &-500 {
+      padding-left: 50rem;
     }
   }
 }

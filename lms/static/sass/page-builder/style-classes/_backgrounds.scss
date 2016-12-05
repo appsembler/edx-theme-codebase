@@ -4,14 +4,17 @@
 
     &--default {
       background-size: initial;
+      background-position: center center;
     }
 
     &--cover {
       background-size: cover;
+      background-position: center center;
     }
 
     &--contain {
       background-size: contain;
+      background-position: center center;
     }
   }
 }

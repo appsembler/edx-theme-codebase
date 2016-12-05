@@ -91,7 +91,7 @@
     }
 
     &__title {
-      @include big-headings-font;
+      @include fontVariantInclude($global-font-h1);
       font-size: 5.2rem;
       color: #fff;
       margin: 0 0 3rem;
@@ -102,7 +102,7 @@
     }
 
     &__description {
-      @include primary-font;
+      @include fontVariantInclude($global-font-base-body);
       font-size: 1.8rem;
       color: #fff;
       margin: -1rem 0 3rem;
@@ -146,7 +146,7 @@
     &__helper {
       display: block;
       color: #fff;
-      @include primary-font;
+      @include fontVariantInclude($global-font-base-body);
     }
 
     a {
@@ -168,7 +168,7 @@
     padding: 1.5rem 2rem;
     font-size: 1.6rem;
     margin: 1rem 2rem 1rem 0;
-    @include large-cta-font;
+    @include fontVariantInclude($global-font-cta-buttons);
     color: #fff;
     @include button_radius;
     @include button_splash($buttons-border-radius);
@@ -193,7 +193,7 @@
     }
 
     h1 {
-      @include big-headings-font;
+      @include fontVariantInclude($global-font-h1);
       font-size: 4.2rem;
       margin: 0 0 3rem;
       color: $brand-primary-color;
@@ -201,7 +201,7 @@
     }
 
     h2 {
-      @include big-headings-font;
+      @include fontVariantInclude($global-font-h2);
       font-size: 3.2rem;
       margin: 4rem 0 3rem;
       color: $brand-primary-color;
@@ -209,11 +209,19 @@
     }
 
     h3 {
-      @include small-headings-font;
+      @include fontVariantInclude($global-font-h3);
       font-size: 1.8rem;
       margin: 3rem 0 2rem;
       color: rgba($base-text-color, 0.8);
       text-transform: none;
+    }
+
+    h4 {
+      @include fontVariantInclude($global-font-h4);
+    }
+
+    p {
+      @include fontVariantInclude($global-font-base-body);
     }
 
     .teacher {

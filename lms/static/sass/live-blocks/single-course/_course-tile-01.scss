@@ -5,6 +5,7 @@
     width: 25%;
     @include display(flex);
     @include flex-wrap(wrap);
+    @include fontVariantInclude($global-font-base-body);
 
     @media(max-width:$screen-md-max) {
       width: 33.3%;
@@ -59,14 +60,14 @@
   }
 
   &__code, &__organization {
-    @include primary-font-bold;
+    @include fontVariantInclude($global-font-h4);
     font-size: 1.4rem;
     color: rgba($base-text-color, 0.8);
     margin: 0 0 0.5rem;
   }
 
   &__title {
-    @include primary-font;
+    @include fontVariantInclude($global-font-h1);
     font-size: 2rem;
     margin: 0 0 1.5rem;
     color: $brand-primary-color;
@@ -80,7 +81,7 @@
   }
 
   &__start-date {
-    @include primary-font-bold;
+    @include fontVariantInclude($global-font-h4);
     color: $brand-primary-color;
     font-size: 1.4rem;
     text-transform: uppercase;

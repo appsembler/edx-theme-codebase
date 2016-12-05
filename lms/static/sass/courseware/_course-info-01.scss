@@ -1,7 +1,7 @@
 .a--course-info {
 
   &__main-title {
-    @include primary-font;
+    @include fontVariantInclude($global-font-h1);
     font-size: 3.2rem;
     color: $brand-primary-color;
     margin: 0 0 2.5rem;

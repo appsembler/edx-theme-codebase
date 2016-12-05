@@ -5,6 +5,7 @@
     width: 25%;
     @include display(flex);
     @include flex-wrap(wrap);
+    @include fontVariantInclude($global-font-base-body);
 
     @media(min-width:$screen-lg-min) {
 
@@ -37,7 +38,7 @@
 
           &__title {
             font-size: 3.2rem;
-            @include primary-font-light;
+            @include fontVariantInclude($global-font-h1);
           }
         }
       }
@@ -119,14 +120,14 @@
   }
 
   &__code, &__organization {
-    @include primary-font-bold;
+    @include fontVariantInclude($global-font-h4);
     font-size: 1.4rem;
     color: rgba($base-text-color, 0.8);
     margin: 0 0 0.5rem;
   }
 
   &__title {
-    @include primary-font;
+    @include fontVariantInclude($global-font-h1);
     font-size: 2rem;
     margin: 0 0 1.5rem;
     padding-bottom: 1.5rem;
@@ -136,7 +137,7 @@
   }
 
   &__start-date {
-    @include primary-font-bold;
+    @include fontVariantInclude($global-font-h4);
     color: $brand-primary-color;
     font-size: 1.4rem;
     text-transform: uppercase;
@@ -186,7 +187,7 @@
 
             &__title {
               font-size: 3.2rem;
-              @include primary-font-light;
+              @include fontVariantInclude($global-font-h1);
             }
           }
         }
@@ -242,7 +243,7 @@
 
           &__title {
             font-size: 3.2rem;
-            @include primary-font-light;
+            @include fontVariantInclude($global-font-h1);
           }
         }
       }
@@ -328,14 +329,14 @@
         }
 
         &__code, &__organization {
-          @include primary-font-bold;
+          @include fontVariantInclude($global-font-h4);
           font-size: 1.4rem;
           color: rgba($base-text-color, 0.8);
           margin: 0 0 0.5rem;
         }
 
         &__title {
-          @include primary-font;
+          @include fontVariantInclude($global-font-h1);
           font-size: 2rem;
           margin: 0 0 1.5rem;
           padding-bottom: 1.5rem;
@@ -345,7 +346,7 @@
         }
 
         &__start-date {
-          @include primary-font-bold;
+          @include fontVariantInclude($global-font-h4);
           color: $brand-primary-color;
           font-size: 1.4rem;
           text-transform: uppercase;

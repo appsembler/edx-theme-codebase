@@ -2,7 +2,7 @@
   @include flex-wrap(wrap);
 
   &__main-title {
-    @include big-headings-font;
+    @include fontVariantInclude($global-font-h1);
     font-size: 3.2rem;
     color: $brand-primary-color;
     margin: 0 0 4.5rem;
@@ -57,7 +57,7 @@
       }
 
       .chapter-name {
-        @include small-headings-font;
+        @include fontVariantInclude($global-font-h2);
         color: rgba($base-text-color, 0.75);
         margin: 0;
       }
@@ -106,7 +106,7 @@
 
         h3 {
           font-size: 1.4rem;
-          @include primary-font;
+          @include fontVariantInclude($global-font-h3);
           color: $base-text-color;
           margin: 0 0 1.2rem;
         }

@@ -482,9 +482,13 @@
 
       // overall course content default stylings
 
+      h1 {
+        @include fontVariantInclude($global-font-h1);
+      }
+
       h2 {
         text-transform: none;
-        @include primary-font;
+        @include fontVariantInclude($global-font-h2);
         font-size: 1.8 * $courseware-content-font-size;
         color: $brand-primary-color;
         letter-spacing: 0;
@@ -492,14 +496,14 @@
 
       h3 {
         text-transform: none;
-        @include small-headings-font;
+        @include fontVariantInclude($global-font-h3);
         color: $brand-primary-color;
         letter-spacing: 0;
       }
 
       h4 {
         text-transform: none;
-        @include small-headings-font;
+        @include fontVariantInclude($global-font-h4);
         color: rgba($base-text-color, 0.75);
         letter-spacing: 0;
       }

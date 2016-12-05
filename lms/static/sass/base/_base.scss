@@ -3,7 +3,7 @@ html {
 }
 
 body {
-	@include body-base-font;
+	@include fontVariantInclude($global-font-base-body);
 	letter-spacing: 0;
 }
 
@@ -65,6 +65,7 @@ a, a:visited {
 }
 
 .a--button {
+	@include fontVariantInclude($global-font-cta-buttons);
 	border: none;
 	outline: none;
 	background: none;
@@ -112,7 +113,7 @@ span.a--underlined {
 .spacer {
 	width: 100%;
 
-	&.1rem {
+	&.one-rem {
 		height: 1rem;
 	}
 }

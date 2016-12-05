@@ -44,3 +44,24 @@
 	font-family: $accent-font-name, cursive;
 	font-weight: normal;
 }
+
+
+@mixin fontVariantInclude ($font-variant) {
+	@if $font-variant == "primary-font-light" {
+		@include primary-font-light;
+	} @else if $font-variant == "primary-font-light-italic" {
+		@include primary-font-light-italic;
+	} @else if $font-variant == "primary-font-regular" {
+		@include primary-font;
+	} @else if $font-variant == "primary-font-regular-italic" {
+		@include primary-font-italic;
+	} @else if $font-variant == "primary-font-bold" {
+		@include primary-font-bold;
+	} @else if $font-variant == "primary-font-bold-italic" {
+		@include primary-font-bold-italic;
+	} @else if $font-variant == "primary-font-black" {
+		@include primary-font-black;
+	} @else if $font-variant == "accent-font" {
+		@include accent-font;
+	}
+}

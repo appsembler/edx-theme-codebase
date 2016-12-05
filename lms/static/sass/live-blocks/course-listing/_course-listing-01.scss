@@ -26,7 +26,7 @@
   }
 
   &__section-heading {
-    @include big-headings-font;
+    @include fontVariantInclude($global-font-h1);
     font-size: 4.2rem;
     margin: 0 0 2rem;
     color: $brand-primary-color;

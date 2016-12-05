@@ -1,4 +1,5 @@
 .a--dashboard-course-listing-01 {
+  @include fontVariantInclude($global-font-base-body);
   list-style-type: none;
   padding: 1.5rem 0;
   border-bottom: 0.1rem solid rgba($base-text-color, 0.3);
@@ -69,7 +70,7 @@
   &__course-name {
     display: block;
     color: $brand-primary-color;
-    @include small-headings-font;
+    @include fontVariantInclude($global-font-h2);
     margin: 0 0 1rem;
     font-size: 2rem;
 
@@ -80,7 +81,7 @@
 
   &__course-organisation-id {
     color: rgba($base-text-color, 0.7);
-    @include small-headings-font;
+    @include fontVariantInclude($global-font-h4);
     margin: 0 0 1.5rem;
     font-size: 1.6rem;
   }

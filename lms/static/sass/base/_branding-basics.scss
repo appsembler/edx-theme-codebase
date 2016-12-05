@@ -13,12 +13,20 @@ $primary-font-weight-light: 300;
 $primary-font-weight-regular: 400;
 $primary-font-weight-bold: 700;
 $primary-font-weight-black: 800;
-
 $accent-font-name: "Bungee";
+
+$global-font-h1: "accent-font";
+$global-font-h2: "primary-font-light";
+$global-font-h3: "primary-font-bold";
+$global-font-h4: "primary-font-black";
+$global-font-base-body: "primary-font";
+$global-font-header-links: "primary-font-bold";
+$global-font-cta-buttons: "primary-font-bold";
 
 $cta-button-bg: $brand-accent-color;
 $cta-button-text-color: #fff;
 $cta-button-border: none;
+$buttons-border-radius: 0.5rem;
 
 $header-bg-color: calcNavbarBg($navbar-style, $brand-primary-color);
 $header-logo-height: 4.8rem;
@@ -52,8 +60,6 @@ $slideout-menu-text-size: 1.6rem;
 $slideout-menu-item-padding: 1.4rem;
 
 $base-letter-spacing: 0;
-
-$buttons-border-radius: 0.5rem;
 
 
 $footer-padding-top: 4rem;

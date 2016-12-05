@@ -39,14 +39,14 @@
   }
 
   &__code {
-    @include primary-font;
+    @include fontVariantInclude($global-font-h4);
     font-size: 1.4rem;
     color: rgba($base-text-color, 0.8);
     margin: 0;
   }
 
   &__title {
-    @include primary-font-light;
+    @include fontVariantInclude($global-font-h1);
     font-size: 2.8rem;
     margin: 0 0 1.5rem;
     color: $brand-primary-color;
@@ -62,7 +62,7 @@
   }
 
   &__start-date {
-    @include primary-font;
+    @include fontVariantInclude($global-font-h4);
     color: rgba($base-text-color, 0.8);
     font-size: 1.4rem;
     text-transform: none;
@@ -76,13 +76,13 @@
   }
 
   &__description {
-    @include primary-font;
+    @include fontVariantInclude($global-font-base-body);
     line-height: 180%;
     margin: 1rem 0;
   }
 
   &__more-info {
-    @include primary-font-bold;
+    @include fontVariantInclude($global-font-cta-buttons);
     font-size: 1.6rem;
   }
 }
