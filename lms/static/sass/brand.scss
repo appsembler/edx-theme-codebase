@@ -13,12 +13,20 @@
 .primary-font-weight-regular { content: $primary-font-weight-regular }
 .primary-font-weight-bold { content: $primary-font-weight-bold }
 .primary-font-weight-black { content: $primary-font-weight-black }
-
 .accent-font-name { content: $accent-font-name }
+
+.global-font-h1 { content: $global-font-h1 };
+.global-font-h2 { content: $global-font-h2 };
+.global-font-h3 { content: $global-font-h3 };
+.global-font-h4 { content: $global-font-h4 };
+.global-font-base-body { content: $global-font-base-body };
+.global-font-header-links { content: $global-font-header-links };
+.global-font-cta-buttons { content: $global-font-cta-buttons };
 
 .cta-button-bg { content: $cta-button-bg }
 .cta-button-text-color { content: $cta-button-text-color }
 .cta-button-border { content: $cta-button-border }
+.buttons-border-radius { content: $buttons-border-radius };
 
 .header-bg-color { content: $header-bg-color }
 .header-logo-height { content: $header-logo-height }
@@ -52,8 +60,6 @@
 .slideout-menu-item-padding { content: $slideout-menu-item-padding }
 
 .base-letter-spacing { content: $base-letter-spacing }
-
-.buttons-border-radius { content: $buttons-border-radius }
 
 
 .footer-padding-top { content: $footer-padding-top }
