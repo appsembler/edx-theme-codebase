@@ -4,3 +4,4 @@ prepros.cfg
 lms/static/css/*
 /lms/static/sass/.sass-cache
 .sass-cache
+/edx-theme-customers
