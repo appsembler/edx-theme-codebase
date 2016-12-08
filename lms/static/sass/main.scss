@@ -20,7 +20,7 @@
 @import "base/mixins";
 
 // Import basic styles
-@import "../../../edx-theme-customers/lms/static/sass/branding-basics";
+@import "../../../customer_specific/lms/static/sass/branding-basics";
 
 // Import typography
 @import "base/typography";
@@ -82,4 +82,4 @@
 @import "page-builder/page-builder";
 
 // Import custom customer-specific styles
-@import "../../../edx-theme-customers/lms/static/sass/customer-specific";
+@import "../../../customer_specific/lms/static/sass/customer-specific";
