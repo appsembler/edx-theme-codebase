@@ -93,6 +93,8 @@
   % for element in get_course_catalogue_content():
     % if (element['element-type'].startswith('layout')):
       <%include file = '/${element["element-path"]}' args = "options = element['options'], children = element['children'], page_specific_args = course_about_vars" />
+    % elif (element['element-type'].startswith('static-block')):
+      <%include file = '/${element["element-path"]}' args = "template_settings = element['options']" />
     % elif (element['element-type'].startswith('course-catalogue-template')):
       <%include file = '/${element["element-path"]}' args = "courses = courses, discovery_enabled = course_discovery_enabled" />
     % endif

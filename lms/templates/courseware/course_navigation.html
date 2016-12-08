@@ -94,6 +94,7 @@ include_special_exams = settings.FEATURES.get('ENABLE_SPECIAL_EXAMS', False) and
             </a>
           </li>
         % endfor
+        <%block name="extratabs" />
       </ul>
     </div>
     <div class="a--courseware-top-nav__mobile-scroll-indicator" id="courseware-top-nav-chevron">

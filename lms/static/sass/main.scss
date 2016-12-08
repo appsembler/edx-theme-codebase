@@ -20,7 +20,7 @@
 @import "base/mixins";
 
 // Import basic styles
-@import "base/branding-basics";
+@import "../../../edx-theme-customers/lms/static/sass/branding-basics";
 
 // Import typography
 @import "base/typography";
@@ -69,7 +69,6 @@
 @import "courseware/discussion-in-course";
 @import "courseware/courseware-textbook";
 
-
 // Import page specific templates sass
 @import "pages/course-about-01";
 @import "pages/course-catalogue-01";
@@ -79,6 +78,8 @@
 @import "pages/sysadmin-dashboard";
 @import "pages/dashboard-01";
 
-
 // Import page builder sass
 @import "page-builder/page-builder";
+
+// Import custom customer-specific styles
+@import "../../../edx-theme-customers/lms/static/sass/customer-specific";

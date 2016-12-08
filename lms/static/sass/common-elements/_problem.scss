@@ -1,0 +1,52 @@
+.xmodule_display.xmodule_CapaModule div.problem .action .save, .xmodule_display.xmodule_CapaModule div.problem .action .check, .xmodule_display.xmodule_CapaModule div.problem .action .show, .xmodule_display.xmodule_CapaModule div.problem .action .reset, .xmodule_display.xmodule_CapaModule div.problem .action .hint-button, .course-content .xmodule_display button {
+  @include transition(all 0.3s ease-in-out);
+  border-radius: $buttons-border-radius;
+  height: auto;
+  padding: 1rem 1.5rem;
+  margin: 0 1rem 1rem 0;
+  text-shadow: none;
+  box-shadow: none;
+  border: 0.1rem solid #d9d1d1;
+
+  &:hover, &:focus {
+    background-color: #d9d1d1;
+    border: 0.1rem solid darken(#d9d1d1, 20%);
+  }
+
+  &.save {
+    background-color: $brand-primary-color;
+
+    &:hover, &:focus {
+      background-color: darken($brand-primary-color, 10%);
+    }
+  }
+}
+
+.course-content {
+
+  .problem {
+
+    .action {
+
+      button {
+
+      }
+    }
+  }
+
+  .light-button:hover:not(:disabled), div.history-controls input[type="submit"]:hover:not(:disabled), a.light-button:hover:not(:disabled), div.info-wrapper section.handouts ol li div.hitarea:hover+h4.light-button:not(:disabled), div.info-wrapper section.handouts ol li div.hitarea:focus+h4.light-button:not(:disabled), .gray-button:hover:not(:disabled), input[type="reset"]:hover:not(:disabled), input[type="submit"]:hover:not(:disabled), input[type="button"]:hover:not(:disabled), button:hover:not(:disabled), .button:hover:not(:disabled), .xmodule_display.xmodule_LTIModule div.lti .wrapper-lti-link .lti-link .link_lti_new_window:hover:not(:disabled) {
+    @include transition(all 0.3s ease-in-out);
+    border-radius: $buttons-border-radius;
+    height: auto;
+    padding: 1rem 1.5rem;
+    margin: 0 1rem 1rem 0;
+    text-shadow: none;
+    box-shadow: none;
+    border: 0.1rem solid #d9d1d1;
+
+    &:hover, &:focus {
+      background-color: #d9d1d1;
+      border: 0.1rem solid darken(#d9d1d1, 20%);
+    }
+  }
+}

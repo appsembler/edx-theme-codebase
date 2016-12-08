@@ -48,7 +48,7 @@
           <ul class="a--slide-menu__container" id="slide-menu">
             <% first_slideout_item = True %>
             % for menu_group in slideout_menu_items:
-              % if not first_slideout_item:
+              % if not first_slideout_item and menu_group:
                 <li class="a--spacer"></li>
               % endif
               % for item in menu_group:

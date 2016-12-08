@@ -1,0 +1,22 @@
+.a--courseware-top-nav__list {
+
+  li.right {
+    margin-left: auto;
+  }
+}
+
+a.new-post-btn {
+  border-radius: $buttons-border-radius;
+  border: 0.1rem solid $brand-primary-color;
+  padding: 1rem 1.5rem;
+  @include transition(all 0.3s ease-in-out);
+  opacity: 1;
+
+  span {
+    margin-right: 0.5rem;
+  }
+
+  &:hover, &:focus {
+    opacity: 0.6;
+  }
+}

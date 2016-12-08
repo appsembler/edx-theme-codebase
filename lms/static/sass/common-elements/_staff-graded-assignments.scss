@@ -1,0 +1,21 @@
+#sga-content {
+
+  .upload {
+
+    button {
+      padding: 1rem 2rem;
+      margin: 2rem 0;
+      background: none;
+      outline: none;
+      box-shadow: none;
+      text-shadow: none;
+      background-color: #ddd;
+      border: 0.1rem solid #ccc;
+      border-radius: $buttons-border-radius;
+
+      &:hover, &:focus {
+        background-color: #ccc;
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.a--course-static-page, .xmodule_display.xmodule_StaticTabModule {
+  // overall course content default stylings
+
+  p {
+    @include primary-font;
+    font-size: 1.6rem;
+    line-height: 1.65eem !important;
+  }
+
+  h1, h2, h3 {
+    text-transform: none;
+  }
+
+  h1 {
+    text-transform: none;
+    @include primary-font;
+    font-size: 2.4 * $courseware-content-font-size;
+    color: $brand-primary-color;
+    letter-spacing: 0;
+  }
+
+  h2 {
+    text-transform: none;
+    @include primary-font;
+    font-size: 1.8 * $courseware-content-font-size;
+    color: $brand-primary-color;
+    letter-spacing: 0;
+  }
+
+  h3 {
+    text-transform: none;
+    @include small-headings-font;
+    color: $brand-primary-color;
+    letter-spacing: 0;
+  }
+
+  h4 {
+    text-transform: none;
+    @include small-headings-font;
+    color: rgba($base-text-color, 0.75);
+    letter-spacing: 0;
+  }
+
+  ul li, ol li, .xmodule_display.xmodule_CapaModule div.problem p {
+    font-size: $courseware-content-font-size;
+  }
+}

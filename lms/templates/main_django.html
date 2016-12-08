@@ -39,7 +39,7 @@
       {% block bodyextra %}{% endblock %}
     </div>
     {% with course=request.course %}
-      {% elif IS_EDX_DOMAIN %}
+      {% if IS_EDX_DOMAIN %}
         {% include "footer.html" %}
       {% else %}
         {% include "theme-footer.html" %}
