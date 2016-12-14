@@ -192,6 +192,7 @@
     position: relative;
     bottom: 0.2rem;
     margin-left: $nav-toggle-bar-margin;
+    z-index: 1000000;
 
     // IE fix hack
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
