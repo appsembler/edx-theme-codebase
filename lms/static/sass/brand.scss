@@ -15,6 +15,17 @@
 .primary-font-weight-black { content: $primary-font-weight-black }
 .accent-font-name { content: $accent-font-name }
 
+.font-size-base-body { $font-size-base-body };
+.line-height-base-body { $line-height-base-body };
+.font-size-h1 { $font-size-h1 };
+.line-height-h1 { $line-height-h1 };
+.font-size-h2 { $font-size-h2 };
+.line-height-h2 { $line-height-h2 };
+.font-size-h3 { $font-size-h3 };
+.line-height-h3 { $line-height-h3 };
+.font-size-h4 { $font-size-h4 };
+.line-height-h4 { $line-height-h4 };
+
 .global-font-h1 { content: $global-font-h1 };
 .global-font-h2 { content: $global-font-h2 };
 .global-font-h3 { content: $global-font-h3 };
