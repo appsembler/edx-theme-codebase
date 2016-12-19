@@ -2,7 +2,7 @@
     <%= displayName %>
 </h3>
 <ul data-facet="<%= name %>" class="facet-list collapse">
-    <%= options %>
+    <%= HtmlUtils.ensureHtml(optionsHtml) %>
 </ul>
 <% if (listIsHuge) { %>
     <div class="toggle ">
