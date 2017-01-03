@@ -1,7 +1,7 @@
 @import "base/functions";
 @import "base/variables";
 @import "base/mixins";
-@import "base/branding-basics";
+@import "../../../customer_specific/lms/static/sass/base/branding-basics";
 
 .brand-primary-color { content: $brand-primary-color }
 .brand-accent-color { content: $brand-accent-color }
