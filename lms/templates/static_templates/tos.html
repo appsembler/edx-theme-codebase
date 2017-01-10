@@ -1,14 +1,27 @@
 <%! from django.utils.translation import ugettext as _ %>
 <%inherit file="../main.html" />
 
-<%namespace file='/theme-variables.html' import="get_tos_content" />
+<%namespace file='/theme-variables.html' import="get_tos_content, get_global_settings" />
 
-<%block name="pagetitle">${_("Terms of Service")}</%block>
-
-% for element in get_tos_content():
-  % if (element['element-type'].startswith('layout')):
-    <%include file = '/${element["element-path"]}' args = "options = element['options'], children = element['children'], page_specific_args = []" />
-  % elif (element['element-type'].startswith('static-block')):
-    <%include file = '/${element["element-path"]}' args = "template_settings = element['options']" />
+<%block name="pagetitle">
+  % if get_global_settings().get('tos_enabled', True):
+    ${_("Terms of Service")}
+  % else:
+    ${_("Page Not Found")}
   % endif
-% endfor
+</%block>
+
+% if get_global_settings().get('tos_enabled', True):
+  % for element in get_tos_content():
+    % if (element['element-type'].startswith('layout')):
+      <%include file = '/${element["element-path"]}' args = "options = element['options'], children = element['children'], page_specific_args = []" />
+    % elif (element['element-type'].startswith('static-block')):
+      <%include file = '/${element["element-path"]}' args = "template_settings = element['options']" />
+    % endif
+  % endfor
+% else:
+  <%block name="headextra">
+    <meta name="robots" content="noindex" />
+  </%block>
+  <%include file = '/design-templates/pages/404/_404-block.html' />
+% endif

@@ -1,0 +1,44 @@
+.a--404-content {
+
+  &__container {
+    max-width: 98rem;
+    margin: 8rem auto 12rem;
+    text-align: center;
+
+    h1 {
+      font-size: 4.2rem;
+      @include fontVariantInclude($global-font-h1);
+      color: $base-text-color;
+      margin: 4rem 0 1.5rem;
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      @include fontVariantInclude($global-font-base-body);
+      color: lighten($base-text-color, 15%);
+      margin: 0.5rem 0;
+    }
+
+    p {
+      font-size: 1.4rem;
+      @include fontVariantInclude($global-font-base-body);
+      color: lighten($base-text-color, 15%);
+      margin: 0.5rem 0;
+
+      a {
+        @include primary-font-bold;
+        color: $brand-primary-color;
+
+        &:hover, &:focus {
+          color: lighten($brand-primary-color, 15%);
+        }
+      }
+    }
+
+    svg {
+      fill: $brand-primary-color;
+      max-width: 48rem;
+      width: 80%;
+    }
+  }
+}
