@@ -4,14 +4,14 @@
 <%namespace file='/theme-variables.html' import="get_embargo_content, get_global_settings" />
 
 <%block name="pagetitle">
-  % if get_global_settings().get('embargo_enabled', True):
+  % if get_global_settings().get('page_status', {}).get('embargo', False):
     ${_("Embargo")}
   % else:
     ${_("Page Not Found")}
   % endif
 </%block>
 
-% if get_global_settings().get('embargo_enabled', True):
+% if get_global_settings().get('page_status', {}).get('embargo', False):
   % for element in get_embargo_content():
     % if (element['element-type'].startswith('layout')):
       <%include file = '/${element["element-path"]}' args = "options = element['options'], children = element['children'], page_specific_args = []" />

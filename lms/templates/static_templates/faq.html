@@ -4,14 +4,14 @@
 <%namespace file='/theme-variables.html' import="get_faq_content, get_global_settings" />
 
 <%block name="pagetitle">
-  % if get_global_settings().get('faq_enabled', True):
+  % if get_global_settings().get('page_status', {}).get('faq', True):
     ${_("FAQ")}
   % else:
     ${_("Page Not Found")}
   % endif
 </%block>
 
-% if get_global_settings().get('faq_enabled', True):
+% if get_global_settings().get('page_status', {}).get('faq', True):
   % for element in get_faq_content():
     % if (element['element-type'].startswith('layout')):
       <%include file = '/${element["element-path"]}' args = "options = element['options'], children = element['children'], page_specific_args = []" />
