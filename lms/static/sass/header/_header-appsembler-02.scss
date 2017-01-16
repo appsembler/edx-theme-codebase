@@ -119,6 +119,13 @@
         @include align-items(center);
       }
 
+      &.a--slide-menu {
+
+        ul {
+          display: block;
+        }
+      }
+
       &:first-child {
         @include flex-shrink(1);
 
