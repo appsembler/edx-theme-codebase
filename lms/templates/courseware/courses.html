@@ -3,6 +3,7 @@
   from django.utils.translation import ugettext as _
   from microsite_configuration import microsite
   from openedx.core.djangolib.js_utils import dump_js_escaped_json
+  from django.http.response import Http404
 %>
 <%inherit file="../main.html" />
 <%
@@ -13,11 +14,7 @@
 <%namespace file='/theme-variables.html' import="get_course_catalogue_content, get_global_settings" />
 
 <%block name="pagetitle">
-  % if get_global_settings().get('course-catalogue_enabled', True):
     ${_("Courses")}
-  % else:
-    ${_("Page Not Found")}
-  % endif
 </%block>
 
 % if get_global_settings().get('course-catalogue_enabled', True):
@@ -58,8 +55,5 @@
     % endif
   % endfor
 % else:
-  <%block name="headextra">
-    <meta name="robots" content="noindex" />
-  </%block>
-  <%include file = '/design-templates/pages/404/_404-block.html' />
+  <% raise Http404 %>
 % endif
