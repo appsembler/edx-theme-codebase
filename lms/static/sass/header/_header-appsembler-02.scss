@@ -53,11 +53,11 @@
       &__group-left {
         @include display(flex);
         @include align-items(center);
-        @include flex-shrink(1);
+        @include flex-shrink(2);
       }
 
       &__group-right {
-        @include flex-shrink(0);
+        @include flex-shrink(1);
       }
 
       &__course-name {
@@ -102,6 +102,7 @@
     &__group {
       display: inline-block;
       padding: 0 $header-group-separation/2;
+      @include flex-shrink(0);
 
       @media(max-width: $screen-sm-max) {
         display: none;
@@ -110,7 +111,20 @@
       &.a--slide-menu {
         @media(max-width: $screen-sm-max) {
           display: inline-block;
+        }
+      }
 
+      ul {
+        @include display(flex);
+        @include align-items(center);
+      }
+
+      &:first-child {
+        @include flex-shrink(1);
+
+        ul {
+          @include flex-wrap(wrap);
+          @include justify-content(flex-end);
         }
       }
 

@@ -158,7 +158,7 @@ site_status_msg = get_site_status_msg(course_id)
             append_group.append({
               'link_title': 'Register',
               'link_URL': reverse('course-specific-register', args=[course.id.to_deprecated_string()]),
-              'special_class': 'nav-cta',
+              'special_class': 'a--nav-cta',
               'open_in_new_tab': false
               })
           %>
@@ -167,7 +167,7 @@ site_status_msg = get_site_status_msg(course_id)
             append_group.append({
               'link_title': 'Register',
               'link_URL': '/register',
-              'special_class': 'nav-cta',
+              'special_class': 'a--nav-cta',
               'open_in_new_tab': false
               })
           %>
