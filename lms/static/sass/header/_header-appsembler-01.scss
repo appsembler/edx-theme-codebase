@@ -154,7 +154,7 @@
           }
         }
 
-        &.a--nav-cta a {
+        &.a--nav-cta a, &.a--cta-button a {
           background-color: $navbar-button-bg;
           border: $navbar-button-border;
           display: inline-block;
