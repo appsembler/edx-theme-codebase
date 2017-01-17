@@ -1,11 +1,14 @@
 <%! from django.utils.translation import ugettext as _ %>
-<%! from django.http.response import Http404 %>
 <%inherit file="../main.html" />
 
 <%namespace file='/theme-variables.html' import="get_copyright_content, get_global_settings" />
 
 <%block name="pagetitle">
+  % if get_global_settings().get('page_status', {}).get('copyright', True):
     ${_("Copyright")}
+  % else:
+    ${_("Page Not Found")}
+  % endif
 </%block>
 
 % if get_global_settings().get('page_status', {}).get('copyright', True):
@@ -17,5 +20,8 @@
     % endif
   % endfor
 % else:
-  <% raise Http404 %>
+  <%block name="headextra">
+    <meta name="robots" content="noindex" />
+  </%block>
+  <%include file = '/design-templates/pages/404/_404-block.html' />
 % endif
