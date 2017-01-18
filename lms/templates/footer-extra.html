@@ -1,10 +1,10 @@
 <%page args="theme_folder" />
+<%! from django.contrib.staticfiles.templatetags.staticfiles import static %>
 ## mako
 
 <!-- Include jQuery -->
-##<script src="/static/${theme_folder}/js/jquery-1.11.2.min.js"></script>
-<script src="/static/${theme_folder}/js/jquery.mobile.custom.min.js"></script>
+<script src="${static('js/jquery.mobile.custom.min.js')}"></script>
 <!-- Bootstrap Core JavaScript -->
-<script src="/static/${theme_folder}/js/bootstrap.min.js"></script>
+<script src="${static('js/bootstrap.min.js')}"></script>
 <!-- Custom base JavaScript -->
-<script src="/static/${theme_folder}/js/base.js"></script>
+<script src="${static('js/base.js')}"></script>
