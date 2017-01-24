@@ -77,7 +77,7 @@ site_status_msg = get_site_status_msg(course_id)
   % if user.is_authenticated():
     <%
       user_authenticated = True
-      user_name = user.username
+      user_name = user.profile.name.split(' ', 1)[0]
     %>
     % if get_header_menu_logged_in_extra_items():
       <%
