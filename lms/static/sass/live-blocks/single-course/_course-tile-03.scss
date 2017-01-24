@@ -87,7 +87,9 @@
   }
 }
 
-a--course-tile-03-parent-element {
+.a--course-tile-03-parent-element {
+  position: relative;
+  z-index: 2;
 
   li.courses-listing-item {
     list-style-type: none;

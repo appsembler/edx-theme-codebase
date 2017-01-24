@@ -148,6 +148,8 @@
 .a--course-tile-02-parent-element {
   @include display(flex);
   @include flex-wrap(wrap);
+  position: relative;
+  z-index: 2;
 
   &.courses-listing-narrower {
 
