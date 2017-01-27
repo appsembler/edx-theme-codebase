@@ -123,6 +123,11 @@
 
         ul {
           display: block;
+          visibility: hidden;
+
+          &.a--active {
+            visibility: visible;
+          }
         }
       }
 
@@ -379,7 +384,7 @@
 
 
   .a--slide-menu__container, ul.a--slide-menu__container {
-    position: absolute;
+    position: fixed;
     z-index: 1001;
     width: 100%;
     max-width: 100%;
