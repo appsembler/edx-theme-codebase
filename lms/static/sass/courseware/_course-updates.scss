@@ -1,0 +1,50 @@
+.a--courseware--updates-article {
+  margin: 2.5rem 0;
+  border-bottom: 0.1rem solid rgba($base-text-color, 0.2);
+  padding: 2.5rem 0;
+  @include display(flex);
+  @include align-items(center);
+  @include flex-wrap(wrap);
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  &__header {
+
+  }
+
+  &__date {
+    @include primary-font-bold;
+    font-size: $font-size-base-body;
+    color: $brand-primary-color;
+    margin: 0 3rem 0 0;
+    width: 50%;
+  }
+
+  &__toggle-visibility-button {
+    background: none;
+    border: none;
+    border-bottom: 0.1rem dotted #ccc;
+    border-radius: 0;
+    padding: 0.5rem 0;
+    text-shadow: none;
+    box-shadow: none;
+    margin-left: auto;
+    color: $base-text-color;
+    @include primary-font-bold;
+
+    &:hover, &:focus, &:focus:not(:disabled) {
+      border: none;
+      outline: none;
+      box-shadow: none;
+      @include transition(all 0.3s ease-in-out);
+      color: $brand-primary-color;
+    }
+  }
+
+  &__content {
+    margin: 2rem 0 2.5rem;
+    text-align: justify;
+  }
+}

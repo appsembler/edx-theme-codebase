@@ -11,6 +11,36 @@ h1, h2, h3, h4 {
 	text-align: inherit;
 }
 
+h1 {
+	@include fontVariantInclude($global-font-h1);
+	font-size: $font-size-h1;
+	line-height: $line-height-h1;
+}
+
+h2 {
+	@include fontVariantInclude($global-font-h2);
+	font-size: $font-size-h2;
+	line-height: $line-height-h2;
+}
+
+h3 {
+	@include fontVariantInclude($global-font-h3);
+	font-size: $font-size-h3;
+	line-height: $line-height-h3;
+}
+
+h4 {
+	@include fontVariantInclude($global-font-h4);
+	font-size: $font-size-h4;
+	line-height: $line-height-h4;
+}
+
+p {
+	@include fontVariantInclude($global-font-base-body);
+	font-size: $font-size-base-body;
+	line-height: $line-height-base-body;
+}
+
 a, a:visited {
 	text-decoration: none;
 	color: $brand-primary-color;
