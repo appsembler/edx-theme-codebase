@@ -282,11 +282,12 @@
 
     .a--toggle-pulsar {
 
-      @if $nav-toggle-bar-pulsar-visible {
+      @if ($nav-toggle-bar-pulsar-visible != "False") {
         display: block;
       } @else {
         display: none;
       }
+      margin: $nav-toggle-bar-pulsar-visible;
       position: absolute;
       bottom: -0.5rem;
       right: -0.7rem;
