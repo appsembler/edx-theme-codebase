@@ -36,7 +36,7 @@ from django.core.urlresolvers import reverse
   <section class="a--dashboard-01__discovery bs-container a--container">
     <%include file = "../../${get_dashboard_settings()['discovery-search-template']}" args='search_wrapper_id = "dashboard-search-bar"' />
     <script>
-      $( "#discovery-message" ).append("My courses");
+      $( "#discovery-message" ).append("${_("My Courses")}");
     </script>
   </section>
 % endif
@@ -81,7 +81,7 @@ from django.core.urlresolvers import reverse
       <aside class="a--dashboard-01__main__sidebar">
         % if get_dashboard_settings()['promote_course_catalog']:
         <div class="a--dashboard-01__promote-catalog">
-          <p>${get_dashboard_settings()['promote_course_catalog_text']}</p>
+          <p>${_(get_dashboard_settings()['promote_course_catalog_text'])}</p>
           <a class="a--dashboard-01__promote-catalog__cta" href="${marketing_link('COURSES')}">${_("Find courses now!")}</a>
         </div>
         % endif
