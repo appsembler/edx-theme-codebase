@@ -42,7 +42,7 @@
     @include fontVariantInclude($global-font-h4);
     font-size: $font-size-h4;
     line-height: $line-height-h4;
-    color: rgba($base-text-color, 0.75);
+    color: $base-text-color;
     margin: $font-size-h4 0;
   }
 
