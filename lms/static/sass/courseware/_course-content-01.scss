@@ -286,11 +286,7 @@
 
       .path {
         margin-bottom: 3.2rem;
-        color: rgba($base-text-color, 0.5);
-
-        &:hover, &:focus {
-          color: $base-text-color;
-        }
+        color: rgba($base-text-color, 0.6);
       }
 
       .sequence-nav {
