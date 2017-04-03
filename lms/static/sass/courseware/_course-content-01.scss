@@ -278,6 +278,11 @@
       line-height: $courseware-content-line-height !important;
     }
 
+    .courseware-results-wrapper {
+      display: block !important;
+      width: 100%;
+    }
+
     .course-content {
       padding: 0;
       margin-top: 1.1rem;
