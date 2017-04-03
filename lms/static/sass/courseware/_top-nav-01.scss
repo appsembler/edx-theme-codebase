@@ -48,6 +48,32 @@
     margin: 0;
     @include display(flex);
     @include align-items(center);
+
+    li {
+      list-style-type: none;
+
+      &.right {
+        margin-left: auto;
+      }
+
+      .new-post-btn {
+        display: block;
+        @include primary-font;
+        color: $brand-primary-color;
+        font-size: 1.6rem;
+        padding: 0.8rem 1.5rem;
+        background-color: transparent;
+        border: 0.1rem solid $brand-primary-color;
+        border-radius: 0.5rem;
+        letter-spacing: 0;
+        @include transition(all 0.2s ease-in-out);
+
+        &:hover, &:focus {
+          background-color: $brand-primary-color;
+          color: #fff;
+        }
+      }
+    }
   }
 
   &__item {
