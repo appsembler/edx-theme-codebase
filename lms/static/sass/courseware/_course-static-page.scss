@@ -1,47 +1,50 @@
 .a--course-static-page, .xmodule_display.xmodule_StaticTabModule {
   // overall course content default stylings
 
-  p {
-    @include primary-font;
-    font-size: 1.6rem;
-    line-height: 1.65eem !important;
-  }
-
-  h1, h2, h3 {
+  h1, h2, h3, h4 {
     text-transform: none;
+    letter-spacing: 0;
   }
 
   h1 {
-    text-transform: none;
-    @include primary-font;
-    font-size: 2.4 * $courseware-content-font-size;
+  	@include fontVariantInclude($global-font-h1);
+  	font-size: $font-size-h1;
+  	line-height: $line-height-h1;
     color: $brand-primary-color;
-    letter-spacing: 0;
+    margin: $font-size-h1 0;
   }
 
   h2 {
-    text-transform: none;
-    @include primary-font;
-    font-size: 1.8 * $courseware-content-font-size;
+  	@include fontVariantInclude($global-font-h2);
+  	font-size: $font-size-h2;
+  	line-height: $line-height-h2;
     color: $brand-primary-color;
-    letter-spacing: 0;
+    margin: $font-size-h2 0;
   }
 
   h3 {
-    text-transform: none;
-    @include small-headings-font;
+  	@include fontVariantInclude($global-font-h3);
+  	font-size: $font-size-h3;
+  	line-height: $line-height-h3;
     color: $brand-primary-color;
-    letter-spacing: 0;
+    margin: $font-size-h3 0;
   }
 
   h4 {
-    text-transform: none;
-    @include small-headings-font;
+  	@include fontVariantInclude($global-font-h4);
+  	font-size: $font-size-h4;
+  	line-height: $line-height-h4;
     color: rgba($base-text-color, 0.75);
-    letter-spacing: 0;
+    margin: $font-size-h4 0;
+  }
+
+  p {
+  	@include fontVariantInclude($global-font-base-body);
+  	font-size: $font-size-base-body;
+  	line-height: $line-height-base-body;
   }
 
   ul li, ol li, .xmodule_display.xmodule_CapaModule div.problem p {
-    font-size: $courseware-content-font-size;
+    font-size: $font-size-base-body;
   }
 }
