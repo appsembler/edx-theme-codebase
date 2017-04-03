@@ -57,9 +57,11 @@
       }
 
       .chapter-name {
-        @include fontVariantInclude($global-font-h2);
+        @include fontVariantInclude($global-font-h4);
+      	font-size: $font-size-h4;
+      	line-height: $line-height-h4;
+        margin: 1.2rem 0;
         color: rgba($base-text-color, 0.75);
-        margin: 0;
       }
     }
 
