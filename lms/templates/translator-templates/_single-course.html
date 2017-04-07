@@ -20,8 +20,8 @@ from courseware.courses import get_course_about_section
     'course_organization' : course.display_org_with_default,
     'course_code' : course.display_number_with_default,
     'course_title' : course.display_name_with_default,
-    'course_start_date' : course.start_datetime_text(),
-    'course_end_date' : course.end_datetime_text(),
+    'course_start_date' : course.advertised_start,
+    'course_end_date' : course.end,
     'course_short_description' : course.short_description,
     'course_number' : course.display_number_with_default
   }
