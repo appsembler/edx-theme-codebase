@@ -15,3 +15,20 @@
     }
   }
 }
+
+.a--page-header-main {
+  padding: 0;
+
+  .page-title {
+    font-size: $font-size-base-body*1.6;
+    @include primary-font;
+    margin: 0 0 1rem;
+  }
+
+  .page-subtitle {
+    font-size: $font-size-base-body;
+    @include primary-font-bold;
+    margin: 0;
+    color: darken($brand-primary-color, 20%);
+  }
+}
