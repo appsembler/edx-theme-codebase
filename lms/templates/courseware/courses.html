@@ -49,10 +49,12 @@
             <%static:include path="discovery/${discovery_facet_option_template}" />
         </script>
         <%static:require_module module_name="js/discovery/discovery_factory" class_name="DiscoveryFactory">
-          DiscoveryFactory(
-            ${ dump_js_escaped_json(course_discovery_meanings) | n },
-            getParameterByName('search_query')
-          );
+        DiscoveryFactory(
+          ${course_discovery_meanings | n, dump_js_escaped_json},
+          getParameterByName('search_query'),
+          "${user_language}",
+          "${user_timezone}"
+        );
         </%static:require_module>
       % endif
     % endif
