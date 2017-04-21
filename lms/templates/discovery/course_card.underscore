@@ -21,7 +21,7 @@
         </section>
         <div class="sr">
             <ul>
-                <li><%= org %></li>
+                <li><%= display_org_with_default %></li>
                 <li><%= content.number %></li>
                 <li><%= gettext("Starts") %><time itemprop="startDate" datetime="<%- start %>"><%- start %></time></li>
             </ul>
