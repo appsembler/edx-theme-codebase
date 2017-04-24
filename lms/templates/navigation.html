@@ -92,7 +92,20 @@ site_status_msg = get_site_status_msg(course_id)
         'special_class': '',
         'open_in_new_tab': ''
         })
+    %>
+    % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY') and get_global_settings().get('course-catalogue_enabled', True):
+      <%
+        append_group.append({
+          'link_title': _('Find Courses'),
+          'link_URL': '/courses',
+          'special_class': '',
+          'open_in_new_tab': false
+          })
+      %>
+    % endif
+    <%
       slideout_menu_items.append(append_group)
+      menu_items.append(append_group)
     %>
     % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
       <%
@@ -136,7 +149,7 @@ site_status_msg = get_site_status_msg(course_id)
       <%
         append_group = []
       %>
-      % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+      % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY') and get_global_settings().get('course-catalogue_enabled', True) and get_global_settings().get('enable_course_catalogue_for_non-auth_users', True):
         <%
           append_group.append({
             'link_title': _('Explore courses'),
