@@ -87,7 +87,7 @@ site_status_msg = get_site_status_msg(course_id)
     <%
       append_group = []
       append_group.append({
-        'link_title': 'Dashboard',
+        'link_title': _('Dashboard'),
         'link_URL': reverse('dashboard'),
         'special_class': '',
         'open_in_new_tab': ''
@@ -98,13 +98,13 @@ site_status_msg = get_site_status_msg(course_id)
       <%
         append_group = []
         append_group.append({
-          'link_title': 'Profile',
+          'link_title': _('Profile'),
           'link_URL': reverse('learner_profile', kwargs={'username': user.username}),
           'special_class': '',
           'open_in_new_tab': false
           })
         append_group.append({
-          'link_title': 'Account',
+          'link_title': _('Account'),
           'link_URL': reverse('account_settings'),
           'special_class': '',
           'open_in_new_tab': false
@@ -112,7 +112,7 @@ site_status_msg = get_site_status_msg(course_id)
         slideout_menu_items.append(append_group)
         append_group = []
         append_group.append({
-          'link_title': 'Sign Out',
+          'link_title': _('Sign Out'),
           'link_URL': reverse('logout'),
           'special_class': '',
           'open_in_new_tab': false
@@ -139,7 +139,7 @@ site_status_msg = get_site_status_msg(course_id)
       % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
         <%
           append_group.append({
-            'link_title': 'Explore courses',
+            'link_title': _('Explore courses'),
             'link_URL': '/courses',
             'special_class': '',
             'open_in_new_tab': false
@@ -150,7 +150,7 @@ site_status_msg = get_site_status_msg(course_id)
         % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
           <%
             append_group.append({
-              'link_title': 'Register',
+              'link_title': _('Register'),
               'link_URL': reverse('course-specific-register', args=[course.id.to_deprecated_string()]),
               'special_class': 'a--nav-cta',
               'open_in_new_tab': false
@@ -159,7 +159,7 @@ site_status_msg = get_site_status_msg(course_id)
         % else:
           <%
             append_group.append({
-              'link_title': 'Register',
+              'link_title': _('Register'),
               'link_URL': '/register',
               'special_class': 'a--nav-cta',
               'open_in_new_tab': false
@@ -175,7 +175,7 @@ site_status_msg = get_site_status_msg(course_id)
       % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
         <%
           append_group.append({
-            'link_title': 'Sign in',
+            'link_title': _('Sign in'),
             'link_URL': reverse('course-specific-login', args=[course.id.to_deprecated_string()]),
             'special_class': '',
             'open_in_new_tab': false
@@ -184,7 +184,7 @@ site_status_msg = get_site_status_msg(course_id)
       % else:
         <%
           append_group.append({
-            'link_title': 'Sign in',
+            'link_title': _('Sign in'),
             'link_URL': '/login',
             'special_class': '',
             'open_in_new_tab': false
