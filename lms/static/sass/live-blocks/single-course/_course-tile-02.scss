@@ -38,6 +38,7 @@
 
           &__title {
             font-size: 3.2rem;
+            line-height: 110%;
             @include fontVariantInclude($global-font-h1);
           }
         }
@@ -129,6 +130,7 @@
   &__title {
     @include fontVariantInclude($global-font-h1);
     font-size: 2rem;
+    line-height: 110%;
     margin: 0 0 1.5rem;
     padding-bottom: 1.5rem;
     color: $brand-primary-color;
