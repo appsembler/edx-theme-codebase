@@ -53,7 +53,7 @@ from django.utils.translation import ugettext as _
           <ul class="a--slide-menu__container" id="slide-menu">
             <% first_slideout_item = True %>
             % for menu_group in slideout_menu_items:
-              % if menu_group[0]['link_title']:
+              % if menu_group and menu_group[0]['link_title']:
                 % if not first_slideout_item:
                   <li class="a--spacer"></li>
                 % endif
