@@ -29,14 +29,14 @@
         <script type="text/template" id="${template_name}-tpl">
             <%static:include path="student_account/${template_name}.underscore" />
         </script>
-  % endif
+    % endfor
   <script type="text/template" id="login-tpl">
       <%static:include path="student_account/login-no-register.underscore" />
   </script>
   <script type="text/template" id="register-tpl">
       <%static:include path="student_account/a--register-disabled.underscore" />
   </script>
-% endfor
+  % endif
 </%block>
 
 <div class="section-bkg-wrapper">
