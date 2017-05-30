@@ -51,11 +51,11 @@
       &__group-left {
         @include display(flex);
         @include align-items(center);
-        @include flex-shrink(2);
+        @include flex-shrink(1);
       }
 
       &__group-right {
-        @include flex-shrink(1);
+        @include flex-shrink(0);
       }
 
       &__course-name {
