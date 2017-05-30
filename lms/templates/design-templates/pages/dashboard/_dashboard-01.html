@@ -5,7 +5,7 @@ from django.core.urlresolvers import reverse
 
 <%page args="course_enrollments, template_settings" />
 
-<%namespace file='/theme-variables.html' import="get_dashboard_settings" />
+<%namespace file='/theme-variables.html' import="get_global_settings, get_dashboard_settings" />
 
 <%
   if get_dashboard_settings()['promote_course_catalog']:
@@ -79,7 +79,7 @@ from django.core.urlresolvers import reverse
     </div>
     % if dashboard_sidebar_enabled:
       <aside class="a--dashboard-01__main__sidebar">
-        % if get_dashboard_settings()['promote_course_catalog']:
+        % if get_dashboard_settings()['promote_course_catalog'] and get_global_settings().get('course-catalogue_enabled', True):
         <div class="a--dashboard-01__promote-catalog">
           <p>${_(get_dashboard_settings()['promote_course_catalog_text'])}</p>
           <a class="a--dashboard-01__promote-catalog__cta" href="${marketing_link('COURSES')}">${_("Find courses now!")}</a>
