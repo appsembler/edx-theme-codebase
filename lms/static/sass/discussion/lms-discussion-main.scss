@@ -1,0 +1,5 @@
+// Appsembler-specific-overrides
+$em-base: 10px; // set the base rem sizing
+
+// Import the original styles from edx-platform.
+@import 'lms/static/sass/discussion/lms-discussion-main';

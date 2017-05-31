@@ -73,6 +73,9 @@
 @import "courseware/course-static-page";
 @import "courseware/bookmarks";
 
+// Import discussions overrides
+@import "discussion/appsembler-discussion-overrides";
+
 // Import page specific templates sass
 @import "pages/404";
 @import "pages/course-about-01";
