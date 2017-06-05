@@ -1,6 +1,7 @@
 <%page expression_filter="h"/>
 <%inherit file="/main.html" />
 <%namespace name='static' file='/static_content.html'/>
+<%namespace file='/theme-variables.html' import="get_global_settings" />
 <%def name="online_help_token()"><% return "courseware" %></%def>
 <%!
 from django.utils.translation import ugettext as _
@@ -106,8 +107,15 @@ ${HTML(fragment.foot_html())}
   <%include file="/courseware/course_navigation.html" args="active_page='courseware'" />
 % endif
 
+<%
+  if get_global_settings().get('small_screen_optimized_courseware', False):
+    courseware_wrapper_classes = 'a--courseware-wrapper a--small-screen-optimized-courseware'
+  else:
+    courseware_wrapper_classes = 'a--courseware-wrapper'
+  endif
+%>
 
-<section class="a--courseware-wrapper">
+<section class="${courseware_wrapper_classes}">
   <div class="a--courseware-wrapper__content bs-container a--container a--course-content">
     <section class="a--courseware-wrapper__content__side-navigation a--course-content__nav toggle-on-mobile">
       <span class="a--course-content__nav__mobile-toggle show-nav">
@@ -152,6 +160,9 @@ ${HTML(fragment.foot_html())}
         Hide course content navigation
       </span>
     </section>
+    % if get_global_settings().get('small_screen_optimized_courseware', False):
+      <button id="course-side-nav-small-screen-toggle" class="a--course-content__nav__small-screen-toggle"><span class="show"><i class="fa fa-angle-double-down"></i>Course content navigation</span><span class="hide"><i class="fa fa-angle-double-up"></i>Hide</span></button>
+    % endif
     <section class="a--courseware-wrapper__content__main-content a--course-content__main-content">
       <div class="course-content" id="course-content">
         <main id="main" aria-label="Content" tabindex="-1">

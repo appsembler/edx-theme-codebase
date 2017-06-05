@@ -49,10 +49,18 @@ from openedx.core.djangolib.markup import HTML, Text
 
 <%block name="bodyclass">view-in-course view-course-info ${course.css_class or ''}</%block>
 
+<%
+  if get_global_settings().get('small_screen_optimized_courseware', False):
+    courseware_wrapper_classes = 'a--courseware-wrapper a--small-screen-optimized-courseware'
+  else:
+    courseware_wrapper_classes = 'a--courseware-wrapper'
+  endif
+%>
+
 <main id="main" aria-label="Content" tabindex="-1">
-    <div class="a--courseware-wrapper">
+    <div class="${courseware_wrapper_classes}">
       % if get_global_settings().get('enable_big_header_on_course_info', True):
-        <div class="a--courseware-wrapper__content bs-container a--container">
+        <div class="a--courseware-wrapper__content a--course-info__welcome-header bs-container a--container">
           <div class="page-header-main">
               <h1 class="page-title">${_("Welcome to {org}'s {course_name}!").format(org=course.display_org_with_default, course_name=course.display_number_with_default)}</h1>
               <h2 class="page-subtitle">${course.display_name_with_default}</h2>

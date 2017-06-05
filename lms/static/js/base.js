@@ -59,6 +59,11 @@ $(document).ready(function(){
     $("#discovery-expanding-area").slideToggle();
 	})
 
+	$("button#course-side-nav-small-screen-toggle").click(function() {
+		$(this).siblings(".a--courseware-wrapper__content__side-navigation").toggleClass("in-view");
+		$(this).toggleClass("toggled");
+	})
+
 	// YouTube control
 	var tag = document.createElement('script');
 	tag.src = "//www.youtube.com/player_api";
@@ -128,4 +133,9 @@ function toggleCoursewareNavChevrons() {
 	if ($('#courseware-top-nav-container').width() < childrenTotalWidth) {
 		$('#courseware-top-nav-chevron').addClass("visible");
 	}
+}
+
+// Courseware small screen optimization related
+function coursewareScrollToContent() {
+  $("html, body").animate({ scrollTop: $("#content").offset().top });
 }
