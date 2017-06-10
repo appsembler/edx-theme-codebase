@@ -65,9 +65,9 @@ from django.core.urlresolvers import reverse
           </ul>
         % else:
           <div class="a--dashboard-01__main__no-enrollments__container">
-            <p>${_("Looks like you haven't enrolled in any courses yet.")}</p>
+            <p>${_("You are not enrolled in any courses yet.")}</p>
             % if get_dashboard_settings()['promote_course_catalog']:
-              <a class="a--dashboard-01__main__no-enrollments__cta" href="${marketing_link('COURSES')}">${_("Find courses now!")}</a>
+              <a class="a--dashboard-01__main__no-enrollments__cta" href="${marketing_link('COURSES')}">${_("Find Courses")}!</a>
             % endif
           </div>
         % endif
@@ -82,7 +82,7 @@ from django.core.urlresolvers import reverse
         % if get_dashboard_settings()['promote_course_catalog'] and get_global_settings().get('course-catalogue_enabled', True):
         <div class="a--dashboard-01__promote-catalog">
           <p>${_(get_dashboard_settings()['promote_course_catalog_text'])}</p>
-          <a class="a--dashboard-01__promote-catalog__cta" href="${marketing_link('COURSES')}">${_("Find courses now!")}</a>
+          <a class="a--dashboard-01__promote-catalog__cta" href="${marketing_link('COURSES')}">${_("Find Courses")}!</a>
         </div>
         % endif
       </aside>
