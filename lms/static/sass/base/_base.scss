@@ -168,10 +168,19 @@ span.a--underlined {
 
 	.content-wrapper {
 		@include flex-grow(1);
-		max-width: 1280px;
 	}
 
 	.a--footer {
 		@include flex-grow(0);
+	}
+}
+
+body.discussion {
+
+	.window-wrap {
+
+		.content-wrapper {
+			max-width: 1280px;
+		}
 	}
 }
