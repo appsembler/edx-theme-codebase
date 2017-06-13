@@ -18,7 +18,7 @@
 </%block>
 
 <%block name="header_extras">
-  % if get_global_settings()['enable_registration_button']:
+  % if get_global_settings()['enable_registration_form']:
     % for template_name in ["account", "access", "form_field", "login", "register", "institution_login", "institution_register", "password_reset", "hinted_login"]:
         <script type="text/template" id="${template_name}-tpl">
             <%static:include path="student_account/${template_name}.underscore" />
