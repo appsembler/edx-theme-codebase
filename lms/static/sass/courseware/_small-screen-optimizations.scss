@@ -1,4 +1,14 @@
-@media (min-width: $screen-md-min) {
+.a--courseware-wrapper {
+
+  .a--course-content {
+
+    &__nav__small-screen-toggle {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $screen-md-min) and (max-width: 1400px) {
   .a--small-screen-optimized-courseware {
 
     &.a--courseware-top-nav {
@@ -50,6 +60,7 @@
       .a--course-content {
 
         &__nav__small-screen-toggle {
+          display: block;
           width: 32rem;
           text-align: center;
           @include transition(all 0.3s ease-in-out);
