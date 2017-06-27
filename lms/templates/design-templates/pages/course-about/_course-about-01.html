@@ -1,3 +1,5 @@
+<%namespace name='static' file='/static_content.html'/>
+
 <%!
 from django.utils.translation import ugettext as _
 %>
@@ -115,7 +117,7 @@ from django.utils.translation import ugettext as _
 
       <li><i class="fa fa-info-circle"></i><p>${_("Course Number")}</p><span>${course_vars['course_number']}</span></li>
       % if course_vars['course_display_start_date']:
-        <li><i class="fa fa-calendar"></i><p>${_("Classes Start")}</p><span>${course_vars['course_start_date']}</span></li>
+        <li><i class="fa fa-calendar"></i><p>${_("Classes Start")}</p><span class="localized_datetime" data-format="shortDate" data-datetime="${course_vars['course_start_date']}"></span></li>
       % endif
       % if course_vars['course_end_date']:
         <li><i class="fa fa-calendar"></i><p>${_("Classes End")}</p><span>${course_vars['course_end_date']}</span></li>
@@ -132,3 +134,7 @@ from django.utils.translation import ugettext as _
     </div>
   </div>
 </section>
+
+<%static:require_module_async module_name="js/dateutil_factory" class_name="DateUtilFactory">
+    DateUtilFactory.transform(iterationKey=".localized_datetime");
+</%static:require_module_async>

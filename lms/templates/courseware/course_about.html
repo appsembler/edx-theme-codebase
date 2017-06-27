@@ -180,8 +180,19 @@ from openedx.core.lib.courses import course_image_url
   course_about_vars['course_price'] = course_price
   course_about_vars['course_effort'] = get_course_about_section(request, course, "effort")
   course_about_vars['course_display_start_date'] = not course.start_date_is_still_default
-  course_about_vars['course_start_date'] = course.advertised_start
   course_about_vars['course_end_date'] = course.end
+
+  if course.advertised_start is not None:
+    course_start_string = course.advertised_start
+  else:
+    if course.start is not None:
+      course_start_string = course.start.strftime('%Y-%m-%dT%H:%M:%S%z')
+    else:
+      course_start_string = ''
+    endif
+  endif
+
+  course_about_vars['course_start_date'] = course_start_string
 %>
 
 % for element in get_course_about_content():
