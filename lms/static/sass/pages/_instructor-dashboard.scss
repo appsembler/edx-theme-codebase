@@ -1,0 +1,23 @@
+.instructor-dashboard-wrapper-2 {
+
+  h1.hd-1 {
+
+  }
+
+  h2.hd-2 {
+    margin: 0.75rem 0;
+  }
+
+  h3.hd-3 {
+    margin: 1rem 0;
+  }
+
+  table {
+    width: 100%;
+    max-width: 64rem;
+
+    &>caption {
+      margin: 1rem 0;
+    }
+  }
+}
