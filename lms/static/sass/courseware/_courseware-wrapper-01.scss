@@ -17,6 +17,8 @@
 
     &__sidebar {
       min-width: 28rem;
+      max-width: 36rem;
+      width: 100%;
       @include flex-shrink(0);
       border-left: 0.1rem solid #ddd;
       padding-left: 3rem;
