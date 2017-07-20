@@ -12,9 +12,9 @@
       text-align: center;
       display: block;
       padding: 1.5rem 1rem;
-      background-color: #eee;
+      background-color: $cta-button-bg;
       border-radius: 4rem;
-      color: rgba($base-text-color, 0.7);
+      color: pick-visible-color($cta-button-bg, $base-text-color, #fff);
       margin: 1.5rem 0;
       width: 100%;
 
@@ -566,5 +566,11 @@
       	line-height: $line-height-base-body;
       }
     }
+  }
+
+  .course-content .bookmark-button-wrapper {
+    float: right;
+    margin-left: 3rem;
+    margin-bottom: 3rem;
   }
 }

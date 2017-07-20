@@ -235,4 +235,13 @@ ${HTML(fragment.foot_html())}
   % endif
 </nav>
 
+%if get_global_settings().get('small_screen_optimized_courseware', False):
+    <script>
+      $(document).ready(function(){
+        // execute css on-load animations
+        $('.a--site-nav__logo').addClass("in-courseware-reduced-height");
+      });
+    </script>
+%endif
+
 <%include file="../modal/accessible_confirm.html" />

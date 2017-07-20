@@ -24,6 +24,11 @@
 
       &__logo {
         height: $header-logo-height;
+        @include transition(all 0.3s ease-in-out);
+
+        &.in-courseware-reduced-height {
+          height: $header-logo-height*2/3;
+        }
 
         // IE fix hack
         @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {

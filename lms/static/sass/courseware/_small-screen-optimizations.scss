@@ -60,7 +60,7 @@
           left: 0;
           background: none;
           background-color: $cta-button-bg;
-          color: $cta-button-text-color;
+          color: pick-visible-color($cta-button-bg, $base-text-color, #fff);
           text-shadow: none;
           border-bottom-left-radius: $buttons-border-radius;
           border-bottom-right-radius: $buttons-border-radius;
@@ -131,5 +131,11 @@
         display: none;
       }
     }
+  }
+}
+
+@media (max-width: $screen-sm-max) {
+  .a--course-content__nav__small-screen-toggle {
+    display: none;
   }
 }
