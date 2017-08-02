@@ -160,9 +160,6 @@ ${HTML(fragment.foot_html())}
         Hide course content navigation
       </span>
     </section>
-    % if get_global_settings().get('small_screen_optimized_courseware', False):
-      <button id="course-side-nav-small-screen-toggle" class="a--course-content__nav__small-screen-toggle"><span class="show"><i class="fa fa-angle-double-down"></i>Course content navigation</span><span class="hide"><i class="fa fa-angle-double-up"></i>Hide</span></button>
-    % endif
     <section class="a--courseware-wrapper__content__main-content a--course-content__main-content">
       <div class="course-content" id="course-content">
         <main id="main" aria-label="Content" tabindex="-1">

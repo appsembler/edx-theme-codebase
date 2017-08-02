@@ -222,6 +222,7 @@
 
             .chapter-menu {
               display: block;
+              overflow: visible;
             }
           }
 
@@ -239,10 +240,25 @@
             }
 
             &.active {
+              position: relative;
+
+              &:after {
+                content: "";
+                background-color: $cta-button-bg;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: -2.5rem;
+                width: 0.3rem;
+              }
 
               a {
                 @include primary-font-bold;
                 color: $brand-primary-color;
+
+                p {
+                  @include primary-font-bold;
+                }
               }
             }
 
