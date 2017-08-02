@@ -163,14 +163,14 @@
   }
 
   &__courseware-btn {
-    background-color: $navbar-button-bg;
+    background-color: $cta-button-bg;
     border: $navbar-button-border;
     display: inline-block;
     padding: 1.5rem 2rem;
     font-size: 1.6rem;
     margin: 1rem 2rem 1rem 0;
     @include fontVariantInclude($global-font-cta-buttons);
-    color: #fff;
+    color: pick-visible-color($cta-button-bg, $base-text-color, #fff);
     @include button_radius;
     @include button_splash($buttons-border-radius);
 
@@ -179,7 +179,7 @@
     }
 
     &:hover, &:focus {
-      color: rgba(#fff, 0.8);
+      color: rgba(pick-visible-color($cta-button-bg, $base-text-color, #fff), 0.8);
     }
   }
 

@@ -80,7 +80,7 @@
       padding: 1.5rem 2rem;
       margin: 0.5rem 0 0;
       @include fontVariantInclude($global-font-cta-buttons);
-      color: $cta-button-text-color;
+      color: pick-visible-color($cta-button-bg, $base-text-color, #fff);
       @include button_radius;
       @include button_splash($buttons-border-radius);
 

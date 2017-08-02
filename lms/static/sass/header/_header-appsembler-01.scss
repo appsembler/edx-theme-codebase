@@ -182,12 +182,12 @@
           display: inline-block;
           padding: 1.5rem 2rem;
           @include fontVariantInclude($global-font-cta-buttons);
-          color: $cta-button-text-color;
+          color: pick-visible-color($navbar-button-bg, $base-text-color, #fff);
           @include button_radius;
           @include button_splash($buttons-border-radius);
 
           &:hover, &:focus {
-            color: rgba(#fff, 0.8);
+            color: rgba(pick-visible-color($navbar-button-bg, $base-text-color, #fff), 0.8);
           }
 
           &:after {
