@@ -1,6 +1,7 @@
 .a--discovery-facets {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+  position: initial;
 
   &__heading {
     @include primary-font-bold;
