@@ -1,5 +1,12 @@
 .a--course-info {
 
+  h3.big-section-title {
+    @include primary-font;
+    font-size: 2.4rem;
+    color: rgba($base-text-color, 0.75);
+    margin: 0 0 2.5rem;
+  }
+
   &__main-title {
     @include fontVariantInclude($global-font-h1);
     font-size: 3.2rem;
@@ -13,6 +20,10 @@
     li {
       list-style-type: none;
     }
+  }
+
+  li h2 {
+    margin: 2rem 0;
   }
 }
 
@@ -30,5 +41,24 @@
     @include primary-font-bold;
     margin: 0;
     color: darken($brand-primary-color, 20%);
+  }
+}
+
+.a--last-accessed-wrapper {
+  @include display(flex);
+  @include align-items(center);
+  margin-left: auto;
+
+  .last-accessed-link {
+    background-color: $cta-button-bg;
+    color: pick-visible-color($cta-button-bg, $base-text-color, #fff);
+    border: $cta-button-border;
+    display: inline-block;
+    padding: 1.5rem 2rem;
+    font-size: 1.4rem;
+    margin: 0 0 0 2rem;
+    @include fontVariantInclude($global-font-cta-buttons);
+    @include button_radius;
+    @include button_splash($buttons-border-radius);
   }
 }

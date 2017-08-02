@@ -1,0 +1,36 @@
+.a--courseware-wrapper__content__sidebar {
+
+  .course-dates-container {
+    margin-bottom: 3.5rem;
+  }
+
+  .date-summary-container {
+    margin: 0.1rem 0;
+
+    .date-summary {
+
+      h3.heading {
+        margin: 0;
+        font-size: 1.4rem;
+      }
+
+      h4.date {
+        margin: 0.5rem 0 0;
+        font-size: 1.2rem;
+      }
+
+      p.description {
+        font-style: italic;
+        margin-top: 1.5rem;
+      }
+    }
+
+    .date-summary-todays-date {
+
+      h3.heading {
+        @include primary-font-bold;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
