@@ -2,6 +2,7 @@
 <%inherit file="../main.html" />
 <%def name="online_help_token()"><% return "courseinfo" %></%def>
 <%namespace name='static' file='../static_content.html'/>
+<%namespace file='/theme-variables.html' import="get_global_settings" />
 <%!
 from datetime import datetime
 from pytz import timezone, utc
@@ -51,17 +52,19 @@ from openedx.core.djangolib.markup import HTML, Text
 
 <main id="main" aria-label="Content" tabindex="-1">
     <div class="a--courseware-wrapper">
-      <div class="a--courseware-wrapper__content bs-container a--container">
-        <div class="a--page-header-main">
-            <h1 class="page-title">${_("Welcome to {org}'s {course_name}!").format(org=course.display_org_with_default, course_name=course.display_number_with_default)}</h1>
-            <h2 class="page-subtitle">${course.display_name_with_default}</h2>
-        </div>
-        % if last_accessed_courseware_url:
-          <div class="a--last-accessed-wrapper">
-              <a href="${last_accessed_courseware_url}" class="last-accessed-link">${_("Resume Course")}</a>
+      %if get_global_settings().get('ficus_course_info_header_enabled', True):
+        <div class="a--courseware-wrapper__content bs-container a--container">
+          <div class="a--page-header-main">
+              <h1 class="page-title">${_("Welcome to {org}'s {course_name}!").format(org=course.display_org_with_default, course_name=course.display_number_with_default)}</h1>
+              <h2 class="page-subtitle">${course.display_name_with_default}</h2>
           </div>
-        % endif
-      </div>
+          % if last_accessed_courseware_url:
+            <div class="a--last-accessed-wrapper">
+                <a href="${last_accessed_courseware_url}" class="last-accessed-link">${_("Resume Course")}</a>
+            </div>
+          % endif
+        </div>
+      %endif
       <div class="a--courseware-wrapper__content bs-container a--container a--course-updates">
         % if user.is_authenticated():
         <section class="updates a--courseware-wrapper__content__main-content a--course-info">
