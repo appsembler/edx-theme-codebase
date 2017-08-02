@@ -19,6 +19,13 @@ from django.utils.http import urlquote_plus
 
 <%block name="pagetitle">${_("{course_number} Progress").format(course_number=course.display_number_with_default) | h}</%block>
 
+<%
+  ## This snippet takes care of an isue where graph gets squieshed if there are long labels
+  for index, elem in enumerate(grade_summary['section_breakdown']):
+    short_label = (grade_summary['section_breakdown'][index]['label'][:22] + '..') if len(grade_summary['section_breakdown'][index]['label']) > 22 else grade_summary['section_breakdown'][index]['label']
+    grade_summary['section_breakdown'][index]['label'] = short_label
+%>
+
 <%block name="js_extra">
 <script type="text/javascript" src="${static.url('js/vendor/flot/jquery.flot.js') | h}"></script>
 <script type="text/javascript" src="${static.url('js/vendor/flot/jquery.flot.stack.js') | h}"></script>
