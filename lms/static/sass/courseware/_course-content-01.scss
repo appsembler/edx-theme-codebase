@@ -608,10 +608,39 @@
       	font-size: $font-size-base-body;
       	line-height: $line-height-base-body;
       }
+
+      a {
+        position: relative;
+
+        &:after {
+          position: absolute;
+          z-index: 2;
+          content: "";
+          bottom: -0.2rem;
+          height: 0.2rem;
+          left: 0;
+          width: 0;
+          background-color: $brand-primary-color;
+          @include transition(all 0.2s ease-in-out);
+        }
+
+        &:hover, &:focus {
+
+          &:after {
+            width: 100%;
+          }
+        }
+      }
     }
   }
 }
 
+// some edx-specific overrides
+
 .xmodule_display.xmodule_SequenceModule .sequence-nav-button {
   padding: 0;
+}
+
+.course-content .bookmark-button-wrapper {
+  margin-bottom: 0;
 }
