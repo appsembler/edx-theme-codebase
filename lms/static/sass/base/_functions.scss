@@ -86,12 +86,10 @@
   @return 0 $primary-offset $blur $color;
 }
 
-/*
- * Calculates the sRGB luma of a colour.
- *
- * Math nicked from a great Thoughtbot article by Reda Lemeden:
- * http://robots.thoughtbot.com/closer-look-color-lightness
- */
+
+/// Calculates the sRGB luma of a colour.
+/// Math nicked from a great Thoughtbot article by Reda Lemeden:
+/// http://robots.thoughtbot.com/closer-look-color-lightness
 
 @function luma($c) {
   $-local-red: red(rgba($c, 1.0));
