@@ -53,6 +53,7 @@
         @include align-items(center);
         @include flex-shrink(2);
         margin: 0;
+        letter-spacing: inherit;
       }
 
       &__group-right {
