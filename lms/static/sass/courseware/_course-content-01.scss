@@ -618,6 +618,14 @@
         &:hover, &:focus {
           border-bottom: 0.1rem solid $brand-primary-color;
         }
+
+        &.loupe {
+          border-bottom: none;
+
+          &:hover, &:focus {
+            border-bottom: none;
+          }
+        }
       }
     }
   }
