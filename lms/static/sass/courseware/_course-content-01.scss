@@ -611,24 +611,12 @@
 
       a {
         position: relative;
-
-        &:after {
-          position: absolute;
-          z-index: 2;
-          content: "";
-          bottom: -0.2rem;
-          height: 0.2rem;
-          left: 0;
-          width: 0;
-          background-color: $brand-primary-color;
-          @include transition(all 0.2s ease-in-out);
-        }
+        display: inline;
+        border-bottom: 0rem solid rgba($brand-primary-color, 0);
+        @include transition(all 0.2s ease-in-out);
 
         &:hover, &:focus {
-
-          &:after {
-            width: 100%;
-          }
+          border-bottom: 0.1rem solid $brand-primary-color;
         }
       }
     }
