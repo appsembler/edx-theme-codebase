@@ -55,8 +55,9 @@ from openedx.core.djangolib.markup import HTML, Text
       %if get_global_settings().get('ficus_course_info_header_enabled', True):
         <div class="a--courseware-wrapper__content bs-container a--container">
           <div class="a--page-header-main">
-              <h1 class="page-title">${_("Welcome to {org}'s {course_name}!").format(org=course.display_org_with_default, course_name=course.display_number_with_default)}</h1>
-              <h2 class="page-subtitle">${course.display_name_with_default}</h2>
+            <h3 class="page-title">${_("Welcome to {org}'s {course_name}!").format(org=course.display_org_with_default, course_name=course.display_number_with_default)}
+              <div class="page-subtitle">${course.display_name_with_default}</div>
+            </h3>
           </div>
           % if last_accessed_courseware_url:
             <div class="a--last-accessed-wrapper">
