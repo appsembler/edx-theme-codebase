@@ -52,6 +52,7 @@
         @include display(flex);
         @include align-items(center);
         @include flex-shrink(2);
+        margin: 0;
       }
 
       &__group-right {
