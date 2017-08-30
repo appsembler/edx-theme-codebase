@@ -28,6 +28,7 @@
     background-position: center center;
     opacity: 1;
     position: relative;
+    overflow: hidden;
 
     &:hover, &:focus {
       opacity: 0.8;
@@ -56,6 +57,39 @@
       display: block;
       width: 100%;
       text-align: center;
+    }
+
+    .certificate-enrollment-label {
+      padding: 1rem 4rem;
+      font-size: 1.2rem;
+      @include display(flex);
+      @include align-items(center);
+      @include justify-content(center);
+      position: absolute;
+      bottom: 5rem;
+      left: -3rem;
+      right: -3rem;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      @include transform(rotate(-10deg))
+      background-color: $brand-primary-color;
+      color: pick-visible-color($brand-primary-color, #fff, $base-text-color);
+      text-align: center;
+
+      .certificate-icon {
+        font-size: 1.4rem;
+        padding: 0.2rem 1rem 0.2rem 0;
+        margin-right: 1rem;
+        border-right: 0.1rem solid pick-visible-color($brand-primary-color, #fff, $base-text-color);
+      }
+
+      .label {
+        font-size: 1rem;
+        @include primary-font;
+      }
+
+      .value {
+        @include primary-font-bold;
+      }
     }
   }
 
