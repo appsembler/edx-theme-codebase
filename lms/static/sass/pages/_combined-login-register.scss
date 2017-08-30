@@ -49,8 +49,6 @@
     margin: $login-register-single-input-wrapper-margin;
 
     &.checkbox-honor_code, &.checkbox-terms_of_service, &.checkbox-remember {
-      @include display(flex);
-      @include align-items(center);
 
       input {
         margin: 0 1rem 0 0;
@@ -58,6 +56,10 @@
 
       label {
         margin: 0;
+      }
+
+      .supplemental-link {
+        margin: 1rem 0 1rem 2.7rem;
       }
     }
 
