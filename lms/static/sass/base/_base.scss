@@ -43,10 +43,11 @@ h4 {
 	margin: $font-size-h4 0;
 }
 
-p {
+p, ul li {
 	@include fontVariantInclude($global-font-base-body);
 	font-size: $font-size-base-body;
 	line-height: $line-height-base-body;
+	margin: 0.5rem 0;
 }
 
 a, a:visited {
