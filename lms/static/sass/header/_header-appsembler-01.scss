@@ -1,5 +1,9 @@
 .a--header-design-01 {
 
+  ul li {
+    font-size: inherit;
+  }
+
   &.a--site-nav {
     background-color: $header-bg-color;
 
