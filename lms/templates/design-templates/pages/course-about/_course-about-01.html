@@ -116,11 +116,15 @@ from django.utils.translation import ugettext as _
     <ul class="a--course-about-01__info">
 
       <li><i class="fa fa-info-circle"></i><p>${_("Course Number")}</p><span>${course_vars['course_number']}</span></li>
-      % if course_vars['course_display_start_date']:
-        <li><i class="fa fa-calendar"></i><p>${_("Classes Start")}</p><span class="localized_datetime" data-format="shortDate" data-datetime="${course_vars['course_start_date']}"></span></li>
-      % endif
-      % if course_vars['course_end_date']:
-        <li><i class="fa fa-calendar"></i><p>${_("Classes End")}</p><span>${course_vars['course_end_date']}</span></li>
+      % if not course_vars['self_paced']:
+        % if course_vars['course_display_start_date']:
+          <li><i class="fa fa-calendar"></i><p>${_("Classes Start")}</p><span class="localized_datetime" data-format="shortDate" data-datetime="${course_vars['course_start_date']}"></span></li>
+        % endif
+        % if course_vars['course_end_date']:
+          <li><i class="fa fa-calendar"></i><p>${_("Classes End")}</p><span class="localized_datetime" data-format="shortDate" data-datetime="${course_vars['course_end_date']}"></span></li>
+        % endif
+      % else:
+          <li><i class="fa fa-calendar"></i><p>${_("Self-Paced")}</p></li>
       % endif
       % if course_vars['course_effort']:
         <li><i class="fa fa-pencil"></i><p>${_("Estimated Effort")}</p><span>${course_vars['course_effort']}/week</span></li>

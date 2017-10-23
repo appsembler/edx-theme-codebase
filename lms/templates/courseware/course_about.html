@@ -1,4 +1,4 @@
-<%namespace name='static' file='../static_content.html'/>
+<%namespace name='static' file='/static_content.html'/>
 <%!
 from django.utils.translation import ugettext as _
 from django.core.urlresolvers import reverse
@@ -10,7 +10,7 @@ from openedx.core.lib.courses import course_image_url
 
 <%namespace file='/theme-variables.html' import="get_course_about_content" />
 
-<%inherit file="../main.html" />
+<%inherit file="/main.html" />
 <%block name="headextra">
   ## OG (Open Graph) title and description added below to give social media info to display
   ## (https://developers.facebook.com/docs/opengraph/howtos/maximizing-distribution-media-content#tags)
@@ -181,6 +181,7 @@ from openedx.core.lib.courses import course_image_url
   course_about_vars['course_effort'] = get_course_about_section(request, course, "effort")
   course_about_vars['course_display_start_date'] = not course.start_date_is_still_default
   course_about_vars['course_end_date'] = course.end
+  course_about_vars['self_paced'] = course.self_paced
 
   if course.advertised_start is not None:
     course_start_string = course.advertised_start
