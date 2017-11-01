@@ -25,6 +25,15 @@
   li h2 {
     margin: 2rem 0;
   }
+
+  a {
+    text-decoration: underline;
+
+    &:hover, &:focus {
+      text-decoration: underline !important;
+      color: lighten($brand-primary-color, 15%);
+    }
+  }
 }
 
 .a--page-header-main {
