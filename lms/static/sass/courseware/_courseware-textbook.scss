@@ -8,8 +8,8 @@ div.book-wrapper {
   section.book-sidebar {
     border: none;
     background: none;
-    width: 20%;
-    max-width: 15rem;
+    min-width: 16rem;
+    max-width: 22rem;
     padding-right: 3rem;
     margin-right: 3rem;
     border-right: 0.1rem solid #ddd;
@@ -17,6 +17,7 @@ div.book-wrapper {
 
     @media(max-width: $screen-sm-max) {
       width: 100%;
+      max-width: 100%;
       padding-right: 0;
       margin-right: 0;
       border-right: none;
