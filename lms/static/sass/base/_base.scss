@@ -9,6 +9,8 @@ html {
 body {
 	@include fontVariantInclude($global-font-base-body);
 	letter-spacing: 0;
+	@include display(flex);
+	width: 100%;
 }
 
 h1, h2, h3, h4 {
@@ -166,6 +168,7 @@ span.a--underlined {
 	@include display(flex);
 	@include flex-direction(column);
 	min-height: 100vh;
+	width: 100%;
 
 	.a--site-nav {
 		@include flex-grow(0);
