@@ -31,3 +31,7 @@ h2 {
 .window-wrap {
 	min-width: 10rem !important;
 }
+
+input#calculator_input {
+	color: $base-text-color;
+}
