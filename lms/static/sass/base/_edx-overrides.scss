@@ -32,6 +32,6 @@ h2 {
 	min-width: 10rem !important;
 }
 
-input#calculator_input {
+.calc-main #calculator_wrapper form .input-wrapper #calculator_input {
 	color: $base-text-color;
 }
