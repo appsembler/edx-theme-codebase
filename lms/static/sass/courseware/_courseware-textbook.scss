@@ -4,18 +4,19 @@ div.book-wrapper {
   @extend .a--courseware-wrapper;
   @extend .a--courseware-wrapper__content;
   max-width: none;
+  display: block;
 
   section.book-sidebar {
     border: none;
     background: none;
-    min-width: 16rem;
-    max-width: 22rem;
-    padding-right: 3rem;
-    margin-right: 3rem;
+    display: inline-block;
+    width: 20%;
+    padding-right: 2.5%;
+    margin-right: 2.5%;
     border-right: 0.1rem solid #ddd;
-    @include flex-shrink(0);
 
     @media(max-width: $screen-sm-max) {
+      display: block;
       width: 100%;
       max-width: 100%;
       padding-right: 0;
@@ -30,10 +31,15 @@ div.book-wrapper {
   }
 
   .book {
-    width: 100%;
-    @include flex-shrink(1);
+    width: 74%;
+    display: inline-block;
 
     iframe {
+      width: 100%;
+    }
+
+    @media(max-width: $screen-sm-max) {
+      display: block;
       width: 100%;
     }
   }
