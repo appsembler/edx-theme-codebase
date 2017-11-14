@@ -217,6 +217,10 @@
         p {
 
         }
+
+        a {
+          color: darken($brand-accent-color, 20%);
+        }
       }
     }
   }
