@@ -71,6 +71,7 @@
         padding-left: 2rem;
         @include primary-font-light;
         font-size: $header-font-size;
+        line-height: 120%;
         color: rgba($header-text-color, 0.6);
 
         @media (max-width: $screen-sm-max) {
