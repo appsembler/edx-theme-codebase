@@ -35,3 +35,8 @@ h2 {
 .calc-main #calculator_wrapper form .input-wrapper #calculator_input {
 	color: $base-text-color;
 }
+
+// prevent image aspect ratio breaking on window resize in certain cases
+.xmodule_display.xmodule_HtmlModule img {
+	height: auto;
+}
