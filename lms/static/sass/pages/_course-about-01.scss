@@ -188,6 +188,9 @@
     background-color: transparent;
     line-height: 150%;
     display: block;
+    width: 100%;
+    @include flex-grow(1);
+    @include flex-shrink(1);
 
     @media(max-width: $screen-md-min) {
       width: 100%;
@@ -246,6 +249,8 @@
     max-width: 32rem;
     margin-right: 5rem;
     padding: 5rem 0;
+    @include flex-grow(0);
+    @include flex-shrink(0);
 
     @media (max-width: $screen-sm-max) {
       width: 100%;
