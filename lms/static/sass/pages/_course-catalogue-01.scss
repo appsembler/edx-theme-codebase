@@ -5,3 +5,44 @@
     list-style-type: none;
   }
 }
+
+.courses-list-header {
+	padding: 40px 30px;
+	background-color: $footer-bg-color;
+	text-align: left;
+	color: $footer-text-color;
+	border-bottom: 2px solid #D7D7D7;
+	margin-bottom: 20px;
+
+	&__container {
+		padding: 0 30px;
+		@include display(flex);
+		@include align-items(baseline);
+	}
+
+	h2 {
+		font-size: 26px;
+		color: $base-text-color;
+		margin: 10px 0;
+		display: inline-block;
+		@include flex-shrink(0);
+		@include flex-grow(1);
+	}
+
+	&__categories {
+		width: 100%;
+		margin-left: 40px;
+	}
+
+	&__category, &__category:link, &__category:visited {
+		margin: 5px 12px 7px;
+		display: inline-block;
+		font-size: 16px;
+		color: $brand-primary-color;
+
+		&:hover, &:focus {
+			color: darken($brand-primary-color, 10%);
+		}
+	}
+}
+

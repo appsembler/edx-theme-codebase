@@ -2,7 +2,7 @@
 from django.utils.translation import ugettext as _
 %>
 
-<%page args="options, courses, discovery_enabled" />
+<%page args="options, courses, discovery_enabled, use_custom_course_grouping" />
 
 <%namespace name='static' file='/static_content.html'/>
 
@@ -30,14 +30,60 @@ from django.utils.translation import ugettext as _
 
 % else:
 
+  % if use_custom_course_grouping:
+  <!-- Header with categories -->
+  <section class="courses-list-header">
+    <div class="courses-list-header__container container-bs">
+      <h2>Courses</h2>
+      <div class="courses-list-header__categories">
+        % for category in courses.keys():
+        <% cgroupshort = category.replace(" ", "").lower()
+        %>  
+        <a href="#${cgroupshort}" class="courses-list-header__category">${category}</a>
+        % endfor
+      </div>
+    </div>
+  </section>
+  <!-- end of header with categories -->
+  % endif
+
   <section class="a--course-catalogue-01__courses">
     <div class="bs-container a--container courses">
+
+      % if use_custom_course_grouping:
+       % for category in courses.keys():
+        <%
+          cat_courses = courses[category]
+          cgroupshort = category.replace(" ", "").lower()
+        %>
+        <!-- single courses category -->
+        <div id="${cgroupshort}" class="row courses-list__row courses-list__category">
+
+          <!-- single category header with category name -->
+          %if category != 'ungrouped':
+          <div class="col-xs-12 courses-list__category__heading">
+            <h2>${category}</h2>
+          </div>
+          %endif
+          <!-- end of category header -->
+
+          <div class="col-xs-12 a--course-catalogue-01__courses-container courses-listing a--${options['course-card']}-parent-element">
+            %for course in cat_courses:
+              <%include file="/design-templates/live-blocks/single-course/_${options['course-card']}.html" args="course=course" />
+            % endfor
+          </div>
+        </div>
+       % endfor 
+
+      % else:      
       <div class="col-xs-12 a--course-catalogue-01__courses-container courses-listing a--${options['course-card']}-parent-element">
         % for course in courses:
             <%include file="/design-templates/live-blocks/single-course/_${options['course-card']}.html" args="course=course" />
         % endfor
       </div>
     </div>
+    % endif
+
   </section>
 
 % endif

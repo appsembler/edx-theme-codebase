@@ -31,7 +31,7 @@
     % elif (element['element-type'].startswith('static-block')):
       <%include file = '/${element["element-path"]}' args = "template_settings = element['options']" />
     % elif (element['element-type'].startswith('course-catalogue-template')):
-      <%include file = '/${element["element-path"]}' args = "options = element['options'], courses = courses, discovery_enabled = course_discovery_enabled" />
+      <%include file = '/${element["element-path"]}' args = "options = element['options'], courses = courses, discovery_enabled = course_discovery_enabled, use_custom_course_grouping = use_custom_course_grouping" />
       % if (course_discovery_enabled & element['options']['search-enabled']):
         <%
         discovery_card_template = "_" + element['options']['course-card'] + ".underscore"
