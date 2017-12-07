@@ -33,8 +33,8 @@ from django.utils.translation import ugettext as _
   % if use_custom_course_grouping:
   <!-- Header with categories -->
   <section class="courses-list-header">
-    <div class="courses-list-header__container container-bs">
-      <h2>Courses</h2>
+    <div class="courses-list-header__container bs-container a--container">
+      <h2>${_("Courses")}</h2>
       <div class="courses-list-header__categories">
         % for category in courses.keys():
         <% cgroupshort = category.replace(" ", "").lower()
