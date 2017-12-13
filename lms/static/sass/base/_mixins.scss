@@ -149,6 +149,7 @@
   letter-spacing: 0;
 
   &:hover, &:focus, &:hover:not(:disabled), &:focus:not(:disabled) {
+    background: none;
     border: none;
     box-shadow: none;
     text-shadow: none;

@@ -52,8 +52,9 @@
     list-style-type: none;
     padding: $single-facet-padding;
     width: 100%;
+    @include transition(all 0.3s ease-in-out);
 
-    &.selected {
+    &:hover, &:focus, &.selected {
       opacity: $single-facet-selected-opacity;
     }
 
