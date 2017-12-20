@@ -65,6 +65,14 @@ To customize your theme:
 - Play around with the theme-variables.html template and basic-branding.scss files :)
 
 
+How to use on Devstack
+======================
+ 1. Go to your devstacks `themes` directory.
+ 2. Clone this repo: `$ git clone git@github.com:appsembler/edx-theme-codebase.git`
+ 3. Inside the `edx-theme-codebase` directory, clone the customers repo: `$ git clone git@github.com:appsembler/edx-theme-customers customer_specific`
+ 4. 
+
+
 License
 =======
 
