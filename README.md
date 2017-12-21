@@ -78,7 +78,9 @@ How to use on Devstack
    - `"DEFAULT_SITE_THEME": "edx-theme-codebase"`
    - `"ENABLE_COMPREHENSIVE_THEMING": true`
  5. Run `paver lms --settings=devstack_appsembler`
- 6. <TBD> How to run quick Matej's magical fast compile
+ 6. In another shell, use the following command to compile the SASS file:
+   - `$ cd edx-theme-codebase`
+   - `$ sassc lms/static/sass/main.scss lms/static/css/main.css`
 
 License
 =======
