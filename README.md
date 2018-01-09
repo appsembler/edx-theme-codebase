@@ -65,6 +65,23 @@ To customize your theme:
 - Play around with the theme-variables.html template and basic-branding.scss files :)
 
 
+How to use on Devstack
+======================
+ 1. Go to your devstacks `themes` directory.
+ 2. Clone this repo: `$ git clone git@github.com:appsembler/edx-theme-codebase.git`
+ 3. Inside the `edx-theme-codebase` directory, clone the customers repo: `$ git clone git@github.com:appsembler/edx-theme-customers customer_specific`
+ 3. To change to a specific customer's code:
+   - Go to `customer_specific` directory
+   - Checkout the customer's branch `$ git checkout ficus/easycare`
+ 4. Edit your `lms.env.json` and set the following values:
+   - `COMPREHENSIVE_THEME_DIRS: ["/edx/app/edxapp/themes"]`
+   - `"DEFAULT_SITE_THEME": "edx-theme-codebase"`
+   - `"ENABLE_COMPREHENSIVE_THEMING": true`
+ 5. Run `paver lms --settings=devstack_appsembler`
+ 6. In another shell, use the following command to compile the SASS file:
+   - `$ cd edx-theme-codebase`
+   - `$ sassc lms/static/sass/main.scss lms/static/css/main.css`
+
 License
 =======
 
