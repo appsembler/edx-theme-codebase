@@ -192,3 +192,22 @@ body.discussion {
 		}
 	}
 }
+
+a.nav-skip {
+	display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -600px;
+  overflow: hidden;
+  background: #fff;
+  border-bottom: 1px solid #fcfcfc;
+  padding: 15px 10px;
+
+	&:focus {
+		position: relative;
+    top: auto;
+    width: auto;
+    height: auto;
+    margin: 0;
+	}
+}
