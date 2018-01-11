@@ -6,7 +6,6 @@
 <%! from django.utils.translation import ugettext as _ %>
 
 
-
 <%!
   theme_name = "eucalyptus-theme-codebase"
 %>
@@ -485,5 +484,22 @@
 <%def name="get_privacy_content()">
   <%
     return []
+  %>
+</%def>
+
+
+## Diazo theming / old browser degradation 
+## via classes on HTML tag, to be searched for 
+## in Diazo theme rules.xml
+
+<%def name="get_diazo_extra()">
+  <%
+    try:
+        ua_family = request.user_agent.browser.family
+        ua_version = request.user_agent.browser.version
+        ua_deprecated = True if ua_family == 'IE' and ua_version[0] < 11 else False
+        return "diazo-ua-deprecated" if ua_deprecated else ""
+    except:
+        return ""
   %>
 </%def>
