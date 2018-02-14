@@ -135,7 +135,7 @@ from django.core.urlresolvers import reverse
         </ul>
         <footer class="wrapper-messages-primary">
           <ul class="messages-list">
-            % if course_overview.may_certify() and cert_status:
+            % if course_overview.may_certify() and cert_status and cert_status.get('status', None) != 'unavailable':
               <%include file='/dashboard/_dashboard_certificate_information.html' args='cert_status=cert_status,course_overview=course_overview, enrollment=enrollment, reverify_link=reverify_link'/>
             % endif
 
