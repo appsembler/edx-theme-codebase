@@ -2,5 +2,173 @@
 
   .discussion-module {
     margin: 4rem 0;
+    @include display(flex);
+    @include align-items(center);
+    width: 100%;
+    @include flex-wrap(wrap);
+
+    a.discussion-show {
+
+    }
+
+    .new-post-btn {
+      margin: 0 0 0 auto;
+    }
+
+    .discussion {
+      width: 100%;
+      @include flex-shrink(0);
+    }
+
+    .new-post-btn, .add-response-btn {
+      background: none;
+      box-shadow: none;
+      text-shadow: none;
+      line-height: 100%;
+      height: auto;
+      @include primary-font-bold;
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      font-size: $font-size-base-body;
+      background-color: transparent;
+      color: $brand-primary-color;
+      border: 0.2rem solid $brand-primary-color;
+      border-radius: $buttons-border-radius;
+
+      &:hover, &:focus {
+        background-color: $brand-primary-color;
+        color: pick-visible-color($brand-primary-color, #fff, $base-text-color);
+      }
+    }
+
+    .wmd-input {
+      font-size: $font-size-base-body;
+      @include primary-font;
+
+      &:focus {
+        box-shadow: none;
+        border-color: $brand-accent-color;
+      }
+    }
+
+    .wmd-preview-container {
+      margin-top: 1.5rem;
+
+      .wmd-preview-label {
+        font-size: 0.85*$font-size-base-body;
+        opacity: 0.75;
+        display: block;
+        margin-bottom: 1rem;
+      }
+
+      .wmd-preview {
+        padding: 1rem;
+        background-color: rgba(255,255,255, 0.8);
+        border: 0.1rem solid #eee;
+      }
+    }
+
+    .comment-post-control a, .reply-post-control a {
+      @include primary-font-bold;
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      font-size: $font-size-base-body;
+      background-color: transparent;
+      color: $brand-primary-color;
+      border: 0.2rem solid $brand-primary-color;
+      border-radius: $buttons-border-radius;
+
+      &:hover, &:focus {
+        background-color: $brand-primary-color;
+        color: pick-visible-color($brand-primary-color, #fff, $base-text-color);
+      }
+    }
+  }
+
+  .thread-wrapper {
+
+    .thread-responses-wrapper {
+
+      .response-count {
+        font-size: $font-size-base-body*0.85;
+        opacity: 0.7;
+        position: relative;
+        top: -2rem;
+        right: 1rem;
+      }
+
+      .responses {
+        border: 0.2rem solid #dedede;
+        border-radius: 0.5rem;
+        padding: 0;
+        margin: 2rem 0 0;
+
+        li {
+          list-style-type: none;
+        }
+
+        .discussion-response {
+          margin: 2rem;
+
+          .wrapper-response-header {
+            position: relative;
+
+            .response-header-content {
+
+              .username {
+                @include primary-font-bold;
+                color: $brand-primary-color;
+              }
+
+              .posted-details {
+                font-size: $font-size-base-body*0.85;
+                opacity: 0.75;
+              }
+            }
+
+            .response-header-actions {
+              right: 0;
+            }
+          }
+        }
+
+        ol.comments {
+          background-color: #f6f6f6;
+          padding: 2rem 0;
+          margin: 0;
+
+          li {
+
+            .discussion-comment {
+              padding: 2rem;
+              border-top: 0.1rem solid #dedede;
+
+              .posted-details {
+                font-size: 0.85*$font-size-base-body;
+              }
+            }
+
+            &:first-child {
+
+              .discussion-comment {
+                border: none;
+              }
+            }
+
+            &.new-comment {
+              border-top: 0.1rem solid #dedede;
+              padding: 2rem;
+            }
+          }
+        }
+      }
+    }
+
+    .response-pagination .response-display-count {
+      font-size: 0.85*$font-size-base-body;
+      opacity: 0.75;
+    }
   }
 }
