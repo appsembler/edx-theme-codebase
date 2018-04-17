@@ -8,7 +8,7 @@
         <p class="a--course-tile-01__title"><%= content.display_name %></p>
       </div>
       <div>
-        <p class="a--course-tile-01__organization"><%= org %></p>
+        <p class="a--course-tile-01__organization"><%= display_org_with_default %></p>
         <p class="a--course-tile-01__start-date">
           <%= interpolate(
               gettext("Starts: %(start_date)s"),
