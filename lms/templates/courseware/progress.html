@@ -48,7 +48,7 @@ from django.utils.http import urlquote_plus
 
 <section class="a--courseware-wrapper">
   <div class="a--courseware-wrapper__content bs-container a--container a--course-progress">
-    <section class="a--course-progress__section a--course-progress__info" aria-label="${_('Course Progress')}">
+    <section class="a--course-progress__section a--course-progress__info course-info" id="course-info-progress" aria-label="${_('Course Progress')}">
       % if staff_access and studio_url is not None:
         <div class="wrap-instructor-info">
           <a class="instructor-info-action studio-view" href="${studio_url}">${_("View Grading in studio")}</a>
@@ -188,10 +188,10 @@ from django.utils.http import urlquote_plus
                         %endif
                     </p>
                     <div class="chapter-scores">
-                      %if len(section.scores) > 0:
+                      %if len(section.problem_scores.values()) > 0:
                         <h3>${ _("Problem Scores: ") if section.graded else _("Practice Scores: ")}</h3>
                         <ol>
-                          %for score in section.scores:
+                          %for score in section.problem_scores.values():
                           <li>${"{0:.3n}/{1:.3n}".format(float(score.earned),float(score.possible))}</li>
                           %endfor
                         </ol>
