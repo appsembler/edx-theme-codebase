@@ -7,6 +7,8 @@
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
 
+from openedx.core.djangoapps.user_api.accounts.image_helpers import get_profile_image_urls_for_user
+
 from microsite_configuration import microsite
 from lms.djangoapps.ccx.overrides import get_current_ccx
 
@@ -77,6 +79,7 @@ site_status_msg = get_site_status_msg(course_id)
     <%
       user_authenticated = True
       user_name = user.profile.name.split(' ', 1)[0]
+      profile_image_url = get_profile_image_urls_for_user(user)['medium']
     %>
     % if get_header_menu_logged_in_extra_items():
       <%
@@ -211,7 +214,7 @@ site_status_msg = get_site_status_msg(course_id)
     % endif
   % endif
 
-  <%include file = "${get_header_footer_templates()['header_template']}" args="user_authenticated = user_authenticated, user_name = user_name, logo_positive = logo_positive, logo_negative = logo_negative, logo_url = logo_url, display_shopping_cart = display_shopping_cart, shopping_cart_url = shopping_cart_url, display_course_name = display_course_name, course_number = course_number, course_name = course_name, menu_items = menu_items, slideout_menu_items = slideout_menu_items" />
+  <%include file = "${get_header_footer_templates()['header_template']}" args="user_authenticated = user_authenticated, user_name = user_name, logo_positive = logo_positive, logo_negative = logo_negative, logo_url = logo_url, display_shopping_cart = display_shopping_cart, shopping_cart_url = shopping_cart_url, display_course_name = display_course_name, course_number = course_number, course_name = course_name, menu_items = menu_items, slideout_menu_items = slideout_menu_items, profile_image_url = profile_image_url" />
 
 % if course:
 <!--[if lte IE 9]>
