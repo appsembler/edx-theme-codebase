@@ -208,7 +208,17 @@
       }
 
       &.a--user-avatar {
+        @include display(flex);
+        @include align-items(center);
         color: rgba($header-text-color, 0.6);
+
+        .a--user-avatar__image {
+          width: 4.8rem;
+          height: auto;
+          border-radius: 100%;
+          display: block;
+          margin-right: 1.5rem;
+        }
       }
     }
   }
