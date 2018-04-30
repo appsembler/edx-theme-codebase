@@ -1,0 +1,127 @@
+.content-wrapper {
+  width: 100%;
+  max-width: 100%;
+
+  .container {
+    @include container-fixed();
+
+    @media (min-width: $screen-sm-min) {
+      width: $container-sm;
+    }
+    @media (min-width: $screen-md-min) {
+      width: $container-md;
+    }
+    @media (min-width: $screen-lg-min) {
+      width: $container-lg;
+    }
+    @media(min-width: 1440px) {
+  		width: 1280px;
+  	}
+  }
+
+  .course-view.container {
+
+    header.page-header {
+
+      .page-title {
+        font-size: 2.4rem;
+      }
+
+      .field-input.input-text.search-input {
+        width: 18rem;
+        font-size: 1.6rem;
+      }
+
+      .btn.btn-small.search-button {
+        font-size: 1.6rem;
+        border-color: $brand-primary-color;
+        color: $brand-primary-color;
+        border-top-right-radius: $buttons-border-radius;
+        border-bottom-right-radius: $buttons-border-radius;
+      }
+
+      .btn.btn-brand.action-resume-course {
+        font-size: 1.6rem;
+        background-color: $cta-button-bg;
+        color: $cta-button-text-color;
+        border: $cta-button-border;
+        border-radius: $buttons-border-radius;
+      }
+    }
+
+    .page-content {
+
+      .layout-1t2t.layout {
+        width: 100%;
+        max-width: 100%;
+
+        .layout-col-b {
+          margin-left: 0;
+          margin-right: 0;
+        }
+
+        .course-outline {
+          padding: 2rem 0;
+
+          .block-tree {
+
+            .section {
+
+              ol.outline-item {
+                padding-bottom: 0;
+              }
+            }
+
+            .outline-item {
+
+              .section-name {
+
+                h3 {
+                  font-size: $font-size-base-body;
+                  color: lighten($base-text-color, 15%);
+                }
+              }
+
+              .subsection {
+
+                &.current {
+                  border-color: $brand-accent-color;
+                }
+
+                .outline-item {
+
+                  &:hover, &:focus {
+                    background-color: lighten($brand-accent-color, 45%);
+                  }
+
+                  .subsection-text {
+
+                    .subsection-title {
+                      font-size: 1.15*$font-size-base-body;
+                      color: $base-text-color;
+
+                      &:hover, &:focus {
+                        color: $brand-accent-color;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .course-sidebar {
+
+          .hd-6 {
+            font-size: $font-size-base-body;
+          }
+
+          ul li a {
+            font-size: $font-size-base-body;
+          }
+        }
+      }
+    }
+  }
+}
