@@ -40,7 +40,7 @@ site_status_msg = get_site_status_msg(course_id)
 % endif
 </%block>
 
-
+  <% profile_image_url = '' %>
   <% logo_positive = get_brand_logos()['logo_positive'] %>
   <% logo_negative = get_brand_logos()['logo_negative'] %>
   <% logo_url = get_global_settings().get('header_logo_target',marketing_link('ROOT')) %>
