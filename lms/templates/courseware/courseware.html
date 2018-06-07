@@ -1,6 +1,7 @@
 <%page expression_filter="h"/>
 <%inherit file="/main.html" />
 <%namespace name='static' file='/static_content.html'/>
+<%namespace file='/theme-variables.html' import="get_global_settings" />
 <%def name="online_help_token()"><% return "courseware" %></%def>
 <%!
 from django.utils.translation import ugettext as _
@@ -36,11 +37,11 @@ ${static.get_page_title_breadcrumbs(course_name())}
 % endfor
 
 % if settings.FEATURES.get('ENABLE_COURSEWARE_SEARCH'):
-    % for template_name in ["course_search_item", "course_search_results", "search_loading", "search_error"]:
-        <script type="text/template" id="${template_name}-tpl">
-            <%static:include path="search/${template_name}.underscore" />
-        </script>
-    % endfor
+    ## % for template_name in ["course_search_item", "course_search_results", "search_loading", "search_error"]:
+    ##     <script type="text/template" id="${template_name}-tpl">
+    ##         <%static:include path="search/${template_name}.underscore" />
+    ##     </script>
+    ## % endfor
 % endif
 
 % if include_special_exams:
@@ -112,49 +113,49 @@ ${HTML(fragment.foot_html())}
 
 <section class="a--courseware-wrapper">
   <div class="a--courseware-wrapper__content bs-container a--container a--course-content">
-    <section class="a--courseware-wrapper__content__side-navigation a--course-content__nav toggle-on-mobile">
-      <span class="a--course-content__nav__mobile-toggle show-nav">
-        Show course content navigation
-      </span>
+    % if get_global_settings().get('enable_legacy_courseware_nav', True):
+      <section class="a--courseware-wrapper__content__side-navigation a--course-content__nav toggle-on-mobile">
+        <span class="a--course-content__nav__mobile-toggle show-nav">
+          Show course content navigation
+        </span>
 
-      <div class="a--course-content__nav__wrapper" id="course-nav-wrapper">
-        % if disable_accordion is UNDEFINED or not disable_accordion:
+        <div class="a--course-content__nav__wrapper" id="course-nav-wrapper">
 
-          <div class="a--course-content__nav__bookmarks-btn courseware-bookmarks-button" data-bookmarks-api-url="${bookmarks_api_url}">
-            <button type="button" class="bookmarks-list-button is-inactive" aria-pressed="false">
-                ${_('Bookmarks')}
-            </button>
-          </div>
-
-          % if settings.FEATURES.get('ENABLE_COURSEWARE_SEARCH'):
-            <div id="courseware-search-bar" class="search-bar courseware-search-bar" role="search" aria-label="Course">
-              <form>
-                <label for="course-search-input" class="sr">${_('Course Search')}</label>
-                <div class="search-field-wrapper">
-                  <input id="course-search-input" type="text" class="search-field" placeholder="${_('Course Search')}..."/>
-                  <button type="submit" class="search-button"><i class="icon fa fa-search" aria-hidden="true"></i></button>
-                  <button type="button" class="cancel-button" aria-label="${_('Clear search')}"><i class="icon fa fa-remove" aria-hidden="true"></i></button>
-                </div>
-              </form>
+            <div class="a--course-content__nav__bookmarks-btn courseware-bookmarks-button" data-bookmarks-api-url="${bookmarks_api_url}">
+              <button type="button" class="bookmarks-list-button is-inactive" aria-pressed="false">
+                  ${_('Bookmarks')}
+              </button>
             </div>
-          % endif
 
-          <div class="accordion">
-            <nav class="course-navigation" aria-label="${_('Course')}">
+            % if settings.FEATURES.get('ENABLE_COURSEWARE_SEARCH'):
+              <div id="courseware-search-bar" class="search-bar courseware-search-bar" role="search" aria-label="Course">
+                <form>
+                  <label for="course-search-input" class="sr">${_('Course Search')}</label>
+                  <div class="search-field-wrapper">
+                    <input id="course-search-input" type="text" class="search-field" placeholder="${_('Course Search')}..."/>
+                    <button type="submit" class="search-button"><i class="icon fa fa-search" aria-hidden="true"></i></button>
+                    <button type="button" class="cancel-button" aria-label="${_('Clear search')}"><i class="icon fa fa-remove" aria-hidden="true"></i></button>
+                  </div>
+                </form>
+              </div>
+            % endif
+
+            <div class="accordion">
+              <nav class="course-navigation" aria-label="${_('Course')}">
               % if accordion.strip():
                 ${HTML(accordion)}
               % else:
                 <div class="chapter">${_("No content has been added to this course")}</div>
               % endif
-            </nav>
-          </div>
-        % endif
-      </div>
+              </nav>
+            </div>
+        </div>
 
-      <span class="a--course-content__nav__mobile-toggle hide-nav" style="display: none;">
-        Hide course content navigation
-      </span>
-    </section>
+        <span class="a--course-content__nav__mobile-toggle hide-nav" style="display: none;">
+          Hide course content navigation
+        </span>
+      </section>
+    % endif
     <section class="a--courseware-wrapper__content__main-content a--course-content__main-content">
       <div class="course-content" id="course-content">
         <div class="path"></div>
