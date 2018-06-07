@@ -55,13 +55,13 @@
       &__group-left {
         @include display(flex);
         @include align-items(center);
-        @include flex-shrink(2);
+        @include flex-shrink(1);
         margin: 0;
         letter-spacing: inherit;
       }
 
       &__group-right {
-        @include flex-shrink(1);
+        @include flex-shrink(0);
       }
 
       &__course-name {
