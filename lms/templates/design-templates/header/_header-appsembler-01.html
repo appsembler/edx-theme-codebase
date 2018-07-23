@@ -1,4 +1,4 @@
-<%page args="user_authenticated, user_name, logo_positive, logo_negative, logo_url, display_shopping_cart, shopping_cart_url, display_course_name, course_number, course_name, menu_items, slideout_menu_items" />
+<%page args="user_authenticated, user_name, logo_positive, logo_negative, logo_url, display_shopping_cart, shopping_cart_url, display_course_name, course_number, course_name, menu_items, slideout_menu_items, profile_image_url" />
 <%!
 from django.utils.translation import ugettext as _
 %>
@@ -40,6 +40,7 @@ from django.utils.translation import ugettext as _
         % endfor
         % if user_authenticated:
         <li class="a--site-menu__group a--user-avatar">
+          <img class="a--user-avatar__image" src="${profile_image_url}" alt="${user_name}" role="presentation" />
           ${_("Welcome")}, <span>${user_name}</span>.
         </li>
         % endif
