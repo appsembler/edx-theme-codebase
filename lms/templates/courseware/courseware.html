@@ -80,7 +80,7 @@ ${static.get_page_title_breadcrumbs(course_name())}
   <%include file="/mathjax_include.html" args="disable_fast_preview=True"/>
 
   % if settings.FEATURES.get('ENABLE_COURSEWARE_SEARCH'):
-    <%static:require_module module_name="js/search/course/course_search_factory" class_name="CourseSearchFactory">
+    <%static:require_module module_name="course_search/js/course_search_factory" class_name="CourseSearchFactory">
         var courseId = $('.courseware-results').data('courseId');
         CourseSearchFactory(courseId);
     </%static:require_module>
