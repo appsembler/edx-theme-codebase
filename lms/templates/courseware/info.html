@@ -52,8 +52,16 @@ from openedx.core.djangolib.markup import HTML, Text
 
   <%block name="bodyclass">view-in-course view-course-info ${course.css_class or ''}</%block>
 
+  <%
+    if get_global_settings().get('small_screen_optimized_courseware', False):
+      courseware_wrapper_classes = 'a--courseware-wrapper a--small-screen-optimized-courseware'
+    else:
+      courseware_wrapper_classes = 'a--courseware-wrapper'
+    endif
+  %>
+
   <main id="main" aria-label="Content" tabindex="-1">
-      <div class="a--courseware-wrapper">
+      <div class="${courseware_wrapper_classes}">
         %if get_global_settings().get('ficus_course_info_header_enabled', True):
           <div class="a--courseware-wrapper__content bs-container a--container">
             <div class="a--page-header-main">
