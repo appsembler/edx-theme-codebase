@@ -38,6 +38,11 @@
         color: $brand-primary-color;
         border-top-right-radius: $buttons-border-radius;
         border-bottom-right-radius: $buttons-border-radius;
+
+        &:hover, &:focus {
+          color: #fff;
+          background-color: $brand-primary-color;
+        }
       }
 
       .btn.btn-brand.action-resume-course {
@@ -46,6 +51,11 @@
         color: $cta-button-text-color;
         border: $cta-button-border;
         border-radius: $buttons-border-radius;
+        opacity: 1;
+
+        &:hover, &:focus {
+          opacity: 0.6;
+        }
       }
     }
 
@@ -90,17 +100,36 @@
 
                 .outline-item {
 
-                  &:hover, &:focus {
-                    background-color: lighten($brand-accent-color, 45%);
-                  }
-
                   .subsection-text {
 
                     .subsection-title {
                       font-size: 1.15*$font-size-base-body;
                       color: $base-text-color;
+                    }
 
-                      &:hover, &:focus {
+                    &:focus {
+                      outline: 0.1rem solid $brand-primary-color;
+                      background-color: lighten($brand-accent-color, 40%);
+
+                      .subsection-text {
+
+                        .subsection-title {
+                          color: $brand-accent-color;
+                        }
+                      }
+                    }
+                  }
+                }
+
+                &:hover, &:focus {
+                  border: 0.1rem solid $brand-primary-color;
+
+                  .outline-item {
+                    background-color: lighten($brand-accent-color, 40%);
+
+                    .subsection-text {
+
+                      .subsection-title {
                         color: $brand-accent-color;
                       }
                     }
