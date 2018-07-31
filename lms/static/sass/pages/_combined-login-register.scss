@@ -186,3 +186,75 @@
 .a--register-disabled {
   padding: 3rem 0;
 }
+
+// style the login providers buttons
+.login-register .form-type{
+
+  .login-providers {
+    margin: 4rem 0 0;
+
+    .section-title.lines {
+      margin: 0 0 2rem;
+      padding: 0 0 2rem;
+
+      h2 {
+        font-size: 2.4rem;
+        font-weight: normal;
+        margin: 0 auto;
+      }
+    }
+
+    .button.login-provider {
+      padding: 0;
+      border-radius: $buttons-border-radius;
+      overflow: hidden;
+      border: 0.1rem solid #eee;
+      background-color: #fff;
+      margin: 2rem auto;
+      @include display(flex);
+      @include align-items(center);
+      width: 24rem;
+      height: auto;
+      -webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.10), 0 6px 6px rgba(0,0,0,0.15);
+      -moz-box-shadow: 0 10px 20px rgba(0,0,0,0.10), 0 6px 6px rgba(0,0,0,0.15);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.10), 0 6px 6px rgba(0,0,0,0.15);
+
+      .icon {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 4.4rem;
+        height: 4.4rem;
+        @include display(flex);
+        @include align-items(center);
+        @include justify-content(center);
+        text-align: center;
+        background-color: $brand-primary-color;
+        color: pick-visible-color($brand-primary-color, $base-text-color, #fff);
+        line-height: 100%;
+        font-size: 1.4rem;
+      }
+
+      span {
+        color: $base-text-color;
+        font-size: 1.6rem;
+        letter-spacing: 0;
+        @include fontVariantInclude($global-font-cta-buttons);
+        padding: 1.2rem 1.5rem;
+      }
+
+      &:hover, &:focus, &:hover:not(:disabled) {
+        background-color: $brand-primary-color;
+
+        .icon {
+          background-color: darken($brand-primary-color, 10%);
+          color: pick-visible-color(darken($brand-primary-color, 10%), $base-text-color, #fff);
+        }
+
+        span {
+          color: pick-visible-color($brand-primary-color, $base-text-color, #fff);
+        }
+      }
+    }
+  }
+}
