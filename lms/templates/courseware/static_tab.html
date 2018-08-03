@@ -11,7 +11,7 @@ from openedx.core.djangolib.markup import HTML
 <%block name="bodyclass">view-in-course view-statictab ${course.css_class or ''}</%block>
 <%namespace name='static' file='/static_content.html'/>
 
-<%block name="headextra">
+<%block name="head_extra">
 <%static:css group='style-course-vendor'/>
 <%static:css group='style-course'/>
 </%block>
