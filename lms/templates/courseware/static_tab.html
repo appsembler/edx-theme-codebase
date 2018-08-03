@@ -1,8 +1,17 @@
+## mako
+
+<%page expression_filter="h"/>
+
+<%!
+from django.utils.translation import ugettext as _
+from openedx.core.djangolib.markup import HTML
+%>
+
 <%inherit file="/main.html" />
 <%block name="bodyclass">view-in-course view-statictab ${course.css_class or ''}</%block>
 <%namespace name='static' file='/static_content.html'/>
 
-<%block name="headextra">
+<%block name="head_extra">
 <%static:css group='style-course-vendor'/>
 <%static:css group='style-course'/>
 </%block>
@@ -13,6 +22,6 @@
 
 <section class="a--courseware-wrapper">
   <div class="a--courseware-wrapper__content bs-container a--container a--course-static-page">
-    ${tab_contents}
+    ${HTML(fragment.body_html())}
   </div>
 </section>
