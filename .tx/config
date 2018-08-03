@@ -1,0 +1,14 @@
+[main]
+host = https://www.transifex.com
+
+[noderabbit.edx-theme-codebase]
+file_filter = conf/locale/<lang>/LC_MESSAGES/django.po
+source_file = conf/locale/en/LC_MESSAGES/mako.po
+source_lang = en
+type = PO
+
+[noderabbit.edx-theme-codebase-js]
+file_filter = conf/locale/<lang>/LC_MESSAGES/djangojs.po
+source_file = conf/locale/en/LC_MESSAGES/underscore.po
+source_lang = en
+type = PO
