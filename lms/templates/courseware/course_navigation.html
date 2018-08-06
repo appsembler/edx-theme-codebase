@@ -1,5 +1,6 @@
 ## mako
 <%namespace name='static' file='/static_content.html'/>
+<%namespace file='/theme-variables.html' import="get_global_settings" />
 <%!
 from django.utils.translation import ugettext as _
 from courseware.tabs import get_course_tab_list
@@ -80,8 +81,16 @@ include_special_exams = settings.FEATURES.get('ENABLE_SPECIAL_EXAMS', False) and
     </nav>
 % endif
 
+<%
+  if get_global_settings().get('small_screen_optimized_courseware', False):
+    courseware_top_nav_classes = 'a--courseware-top-nav__container bs-container a--container a--small-screen-optimized-courseware'
+  else:
+    courseware_top_nav_classes = 'a--courseware-top-nav__container bs-container a--container'
+  endif
+%>
+
 % if disable_tabs is UNDEFINED or not disable_tabs:
-  <nav class="a--courseware-top-nav__container bs-container a--container">
+  <nav class="${courseware_top_nav_classes}">
     <div class="a--courseware-top-nav__list-container" id="courseware-top-nav-container">
       <ul class="a--courseware-top-nav__list a--animated" id="courseware-top-nav-list">
         % for tab in get_course_tab_list(request, course):
@@ -181,4 +190,10 @@ include_special_exams = settings.FEATURES.get('ENABLE_SPECIAL_EXAMS', False) and
     }
 }());
 </script>
+% endif
+
+% if get_global_settings().get('small_screen_optimized_courseware', False):
+  <script>
+    jQuery('body').on('load', coursewareScrollToContent());
+  </script>
 % endif
