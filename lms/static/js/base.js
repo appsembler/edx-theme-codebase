@@ -135,7 +135,7 @@ function toggleCoursewareNavChevrons() {
 	}
 }
 
-// Courseware small screen optimization related
+// Courseware small screen optimization related. Essentially what this function does is that it scrolls the view down to the beginning of the content, skipping the header.. We call upon this function once the page is fully loaded (takes some time in LMS for the content to load).
 function coursewareScrollToContent() {
   $("html, body").animate({ scrollTop: $("#content").offset().top });
 }

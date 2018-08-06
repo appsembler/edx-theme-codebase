@@ -194,6 +194,6 @@ include_special_exams = settings.FEATURES.get('ENABLE_SPECIAL_EXAMS', False) and
 
 % if get_global_settings().get('small_screen_optimized_courseware', False):
   <script>
-  	window.onload = function () { coursewareScrollToContent(); }
+    jQuery('body').on('load', coursewareScrollToContent());
   </script>
 % endif
