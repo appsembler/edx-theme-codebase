@@ -7,6 +7,9 @@ from microsite_configuration import microsite
 %>
 
 <%namespace file='/theme-variables.html' import="get_index_content" />
+<%block name="pagetitle">
+  ${_("Home")}
+</%block>
 
 % for element in get_index_content():
   ## this check is AMC-specific
