@@ -13,15 +13,43 @@ from openedx.core.djangolib.markup import HTML
 
 <%block name="head_extra">
 <%static:css group='style-course-vendor'/>
-<%static:css group='style-course'/>
+${HTML(fragment.head_html())}
+</%block>
+
+<%block name="footer_extra">
+<%include file="/mathjax_include.html" args="disable_fast_preview=True"/>
+${HTML(fragment.foot_html())}
 </%block>
 
 <%block name="pagetitle">${tab['name']} | ${course.display_number_with_default | h}</%block>
 
 <%include file="/courseware/course_navigation.html" args="active_page='static_tab_{0}'.format(tab['url_slug'])" />
 
-<section class="a--courseware-wrapper">
-  <div class="a--courseware-wrapper__content bs-container a--container a--course-static-page">
-    ${HTML(fragment.body_html())}
-  </div>
-</section>
+
+% if user.is_authenticated():
+  <section class="a--courseware-wrapper">
+    <div class="a--courseware-wrapper__content bs-container a--container a--course-static-page">
+      ${HTML(fragment.body_html())}
+    </div>
+  </section>
+
+% else:
+      <%
+        login_url = "/login?next=/courses/" + course.id.to_deprecated_string() + "/info"
+        login_url = login_url.replace("+", "%2B")
+      %>
+      <main id="main" aria-label="Content" tabindex="-1">
+         <div class="a--courseware-wrapper">
+           <div class="a--courseware-wrapper__content a--courseware-wrapper__non-authenticated bs-container a--container">
+             <h1>Please sign in</h1>
+             <div class="a--courseware-wrapper__non-authenticated__message-wrapper">
+               <p>
+                 Please sign into your ${platform_name} account by clicking the button below to access this course.
+               </p>
+               <a class="a--cta" href="${login_url}">Sign into your ${platform_name} account</a>
+             </div>
+           </div>
+         </div>
+    </main>
+
+% endif
