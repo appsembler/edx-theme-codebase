@@ -5,6 +5,8 @@
 <%!
 from django.utils.translation import ugettext as _
 from openedx.core.djangolib.markup import HTML
+from django.conf import settings
+from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 %>
 
 <%inherit file="/main.html" />
@@ -35,18 +37,21 @@ ${HTML(fragment.foot_html())}
 
 % else:
       <%
-        login_url = "/login?next=/courses/" + course.id.to_deprecated_string() + "/info"
-        login_url = login_url.replace("+", "%2B")
+        if settings.APPSEMBLER_FEATURES.get('ENABLE_EXCLUSIVE_SSO_LOGISTRATION'):
+          urls_dict = configuration_helpers.get_value(
+            'EXCLUSIVE_SSO_LOGISTRATION_URL_MAP',
+            settings.EXCLUSIVE_SSO_LOGISTRATION_URL_MAP)
+          login_url = urls_dict['login']
+        else:
+          login_url = settings.LOGIN_URL
       %>
       <main id="main" aria-label="Content" tabindex="-1">
          <div class="a--courseware-wrapper">
            <div class="a--courseware-wrapper__content a--courseware-wrapper__non-authenticated bs-container a--container">
              <h1>Please sign in</h1>
              <div class="a--courseware-wrapper__non-authenticated__message-wrapper">
-               <p>
-                 Please sign into your ${platform_name} account by clicking the button below to access this course.
-               </p>
-               <a class="a--cta" href="${login_url}">Sign into your ${platform_name} account</a>
+               <p>Please sign into your ${platform_name} account by clicking the button below to access this course.</p>
+               <a class="a--cta" href="${login_url}"> Sign into your ${platform_name} account</a>
              </div>
            </div>
          </div>
