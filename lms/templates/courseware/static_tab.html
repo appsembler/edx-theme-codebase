@@ -37,13 +37,13 @@ ${HTML(fragment.foot_html())}
 
 % else:
       <%
-          if settings.APPSEMBLER_FEATURES.get('ENABLE_EXCLUSIVE_SSO_LOGISTRATION'):
-              urls_dict = configuration_helpers.get_value(
-                  'EXCLUSIVE_SSO_LOGISTRATION_URL_MAP',
-                  settings.EXCLUSIVE_SSO_LOGISTRATION_URL_MAP)
-             login_url = urls_dict['login']
-          else:
-            login_url = settings.LOGIN_URL
+        if settings.APPSEMBLER_FEATURES.get('ENABLE_EXCLUSIVE_SSO_LOGISTRATION'):
+          urls_dict = configuration_helpers.get_value(
+            'EXCLUSIVE_SSO_LOGISTRATION_URL_MAP',
+            settings.EXCLUSIVE_SSO_LOGISTRATION_URL_MAP)
+          login_url = urls_dict['login']
+        else:
+          login_url = settings.LOGIN_URL
       %>
       <main id="main" aria-label="Content" tabindex="-1">
          <div class="a--courseware-wrapper">
