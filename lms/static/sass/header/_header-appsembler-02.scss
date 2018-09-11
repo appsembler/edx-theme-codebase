@@ -219,6 +219,10 @@
           display: block;
           margin-right: 1.5rem;
         }
+
+        @media(max-width: $screen-sm-max) {
+          display: none;
+        }
       }
     }
   }

@@ -115,7 +115,6 @@
       &.a--slide-menu {
         @media(max-width: $screen-sm-max) {
           display: inline-block;
-
         }
       }
 
@@ -214,6 +213,10 @@
           border-radius: 100%;
           display: block;
           margin-right: 1.5rem;
+        }
+
+        @media(max-width: $screen-sm-max) {
+          display: none;
         }
       }
     }
