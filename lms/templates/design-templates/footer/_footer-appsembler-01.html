@@ -1,4 +1,4 @@
-<%page args="footer_links, footer_logo, footer_copyright_text, display_edx_disclaimer, edx_disclaimer, display_poweredby" />
+<%page args="footer_links, footer_logo, footer_logo_alt_text, footer_copyright_text, display_edx_disclaimer, edx_disclaimer, display_poweredby" />
 <%namespace file='/theme-variables.html' import="get_footer_settings" />
 <%namespace name='static' file='/static_content.html'/>
 <%! from django.utils.translation import ugettext as _ %>
@@ -8,7 +8,7 @@
     <div class="a--footer__main-wrapper">
       <div class="a--footer__main">
         <div class="a--footer__logo">
-          <img src="${footer_logo}" />
+          <img src="${footer_logo}" alt="${footer_logo_alt_text}"/>
         </div>
         <div class="a--footer__nav">
           <p class="a--footer__copyright-text">
