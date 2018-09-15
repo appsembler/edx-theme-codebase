@@ -63,4 +63,8 @@
   ul li, ol li, .xmodule_display.xmodule_CapaModule div.problem p {
     font-size: $font-size-base-body;
   }
+
+  img {
+    max-width: 100%;
+  }
 }
