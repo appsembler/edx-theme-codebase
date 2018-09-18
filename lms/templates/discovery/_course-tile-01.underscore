@@ -10,10 +10,17 @@
       <div>
         <p class="a--course-tile-01__organization"><%= org %></p>
         <p class="a--course-tile-01__start-date">
-          <%= interpolate(
-              gettext("Starts: %(start_date)s"),
-              { start_date: start }, true
-            ) %>
+            <% if ((start === "Self-paced") || (start === "Self-Paced") || (start === "self-paced") || (start === "SELF-PACED")) { %>
+              <%= interpolate(
+                gettext("%(start_date)s"),
+                { start_date: start }, true
+              ) %>
+            <% } else { %>
+              <%= interpolate(
+                gettext("Starts: %(start_date)s"),
+                { start_date: start }, true
+              ) %>
+            <% } %>
         </p>
       </div>
     </div>

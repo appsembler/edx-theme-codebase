@@ -6,10 +6,17 @@
       <a href="/courses/<%- course %>/about" class="a--course-tile-03__title"><%= content.display_name %></a>
       <span class="a--course-tile-03__separator-line"></span>
       <p class="a--course-tile-03__start-date"><span>Starts on:</span>
-        <%= interpolate(
-          gettext("%(start_date)s"),
-          { start_date: start }, true
-        ) %>
+        <% if ((start === "Self-paced") || (start === "Self-Paced") || (start === "self-paced") || (start === "SELF-PACED")) { %>
+          <%= interpolate(
+            gettext("%(start_date)s"),
+            { start_date: start }, true
+          ) %>
+        <% } else { %>
+          <%= interpolate(
+            gettext("Starts: %(start_date)s"),
+            { start_date: start }, true
+          ) %>
+        <% } %>
       </p>
       <p class="a--course-tile-03__description"><%= content.overview.substr(0,220) %>...</p>
       <a class="a--course-tile-03__more-info" href="/courses/<%- course %>/about">Learn more...</a>
