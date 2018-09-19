@@ -6,7 +6,7 @@
       <a href="/courses/<%- course %>/about" class="a--course-tile-03__title"><%= content.display_name %></a>
       <span class="a--course-tile-03__separator-line"></span>
       <p class="a--course-tile-03__start-date"><span>Starts on:</span>
-        <% if ([gettext("Self-paced"), gettext("Self-Paced"), gettext("self-paced"), gettext("SELF-PACED")].indexOf(gettext(start)) !== -1) %>
+        <% if ([gettext("Self-paced"), gettext("Self-Paced"), gettext("self-paced"), gettext("SELF-PACED")].indexOf(gettext(start)) !== -1) { %>
           <%= gettext(start) %>
         <% } else { %>
           <%= interpolate(

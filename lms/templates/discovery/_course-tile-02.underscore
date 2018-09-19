@@ -7,7 +7,7 @@
       <p class="a--course-tile-02__title"><%= content.display_name %></p>
       <p class="a--course-tile-02__organization"><%= org %></p>
       <p class="a--course-tile-02__start-date">
-        <% if ([gettext("Self-paced"), gettext("Self-Paced"), gettext("self-paced"), gettext("SELF-PACED")].indexOf(gettext(start)) !== -1) %>
+        <% if ([gettext("Self-paced"), gettext("Self-Paced"), gettext("self-paced"), gettext("SELF-PACED")].indexOf(gettext(start)) !== -1) { %>
           <%= gettext(start) %>
         <% } else { %>
           <%= interpolate(
