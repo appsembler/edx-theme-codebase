@@ -26,7 +26,11 @@ from django.utils.translation import ugettext as _
           ${_("Self-Paced")}
         </p>
       % else:
-        <p class="a--course-tile-02__start-date localized_datetime" data-format="shortDate" data-datetime="${course_info['course_start_date']}"></p>
+        % if course_info['course_start_date_display']:
+          <p class="a--course-tile-02__start-date">${course_info['course_start_date_display']}</p>
+        % else:
+          <p class="a--course-tile-02__start-date localized_datetime" data-format="shortDate" data-datetime="${course_info['course_start_date']}"></p>
+        % endif
       % endif
     </div>
   </a>
