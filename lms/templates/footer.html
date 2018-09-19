@@ -12,8 +12,9 @@
   display_edx_disclaimer = get_footer_settings().get('display_edx_disclaimer')
   edx_disclaimer = get_footer_settings().get('edx_disclaimer')
   display_poweredby = get_footer_settings().get('display_poweredby')
+  footer_logo_alt_text = get_footer_settings().get('footer_logo_alt_text', '')
 %>
 
-<%include file = "${get_header_footer_templates()['footer_template']}" args="footer_links = get_footer_menu_items(), footer_logo = footer_logo, footer_copyright_text = footer_copyright_text, display_edx_disclaimer = display_edx_disclaimer, edx_disclaimer = edx_disclaimer, display_poweredby = display_poweredby" />
+<%include file = "${get_header_footer_templates()['footer_template']}" args="footer_links = get_footer_menu_items(), footer_logo = footer_logo, footer_logo_alt_text = footer_logo_alt_text, footer_copyright_text = footer_copyright_text, display_edx_disclaimer = display_edx_disclaimer, edx_disclaimer = edx_disclaimer, display_poweredby = display_poweredby" />
 
 <%include file = '/footer-extra.html' />
