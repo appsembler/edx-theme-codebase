@@ -13,15 +13,7 @@ from courseware.courses import get_course_about_section
 <%def name="get_course_info(course_in)">
   <%
   course = course_in
-  if course.advertised_start is not None:
-    course_start_string = course.advertised_start
-  else:
-    if course.start is not None:
-      course_start_string = course.start.strftime('%Y-%m-%dT%H:%M:%S%z')
-    else:
-      course_start_string = ''
-    endif
-  endif
+  course_start_string = course.advertised_start
   return {
     'course_id' : course.id,
     'course_url' : reverse('about_course', args=[course.id.to_deprecated_string()]),
@@ -29,7 +21,8 @@ from courseware.courses import get_course_about_section
     'course_organization' : course.display_org_with_default,
     'course_code' : course.display_number_with_default,
     'course_title' : course.display_name_with_default,
-    'course_start_date' : course_start_string,
+    'course_start_date' : course.start,
+    'course_start_date_display' : course_start_string,
     'course_end_date' : course.end,
     'course_short_description' : course.short_description,
     'course_number' : course.display_number_with_default
