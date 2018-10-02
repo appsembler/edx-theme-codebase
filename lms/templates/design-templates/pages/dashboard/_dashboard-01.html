@@ -66,8 +66,10 @@ from django.core.urlresolvers import reverse
         % else:
           <div class="a--dashboard-01__main__no-enrollments__container">
             <p>${_("You are not enrolled in any courses yet.")}</p>
-            % if get_dashboard_settings()['promote_course_catalog']:
-              <a class="a--dashboard-01__main__no-enrollments__cta" href="${marketing_link('COURSES')}">${_("Find Courses")}!</a>
+            % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY') and get_global_settings().get('course-catalogue_enabled', True):
+              % if get_dashboard_settings()['promote_course_catalog']:
+                <a class="a--dashboard-01__main__no-enrollments__cta" href="${marketing_link('COURSES')}">${_("Find Courses")}!</a>
+              % endif
             % endif
           </div>
         % endif
