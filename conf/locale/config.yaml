@@ -4,11 +4,7 @@ locales:
     - en  # English - Source Language
     - ar  # Arabic
     - es  # Spanish (Spain)
-    - es_419  # Spanish (Latin America)
-    - fr  # French
-    - fr_CA # French Canadian
     - ja_JP  # Japanese (Japan)
-    - pt_BR  # Portuguese (Brazil)
 
 # The locales used for fake-accented English, for testing.
 dummy_locales:

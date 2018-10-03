@@ -82,6 +82,37 @@ How to use on Devstack
    - `$ cd edx-theme-codebase`
    - `$ sassc lms/static/sass/main.scss lms/static/css/main.css`
 
+	
+Working with Translations
+=========================
+For information about working with translations, see the [Internationalization Support](http://edx.readthedocs.io/projects/xblock-tutorial/en/latest/edx_platform/edx_lms.html#internationalization-support) section of the [Open edX XBlock Tutorial](https://xblock-tutorial.readthedocs.io/en/latest/).
+
+The translation strings of this theme are split into two POEditor.com projects:
+
+ - [Appsembler Theme](https://poeditor.com/projects/view?id=213943)
+ - [Appsembler Theme (JavaScript)](https://poeditor.com/projects/view?id=213945)
+
+Working with POEditor
+---------------------
+
+Prepare your environment:
+```
+$ mkvirtualenv theme
+$ pip install -r requirements.txt
+```
+Also ensure that the [POEditor client](https://github.com/lukin0110/poeditor-client) has the correct API access token
+by setting the environment varialbe `POEDITOR_TOKEN` to the value from your [account settings](https://poeditor.com/account/api).
+
+Push new strings to POEditor:
+```
+$ ./scripts/i18n-push.sh
+```
+
+To get the latest translations from POEditor:
+```
+$ ./scripts/i18n-pull.sh
+```
+
 License
 =======
 
