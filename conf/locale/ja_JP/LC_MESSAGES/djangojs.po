@@ -7,14 +7,6 @@ msgstr ""
 "Project-Id-Version: Appsembler Theme (JavaScript)\n"
 "Language: ja\n"
 
-#: lms/templates/design-templates/live-blocks/discovery/_course-tile-01.underscore:14
-#: lms/templates/discovery/_course-tile-01.underscore:17
-#: lms/templates/discovery/_course-tile-02.underscore:14
-#: lms/templates/discovery/_course-tile-03.underscore:13
-#: lms/templates/discovery/course_card.underscore:17
-msgid "Starts: %(start_date)s"
-msgstr ""
-
 #: lms/templates/discovery/_course-tile-01.underscore:13
 #: lms/templates/discovery/_course-tile-02.underscore:10
 #: lms/templates/discovery/_course-tile-03.underscore:9
@@ -37,56 +29,6 @@ msgstr ""
 #: lms/templates/discovery/_course-tile-02.underscore:10
 #: lms/templates/discovery/_course-tile-03.underscore:9
 msgid "SELF-PACED"
-msgstr ""
-
-#: lms/templates/discovery/_facet-01.underscore:10
-#: lms/templates/discovery/facet.underscore:10
-msgid "More"
-msgstr ""
-
-#: lms/templates/discovery/_facet-01.underscore:13
-#: lms/templates/discovery/facet.underscore:13
-msgid "Less"
-msgstr ""
-
-#: lms/templates/discovery/course_card.underscore:6
-msgid "LEARN MORE"
-msgstr ""
-
-#: lms/templates/discovery/course_card.underscore:26
-msgid "Starts"
-msgstr ""
-
-#: lms/templates/student_account/login-no-register.underscore:8
-#: lms/templates/student_account/login-no-register.underscore:23
-#: lms/templates/student_account/sso-no-login-no-register.underscore:8
-msgid "Sign in"
-msgstr ""
-
-#: lms/templates/student_account/login-no-register.underscore:14
-msgid "Sign in here using your email address and password, or use one of the providers listed below."
-msgstr ""
-
-#: lms/templates/student_account/login-no-register.underscore:16
-msgid "Sign in here using your email address and password."
-msgstr ""
-
-#: lms/templates/student_account/login-no-register.underscore:18
-msgid "If you do not yet have an account, use the button below to register."
-msgstr ""
-
-#: lms/templates/student_account/login-no-register.underscore:29
-msgid "or sign in with"
-msgstr ""
-
-#: lms/templates/student_account/login-no-register.underscore:42
-#: lms/templates/student_account/sso-no-login-no-register.underscore:33
-msgid "Sign in with %(providerName)s"
-msgstr ""
-
-#: lms/templates/student_account/login-no-register.underscore:49
-#: lms/templates/student_account/sso-no-login-no-register.underscore:40
-msgid "Use my institution/campus credentials"
 msgstr ""
 
 #: lms/templates/student_account/sso-no-login-no-register.underscore:13
