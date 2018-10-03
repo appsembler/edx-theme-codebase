@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-10-03 17:31+0300\n"
+"POT-Creation-Date: 2018-10-03 18:17+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,15 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 1.3\n"
-
-#: lms/templates/design-templates/live-blocks/discovery/_course-tile-01.underscore
-#: lms/templates/discovery/_course-tile-01.underscore
-#: lms/templates/discovery/_course-tile-02.underscore
-#: lms/templates/discovery/_course-tile-03.underscore
-#: lms/templates/discovery/course_card.underscore
-#, python-format
-msgid "Starts: %(start_date)s"
-msgstr "Stärts: %(start_date)s Ⱡ'σяєм ιρѕυм ∂σłσя #"
 
 #: lms/templates/discovery/_course-tile-01.underscore
 #: lms/templates/discovery/_course-tile-02.underscore
@@ -50,67 +41,6 @@ msgstr "sélf-päçéd Ⱡ'σяєм ιρѕυм ∂σłσ#"
 #: lms/templates/discovery/_course-tile-03.underscore
 msgid "SELF-PACED"
 msgstr "SÉLF-PÀÇÉD Ⱡ'σяєм ιρѕυм ∂σłσ#"
-
-#: lms/templates/discovery/_facet-01.underscore
-#: lms/templates/discovery/facet.underscore
-msgid "More"
-msgstr "Möré Ⱡ'σяєм ι#"
-
-#: lms/templates/discovery/_facet-01.underscore
-#: lms/templates/discovery/facet.underscore
-msgid "Less"
-msgstr "Léss Ⱡ'σяєм ι#"
-
-#: lms/templates/discovery/course_card.underscore
-msgid "LEARN MORE"
-msgstr "LÉÀRN MÖRÉ Ⱡ'σяєм ιρѕυм ∂σłσ#"
-
-#: lms/templates/discovery/course_card.underscore
-msgid "Starts"
-msgstr "Stärts Ⱡ'σяєм ιρѕυ#"
-
-#: lms/templates/student_account/login-no-register.underscore
-#: lms/templates/student_account/login-no-register.underscore
-#: lms/templates/student_account/sso-no-login-no-register.underscore
-msgid "Sign in"
-msgstr "Sïgn ïn Ⱡ'σяєм ιρѕυм #"
-
-#: lms/templates/student_account/login-no-register.underscore
-msgid ""
-"Sign in here using your email address and password, or use one of the "
-"providers listed below."
-msgstr ""
-"Sïgn ïn héré üsïng ýöür émäïl äddréss änd pässwörd, ör üsé öné öf thé "
-"prövïdérs lïstéd ßélöw. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
-
-#: lms/templates/student_account/login-no-register.underscore
-msgid "Sign in here using your email address and password."
-msgstr ""
-"Sïgn ïn héré üsïng ýöür émäïl äddréss änd pässwörd. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт "
-"αмєт, ¢σηѕє¢тєтυя α#"
-
-#: lms/templates/student_account/login-no-register.underscore
-msgid "If you do not yet have an account, use the button below to register."
-msgstr ""
-"Ìf ýöü dö nöt ýét hävé än äççöünt, üsé thé ßüttön ßélöw tö régïstér. Ⱡ'σяєм "
-"ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя #"
-
-#: lms/templates/student_account/login-no-register.underscore
-msgid "or sign in with"
-msgstr "ör sïgn ïn wïth Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт α#"
-
-#: lms/templates/student_account/login-no-register.underscore
-#: lms/templates/student_account/sso-no-login-no-register.underscore
-#, python-format
-msgid "Sign in with %(providerName)s"
-msgstr "Sïgn ïn wïth %(providerName)s Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αм#"
-
-#: lms/templates/student_account/login-no-register.underscore
-#: lms/templates/student_account/sso-no-login-no-register.underscore
-msgid "Use my institution/campus credentials"
-msgstr ""
-"Ûsé mý ïnstïtütïön/çämpüs çrédéntïäls Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
-"¢σηѕє¢тєтυ#"
 
 #: lms/templates/student_account/sso-no-login-no-register.underscore
 msgid "Sign in using one of the providers listed below."

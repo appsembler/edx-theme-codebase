@@ -25,6 +25,8 @@ i18n_tool extract
 mv conf/locale/en/LC_MESSAGES/mako.po conf/locale/en/LC_MESSAGES/django.po
 mv conf/locale/en/LC_MESSAGES/underscore.po conf/locale/en/LC_MESSAGES/djangojs.po
 
+python ./scripts/skim.py
+
 echo "Pulling strings from POEditor.com..."
 poeditor pull
 
