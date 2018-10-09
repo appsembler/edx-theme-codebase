@@ -54,7 +54,7 @@
     width: 100%;
     @include transition(all 0.3s ease-in-out);
 
-    &:hover, &:focus, &.selected {
+    &:hover, &:focus {
       opacity: $single-facet-selected-opacity;
     }
 
@@ -75,6 +75,22 @@
         border-radius: $facet-results-count-border-radius;
         font-size: $facet-results-count-font-size;
         color: $facet-results-count-text-color;
+      }
+
+      &.selected {
+
+        span.name {
+          @include primary-font-bold;
+          position: relative;
+
+          &:after {
+            content: '(Click to disable)';
+            font-size: 1.2rem;
+            @include primary-font-bold;
+            display: inline-block;
+            margin-left: 1rem;
+          }
+        }
       }
   }
 }
