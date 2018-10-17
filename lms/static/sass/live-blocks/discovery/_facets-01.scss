@@ -66,6 +66,13 @@
         font-size: $facet-font-size;
       }
 
+      span.disable-label {
+        font-size: 1.2rem;
+        @include primary-font-bold;
+        display: inline-block;
+        margin-left: 1rem;
+      }
+
       span.count {
         @include display(flex);
         @include flex-shrink(0);
@@ -81,15 +88,6 @@
 
         span.name {
           @include primary-font-bold;
-          position: relative;
-
-          &:after {
-            content: '(Click to disable)';
-            font-size: 1.2rem;
-            @include primary-font-bold;
-            display: inline-block;
-            margin-left: 1rem;
-          }
         }
       }
   }

@@ -3,6 +3,7 @@
       <div class="a--discovery-facets__facet-container">
         <span class="name">
           <%= name %>
+          <span class="disable-label"><%= selected ? gettext("(Click to disable)") : '' %></span>
         </span>
         <span class="count">
             <span class="count-number"><%= count %></span>
