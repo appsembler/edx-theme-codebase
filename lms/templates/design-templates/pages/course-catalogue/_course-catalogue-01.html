@@ -15,12 +15,17 @@ from django.utils.translation import ugettext as _
 
   <section class="a--course-catalogue-01__courses">
     <div class="bs-container a--container courses">
+      <button class="a--search-facets-mobile-trigger" id="search-facets-mobile-trigger">
+        <i class="fa fa-filter"></i>
+        <span class="button-label--active">${_('Hide search filters')}</span>
+        <span class="button-label--non-active">${_('Show search filters')}</span>
+      </button>
       <div class="col-xs-12 col-sm-8 col-md-9 a--course-catalogue-01__courses-container courses-listing courses-listing-narrower a--${options['course-card']}-parent-element">
         % for course in courses:
             <%include file="/design-templates/live-blocks/single-course/_${options['course-card']}.html" args="course=course" />
         % endfor
       </div>
-      <aside class="hidden-xs col-sm-4 col-md-3 a--course-catalogue-01__discovery-facet-container a--discovery-facets search-facets">
+      <aside class="hidden-xs col-sm-4 col-md-3 a--course-catalogue-01__discovery-facet-container a--discovery-facets search-facets" id="search-facets-container">
         <h2 class="a--discovery-facets__heading">${_('Refine Your Search')}</h2>
         <div class="search-facets-lists">
         </div>

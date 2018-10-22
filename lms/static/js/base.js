@@ -12,6 +12,12 @@ $(document).ready(function(){
 		$('#course-nav-wrapper').slideToggle();
 	});
 
+	// search facets mobile toggling
+	$('#search-facets-mobile-trigger').on('click', function() {
+		$('#search-facets-container').slideToggle();
+		$('#search-facets-mobile-trigger').toggleClass('a--active');
+	});
+
 	// execute css on-load animations
 	$('.a--animated').addClass("a--do-animate");
 

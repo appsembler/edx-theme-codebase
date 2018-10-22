@@ -54,7 +54,7 @@
     width: 100%;
     @include transition(all 0.3s ease-in-out);
 
-    &:hover, &:focus, &.selected {
+    &:hover, &:focus {
       opacity: $single-facet-selected-opacity;
     }
 
@@ -66,6 +66,13 @@
         font-size: $facet-font-size;
       }
 
+      span.disable-label {
+        font-size: 1.2rem;
+        @include primary-font-bold;
+        display: inline-block;
+        margin-left: 1rem;
+      }
+
       span.count {
         @include display(flex);
         @include flex-shrink(0);
@@ -75,6 +82,13 @@
         border-radius: $facet-results-count-border-radius;
         font-size: $facet-results-count-font-size;
         color: $facet-results-count-text-color;
+      }
+
+      &.selected {
+
+        span.name {
+          @include primary-font-bold;
+        }
       }
   }
 }
