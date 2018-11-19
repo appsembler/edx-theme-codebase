@@ -612,6 +612,10 @@
       	line-height: $line-height-base-body;
       }
 
+      ul, ol {
+        padding: 0 0 0 3rem;
+      }
+
       ul li, ol li, .xmodule_display.xmodule_CapaModule div.problem p {
         @include fontVariantInclude($global-font-base-body);
       	font-size: $font-size-base-body;
