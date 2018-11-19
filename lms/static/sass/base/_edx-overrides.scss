@@ -30,7 +30,11 @@ h2 {
 
 .window-wrap {
 	min-width: 10rem !important;
-	background: none;
+	background-color: #f5f5f5;
+
+	.content-wrapper {
+		background: none;
+	}
 }
 
 .calc-main #calculator_wrapper form .input-wrapper #calculator_input {
