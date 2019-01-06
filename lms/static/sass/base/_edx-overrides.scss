@@ -40,3 +40,9 @@ h2 {
 .xmodule_display.xmodule_HtmlModule img {
 	height: auto;
 }
+
+// make sure textarea input is at least 16px
+// to avoid input zoom on mobile webview
+.a--course-content__main-content textarea {
+	font-size: 1.6rem;
+}
