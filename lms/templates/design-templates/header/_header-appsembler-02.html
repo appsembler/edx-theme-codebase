@@ -39,38 +39,38 @@ from django.utils.translation import ugettext as _
         </li>
         % endfor
         % if user_authenticated:
-        <li class="a--site-menu__group a--user-avatar">
-          <img class="a--user-avatar__image" src="${profile_image_url}" alt="${user_name}" role="presentation" />
-          ${_("Welcome")}, <span>${user_name}</span>.
-        </li>
-        % endif
-        <li class="a--site-menu__group a--slide-menu">
-          <button type="button" id="site-menu-toggle" class="a--button a--site-nav__mobile-toggle" aria-label="toggle menu">
-            <span class="a--toggle-bar"></span>
-            <span class="a--toggle-bar"></span>
-            <span class="a--toggle-text">${_("MENU")}</span>
-          </button>
-          <ul class="a--slide-menu__container" id="slide-menu">
-            <% first_slideout_item = True %>
-            % for menu_group in slideout_menu_items:
-              % if menu_group and menu_group[0]['link_title']:
-                % if not first_slideout_item:
-                  <li class="a--spacer"></li>
+          <li class="a--site-menu__group a--user-avatar">
+            <img class="a--user-avatar__image" src="${profile_image_url}" alt="${user_name}" role="presentation" />
+            ${_("Welcome")}, <span>${user_name}</span>.
+          </li>
+          <li class="a--site-menu__group a--slide-menu">
+            <button type="button" id="site-menu-toggle" class="a--button a--site-nav__mobile-toggle" aria-label="toggle menu">
+              <span class="a--toggle-bar"></span>
+              <span class="a--toggle-bar"></span>
+              <span class="a--toggle-text">${_("MENU")}</span>
+            </button>
+            <ul class="a--slide-menu__container" id="slide-menu">
+              <% first_slideout_item = True %>
+              % for menu_group in slideout_menu_items:
+                % if menu_group and menu_group[0]['link_title']:
+                  % if not first_slideout_item:
+                    <li class="a--spacer"></li>
+                  % endif
+                  % for item in menu_group:
+                    <li class="${item['special_class']}">
+                      <a href="${item['link_URL']}"
+                      % if item['open_in_new_tab']:
+                        target="_blank"
+                      % endif
+                      >${item['link_title']}</a>
+                    </li>
+                  % endfor
+                  <% first_slideout_item = False %>
                 % endif
-                % for item in menu_group:
-                  <li class="${item['special_class']}">
-                    <a href="${item['link_URL']}"
-                    % if item['open_in_new_tab']:
-                      target="_blank"
-                    % endif
-                    >${item['link_title']}</a>
-                  </li>
-                % endfor
-                <% first_slideout_item = False %>
-              % endif
-            % endfor
-          </ul>
-        </li>
+              % endfor
+            </ul>
+          </li>
+        % endif
       </ul>
     </nav>
   </div>

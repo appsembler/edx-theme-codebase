@@ -68,11 +68,11 @@
         @include flex-shrink(1);
         margin-left: 2rem;
         border-left: 0.1rem solid rgba($base-text-color, 0.25);
-        padding-left: 2rem;
-        @include primary-font-light;
-        font-size: $header-font-size;
+        padding: 1rem 0 1rem 2rem;
+        @include primary-font;
+        font-size: 1.4rem;
         line-height: 120%;
-        color: rgba($header-text-color, 0.6);
+        color: rgba($header-text-color, 0.7);
 
         @media (max-width: $screen-sm-max) {
           display: none;
