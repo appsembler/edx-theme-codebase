@@ -21,13 +21,11 @@ from openedx.core.djangolib.js_utils import js_escaped_string
 
 <%block name="bodyclass">view-in-course view-courseware courseware ${course.css_class or ''}</%block>
 
-<%block name="title"><title>
-    % if section_title:
-${static.get_page_title_breadcrumbs(section_title, course_name())}
-    % else:
-${static.get_page_title_breadcrumbs(course_name())}
-    %endif
-</title></%block>
+<%block name="title">
+  <title data-base-title="${static.get_page_title_breadcrumbs(section_title, course_name())}">
+    ${static.get_page_title_breadcrumbs(sequence_title, section_title, course_name())}
+  </title>
+</%block>
 
 <%block name="header_extras">
 
@@ -38,14 +36,16 @@ ${static.get_page_title_breadcrumbs(course_name())}
 % endfor
 
 % if settings.FEATURES.get('ENABLE_COURSEWARE_SEARCH'):
-    ## % for template_name in ["course_search_item", "course_search_results", "search_loading", "search_error"]:
-    ##     <script type="text/template" id="${template_name}-tpl">
-    ##         <%static:include path="search/${template_name}.underscore" />
-    ##     </script>
-    ## % endfor
+  <%static:require_module module_name="course_search/js/course_search_factory" class_name="CourseSearchFactory">
+      var courseId = $('.courseware-results').data('courseId');
+      CourseSearchFactory({
+          courseId: courseId,
+          searchHeader: $('.search-bar')
+      });
+  </%static:require_module>
 % endif
 
-% if include_special_exams:
+% if include_special_exams is not UNDEFINED and include_special_exams:
   % for template_name in ["proctored-exam-status"]:
     <script type="text/template" id="${template_name}-tpl">
         <%static:include path="courseware/${template_name}.underscore" />
@@ -59,7 +59,7 @@ ${static.get_page_title_breadcrumbs(course_name())}
 <%static:css group='style-course-vendor'/>
 <%static:css group='style-course'/>
 ## Utility: Notes
-% if is_edxnotes_enabled(course):
+% if is_edxnotes_enabled(course, request.user):
 <%static:css group='style-student-notes'/>
 % endif
 
@@ -101,6 +101,16 @@ ${static.get_page_title_breadcrumbs(course_name())}
   <script type="text/javascript">
     var $$course_id = "${course.id | n, js_escaped_string}";
   </script>
+
+  % if not request.user.is_authenticated:
+      <script type="text/javascript">
+        // Disable discussions
+        $('.xblock-student_view-discussion button.discussion-show').attr('disabled', true);
+
+        // Insert message informing user discussions are only available to logged in users.
+        $('.discussion-module')
+      </script>
+  % endif
 
 ${HTML(fragment.foot_html())}
 
@@ -231,16 +241,16 @@ ${HTML(fragment.foot_html())}
   </section>
 </section>
 
-<nav class="nav-utilities ${"has-utility-calculator" if course.show_calculator else ""}" aria-label="${_('Course Utilities')}">
-  ## Utility: Notes
-  % if is_edxnotes_enabled(course):
-    <%include file="/edxnotes/toggle_notes.html" args="course=course"/>
-  % endif
+% if course.show_calculator or is_edxnotes_enabled(course, request.user):
+    <nav class="nav-utilities ${"has-utility-calculator" if course.show_calculator else ""}" aria-label="${_('Course Utilities')}">
+      ## Utility: Notes
+      % if is_edxnotes_enabled(course, request.user):
+        <%include file="/edxnotes/toggle_notes.html" args="course=course"/>
+      % endif
 
-  ## Utility: Calc
-  % if course.show_calculator:
-    <%include file="/calculator/toggle_calculator.html" />
-  % endif
-</nav>
-
-<%include file="../modal/accessible_confirm.html" />
+      ## Utility: Calc
+      % if course.show_calculator:
+        <%include file="/calculator/toggle_calculator.html" />
+      % endif
+    </nav>
+% endif
