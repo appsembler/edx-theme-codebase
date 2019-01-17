@@ -4,13 +4,21 @@
 <%def name="online_help_token()"><% return "progress" %></%def>
 <%!
 from course_modes.models import CourseMode
-from certificates.models import CertificateStatuses
+from lms.djangoapps.certificates.models import CertificateStatuses
 from django.utils.translation import ugettext as _
 from openedx.core.djangolib.markup import HTML, Text
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.conf import settings
 from django.utils.http import urlquote_plus
+from six import text_type
+
+from openedx.features.enterprise_support.utils import get_enterprise_learner_generic_name
 %>
+
+<%
+username = get_enterprise_learner_generic_name(request) or student.username
+%>
+
 <%block name="bodyclass">view-in-course view-progress</%block>
 
 <%block name="headextra">
@@ -39,7 +47,7 @@ from django.utils.http import urlquote_plus
 <script>
     ## This JavaScript is being HTML-escaped because it historically has, and it is not clear what
     ## the correct syntax is. For safety, maintain the previous behavior.
-    ## safe-lint: disable=mako-invalid-js-filter
+    ## xss-lint: disable=mako-invalid-js-filter
     ${progress_graph.body(grade_summary, course.grade_cutoffs, "grade-detail-graph", not course.no_grade, not course.no_grade)}
 </script>
 </%block>
@@ -55,7 +63,7 @@ from django.utils.http import urlquote_plus
         </div>
       % endif
       <h1 class="a--course-progress__main-title">
-        ${_("Course Progress for Student '{username}' ({email})").format(username=student.username, email=student.email)}
+        ${_("Course Progress for Student '{username}' ({email})").format(username=username, email=student.email)}
       </h1>
 
       %if certificate_data:
@@ -163,11 +171,11 @@ from django.utils.http import urlquote_plus
                   <%
                     earned = section.all_total.earned
                     total = section.all_total.possible
-                    percentageString = "{0:.0%}".format( float(earned)/total) if earned > 0 and total > 0 else ""
+                    percentageString = "{0:.0%}".format(section.percent_graded) if earned > 0 and total > 0 else ""
                   %>
 
                   <div class="a--course-progress__chapter__section">
-                    <h2 class="chapter-section-name"><a href="${reverse('courseware_section', kwargs=dict(course_id=course.id.to_deprecated_string(), chapter=chapter['url_name'], section=section.url_name))}">
+                    <h2 class="chapter-section-name"><a href="${reverse('courseware_section', kwargs=dict(course_id=text_type(course.id), chapter=chapter['url_name'], section=section.url_name))}">
                       ${ section.display_name}
                       %if total > 0 or earned > 0:
                         <span class="sr">
