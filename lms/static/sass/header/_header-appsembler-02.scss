@@ -115,18 +115,24 @@
         display: none;
       }
 
-      &.a--slide-menu {
-        @media(max-width: $screen-sm-max) {
-          display: inline-block;
-        }
-      }
-
       ul {
         @include display(flex);
         @include align-items(center);
       }
 
       &.a--slide-menu {
+
+        &.not-authenticated {
+          display: none;
+
+          @media(max-width: $screen-sm-max) {
+            display: inline-block;
+          }
+        }
+
+        @media(max-width: $screen-sm-max) {
+          display: inline-block;
+        }
 
         ul {
           display: block;
