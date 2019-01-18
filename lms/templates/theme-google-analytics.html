@@ -1,1 +1,10 @@
 ## Paste your google analytics script here:
+<script></script>
+
+% if get_global_settings().get('client_ga_code'):
+  <script>
+      ga('create', '${get_global_settings().get('client_ga_code', '')}', 'auto', 'clientTracker');
+      ga('clientTracker.send', 'pageview');
+  </script>
+% endif
+
