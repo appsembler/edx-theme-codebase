@@ -162,7 +162,7 @@
     }
   }
 
-  &__courseware-btn {
+  &__courseware-btn, &__courseware-btn:not(.btn) {
     background-color: $cta-button-bg;
     border: $navbar-button-border;
     display: inline-block;
@@ -174,8 +174,8 @@
     @include button_radius;
     @include button_splash($buttons-border-radius);
 
-    &:visited {
-      color: #fff;
+    &:visited, &:visited:not(.btn) {
+      color: pick-visible-color($cta-button-bg, $base-text-color, #fff);
     }
 
     &:hover, &:focus {

@@ -124,9 +124,11 @@ a, a:visited {
 
 .a--container {
 	width: 100%;
+	padding-right: 3rem;
+	padding-left: 3rem;
 
-	@media(min-width: 1440px) {
-		width: 1280px;
+	@media(min-width: 1680px) {
+		width: 1600px;
 	}
 }
 
@@ -137,8 +139,8 @@ a, a:visited {
 	margin-left: auto;
 	margin-right: auto;
 
-	@media(min-width: 1440px) {
-		width: 1440px;
+	@media(min-width: 1680px) {
+		width: 1600px;
 	}
 
 	@media(max-width:$screen-sm-max) {
@@ -188,7 +190,10 @@ body.discussion {
 	.window-wrap {
 
 		.content-wrapper {
-			max-width: 1280px;
+			padding-right: 3rem;
+			padding-left: 3rem;
+			max-width: 1600px;
+			margin: 0 auto;
 		}
 	}
 }
@@ -209,5 +214,34 @@ a.nav-skip {
     width: auto;
     height: auto;
     margin: 0;
+	}
+}
+
+.wrapper-preview-menu {
+	padding: 2rem !important;
+	background-color: darken($brand-primary-color, 10%);
+	color: #fff;
+	width: 100%;
+	height: auto;
+
+	.preview-menu {
+		width: 100%;
+		max-width: 1600px;
+		margin: 0 auto;
+		padding: 0 1.5rem;
+
+		.preview-actions .action-preview .action-preview-label {
+			font-size: 1.4rem;
+			text-shadow: none;
+			color: #fff;
+		}
+
+		select {
+			color: $base-text-color;
+		}
+
+		input {
+			color: $base-text-color;
+		}
 	}
 }

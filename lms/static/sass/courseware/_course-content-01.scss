@@ -289,6 +289,10 @@
         color: rgba($base-text-color, 0.6);
       }
 
+      #seq_content {
+        padding-top: 5rem;
+      }
+
       .sequence-nav {
         height: inherit;
         border-bottom: 0.2rem solid #ddd;
@@ -304,6 +308,7 @@
           cursor: pointer;
           @include transition(all 0.3s ease-in-out);
           @include flex-shrink(0);
+          overflow-x: initial;
 
           span.icon {
             @include transition(all 0.3s ease-in-out);
@@ -328,7 +333,7 @@
           }
 
           @if $courseware-link-hover == "expanding-underline" {
-              @include underline_expanding_hover($brand-primary-color, 0.2rem);
+              @include underline_expanding_hover($brand-primary-color, 3.1rem);
           } @else if $courseware-link-hover == "hover-pop" {
               @include hover_pop(-0.5rem, 0);
           } @else if $courseware-link-hover == "hover-custom-color" {
@@ -372,6 +377,7 @@
               text-align: center;
               border: none;
               padding: 0 1.5rem;
+              min-width: auto;
               border-right: 0.1rem solid #ddd;
 
               &:focus {
@@ -408,7 +414,7 @@
                 }
 
                 @if $courseware-link-hover == "expanding-underline" {
-                    @include underline_expanding_hover($brand-primary-color, 0.2rem);
+                    @include underline_expanding_hover($brand-primary-color, 1.8rem);
                 } @else if $courseware-link-hover == "hover-pop" {
                     .icon {
                       @include hover_pop(-0.5rem, 0);
@@ -478,7 +484,7 @@
         padding: 3rem 2rem 0;
         width: $courseware-content-bottom-nav-width;
         height: auto;
-        margin: 3rem auto 2rem;
+        margin: 7rem auto 2rem;
         @include display(flex);
         @include align-items(center);
         @include justify-content(space-around);
@@ -497,6 +503,7 @@
           @include flex-shrink(0);
           outline: none;
           padding: 0;
+          overflow-x: initial;
 
           &:hover, &:focus {
             outline: none;
@@ -517,7 +524,7 @@
           }
 
           @if $courseware-link-hover == "expanding-underline" {
-              @include underline_expanding_hover($brand-primary-color, 1rem);
+              @include underline_expanding_hover($brand-primary-color, 2rem);
           } @else if $courseware-link-hover == "hover-pop" {
               @include hover_pop(-0.5rem, 0);
           } @else if $courseware-link-hover == "hover-custom-color" {

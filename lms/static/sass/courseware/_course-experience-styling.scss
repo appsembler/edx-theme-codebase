@@ -1,8 +1,10 @@
 .content-wrapper {
   width: 100%;
   max-width: 100%;
+  padding-left: 3rem;
+  padding-right: 3rem;
 
-  .container {
+  .page-content-container {
     @include container-fixed();
 
     @media (min-width: $screen-sm-min) {
@@ -14,17 +16,47 @@
     @media (min-width: $screen-lg-min) {
       width: $container-lg;
     }
-    @media(min-width: 1440px) {
-  		width: 1280px;
+    @media(min-width: 1680px) {
+  		width: 1600px;
   	}
   }
 
-  .course-view.container {
+  .course-view.page-content-container {
 
     header.page-header {
 
+      .page-header-main {
+
+      }
+
+      .page-header-secondary {
+        @include display(flex);
+        @include align-items(center);
+
+        .btn.btn-primary {
+          @include edx_style_killer;
+          @include no_damn_focus_glow;
+          background-color: $cta-button-bg;
+          border: $cta-button-border;
+          display: inline-block;
+          padding: 1.2rem 2rem;
+          line-height: 100%;
+          font-size: $font-size-base-body;
+          @include fontVariantInclude($global-font-cta-buttons);
+          color: pick-visible-color($cta-button-bg, $base-text-color, #fff);
+          @include button_radius;
+          @include button_splash($buttons-border-radius);
+
+          &:hover, &:focus, &:hover:not(:disabled), &:focus:not(:disabled) {
+            color: rgba(pick-visible-color($cta-button-bg, $base-text-color, #fff), 0.8);
+            background-color: $cta-button-bg;
+          }
+        }
+      }
+
       .page-title {
         font-size: 2.4rem;
+        margin: 1rem 0px;
       }
 
       .field-input.input-text.search-input {
@@ -59,38 +91,60 @@
       }
     }
 
-    .page-content {
+    .page-content .page-content-main {
 
       .layout-1t2t.layout {
         width: 100%;
         max-width: 100%;
+      }
 
-        .layout-col-b {
-          margin-left: 0;
-          margin-right: 0;
+      .layout-col-b {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      .course-outline {
+        padding: 2rem 0;
+
+        #expand-collapse-outline-all-button {
+          @include edx_style_killer;
+          @include no_damn_focus_glow;
+          background: none;
+          border: 1px solid $base-text-color;
+          display: inline-block;
+          padding: 1.2rem 2rem;
+          line-height: 100%;
+          font-size: $font-size-base-body;
+          @include fontVariantInclude($global-font-cta-buttons);
+          color: $base-text-color;
+          @include button_radius;
+          opacity: 1;
+
+          &:hover, &:focus, &:hover:not(:disabled), &:focus:not(:disabled) {
+            border: 1px solid $base-text-color;
+            opacity: 0.6;
+          }
         }
 
-        .course-outline {
-          padding: 2rem 0;
+        .block-tree {
 
-          .block-tree {
+          .section {
 
-            .section {
+            .section-name {
+              @include transition(all 0.3s ease-in-out);
+              padding: 1rem;
 
-              ol.outline-item {
-                padding-bottom: 0;
+              .section-title {
+                font-size: 1.8rem;
+                color: lighten($base-text-color, 15%);
+              }
+
+              &:hover, &:focus {
+                background-color: lighten($brand-primary-color, 60%);
               }
             }
 
             .outline-item {
-
-              .section-name {
-
-                h3 {
-                  font-size: $font-size-base-body;
-                  color: lighten($base-text-color, 15%);
-                }
-              }
 
               .subsection {
 
@@ -98,58 +152,54 @@
                   border-color: $brand-accent-color;
                 }
 
-                .outline-item {
+                .subsection-text {
+                  @include transition(all 0.3s ease-in-out);
+                  padding: 1rem;
 
-                  .subsection-text {
+                  .subsection-title {
+                    font-size: 1.6rem;
+                    color: $base-text-color;
+                  }
 
-                    .subsection-title {
-                      font-size: 1.15*$font-size-base-body;
-                      color: $base-text-color;
-                    }
-
-                    &:focus {
-                      outline: 0.1rem solid $brand-primary-color;
-                      background-color: lighten($brand-accent-color, 40%);
-
-                      .subsection-text {
-
-                        .subsection-title {
-                          color: $brand-accent-color;
-                        }
-                      }
-                    }
+                  &:hover, &:focus {
+                    background-color: lighten($brand-primary-color, 60%);
                   }
                 }
 
-                &:hover, &:focus {
-                  border: 0.1rem solid $brand-primary-color;
+                a.outline-item {
+                  @include transition(all 0.3s ease-in-out);
+                  padding: 1rem;
 
-                  .outline-item {
-                    background-color: lighten($brand-accent-color, 40%);
-
-                    .subsection-text {
-
-                      .subsection-title {
-                        color: $brand-accent-color;
-                      }
-                    }
+                  &:hover, &:focus {
+                    background-color: lighten($brand-primary-color, 60%);
                   }
                 }
               }
             }
           }
         }
+      }
+    }
 
-        .course-sidebar {
+    .course-sidebar {
 
-          .hd-6 {
-            font-size: $font-size-base-body;
-          }
+      .section {
 
-          ul li a {
-            font-size: $font-size-base-body;
-          }
+        h3 {
+          font-size: 1.6rem;
         }
+      }
+
+      .date-summary-container .date-summary .heading {
+        font-size: 1.4rem;
+      }
+
+      .hd-6 {
+        font-size: $font-size-base-body;
+      }
+
+      ul li a {
+        font-size: $font-size-base-body;
       }
     }
   }

@@ -39,12 +39,13 @@ from django.utils.translation import ugettext as _
         </li>
         % endfor
         % if user_authenticated:
-        <li class="a--site-menu__group a--user-avatar">
-          <img class="a--user-avatar__image" src="${profile_image_url}" alt="${user_name}" role="presentation" />
-          <p>${_("Welcome")}, <span>${user_name}</span>.</p>
-        </li>
+          <li class="a--site-menu__group a--user-avatar">
+            <img class="a--user-avatar__image" src="${profile_image_url}" alt="${user_name}" role="presentation" />
+            <p>${_("Welcome")}, <span>${user_name}</span>.</p>
+          </li>
         % endif
-        <li class="a--site-menu__group a--slide-menu">
+        <% slide_menu_authentication_class = "authenticated" if user_authenticated else "not-authenticated" %>
+        <li class="a--site-menu__group a--slide-menu ${slide_menu_authentication_class}">
           <button type="button" id="site-menu-toggle" class="a--button a--site-nav__mobile-toggle" aria-label="toggle menu">
             <span class="a--toggle-bar"></span>
             <span class="a--toggle-bar"></span>

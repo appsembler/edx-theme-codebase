@@ -8,6 +8,8 @@ from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
 
 from openedx.core.djangoapps.user_api.accounts.image_helpers import get_profile_image_urls_for_user
+from openedx.core.djangoapps.user_api.accounts.utils import retrieve_last_sitewide_block_completed
+from openedx.features.enterprise_support.utils import get_enterprise_learner_generic_name
 
 from microsite_configuration import microsite
 from lms.djangoapps.ccx.overrides import get_current_ccx
@@ -39,6 +41,13 @@ site_status_msg = get_site_status_msg(course_id)
 </div>
 % endif
 </%block>
+
+  <%
+    self.real_user = getattr(user, 'real_user', user)
+    username = self.real_user.username
+    resume_block = retrieve_last_sitewide_block_completed(username)
+    displayname = get_enterprise_learner_generic_name(request) or username
+  %>
 
   <% profile_image_url = '' %>
   <% logo_positive = get_brand_logos()['logo_positive'] %>
@@ -78,8 +87,8 @@ site_status_msg = get_site_status_msg(course_id)
   % if user.is_authenticated():
     <%
       user_authenticated = True
-      user_name = user.profile.name.split(' ', 1)[0]
-      profile_image_url = get_profile_image_urls_for_user(user)['medium']
+      user_name = user.profile.name.split(' ', 1)[0] or displayname
+      profile_image_url = get_profile_image_urls_for_user(self.real_user)['medium']
     %>
     % if get_header_menu_logged_in_extra_items():
       <%
@@ -90,10 +99,17 @@ site_status_msg = get_site_status_msg(course_id)
     <%
       append_group = []
       append_group.append({
-        'link_title': _('Dashboard'),
+        'link_title': _('My Courses'),
         'link_URL': reverse('dashboard'),
         'special_class': '',
         'open_in_new_tab': ''
+        })
+      slideout_menu_items.append(append_group)
+      append_group.append({
+        'link_title': _('Profile'),
+        'link_URL': reverse('learner_profile', kwargs={'username': user.username}),
+        'special_class': '',
+        'open_in_new_tab': false
         })
     %>
     % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY') and get_global_settings().get('course-catalogue_enabled', True):
@@ -107,7 +123,6 @@ site_status_msg = get_site_status_msg(course_id)
       %>
     % endif
     <%
-      slideout_menu_items.append(append_group)
       menu_items.append(append_group)
     %>
     % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
@@ -183,11 +198,6 @@ site_status_msg = get_site_status_msg(course_id)
           %>
         % endif
       % endif
-      <%
-        menu_items.append(append_group)
-        slideout_menu_items.append(append_group)
-        append_group = []
-      %>
       % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
         <%
           append_group.append({
