@@ -77,6 +77,9 @@ body.view-in-course .static_tab_wrapper {
 	}
 }
 
-a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:visited:not(.btn):focus {
+a:not(.btn):hover,
+a:not(.btn):focus,
+a:visited:not(.btn):hover,
+a:visited:not(.btn):focus {
 	text-decoration: unset;
 }
