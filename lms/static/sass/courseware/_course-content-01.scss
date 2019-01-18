@@ -371,7 +371,7 @@
               display: block;
               text-align: center;
               border: none;
-              padding: 0 1.5rem;
+              min-width: auto;
               border-right: 0.1rem solid #ddd;
 
               &:focus {
