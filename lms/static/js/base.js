@@ -4,6 +4,11 @@ $(document).ready(function(){
 	$('#site-menu-toggle').on('click', function() {
 		$(this).toggleClass('a--toggled');
 		$('#slide-menu').toggleClass('a--active');
+		if ($(this).hasClass('a--toggled')) {
+		  $('#site-menu-toggle').attr('aria-expanded', 'true');
+		} else {
+		  $('#site-menu-toggle').attr('aria-expanded', 'false');
+		}
 	});
 
 	// courseware nav toggling
