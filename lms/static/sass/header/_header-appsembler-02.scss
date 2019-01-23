@@ -43,6 +43,12 @@
 
         &__container {
           @include flex-shrink(0);
+          opacity: 1;
+          @include transition(all 0.3s ease-in-out);
+
+          &:hover, &:focus {
+            opacity: 0.5;
+          }
         }
 
         &__positive {
@@ -251,6 +257,8 @@
     position: relative;
     bottom: 0.2rem;
     z-index: 1000000;
+    opacity: 1;
+    @include transition(all 0.3s ease-in-out);
 
     // IE fix hack
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -313,7 +321,8 @@
       }
     }
 
-    &:hover {
+    &:hover, &:focus {
+      opacity: 0.5;
 
       .a--toggle-text {
         opacity: 0;
@@ -390,7 +399,7 @@
         letter-spacing: $base-letter-spacing;
 
         &:hover, &:focus {
-          color: rgba($slideout-menu-text-color,0.6);
+          color: rgba($slideout-menu-text-color,0.5);
         }
       }
 
