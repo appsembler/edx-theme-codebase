@@ -21,7 +21,7 @@ from django.utils.translation import ugettext as _
       </div>
       % endif
     </h1>
-    <nav class="a--site-nav__group-right" id="site-menu">
+    <nav class="a--site-nav__group-right" id="site-menu" aria-label="${_("Main navigation")}">
       <ul class="a--site-menu__container">
         % for menu_group in menu_items:
         <li class="a--site-menu__group">
@@ -46,7 +46,7 @@ from django.utils.translation import ugettext as _
         % endif
         <% slide_menu_authentication_class = "authenticated" if user_authenticated else "not-authenticated" %>
         <li class="a--site-menu__group a--slide-menu ${slide_menu_authentication_class}">
-          <button type="button" id="site-menu-toggle" class="a--button a--site-nav__mobile-toggle" aria-label="toggle menu">
+          <button type="button" id="site-menu-toggle" class="a--button a--site-nav__mobile-toggle" aria-label="${_("Slideout menu toggle")}" aria-haspopup="true" aria-expanded="false">
             <span class="a--toggle-bar"></span>
             <span class="a--toggle-bar"></span>
             <span class="a--toggle-text">${_("MENU")}</span>
