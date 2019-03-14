@@ -8,7 +8,7 @@
 % if style_overrides_file:
   ## TODO: `USE_S3_FOR_CUSTOMER_THEMES` should be deprecated. See: github.com/appsembler/edx-platform/issues/341
   % if settings.USE_S3_FOR_CUSTOMER_THEMES:
-    <link rel="stylesheet" type="text/css" href="${get_current_site_configuration.get_css_url()}" />
+    <link rel="stylesheet" type="text/css" href="${get_current_site_configuration().get_css_url()}" />
   % else:
     <link rel="stylesheet" type="text/css" href="${static(style_overrides_file)}" />
   % endif
