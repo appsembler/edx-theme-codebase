@@ -658,5 +658,31 @@
 }
 
 .course-content .bookmark-button-wrapper {
-  margin-bottom: 0;
+  margin: 2rem 0;
+}
+
+.breadcrumbs {
+  font-size: 1.4rem;
+}
+
+.course-bookmarks {
+
+  .search-results .search-count {
+    font-size: 1.6rem;
+  }
+
+  .bookmarks-results-list {
+
+    .bookmarks-results-list-item {
+      padding: 0 2rem 2rem 2rem;
+    }
+
+    .list-item-date {
+      font-size: 1.4rem;
+    }
+
+    .list-item-right-section {
+      bottom: 0;
+    }
+  }
 }
