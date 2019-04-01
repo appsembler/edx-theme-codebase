@@ -52,7 +52,7 @@ p, ul li {
 	margin: 0.5rem 0;
 }
 
-a, a:visited {
+a, a:visited, a:not(.btn), a:visited:not(.btn), .btn-link {
 	text-decoration: none;
 	color: $brand-primary-color;
 	cursor: pointer;
