@@ -138,7 +138,7 @@
       border-radius: $buttons-border-radius;
       background: $cta-button-bg;
       border-color: $cta-button-bg;
-      color: pick-visible-color($cta-button-bg, $base-text-color, #fff);;
+      color: pick-visible-color($cta-button-bg, $base-text-color, #fff);
       opacity: 1;
       @include transition(all 0.3s ease-in-out);
 
