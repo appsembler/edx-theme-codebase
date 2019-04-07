@@ -40,6 +40,42 @@
 					.field-input {
 						font-size: 1.6rem;
 					}
+
+					.u-field-link {
+						font-size: 1.6rem;
+						padding: 1.2rem 1.6rem;
+						border: 0.1rem solid $brand-primary-color;
+						background: transparent;
+						color: $brand-primary-color;
+						width: 100%;
+
+						&:hover, &:focus {
+							background: $brand-primary-color;
+							color: pick-visible-color($brand-primary-color, #000, #fff);
+							cursor: pointer;
+						}
+					}
+				}
+
+				.u-field-message {
+
+					.u-field-message-notification {
+						position: relative;
+						left: 0;
+						top: 0;
+						width: 100%;
+						display: block;
+						padding: 0;
+						margin-bottom: 1rem;
+
+						.fa {
+							margin-right: 1rem;
+						}
+
+						a {
+							@include primary-font-bold;
+						}
+					}
 				}
 			}
 		}
