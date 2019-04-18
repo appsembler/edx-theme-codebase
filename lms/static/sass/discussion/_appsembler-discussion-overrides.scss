@@ -6,6 +6,14 @@
       max-width: 100%;
     }
   }
+
+  .forum-nav-refine-bar {
+    @include display(flex);
+
+    .forum-nav-filter-main, .forum-nav-sort {
+      flex: 1 1 100%;
+    }
+  }
 }
 
 .discussion.container {
@@ -50,6 +58,10 @@
 
     .page-header-secondary {
       margin-left: auto;
+
+      .forum-actions {
+        @include display(flex);
+      }
 
       .new-post-btn {
         font-size: $font-size-base-body;
