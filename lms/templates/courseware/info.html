@@ -67,7 +67,7 @@ from openedx.core.djangolib.markup import HTML, Text
             <div class="a--page-header-main">
               <h3 class="page-title">
                 % if get_global_settings().get('course_info_page_display_course_code', True):
-                  ${_("Welcome to {org}'s {course_name}!").format(org=course.display_org_with_default, course_name=course.display_number_with_default)}
+                  ${_("Welcome to {org}'s {course_title}!").format(org=course.display_org_with_default, course_title=course.display_number_with_default)}
                 % endif
                 <div class="page-subtitle">${course.display_name_with_default}</div>
               </h3>
