@@ -289,3 +289,34 @@
     }
   }
 }
+
+.discussion .page-header {
+
+  .page-header-main {
+    display: flex;
+
+    .breadcrumbs {
+      margin-top: 0;
+      margin-bottom: 0 !important;
+
+      .nav-item {
+
+        .btn-link.all-topics {
+          height: 41px;
+        }
+      }
+    }
+  }
+
+  .page-header-secondary {
+
+    .forum-actions {
+
+      .btn {
+        height: 100%;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+    }
+  }
+}
