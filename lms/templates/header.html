@@ -105,12 +105,6 @@ site_status_msg = get_site_status_msg(course_id)
         'open_in_new_tab': ''
         })
       slideout_menu_items.append(append_group)
-      append_group.append({
-        'link_title': _('Profile'),
-        'link_URL': reverse('learner_profile', kwargs={'username': user.username}),
-        'special_class': '',
-        'open_in_new_tab': false
-        })
     %>
     % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY') and get_global_settings().get('course-catalogue_enabled', True):
       <%
