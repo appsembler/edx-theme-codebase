@@ -11,6 +11,7 @@ from django.core.urlresolvers import reverse
 from edxnotes.helpers import is_feature_enabled as is_edxnotes_enabled
 from openedx.core.djangolib.markup import HTML
 from openedx.core.djangolib.js_utils import js_escaped_string
+from openedx.features.course_experience import course_home_page_title, COURSE_OUTLINE_PAGE_FLAG
 %>
 <%
   include_special_exams = settings.FEATURES.get('ENABLE_SPECIAL_EXAMS', False) and (course.enable_proctored_exams or course.enable_timed_exams)
@@ -117,6 +118,32 @@ ${HTML(fragment.foot_html())}
 </%block>
 
 <div class="message-banner" aria-live="polite"></div>
+
+<nav aria-label="${_('Course')}" class="a--courseware-breadcrumbs bs-container a--container sr-is-focusable" tabindex="-1">
+  <div class="has-breadcrumbs">
+    <div class="breadcrumbs">
+      % if COURSE_OUTLINE_PAGE_FLAG.is_enabled(course.id):
+        <span class="nav-item nav-item-course">
+          <a href="${course_url}">${course_home_page_title(course)}</a>
+        </span>
+      % endif
+      <span class="icon fa fa-angle-right" aria-hidden="true"></span>
+      % if chapter:
+        <span class="nav-item nav-item-chapter" data-course-position="${course.position}" data-chapter-position="${chapter.position}">
+          <a href="${course_url}#${unicode(chapter.location)}">${chapter.display_name_with_default}</a>
+        </span>
+        <span class="icon fa fa-angle-right" aria-hidden="true"></span>
+      % endif
+      % if section:
+        <span class="nav-item nav-item-section">
+          <a href="${course_url}#${unicode(section.location)}">${section.display_name_with_default}</a>
+        </span>
+        <span class="icon fa fa-angle-right" aria-hidden="true"></span>
+      % endif
+      <span class="nav-item nav-item-sequence">${sequence_title}</span>
+    </div>
+  </div>
+</nav>
 
 % if default_tab:
   <%include file="/courseware/course_navigation.html" />
