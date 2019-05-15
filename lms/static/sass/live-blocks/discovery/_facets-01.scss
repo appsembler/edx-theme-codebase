@@ -74,7 +74,7 @@
         padding: $facet-results-count-padding;
         border-radius: $facet-results-count-border-radius;
         font-size: $facet-results-count-font-size;
-        color: $facet-results-count-text-color;
+        color: pick-visible-color($facet-results-count-bg-color, $base-text-color, #fff);
       }
   }
 }
