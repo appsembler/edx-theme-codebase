@@ -57,7 +57,10 @@ from student.helpers import (
       % if show_courseware_link:
         href="${course_target}"
       % endif
-      data-course-key="${enrollment.course_id}" class="a--dashboard-course-listing-01__course-image" style="background-image: url('${course_overview.course_image_url}');" alt="${_('{course_number} {course_name} Home Page').format(course_number=course_overview.number, course_name=course_overview.display_name_with_default) |h}">
+      data-course-key="${enrollment.course_id}"
+      class="a--dashboard-course-listing-01__course-image"
+      style="background-image: url('${course_overview.course_image_url}');"
+      aria-label="${_('Go to {course_number} {course_name}').format(course_number=course_overview.number, course_name=course_overview.display_name_with_default) |h}">
       % if is_course_blocked:
         <span class="course-blocked-overlay"></span>
         <span class="course-blocked-label">Blocked</span>
@@ -297,8 +300,8 @@ from student.helpers import (
         </ul>
       </div>
       % endif
-      
-      ## TODO: The below change to logic may not work in Ginkgo and onward due to refactoring.  
+
+      ## TODO: The below change to logic may not work in Ginkgo and onward due to refactoring.
       ## Ask Bryan W. (bryanlandia) if you have merge problems.
       % if course_overview.may_certify() and cert_status and cert_status.get('status', None) != 'unavailable':
         <%include file='/dashboard/_dashboard_certificate_information.html' args='cert_status=cert_status,course_overview=course_overview, enrollment=enrollment, reverify_link=reverify_link'/>
