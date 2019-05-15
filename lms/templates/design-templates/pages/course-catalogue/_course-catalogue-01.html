@@ -15,11 +15,11 @@ from django.utils.translation import ugettext as _
 
   <section class="a--course-catalogue-01__courses">
     <div class="bs-container a--container courses">
-      <div class="col-xs-12 col-sm-8 col-md-9 a--course-catalogue-01__courses-container courses-listing courses-listing-narrower a--${options['course-card']}-parent-element">
+      <ul class="col-xs-12 col-sm-8 col-md-9 a--course-catalogue-01__courses-container courses-listing courses-listing-narrower a--${options['course-card']}-parent-element">
         % for course in courses:
             <%include file="/design-templates/live-blocks/single-course/_${options['course-card']}.html" args="course=course" />
         % endfor
-      </div>
+      </ul>
       <aside class="hidden-xs col-sm-4 col-md-3 a--course-catalogue-01__discovery-facet-container a--discovery-facets search-facets">
         <h2 class="a--discovery-facets__heading">${_('Refine Your Search')}</h2>
         <div class="search-facets-lists">
