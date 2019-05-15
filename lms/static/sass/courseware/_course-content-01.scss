@@ -315,6 +315,8 @@
           }
 
           &.button-previous, &.button-next {
+            height: 4.6rem;
+            overflow: unset;
 
             &:hover, &:focus {
               outline: none;
