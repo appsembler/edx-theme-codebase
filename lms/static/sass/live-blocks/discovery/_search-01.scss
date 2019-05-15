@@ -31,9 +31,17 @@
     @include edx_style_killer;
     @include no_damn_focus_glow;
     @include flex-shrink(0);
-    font-size: $search-bar-icon-button-font-size;
     color: $search-bar-icon-button-color;
     transition: all 0.3s ease-in-out;
+    @include display(flex);
+    @include align-items(center);
+    font-size: 1.6rem;
+    padding: 1rem;
+
+    .button-text {
+      text-transform: none;
+      margin-right: 1.5rem;
+    }
 
     .inactive {
       display: block;
@@ -70,11 +78,28 @@
   }
 
   &__search-button {
-    @include edx_style_killer;
     @include no_damn_focus_glow;
+    @include edx_style_killer;
     @include flex-shrink(0);
-    font-size: $search-bar-icon-button-font-size;
-    color: $search-bar-icon-button-color;
+    color: pick-visible-color($cta-button-bg, $base-text-color, #fff);
+    @include display(flex);
+    @include align-items(center);
+    font-size: 1.6rem;
+    background-color: $cta-button-bg;
+    border: $navbar-button-border;
+    display: inline-block;
+    padding: 1.5rem 2rem;
+    @include button_splash($buttons-border-radius);
+
+    &:hover, &:focus, &:hover:not(:disabled), &:focus:not(:disabled) {
+      color: pick-visible-color($cta-button-bg, $base-text-color, #fff);
+      background-color: $cta-button-bg;
+    }
+
+    .button-text {
+      text-transform: none;
+      margin-right: 1rem;
+    }
   }
 
   input[type="text"] {
