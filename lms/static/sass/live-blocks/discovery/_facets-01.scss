@@ -58,28 +58,19 @@
       opacity: $single-facet-selected-opacity;
     }
 
-    &.selected {
-
-       span.name {
-        @include primary-font-bold;
-        position: relative;
-
-         &:after {
-          content: '(Click to disable)';
-          font-size: 1.2rem;
-          @include primary-font-bold;
-          display: inline-block;
-          margin-left: 1rem;
-        }
-      }
-    }
-
     span.name {
       @include display(flex);
       @include flex-shrink(1);
       @include primary-font;
       width: 100%;
       font-size: $facet-font-size;
+    }
+
+    span.disable-label {
+      font-size: 1.2rem;
+      @include primary-font-bold;
+      display: inline-block;
+      margin-left: 1rem;
     }
 
     span.count {
@@ -91,6 +82,13 @@
       border-radius: $facet-results-count-border-radius;
       font-size: $facet-results-count-font-size;
       color: $facet-results-count-text-color;
+    }
+
+    &.selected {
+
+      span.name {
+        @include primary-font-bold;
+      }
     }
   }
 }
