@@ -54,27 +54,43 @@
     width: 100%;
     @include transition(all 0.3s ease-in-out);
 
-    &:hover, &:focus, &.selected {
+    &:hover, &:focus {
       opacity: $single-facet-selected-opacity;
     }
 
-      span.name {
-        @include display(flex);
-        @include flex-shrink(1);
-        @include primary-font;
-        width: 100%;
-        font-size: $facet-font-size;
-      }
+    &.selected {
 
-      span.count {
-        @include display(flex);
-        @include flex-shrink(0);
+       span.name {
         @include primary-font-bold;
-        background-color: $facet-results-count-bg-color;
-        padding: $facet-results-count-padding;
-        border-radius: $facet-results-count-border-radius;
-        font-size: $facet-results-count-font-size;
-        color: $facet-results-count-text-color;
+        position: relative;
+
+         &:after {
+          content: '(Click to disable)';
+          font-size: 1.2rem;
+          @include primary-font-bold;
+          display: inline-block;
+          margin-left: 1rem;
+        }
       }
+    }
+
+    span.name {
+      @include display(flex);
+      @include flex-shrink(1);
+      @include primary-font;
+      width: 100%;
+      font-size: $facet-font-size;
+    }
+
+    span.count {
+      @include display(flex);
+      @include flex-shrink(0);
+      @include primary-font-bold;
+      background-color: $facet-results-count-bg-color;
+      padding: $facet-results-count-padding;
+      border-radius: $facet-results-count-border-radius;
+      font-size: $facet-results-count-font-size;
+      color: $facet-results-count-text-color;
+    }
   }
 }
