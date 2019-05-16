@@ -163,19 +163,21 @@
         a {
           color: $header-text-color;
 
-          @if $navbar-link-hover == "expanding-underline" {
-              @include underline_expanding_hover($brand-primary-color, 1rem);
-          } @else if $navbar-link-hover == "hover-pop" {
-              @include hover_pop(-0.5rem, 0);
-          } @else if $navbar-link-hover == "hover-custom-color" {
-              &:hover, &:focus {
-                color: $brand-primary-color;
-              }
-          } @else if $navbar-link-hover == "opacity" {
-              opacity: 1;
-              &:hover, &:focus {
-                opacity: 0.5;
-              }
+          @media(min-width: 800px) {
+            @if $navbar-link-hover == "expanding-underline" {
+                @include underline_expanding_hover($brand-primary-color, 1rem);
+            } @else if $navbar-link-hover == "hover-pop" {
+                @include hover_pop(-0.5rem, 0);
+            } @else if $navbar-link-hover == "hover-custom-color" {
+                &:hover, &:focus {
+                  color: $brand-primary-color;
+                }
+            } @else if $navbar-link-hover == "opacity" {
+                opacity: 1;
+                &:hover, &:focus {
+                  opacity: 0.5;
+                }
+            }
           }
 
           &:hover, &:focus {

@@ -5,7 +5,11 @@
 
 <%block name="pagetitle">
   % if get_global_settings().get('page_status', {}).get('tos', True):
-    ${_("Terms of Service")}
+    % if get_global_settings().get('combine_privacy_and_tos', False):
+        ${_("Terms of Service and Privacy Policy")}
+    % else:
+        ${_("Terms of Service")}
+    % endif
   % else:
     ${_("Page Not Found")}
   % endif
