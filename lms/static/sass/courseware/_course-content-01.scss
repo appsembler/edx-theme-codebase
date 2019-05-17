@@ -595,7 +595,7 @@
         margin: $font-size-h4 0;
       }
 
-      h3.problem-header, h3.scorm_name, h3.hd.hd-2 {
+      h3.problem-header, h3.scorm_name, h3.hd.hd-2, h3.openassessment__title {
         @include fontVariantInclude($global-font-h4);
         font-size: $font-size-h4;
         line-height: $line-height-h4;
