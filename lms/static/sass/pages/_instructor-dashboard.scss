@@ -21,3 +21,16 @@
     }
   }
 }
+
+.open-response-assessment-block {
+  .backgrid {
+    // Patch for the ORA2 to show hidden fields
+    .parent_name {
+      width: 180px;
+    }
+
+    .name {
+      width: 230px;
+    }
+  }
+}
