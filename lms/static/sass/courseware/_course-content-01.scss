@@ -613,6 +613,15 @@
         display: block;
       }
 
+      .problem h4, .feedback h3 {
+        @include fontVariantInclude($global-font-base-body);
+        font-size: $font-size-h4;
+        line-height: $line-height-h4;
+        color: $base-text-color;
+        margin: $font-size-h4 0;
+        display: block;
+      }
+
       p {
       	@include fontVariantInclude($global-font-base-body);
       	font-size: $font-size-base-body;
