@@ -85,7 +85,7 @@
       margin: 1rem 0;
     }
 
-    a {
+    a, a:not(.btn), a:visited, a:visited:not(.btn) {
       display: block;
       @include primary-font;
       color: $base-text-color;
