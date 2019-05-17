@@ -116,15 +116,19 @@
       .search-button {
         position: relative;
         top: 0;
-        right: 1rem;
+        right: 0.5rem;
         width: auto;
         height: auto;
+        background-color: $cta-button-bg;
+        color: $cta-button-text-color;
+        border-radius: 0;
 
         &:hover, &:focus {
           box-shadow: none;
           outline: none;
           border: none;
-          color: $brand-primary-color;
+          background-color: darken($cta-button-bg, 15%);
+          color: $cta-button-text-color;
         }
       }
     }
@@ -657,10 +661,26 @@
         }
       }
 
-      a.forum-nav-thread-link {
-        display: flex;
-        align-items: center;
-        padding: 1rem;
+      .discussion-module {
+
+        .btn {
+          background-color: $cta-button-bg;
+          color: $cta-button-text-color;
+          border: none;
+          @include transition(all 0.3s ease-in-out);
+
+          &:hover, &:focus {
+            background-color: darken($cta-button-bg, 15%) !important;
+            color: $cta-button-text-color !important;
+            border: none !important;
+          }
+        }
+
+        a.forum-nav-thread-link {
+          display: flex;
+          align-items: center;
+          padding: 1rem;
+        }
       }
     }
   }
