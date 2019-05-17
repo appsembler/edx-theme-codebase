@@ -8,14 +8,19 @@
         <p class="a--course-tile-03__start-date">
           <% if ([gettext("Self-paced"), gettext("Self-Paced"), gettext("self-paced"), gettext("SELF-PACED")].indexOf(gettext(start)) !== -1) { %>
             <%= gettext(start) %>
-          <% } else { %>
+          <% } else if (Date.parse(start)) { %>
             <%= interpolate(
               gettext("Starts: %(start_date)s"),
               { start_date: start }, true
             ) %>
+          <% } else { %>
+            <%= interpolate(
+              gettext("%(start_date)s"),
+              { start_date: start }, true
+            ) %>
           <% } %>
         </p>
-      <p class="a--course-tile-03__description"><%= content.overview.substr(0,220) %>...</p>
+      <p class="a--course-tile-03__description"><%= content.short_description %></p>
       <a class="a--course-tile-03__more-info" href="/courses/<%- course %>/about">Learn more...</a>
     </div>
   </div>
