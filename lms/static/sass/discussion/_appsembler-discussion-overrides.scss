@@ -303,6 +303,8 @@
 
         .btn-link.all-topics {
           height: 41px;
+          outline: none;
+          border: none;
         }
       }
     }
@@ -316,6 +318,20 @@
         height: 100%;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
+      }
+    }
+  }
+}
+
+.discussion {
+
+  .page-content {
+
+    .discussion-body {
+
+      .forum-nav-browse-filter-input {
+        padding-top: 5px;
+        padding-bottom: 5px;
       }
     }
   }

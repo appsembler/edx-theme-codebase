@@ -114,11 +114,13 @@
   &__footer {
     margin-top: 3rem;
 
-    .courseware-license {
+    .courseware-license, .course-license {
       text-align: right;
       @include primary-font-italic;
       color: rgba($base-text-color, 0.7);
       font-size: 1.2rem;
+      padding: 0;
+      margin: 0;
     }
   }
 
@@ -166,9 +168,7 @@
 }
 
 .a--courseware-breadcrumbs {
-  padding-top: 2.4rem;
   padding-bottom: 2.4rem;
-  border-bottom: 0.1rem solid #ddd;
 
   .breadcrumbs {
 
@@ -185,4 +185,10 @@
   @include primary-font-bold;
   font-size: 2.2rem;
   margin: 2.4rem 0 1rem;
+}
+
+// play stupid games win stupid prizes
+body.view-in-course .course-license {
+  padding: 0;
+  margin: 0;
 }
