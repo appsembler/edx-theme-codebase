@@ -286,7 +286,7 @@ from student.helpers import (
   </article>
 
   <footer class="wrapper-messages-primary">
-    <ul class="messages-list">
+    <div class="messages-list">
       % if related_programs:
       <div class="message message-related-programs is-shown">
         <span class="related-programs-preface" tabindex="0">${_('Related Programs')}:</span>
@@ -435,7 +435,7 @@ from student.helpers import (
           </p>
         </li>
         % endif
-    </ul>
+    </div>
   </footer>
   <script>
              $( document ).ready(function() {

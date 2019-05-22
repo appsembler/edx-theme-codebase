@@ -220,10 +220,10 @@
               display: block;
               @include primary-font;
               padding: 1rem 1.5rem;
-              color: $cta-button-text-color;
               border: $cta-button-border;
               background-color: $cta-button-bg;
               border-radius: $buttons-border-radius;
+              color: pick-visible-color($cta-button-bg, $base-text-color, #fff);
             }
 
             .cta {
