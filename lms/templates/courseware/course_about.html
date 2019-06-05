@@ -190,7 +190,9 @@ from six import string_types
 
   if course.advertised_start is not None:
     course_start_string = course.advertised_start
+    course_about_vars['course_start_is_custom'] = True
   else:
+    course_about_vars['course_start_is_custom'] = False
     if course.start is not None:
       course_start_string = course.start.strftime('%Y-%m-%dT%H:%M:%S%z')
     else:
