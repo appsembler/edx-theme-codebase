@@ -8,6 +8,12 @@ from microsite_configuration import microsite
 
 <%namespace file='/theme-variables.html' import="get_index_content" />
 
+<%block name="title">
+  <title data-base-title="${static.get_page_title_breadcrumbs()}">
+    ${static.get_page_title_breadcrumbs()}
+  </title>
+</%block>
+
 % for element in get_index_content():
   ## this check is AMC-specific
   % if (element['element-type'].startswith('layout')):
