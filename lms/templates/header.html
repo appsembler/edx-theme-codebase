@@ -8,7 +8,6 @@ from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
 
 from openedx.core.djangoapps.user_api.accounts.image_helpers import get_profile_image_urls_for_user
-from openedx.core.djangoapps.user_api.accounts.utils import retrieve_last_sitewide_block_completed
 from openedx.features.enterprise_support.utils import get_enterprise_learner_generic_name
 
 from microsite_configuration import microsite
@@ -44,9 +43,6 @@ site_status_msg = get_site_status_msg(course_id)
 
   <%
     self.real_user = getattr(user, 'real_user', user)
-    username = self.real_user.username
-    resume_block = retrieve_last_sitewide_block_completed(username)
-    displayname = get_enterprise_learner_generic_name(request) or username
   %>
 
   <% profile_image_url = '' %>
@@ -87,6 +83,7 @@ site_status_msg = get_site_status_msg(course_id)
   % if user.is_authenticated():
     <%
       user_authenticated = True
+      displayname = get_enterprise_learner_generic_name(request) or user.username
       user_name = user.profile.name.split(' ', 1)[0] or displayname
       profile_image_url = get_profile_image_urls_for_user(self.real_user)['medium']
     %>
