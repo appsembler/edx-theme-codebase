@@ -41,7 +41,7 @@ msgstr ""
 msgid "Certificate"
 msgstr "Çértïfïçäté Ⱡ'σяєм ιρѕυм ∂σłσя #"
 
-#: lms/templates/navigation.html
+#: lms/templates/header.html
 msgid ""
 "<strong>Warning:</strong> Your browser is not fully supported. We strongly "
 "recommend using {chrome_link} or {ff_link}."
@@ -49,12 +49,6 @@ msgstr ""
 "<strong>Wärnïng:</strong> Ýöür ßröwsér ïs nöt füllý süppörtéd. Wé strönglý "
 "réçömménd üsïng {chrome_link} ör {ff_link}. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
 "¢ση#"
-
-#: lms/templates/courseware/course_navigation.html
-msgid "You are now viewing the course as <i>{user_name}</i>."
-msgstr ""
-"Ýöü äré nöw vïéwïng thé çöürsé äs <i>{user_name}</i>. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт"
-" αмєт, ¢σηѕє¢тєтυя #"
 
 #: lms/templates/courseware/course_navigation.html
 msgid "Course is not yet visible to students."
@@ -92,22 +86,27 @@ msgstr "Thïs çöürsé ïs Sélf-Päçéd. Ⱡ'σяєм ιρѕυм ∂σłσя
 msgid "Course Progress"
 msgstr "Çöürsé Prögréss Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт α#"
 
+#: customer_specific/lms/templates/design-templates/footer/_footer-appsembler-01.html
 #: lms/templates/design-templates/footer/_footer-appsembler-01.html
 msgid "Apple app on Apple Store"
 msgstr "Àpplé äpp ön Àpplé Störé Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢ση#"
 
+#: customer_specific/lms/templates/design-templates/header/_header-appsembler-02.html
 #: lms/templates/design-templates/header/_header-appsembler-02.html
 msgid "MENU"
 msgstr "MÉNÛ Ⱡ'σяєм ι#"
 
+#: customer_specific/lms/templates/design-templates/pages/course-about/_course-about-01.html
 #: lms/templates/design-templates/pages/course-about/_course-about-01.html
 msgid "Course is in your cart."
 msgstr "Çöürsé ïs ïn ýöür çärt. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
 
+#: customer_specific/lms/templates/design-templates/pages/course-about/_course-about-01.html
 #: lms/templates/design-templates/pages/course-about/_course-about-01.html
 msgid "Add to Cart / Price: "
 msgstr "Àdd tö Çärt / Prïçé:  Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, #"
 
+#: customer_specific/lms/templates/design-templates/pages/course-about/_course-about-01.html
 #: lms/templates/design-templates/pages/course-about/_course-about-01.html
 msgid "Enroll in "
 msgstr "Énröll ïn  Ⱡ'σяєм ιρѕυм ∂σłσ#"
@@ -131,3 +130,55 @@ msgstr "Émßärgö Ⱡ'σяєм ιρѕυм #"
 #: lms/templates/static_templates/press.html
 msgid "Press"
 msgstr "Préss Ⱡ'σяєм ιρѕ#"
+
+#: customer_specific/cms/templates/widgets/header.html
+#: customer_specific/cms/templates/widgets/header.html
+msgid "Appsembler Online Knowledgebase"
+msgstr "Àppsémßlér Önlïné Knöwlédgéßäsé Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢т#"
+
+#: customer_specific/lms/templates/certificates/server-error.html
+msgid "The institution&#39;s logo."
+msgstr "Thé ïnstïtütïön&#39;s lögö. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕ#"
+
+#: lms/templates/enroll_staff.html
+msgid "Enroll"
+msgstr "Énröll Ⱡ'σяєм ιρѕυ#"
+
+#: lms/templates/courseware/courseware.html
+msgid "Submit search"
+msgstr "Süßmït séärçh Ⱡ'σяєм ιρѕυм ∂σłσя ѕι#"
+
+#: lms/templates/courseware/info.html
+msgid ""
+"You are not currently enrolled in this course. {link_start}Sign up "
+"now!{link_end}"
+msgstr ""
+"Ýöü äré nöt çürréntlý énrölléd ïn thïs çöürsé. {link_start}Sïgn üp "
+"nöw!{link_end} Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+
+#: lms/templates/design-templates/header/_header-appsembler-01.html
+#: lms/templates/design-templates/header/_header-appsembler-02.html
+msgid "Main navigation"
+msgstr "Mäïn nävïgätïön Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт α#"
+
+#: lms/templates/design-templates/header/_header-appsembler-01.html
+#: lms/templates/design-templates/header/_header-appsembler-02.html
+msgid "Slideout menu toggle"
+msgstr "Slïdéöüt ménü tögglé Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, #"
+
+#: lms/templates/design-templates/pages/course-catalogue/_course-catalogue-01.html
+msgid "Hide search filters"
+msgstr "Hïdé séärçh fïltérs Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт,#"
+
+#: lms/templates/design-templates/pages/course-catalogue/_course-catalogue-01.html
+msgid "Show search filters"
+msgstr "Shöw séärçh fïltérs Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт,#"
+
+#: lms/templates/instructor/instructor_dashboard_2/course_info.html
+msgid "Course Display Name:"
+msgstr "Çöürsé Dïspläý Nämé: Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, #"
+
+#: lms/templates/static_templates/tos.html
+msgid "Terms of Service and Privacy Policy"
+msgstr ""
+"Térms öf Sérvïçé änd Prïväçý Pölïçý Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєт#"

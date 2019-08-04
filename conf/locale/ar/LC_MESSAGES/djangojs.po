@@ -7,25 +7,25 @@ msgstr ""
 "Project-Id-Version: Appsembler Theme (JavaScript)\n"
 "Language: ar\n"
 
-#: lms/templates/discovery/_course-tile-01.underscore:13
+#: lms/templates/discovery/_course-tile-01.underscore:12
 #: lms/templates/discovery/_course-tile-02.underscore:10
 #: lms/templates/discovery/_course-tile-03.underscore:9
 msgid "Self-paced"
 msgstr ""
 
-#: lms/templates/discovery/_course-tile-01.underscore:13
+#: lms/templates/discovery/_course-tile-01.underscore:12
 #: lms/templates/discovery/_course-tile-02.underscore:10
 #: lms/templates/discovery/_course-tile-03.underscore:9
 msgid "Self-Paced"
 msgstr ""
 
-#: lms/templates/discovery/_course-tile-01.underscore:13
+#: lms/templates/discovery/_course-tile-01.underscore:12
 #: lms/templates/discovery/_course-tile-02.underscore:10
 #: lms/templates/discovery/_course-tile-03.underscore:9
 msgid "self-paced"
 msgstr ""
 
-#: lms/templates/discovery/_course-tile-01.underscore:13
+#: lms/templates/discovery/_course-tile-01.underscore:12
 #: lms/templates/discovery/_course-tile-02.underscore:10
 #: lms/templates/discovery/_course-tile-03.underscore:9
 msgid "SELF-PACED"
@@ -37,5 +37,13 @@ msgstr ""
 
 #: lms/templates/student_account/sso-no-login-no-register.underscore:20
 msgid "Sign in with:"
+msgstr ""
+
+#: lms/templates/discovery/_course-tile-03.underscore:18
+msgid "%(start_date)s"
+msgstr ""
+
+#: lms/templates/discovery/_facet_option-01.underscore:6
+msgid "(Click to disable)"
 msgstr ""
 

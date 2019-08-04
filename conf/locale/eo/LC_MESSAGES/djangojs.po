@@ -1,13 +1,13 @@
 # Translations template for PROJECT.
-# Copyright (C) 2018 ORGANIZATION
+# Copyright (C) 2019 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-10-03 18:17+0300\n"
+"POT-Creation-Date: 2019-08-04 23:24+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,6 +41,15 @@ msgstr "sélf-päçéd Ⱡ'σяєм ιρѕυм ∂σłσ#"
 #: lms/templates/discovery/_course-tile-03.underscore
 msgid "SELF-PACED"
 msgstr "SÉLF-PÀÇÉD Ⱡ'σяєм ιρѕυм ∂σłσ#"
+
+#: lms/templates/discovery/_course-tile-03.underscore
+#, python-format
+msgid "%(start_date)s"
+msgstr "%(start_date)s Ⱡ'σяєм#"
+
+#: lms/templates/discovery/_facet_option-01.underscore
+msgid "(Click to disable)"
+msgstr "(Çlïçk tö dïsäßlé) Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт#"
 
 #: lms/templates/student_account/sso-no-login-no-register.underscore
 msgid "Sign in using one of the providers listed below."

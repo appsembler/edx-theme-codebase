@@ -5,39 +5,39 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: POEditor.com\n"
 "Project-Id-Version: Appsembler Theme (JavaScript)\n"
-"Language: ja\n"
+"Language: fr-ca\n"
 
 #: lms/templates/discovery/_course-tile-01.underscore:12
 #: lms/templates/discovery/_course-tile-02.underscore:10
 #: lms/templates/discovery/_course-tile-03.underscore:9
 msgid "Self-paced"
-msgstr "自習型講座"
+msgstr ""
 
 #: lms/templates/discovery/_course-tile-01.underscore:12
 #: lms/templates/discovery/_course-tile-02.underscore:10
 #: lms/templates/discovery/_course-tile-03.underscore:9
 msgid "Self-Paced"
-msgstr "自習型講座"
+msgstr ""
 
 #: lms/templates/discovery/_course-tile-01.underscore:12
 #: lms/templates/discovery/_course-tile-02.underscore:10
 #: lms/templates/discovery/_course-tile-03.underscore:9
 msgid "self-paced"
-msgstr "自習型講座"
+msgstr ""
 
 #: lms/templates/discovery/_course-tile-01.underscore:12
 #: lms/templates/discovery/_course-tile-02.underscore:10
 #: lms/templates/discovery/_course-tile-03.underscore:9
 msgid "SELF-PACED"
-msgstr "自習型講座"
+msgstr ""
 
 #: lms/templates/student_account/sso-no-login-no-register.underscore:13
 msgid "Sign in using one of the providers listed below."
-msgstr "以下のいずれかのプロバイダーを使用してサインインします。"
+msgstr ""
 
 #: lms/templates/student_account/sso-no-login-no-register.underscore:20
 msgid "Sign in with:"
-msgstr "次のプロバイダーでサインイン:"
+msgstr ""
 
 #: lms/templates/discovery/_course-tile-03.underscore:18
 msgid "%(start_date)s"
