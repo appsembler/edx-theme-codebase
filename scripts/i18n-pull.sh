@@ -13,17 +13,20 @@
 #
 ##################################################################
 
+EXIT=0
 set -e
 
 cd `dirname $BASH_SOURCE` && cd ..
+
 
 rm -rf conf/locale/en/LC_MESSAGES/*.po
 
 echo "Extracting i18n strings..."
 i18n_tool extract
 
-mv conf/locale/en/LC_MESSAGES/mako.po conf/locale/en/LC_MESSAGES/django.po
+msgcat conf/locale/en/LC_MESSAGES/{mako,django-partial}.po -o conf/locale/en/LC_MESSAGES/django.po
 mv conf/locale/en/LC_MESSAGES/underscore.po conf/locale/en/LC_MESSAGES/djangojs.po
+rm -vf conf/locale/en/LC_MESSAGES/{mako,django-partial}.po
 
 python ./scripts/skim.py
 
@@ -37,7 +40,9 @@ echo "Building dummy Esperanto strings..."
 i18n_tool dummy
 
 echo "Validating strings..."
-i18n_tool validate
+i18n_tool validate || EXIT=1
 
 echo "Compiling strings..."
 i18n_tool generate
+
+exit $EXIT

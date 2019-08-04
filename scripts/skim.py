@@ -11,7 +11,7 @@ def skim(open_edx_release_file, theme_file):
 
     Useful to make it cut Translation time by removing entries that is in the Open edX translation files.
 
-    :param open_edx_release_file: The path to the Open edX release file e.g. release-ficus.po
+    :param open_edx_release_file: The path to the Open edX release file e.g. release-hawthorn.po
     :param theme_file: The path to the theme po file e.g. theme.po
     :return:
     """
@@ -28,5 +28,5 @@ def skim(open_edx_release_file, theme_file):
     dest_po.save()
 
 
-skim('release-ficus.po', 'django.po')
-skim('release-ficus-js.po', 'djangojs.po')
+skim('release-hawthorn.po', 'django.po')
+skim('release-hawthorn-js.po', 'djangojs.po')

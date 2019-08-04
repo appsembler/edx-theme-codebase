@@ -9,6 +9,7 @@ terms = conf/locale/en/LC_MESSAGES/django.po
 trans.ar = conf/locale/en/LC_MESSAGES/django.po
 trans.ja = conf/locale/ja_JP/LC_MESSAGES/django.po
 trans.es = conf/locale/es/LC_MESSAGES/django.po
+trans.fr-ca = conf/locale/fr_CA/LC_MESSAGES/django.po
 
 [project.themejs]
 ; project_page = https://poeditor.com/projects/view?id=213945
@@ -19,3 +20,4 @@ terms = conf/locale/en/LC_MESSAGES/djangojs.po
 trans.ar = conf/locale/ar/LC_MESSAGES/djangojs.po
 trans.ja = conf/locale/ja_JP/LC_MESSAGES/djangojs.po
 trans.es = conf/locale/es/LC_MESSAGES/djangojs.po
+trans.fr-ca = conf/locale/fr_CA/LC_MESSAGES/djangojs.po

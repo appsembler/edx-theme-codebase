@@ -23,9 +23,9 @@ cd `dirname $BASH_SOURCE` && cd ..
 
 CUSTOMER_BRANCH_NAME=$(cd customer_specific && git rev-parse --abbrev-ref HEAD)
 
-if [ "$CUSTOMER_BRANCH_NAME" != "ficus/amc" ]; then
-    echo "Error: Currently only 'ficus/amc' is supported for customer_specific."
-    echo "       Checkout ficus/amc and re-run the script"
+if [ "$CUSTOMER_BRANCH_NAME" != "hawthorn/tahoe" ]; then
+    echo "Error: Currently only 'hawthorn/tahoe' is supported for customer_specific."
+    echo "       Checkout hawthorn/tahoe and re-run the script"
     exit 1
 fi
 
@@ -34,8 +34,9 @@ rm -rf conf/locale/en/LC_MESSAGES/*.po
 echo "Extracting i18n strings..."
 i18n_tool extract
 
-mv conf/locale/en/LC_MESSAGES/mako.po conf/locale/en/LC_MESSAGES/django.po
+msgcat conf/locale/en/LC_MESSAGES/{mako,django-partial}.po -o conf/locale/en/LC_MESSAGES/django.po
 mv conf/locale/en/LC_MESSAGES/underscore.po conf/locale/en/LC_MESSAGES/djangojs.po
+rm -vf conf/locale/en/LC_MESSAGES/{mako,django-partial}.po
 
 python ./scripts/skim.py
 
