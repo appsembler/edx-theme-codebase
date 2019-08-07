@@ -77,10 +77,6 @@ msgstr ""
 "thïs                   éxäm. Ýöür çürrént sçöré ïs {current_score}%. Ⱡ'σяєм "
 "ιρѕυм ∂#"
 
-#: lms/templates/courseware/info.html
-msgid "This course is Self-Paced."
-msgstr "Thïs çöürsé ïs Sélf-Päçéd. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕ#"
-
 #: lms/templates/courseware/progress.html
 #: lms/templates/courseware/progress.html
 msgid "Course Progress"
@@ -182,3 +178,57 @@ msgstr "Çöürsé Dïspläý Nämé: Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт
 msgid "Terms of Service and Privacy Policy"
 msgstr ""
 "Térms öf Sérvïçé änd Prïväçý Pölïçý Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєт#"
+
+#: customer_specific/lms/templates/theme-variables.html
+msgid "{copy_sign} {year} Company Name. All rights reserved."
+msgstr ""
+"{copy_sign} {year} Çömpäný Nämé. Àll rïghts résérvéd. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт"
+" αмєт, ¢σηѕє¢тєтυя #"
+
+#: customer_specific/lms/templates/theme-variables.html
+msgid ""
+"edX, Open edX and the edX and Open edX logos are trademarks or registered "
+"trademarks of edX Inc."
+msgstr ""
+"édX, Öpén édX änd thé édX änd Öpén édX lögös äré trädémärks ör régïstéréd "
+"trädémärks öf édX Ìnç. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, #"
+
+#: customer_specific/lms/templates/theme-variables.html
+msgid "Platform Name"
+msgstr "Plätförm Nämé Ⱡ'σяєм ιρѕυм ∂σłσя ѕι#"
+
+#: customer_specific/lms/templates/theme-variables.html
+msgid "We hereby certify that:"
+msgstr "Wé héréßý çértïfý thät: Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
+
+#: customer_specific/lms/templates/theme-variables.html
+msgid ""
+"successfully completed, received a passing grade, and was awarded this "
+"platform's Honor Code Certificate of Completion in:"
+msgstr ""
+"süççéssfüllý çömplétéd, réçéïvéd ä pässïng grädé, änd wäs äwärdéd thïs "
+"plätförm's Hönör Çödé Çértïfïçäté öf Çömplétïön ïn: Ⱡ'σяєм ιρѕ#"
+
+#: customer_specific/lms/templates/theme-variables.html
+msgid "Our platform offers interactive online classes and MOOCs."
+msgstr ""
+"Öür plätförm öfférs ïntéräçtïvé önlïné çlässés änd MÖÖÇs. Ⱡ'σяєм ιρѕυм ∂σłσя"
+" ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+
+#: customer_specific/lms/templates/theme-variables.html
+msgid ""
+"Our platform acknowledges achievements through certificates, which are "
+"awarded for course activities that our platform students complete."
+msgstr ""
+"Öür plätförm äçknöwlédgés äçhïévéménts thröügh çértïfïçätés, whïçh äré "
+"äwärdéd för çöürsé äçtïvïtïés thät öür plätförm stüdénts çömplété. Ⱡ'σяєм "
+"ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α∂ιριѕι¢ιηg єłιт, ѕє∂ ∂σ єιυѕмσ∂ тємρσя "
+"ιη¢ι∂ι∂υηт υт łαвσяє єт ∂σłσяє мαgηα αłιqυα. υт єηιм α∂ мιηιм νєηιαм, qυιѕ "
+"ησѕтяυ∂ єχєя¢ιтαтιση υłłαм¢σ łαвσяιѕ ηιѕι υт αłιqυιρ єχ єα ¢σммσ∂σ "
+"¢σηѕєqυαт. ∂υιѕ αυтє ιяυяє ∂σłσя ιη яєρяєнєη∂єяιт ιη νσłυρтαтє νєłιт єѕѕє "
+"¢ιłłυм ∂σłσяє єυ ƒυgιαт ηυłłα ραяιαтυя. єχ¢єρтєυя ѕιηт σ¢¢αє¢αт ¢υρι∂αтαт "
+"ηση ρяσι∂єηт, ѕυηт ιη ¢υłρα qυι σƒƒι¢ια ∂єѕєяυηт мσłłιт αηιм ι∂ єѕт łαвσ#"
+
+#: lms/templates/courseware/info.html
+msgid "This course is self-paced."
+msgstr "Thïs çöürsé ïs sélf-päçéd. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕ#"

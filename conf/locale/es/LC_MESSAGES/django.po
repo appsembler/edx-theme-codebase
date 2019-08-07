@@ -43,10 +43,6 @@ msgstr ""
 msgid "To access course materials, you must score {required_score}% or higher on this                   exam. Your current score is {current_score}%."
 msgstr ""
 
-#: lms/templates/courseware/info.html:110
-msgid "This course is Self-Paced."
-msgstr ""
-
 #: lms/templates/courseware/progress.html:59
 #: lms/templates/courseware/progress.html:160
 msgid "Course Progress"
@@ -142,5 +138,37 @@ msgstr ""
 
 #: lms/templates/static_templates/tos.html:9
 msgid "Terms of Service and Privacy Policy"
+msgstr ""
+
+#: customer_specific/lms/templates/theme-variables.html:144
+msgid "{copy_sign} {year} Company Name. All rights reserved."
+msgstr ""
+
+#: customer_specific/lms/templates/theme-variables.html:155
+msgid "edX, Open edX and the edX and Open edX logos are trademarks or registered trademarks of edX Inc."
+msgstr ""
+
+#: customer_specific/lms/templates/theme-variables.html:354
+msgid "Platform Name"
+msgstr ""
+
+#: customer_specific/lms/templates/theme-variables.html:357
+msgid "We hereby certify that:"
+msgstr ""
+
+#: customer_specific/lms/templates/theme-variables.html:358
+msgid "successfully completed, received a passing grade, and was awarded this platform's Honor Code Certificate of Completion in:"
+msgstr ""
+
+#: customer_specific/lms/templates/theme-variables.html:360
+msgid "Our platform offers interactive online classes and MOOCs."
+msgstr ""
+
+#: customer_specific/lms/templates/theme-variables.html:362
+msgid "Our platform acknowledges achievements through certificates, which are awarded for course activities that our platform students complete."
+msgstr ""
+
+#: lms/templates/courseware/info.html:110
+msgid "This course is self-paced."
 msgstr ""
 
