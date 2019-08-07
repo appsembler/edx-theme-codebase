@@ -1,0 +1,6 @@
+*.po
+*.mo
+!django.mo
+!djangojs.mo
+!django.po
+!djangojs.po
