@@ -9,6 +9,22 @@
 
   .forum-nav-refine-bar {
     @include display(flex);
+    @include flex-wrap(wrap);
+
+    label {
+      width: 100%;
+      text-align: left;
+      padding: 0.5rem 0;
+      border-bottom: 0.1rem solid #ccc;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+
+      select {
+        width: 100%;
+      }
+    }
 
     .forum-nav-filter-main, .forum-nav-sort {
       flex: 1 1 100%;
