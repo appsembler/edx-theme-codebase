@@ -180,12 +180,6 @@ msgstr ""
 "Térms öf Sérvïçé änd Prïväçý Pölïçý Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєт#"
 
 #: customer_specific/lms/templates/theme-variables.html
-msgid "{copy_sign} {year} Company Name. All rights reserved."
-msgstr ""
-"{copy_sign} {year} Çömpäný Nämé. Àll rïghts résérvéd. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт"
-" αмєт, ¢σηѕє¢тєтυя #"
-
-#: customer_specific/lms/templates/theme-variables.html
 msgid ""
 "edX, Open edX and the edX and Open edX logos are trademarks or registered "
 "trademarks of edX Inc."
@@ -232,3 +226,9 @@ msgstr ""
 #: lms/templates/courseware/info.html
 msgid "This course is self-paced."
 msgstr "Thïs çöürsé ïs sélf-päçéd. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕ#"
+
+#: customer_specific/lms/templates/theme-variables.html
+msgid "{copy_sign} {year} {platform_name}. All rights reserved."
+msgstr ""
+"{copy_sign} {year} {platform_name}. Àll rïghts résérvéd. Ⱡ'σяєм ιρѕυм ∂σłσя "
+"ѕιт αмєт, ¢σηѕє¢тє#"
