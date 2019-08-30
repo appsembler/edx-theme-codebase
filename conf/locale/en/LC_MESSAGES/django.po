@@ -140,35 +140,35 @@ msgstr ""
 msgid "Terms of Service and Privacy Policy"
 msgstr ""
 
-#: customer_specific/lms/templates/theme-variables.html:144
-msgid "{copy_sign} {year} Company Name. All rights reserved."
-msgstr ""
-
-#: customer_specific/lms/templates/theme-variables.html:155
+#: customer_specific/lms/templates/theme-variables.html:157
 msgid "edX, Open edX and the edX and Open edX logos are trademarks or registered trademarks of edX Inc."
 msgstr ""
 
-#: customer_specific/lms/templates/theme-variables.html:354
+#: customer_specific/lms/templates/theme-variables.html:356
 msgid "Platform Name"
 msgstr ""
 
-#: customer_specific/lms/templates/theme-variables.html:357
+#: customer_specific/lms/templates/theme-variables.html:359
 msgid "We hereby certify that:"
 msgstr ""
 
-#: customer_specific/lms/templates/theme-variables.html:358
+#: customer_specific/lms/templates/theme-variables.html:360
 msgid "successfully completed, received a passing grade, and was awarded this platform's Honor Code Certificate of Completion in:"
 msgstr ""
 
-#: customer_specific/lms/templates/theme-variables.html:360
+#: customer_specific/lms/templates/theme-variables.html:362
 msgid "Our platform offers interactive online classes and MOOCs."
 msgstr ""
 
-#: customer_specific/lms/templates/theme-variables.html:362
+#: customer_specific/lms/templates/theme-variables.html:364
 msgid "Our platform acknowledges achievements through certificates, which are awarded for course activities that our platform students complete."
 msgstr ""
 
 #: lms/templates/courseware/info.html:110
 msgid "This course is self-paced."
+msgstr ""
+
+#: customer_specific/lms/templates/theme-variables.html:145
+msgid "{copy_sign} {year} {platform_name}. All rights reserved."
 msgstr ""
 
