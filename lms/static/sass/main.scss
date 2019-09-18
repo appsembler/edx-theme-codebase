@@ -92,5 +92,9 @@
 // Import page builder sass
 @import "page-builder/page-builder";
 
+// Import certificate sass
+@import "certificates/certificates-base";
+@import "certificates/certificate-template-01";
+
 // Import custom customer-specific styles
 @import "../../../customer_specific/lms/static/sass/customer-specific";
