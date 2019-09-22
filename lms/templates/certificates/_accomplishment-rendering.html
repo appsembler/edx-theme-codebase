@@ -20,12 +20,14 @@ course_mode_class = course_mode if course_mode else ''
           <div class="a--accomplishment-design-01__platform-info__signatures">
             % if certificate_data:
                 % for signatory in certificate_data.get('signatories', []):
-                  <div class="signature-container">
-                    <img class="signee-signature" src="${static.url(signatory['signature_image_path'])}" alt="Signature | ${signatory['name']}" />
-                    <span class="signee-name">${signatory['name']}</span>
-                    <span class="signee-title">${signatory['title']}</span>
-                    <span class="signee-organisation">${signatory['organization']}</span>
-                  </div>
+                  % if signatory.get('signature_image_path'):
+                    <div class="signature-container">
+                      <img class="signee-signature" src="${static.url(signatory['signature_image_path'])}" alt="Signature | ${signatory['name']}" />
+                      <span class="signee-name">${signatory['name']}</span>
+                      <span class="signee-title">${signatory['title']}</span>
+                      <span class="signee-organisation">${signatory['organization']}</span>
+                    </div>
+                  % endif
                 % endfor
             % endif
           </div>
