@@ -91,23 +91,28 @@ from student.models import CourseEnrollment
   % endif
 </%block>
 
-
-
 % if get_dashboard_settings()['default_edx_view']:
 
   <!-- standard piece of edX frontend -->
 
   <div class="dashboard-notifications" tabindex="-1">
+
+    %if display_sidebar_account_activation_message:
+      <div class="dashboard-banner">
+        ${_("We have sent you an activation email - please click the link inside to activate your account.")}
+      </div>
+    %endif
+
     %if message:
-        <div class="dashboard-banner">
-            ${message | n, decode.utf8}
-        </div>
+      <div class="dashboard-banner">
+        ${message | n, decode.utf8}
+      </div>
     %endif
 
     %if enrollment_message:
-        <div class="dashboard-banner">
-            ${enrollment_message | n,  decode.utf8}
-        </div>
+      <div class="dashboard-banner">
+        ${enrollment_message | n,  decode.utf8}
+      </div>
     %endif
   </div>
 
