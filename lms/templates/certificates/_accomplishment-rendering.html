@@ -3,19 +3,27 @@
 <%namespace file='/theme-variables.html' import="get_certificates_settings" />
 <%
 course_mode_class = course_mode if course_mode else ''
+cert_settings = get_certificates_settings(context)
+logo_primary = cert_settings['cert_logos'][0]
+logo_secondary = cert_settings['cert_logos'][1] or None
 %>
 
 <main class="a--accomplishment--wrapper a--accomplishment--main">
   <div class="bs-container a--container">
-    <div class="a--accomplishment__body-wrapper a--accomplishment-design-01__body-wrapper ${get_certificates_settings()['paper_orientation']} paper-eu-a4">
+    <div class="a--accomplishment__body-wrapper a--accomplishment-design-01__body-wrapper ${cert_settings['paper_orientation']} paper-eu-a4">
       <div class="a--accomplishment__body a--accomplishment-design-01__body">
         <div class="a--accomplishment-design-01__platform-info">
           <div class="a--accomplishment-design-01__platform-info__main">
-            <img class="organisation-logo" src="${get_certificates_settings()['cert_logo']}" role="presentation" style="width: ${get_certificates_settings()['logo_width']};" />
-            <span class="platform-name">${get_certificates_settings()['platform_name']}</span>
-            <p>
-              ${get_certificates_settings()['short_platform_description']}
-            </p>
+            <img class="organisation-logo" src="${logo_primary['image_url']}" role="presentation" style="width: ${logo_primary['image_width']};" alt="${logo_primary['name']}"/>
+            % if logo_primary.get('show_textual_name', False):
+              <span class="platform-name">${logo_primary['name']}</span>
+            % endif
+            % if logo_secondary:
+              <img class="organisation-logo" src="${logo_secondary['image_url']}" role="presentation" style="width: ${logo_secondary['image_width']};" />
+              % if logo_secondary.get('show_textual_name', False):
+                <span class="platform-name">${logo_secondary['name']}</span>
+              % endif
+            % endif
           </div>
           <div class="a--accomplishment-design-01__platform-info__signatures">
             % if certificate_data:
@@ -44,15 +52,15 @@ course_mode_class = course_mode if course_mode else ''
             </div>
             <span class="vertical-divider-bar"></span>
             <p>
-              ${get_certificates_settings()['we_hereby_text']}
+              ${cert_settings['we_hereby_text']}
             </p>
             <h1 class="student-name">${accomplishment_copy_name | h}</h1>
             <p>
-              ${get_certificates_settings()['successfully_completed_text']}
+              ${cert_settings['successfully_completed_text']}
             </p>
             <h2 class="course-name-main"><span class="course-organization">${accomplishment_copy_course_org}</span> | <span class="course-number">${course_number}</span>: <span class="course-name">${accomplishment_copy_course_name}</span></h2>
             <p class="a--accomplishment-design-01__main__content__optional-cert-text">
-              ${get_certificates_settings()['optional_cert_text']}
+              ${cert_settings['optional_cert_text']}
             </p>
           </div>
         </div>

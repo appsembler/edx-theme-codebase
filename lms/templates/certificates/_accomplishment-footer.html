@@ -1,21 +1,24 @@
 <%namespace file='/theme-variables.html' import="get_certificates_settings" />
+<% 
+cert_settings = get_certificates_settings(context)
+%>
 
 <div class="wrapper-footer">
 
     <footer class="footer-app" role="contentinfo" id="company-info">
         <div class="footer-app-copyright">
-            <p class="copy copy-micro">${get_certificates_settings()['footer_copyright_text']}</p>
+            <p class="copy copy-micro">${cert_settings['footer_copyright_text']}</p>
         </div>
         <nav class="footer-app-nav">
             <ul class="list list-legal">
-                % if (get_certificates_settings()['footer_tos_url'] != "#") and (get_certificates_settings()['footer_tos_url'] != ""):
+                % if (cert_settings['footer_tos_url'] != "#") and (cert_settings['footer_tos_url'] != ""):
                   <li class="nav-item">
-                      <a class="action btn btn-small btn-link" href="${get_certificates_settings()['footer_tos_url']}">${company_tos_urltext}</a>
+                      <a class="action btn btn-small btn-link" href="${cert_settings['footer_tos_url']}">${company_tos_urltext}</a>
                   </li>
                 % endif
-                % if (get_certificates_settings()['footer_privacy_url'] != "#") and (get_certificates_settings()['footer_privacy_url'] != ""):
+                % if (cert_settings['footer_privacy_url'] != "#") and (cert_settings['footer_privacy_url'] != ""):
                   <li class="nav-item">
-                      <a class="action btn btn-small btn-link" href="${get_certificates_settings()['footer_privacy_url']}">${company_privacy_urltext}</a>
+                      <a class="action btn btn-small btn-link" href="${cert_settings['footer_privacy_url']}">${company_privacy_urltext}</a>
                   </li>
                 % endif
             </ul>
