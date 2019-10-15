@@ -18,9 +18,14 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
   endif
 %>
 
-% if message or enrollment_message:
+% if message or enrollment_message or display_sidebar_account_activation_message:
   <section class="a--dashboard-01__notifications" tabindex="-1">
     <ul class="bs-container a--container a--dashboard-01__notifications__container">
+      % if display_sidebar_account_activation_message:
+        <li class="a--dashboard-01__notifications__notification">
+          ${_("We have sent you an activation email - please click the link inside to activate your account.")}
+        </li>
+      % endif
       % if message:
         <li class="a--dashboard-01__notifications__notification">
           ${message}

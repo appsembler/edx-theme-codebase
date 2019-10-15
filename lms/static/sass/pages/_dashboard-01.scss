@@ -1,19 +1,20 @@
 .a--dashboard-01 {
 
   &__notifications {
-    background-color: lighten($base-text-color, 55%);
+    background-color: $brand-primary-color;
     padding: 1rem 0;
-    border-top: 0.1rem solid lighten($base-text-color, 50%);
-    border-bottom: 0.1rem solid lighten($base-text-color, 50%);
+    border-top: 0.1rem solid darken($brand-primary-color, 30%);
+    border-bottom: 0.1rem solid darken($brand-primary-color, 30%);
 
     &__container {
-      padding: 0;
+
     }
 
     &__notification {
       list-style-type: none;
       padding: 1.5rem 1rem;
       border-bottom: 0.1rem solid rgba($base-text-color, 0.2);
+      color: pick-visible-color($brand-primary-color, $base-text-color, #fff);
 
       &:last-child {
         border-bottom: none;
