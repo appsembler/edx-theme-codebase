@@ -60,6 +60,10 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
   <div class="bs-container a--container a--dashboard-01__main__container">
     <div class="a--dashboard-01__main__content">
       <div class="a--dashboard-01__main__courses-container" id="my-courses">
+        % if get_dashboard_settings()['dashboard_search_enabled']:
+          <div class="a--dashboard-01__main__search-results search-results" id="dashboard-search-results">
+          </div>
+        % endif
         % if len(course_enrollments) > 0:
           <ul class="a--dashboard-01__main__courses">
             <%
@@ -129,10 +133,6 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
           </div>
         % endif
       </div>
-      % if get_dashboard_settings()['dashboard_search_enabled']:
-        <div class="a--dashboard-01__main__search-results search-results" id="dashboard-search-results">
-        </div>
-      % endif
     </div>
     % if dashboard_sidebar_enabled:
       <aside class="a--dashboard-01__main__sidebar">
