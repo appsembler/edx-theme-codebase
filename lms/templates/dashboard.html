@@ -103,11 +103,13 @@ from student.models import CourseEnrollment
       </div>
     %endif
 
-    %if account_activation_messages:
-      <div class="dashboard-banner">
-        ${account_activation_messages | n, decode.utf8}
-      </div>
-    %endif
+    % if account_activation_messages:
+      % for account_activation_message in account_activation_messages:
+        <div class="dashboard-banner">
+          ${account_activation_message | n, decode.utf8}
+        </div>
+      % endfor
+    % endif
 
     %if message:
       <div class="dashboard-banner">

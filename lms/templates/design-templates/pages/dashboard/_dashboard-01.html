@@ -37,9 +37,11 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
         </li>
       % endif
       % if account_activation_messages:
-        <li class="a--dashboard-01__notifications__notification">
-          ${account_activation_messages}
-        </li>
+        % for account_activation_message in account_activation_messages:
+          <li class="a--dashboard-01__notifications__notification">
+            ${ account_activation_message | n, decode.utf8 }
+          </li>
+        % endfor
       % endif
     </ul>
   </section>
