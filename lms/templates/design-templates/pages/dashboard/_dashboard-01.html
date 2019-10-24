@@ -18,7 +18,7 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
   endif
 %>
 
-% if message or enrollment_message or display_sidebar_account_activation_message:
+% if message or enrollment_message or display_sidebar_account_activation_message or account_activation_messages:
   <section class="a--dashboard-01__notifications" tabindex="-1">
     <ul class="bs-container a--container a--dashboard-01__notifications__container">
       % if display_sidebar_account_activation_message:
@@ -34,6 +34,11 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
       % if enrollment_message:
         <li class="a--dashboard-01__notifications__notification">
           ${enrollment_message}
+        </li>
+      % endif
+      % if account_activation_messages:
+        <li class="a--dashboard-01__notifications__notification">
+          ${account_activation_messages}
         </li>
       % endif
     </ul>
