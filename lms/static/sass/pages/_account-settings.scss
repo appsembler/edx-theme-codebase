@@ -78,6 +78,13 @@
 					}
 				}
 			}
+
+			.u-field-language_proficiencies {
+				// Hide it so student can chose the correct "Language" field.
+				// Because this "Preferred Language" aka "Language Proficiencies" is a
+				// very confusing field that we don't use. Mainly edX have it for data-collection purposes.
+				display: none;
+			}
 		}
 
 		.account-deletion-details {
