@@ -315,6 +315,7 @@ ul.a--slide-menu__container {
   -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
   transition-timing-function: cubic-bezier(0.7,0,0.3,1);
   overflow: hidden;
+  overflow-y: auto;
 
   li {
     display: block;
