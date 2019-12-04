@@ -13,7 +13,7 @@ from django.utils.translation import ugettext as _
   course_image = course_info['course_image']
 %>
 
-<article id="course_info['id']" class="a--course-tile-02__wrapper" aria-label="${course_info['course_title']}">
+<article id="${course_info['id']}" class="a--course-tile-02__wrapper" aria-label="${course_info['course_title']}">
   <a href="${course_info['course_url']}" class="a--course-tile-02__container">
     <div class="a--course-tile-02__image" style="background-image: url('${course_image}');">
     </div>
