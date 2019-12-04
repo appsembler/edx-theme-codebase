@@ -105,21 +105,21 @@ from student.helpers import (
                     course_date = course_overview.end
                 elif course_overview.has_started():
                     container_string = _("Started - {date}")
-                    course_date = course_overview.start
+                    course_date = course_overview.advertised_start or course_overview.start
                 elif course_overview.starts_within(days=5):
                     container_string = _("Starts - {date}")
-                    course_date = course_overview.start
+                    course_date = course_overview.advertised_start or course_overview.start
                     format = 'defaultFormat'
                 else: ## hasn't started yet
                     container_string = _("Starts - {date}")
-                    course_date = course_overview.start
+                    course_date = course_overview.advertised_start or course_overview.start
                 endif
             endif
           %>
-          % if isinstance(course_date, str):
+          % if isinstance(course_date, basestring):
             <span class="info-date-block" data-tooltip="">${_(container_string).format(date=course_date)}</span>
           % elif course_date is not None:
-            <%
+            <% 
               course_date_string = course_date.strftime('%Y-%m-%dT%H:%M:%S%z')
             %>
             <span class="info-date-block localized-datetime" data-language="${user_language}" data-tooltip="" data-timezone="${user_timezone}" data-datetime="${course_date_string}" data-format=${format} data-string="${container_string}"></span>
