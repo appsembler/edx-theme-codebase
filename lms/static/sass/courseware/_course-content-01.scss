@@ -721,3 +721,12 @@
     }
   }
 }
+
+.modal.staff-modal {
+  width: 980px;
+  max-width: 100%;
+
+  .inner-wrapper {
+    padding: 2.5rem;
+  }
+}
