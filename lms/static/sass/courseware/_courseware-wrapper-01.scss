@@ -54,11 +54,20 @@
     }
 
     .wrap-instructor-info, .wrap-instructor-info.studio-view {
-      margin: 3rem 0 -5rem;
-      margin: 3rem 0 0;
-      display: block;
+      @include display(flex);
+      @include flex-wrap(wrap);
+      @include align-items(center);
+      @include justify-content(flex-end);
       top: 0;
+      margin: 0 0 5rem;
+      padding: 2rem 0;
+      border-bottom: 1px dashed #eee;
       @include primary-font;
+
+      .instructor-info-action {
+        display: inline-block;
+        margin-left: 0.5rem;
+      }
     }
 
     h1 {
