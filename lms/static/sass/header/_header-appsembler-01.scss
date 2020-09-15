@@ -78,7 +78,7 @@
         @include primary-font;
         font-size: 1.4rem;
         line-height: 120%;
-        color: rgba($header-text-color, 0.7);
+        color: rgba($header-text-color, 0.85);
 
         @media (max-width: $screen-sm-max) {
           display: none;
@@ -219,7 +219,7 @@
       &.a--user-avatar {
         @include display(flex);
         @include align-items(center);
-        color: rgba($header-text-color, 0.6);
+        color: rgba($header-text-color, 1);
 
         .a--user-avatar__image {
           width: 4.8rem;

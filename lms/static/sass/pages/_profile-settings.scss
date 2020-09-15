@@ -29,9 +29,9 @@
 		}
 
 		.wrapper-profile-field-account-privacy {
-			background-color: rgba($base-text-color, 0.2);
+			background-color: rgba($base-text-color, 0.05);
 			padding: 2rem 0;
-			opacity: 0.7;
+			opacity: 0.9;
 			@include transition(all 0.3s ease-in-out);
 
 			@media(max-width: $screen-sm-max) {
@@ -54,7 +54,7 @@
 
 			.u-field-title {
 				@include primary-font;
-				color: rgba($base-text-color, 0.8);
+				color: rgba($base-text-color, 1);
 				text-shadow: none;
 				margin: 5px 15px 5px 0;
         font-size: 1.4rem;
