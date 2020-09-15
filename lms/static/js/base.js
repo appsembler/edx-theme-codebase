@@ -3,6 +3,7 @@ $(document).ready(function(){
 	// site mobile nav toggle
 	$('#site-menu-toggle').on('click', function() {
 		$(this).toggleClass('a--toggled');
+		$('#slide-menu li').toggle();
 		$('#slide-menu').toggleClass('a--active');
 		if ($(this).hasClass('a--toggled')) {
 		  $('#site-menu-toggle').attr('aria-expanded', 'true');
