@@ -23,7 +23,7 @@
     }
   }
 
-  h4 {
+  p {
     @include fontVariantInclude($global-font-h4);
     font-size: 1.6rem;
     margin: 0;
