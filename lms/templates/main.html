@@ -177,10 +177,10 @@ from pipeline_mako import render_require_js_path_overrides
         <%include file="/preview_menu.html" />
     % endif
 
-    <div class="content-wrapper" id="content">
+    <main class="content-wrapper" id="main">
       ${self.body()}
       <%block name="bodyextra"/>
-    </div>
+    </main>
 
     % if not disable_footer:
         <%include file="${static.get_template_path('footer.html')}" />
