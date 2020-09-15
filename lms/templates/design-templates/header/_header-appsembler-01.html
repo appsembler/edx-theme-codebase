@@ -21,7 +21,7 @@ from django.utils.translation import ugettext as _
       </div>
       % endif
     </div>
-    <nav class="a--site-nav__group-right" id="site-menu" aria-label="${_("Main navigation")}">
+    <nav class="a--site-nav__group-right" id="site-menu" role="navigation" aria-label="${_("Main navigation")}">
       <ul class="a--site-menu__container">
         % for menu_group in menu_items:
         <li class="a--site-menu__group">
