@@ -40,7 +40,7 @@ from django.utils.translation import ugettext as _
         % endfor
         % if user_authenticated:
           <li class="a--site-menu__group a--user-avatar">
-            <img class="a--user-avatar__image" src="${profile_image_url}" alt="${user_name} avatar" />
+            <img class="a--user-avatar__image" src="${profile_image_url}" role="presentation" />
             ${_("Welcome")}, <span>${user_name}</span>.
           </li>
         % endif
