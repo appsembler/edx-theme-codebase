@@ -48,8 +48,8 @@
           @include button_splash($buttons-border-radius);
 
           &:hover, &:focus, &:hover:not(:disabled), &:focus:not(:disabled) {
-            color: rgba(pick-visible-color($cta-button-bg, $base-text-color, #fff), 0.8);
-            background-color: $cta-button-bg;
+            background-color: pick-visible-color($cta-button-bg, $base-text-color, #fff);
+            color: $cta-button-bg;
           }
         }
       }
@@ -123,6 +123,8 @@
           &:hover, &:focus, &:hover:not(:disabled), &:focus:not(:disabled) {
             border: 1px solid $base-text-color;
             opacity: 0.6;
+            color: #fff;
+            background-color: $base-text-color;
           }
         }
 
@@ -200,6 +202,12 @@
 
       ul li a {
         font-size: $font-size-base-body;
+
+        &:hover, &:focus {
+          opacity: 0.7;
+          text-decoration: underline;
+          text-decoration-style: dotted;
+        }
       }
     }
   }
