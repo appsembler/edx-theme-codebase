@@ -17,11 +17,14 @@
     }
 
     &__title {
+      @include edx_style_killer;
       @include fontVariantInclude($global-font-h3);
       color: $brand-primary-color;
       margin: 0;
       font-size: 1.8rem;
       cursor: pointer;
+      text-align: left;
+      line-height: 150%;
     }
 
     &__content {
