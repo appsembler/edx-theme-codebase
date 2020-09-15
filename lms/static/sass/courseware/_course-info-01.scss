@@ -49,6 +49,7 @@
     font-size: $font-size-base-body;
     @include primary-font-bold;
     margin: 0;
+    display: block;
     color: darken($brand-primary-color, 20%);
   }
 }
