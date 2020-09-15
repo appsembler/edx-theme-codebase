@@ -1,5 +1,10 @@
 .wrapper-account-settings {
 
+	a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:visited:not(.btn):focus {
+		text-decoration: underline !important;
+		text-decoration-style: dotted;
+	}
+
 	.account-settings-container {
 
 		.wrapper-header {
