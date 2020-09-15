@@ -62,14 +62,14 @@ course_sections = blocks.get('children')
                                     <span class="subsection-title">
                                         ${ subsection['display_name'] }
                                     </span>
-                                    <div class="details prerequisite">
+                                    <span class="details prerequisite">
                                         ${ _("Prerequisite: ") }
                                             <%
                                                 prerequisite_id = gated_content[subsection['id']]['prerequisite']
                                                 prerequisite_name = xblock_display_names.get(prerequisite_id)
                                             %>
                                             ${ prerequisite_name }
-                                    </div>
+                                    </span>
                 % else:
                                     <button class="subsection-text accordion-trigger"
                                             id="${ subsection['id'] }"
@@ -84,7 +84,7 @@ course_sections = blocks.get('children')
                                         <span class="complete-checkmark fa fa-check"></span>
                     % endif
                 % endif
-                                        <div class="details">
+                                        <span class="details">
 
                 ## There are behavior differences between rendering of subsections which have
                 ## exams (timed, graded, etc) and those that do not.
@@ -140,7 +140,7 @@ course_sections = blocks.get('children')
                     % endif
                                             </span>
                 % endif
-                                        </div> <!-- /details -->
+                                        </span> <!-- /details -->
                                     </button> <!-- /subsection-text -->
                 % if gated_subsection and not completed_prereqs:
                                 </a>

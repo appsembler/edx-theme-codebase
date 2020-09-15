@@ -154,6 +154,10 @@
                   border-color: $brand-accent-color;
                 }
 
+                span.details {
+                  display: block;
+                }
+
                 .subsection-text {
                   @include transition(all 0.3s ease-in-out);
                   padding: 1rem;
