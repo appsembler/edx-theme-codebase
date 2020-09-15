@@ -177,7 +177,7 @@ from pipeline_mako import render_require_js_path_overrides
         <%include file="/preview_menu.html" />
     % endif
 
-    <main class="content-wrapper" id="main">
+    <main class="content-wrapper" id="main" role="main">
       ${self.body()}
       <%block name="bodyextra"/>
     </main>
