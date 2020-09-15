@@ -8,7 +8,7 @@ from django.utils.translation import ugettext as _
 <!-- top navigation -->
 <section class="a--header-design-02 a--site-nav">
   <div class="bs-container a--container a--site-nav__container">
-    <h1 class="a--site-nav__group-left">
+    <div class="a--site-nav__group-left">
       <a href="${logo_url}" class="a--site-nav__logo__container a--site-nav__logo__positive">
         <img class="a--site-nav__logo a--logo-full" src="${logo_positive}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}">
       </a>
@@ -20,7 +20,7 @@ from django.utils.translation import ugettext as _
         <span>${course_number}</span>${course_name}
       </div>
       % endif
-    </h1>
+    </div>
     <nav class="a--site-nav__group-right" id="site-menu" aria-label="${_("Main navigation")}">
       <ul class="a--site-menu__container">
         % for menu_group in menu_items:
