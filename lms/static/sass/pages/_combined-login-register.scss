@@ -82,6 +82,7 @@
       border-top: $login-register-input-border-top;
       border-left: $login-register-input-border-left;
       border-right: $login-register-input-border-right;
+      border-color: #939393;
       @include transition(all 0.3s ease-in-out);
 
       &:hover, &:focus, &:hover:not(:disabled), &:focus:not(:disabled) {

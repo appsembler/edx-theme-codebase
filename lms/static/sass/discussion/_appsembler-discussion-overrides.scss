@@ -373,3 +373,14 @@
     color: lighten($base-text-color, 5%);
   }
 }
+
+.discussion-body .forum-new-post-form input[type=text].field-input, .edit-post-form input[type=text].field-input {
+	border-color: #939393;
+}
+
+.discussion-body {
+
+  .wmd-input {
+    border-color: #939393;
+  }
+}

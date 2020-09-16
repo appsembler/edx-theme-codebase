@@ -333,7 +333,6 @@
     }
 
     &:hover, &:focus {
-      opacity: 0.5;
 
       .a--toggle-text {
         opacity: 0;
@@ -341,6 +340,7 @@
 
       .a--toggle-bar {
         opacity: 1;
+        background-color: $brand-primary-color;
 
         &:nth-child(1) {
           @include transform(translateX($nav-toggle-bar-separation/2) translateY(-0.5rem) rotate(135deg));
