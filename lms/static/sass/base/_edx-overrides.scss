@@ -83,3 +83,7 @@ a:visited:not(.btn):hover,
 a:visited:not(.btn):focus {
 	text-decoration: unset;
 }
+
+.view-profile .wrapper-profile-section-container-two .u-field.mode-placeholder:hover .u-field-title, .view-profile .wrapper-profile-section-container-two .u-field.mode-placeholder:hover i, .u-field.mode-placeholder:hover span {
+	color: #0070b0;
+}
