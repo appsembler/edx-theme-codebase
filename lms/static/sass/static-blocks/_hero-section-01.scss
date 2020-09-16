@@ -48,6 +48,7 @@
 
       &:hover, &:focus {
         color: rgba($cta-button-text-color, 0.8);
+        color: rgba(pick-visible-color($cta-button-bg, darken($cta-button-text-color, 20%), lighten($cta-button-text-color, 20%)), 1);
       }
     }
   }
