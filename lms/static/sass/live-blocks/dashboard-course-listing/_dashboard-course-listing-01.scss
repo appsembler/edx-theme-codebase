@@ -163,8 +163,8 @@
       }
 
       &:hover, &:focus {
-        color: pick-visible-color($base-text-color, $cta-button-bg, #fff);
-        background: $base-text-color;
+        background: pick-visible-color($cta-button-bg, $base-text-color, #fff);
+        color: $cta-button-bg;
       }
 
       &.archived {
