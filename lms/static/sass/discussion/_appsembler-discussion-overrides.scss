@@ -359,3 +359,17 @@
     }
   }
 }
+
+.view-discussion-home .helpgrid-row-navigation {
+
+  span.fa-search, span.fa-sort {
+    color: lighten($base-text-color, 5%);
+  }
+}
+
+.view-discussion-home .helpgrid-row-notification {
+
+  span.fa-envelope {
+    color: lighten($base-text-color, 5%);
+  }
+}
