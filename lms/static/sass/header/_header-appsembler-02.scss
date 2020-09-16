@@ -234,6 +234,10 @@
           margin-right: 1.5rem;
         }
 
+        p {
+          margin-bottom: 0;
+        }
+
         span {
           display: inline-block;
           margin-left: 0.5rem;
@@ -402,22 +406,22 @@
       a {
         color: $slideout-menu-text-color;
         @include fontVariantInclude($global-font-header-links);
-        text-transform: none;
         letter-spacing: $base-letter-spacing;
+        @include underline_expanding_hover(rgba($slideout-menu-text-color,0.8), 0.5rem);
 
         &:hover, &:focus {
-          color: rgba($slideout-menu-text-color,0.5);
+          color: rgba($slideout-menu-text-color,0.8);
         }
       }
 
       &.a--active a {
-        @include primary-font;
+        @include fontVariantInclude($global-font-header-links);
         letter-spacing: $base-letter-spacing;
-        color: rgba($slideout-menu-text-color,0.2);
+        color: rgba($slideout-menu-text-color,0);
       }
 
       &.a--spacer {
-        margin: 1.5rem auto;
+        margin: 2rem auto;
         width: 5rem;
         height: 0.2rem;
         background-color: rgba($slideout-menu-text-color,0.4);
