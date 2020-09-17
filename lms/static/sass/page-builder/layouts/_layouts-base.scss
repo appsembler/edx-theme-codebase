@@ -1,19 +1,12 @@
 .amc--layout {
+  background-repeat: no-repeat;
 
   &__container {
     padding: 0;
-    max-width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
   }
 
   &__column {
     padding: 0 1.5rem;
-
-    @media (min-width: $screen-sm-min) {
-      padding: 1.5rem;
-      flex-grow: 1;
-      flex-shrink: 1;
-    }
   }
 }

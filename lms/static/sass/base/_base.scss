@@ -128,7 +128,7 @@ a, a:visited, a:not(.btn), a:visited:not(.btn), .btn-link {
 	padding-left: 3rem;
 
 	@media(min-width: 1680px) {
-		width: 1600px;
+		max-width: 1600px;
 	}
 }
 
@@ -140,7 +140,7 @@ a, a:visited, a:not(.btn), a:visited:not(.btn), .btn-link {
 	margin-right: auto;
 
 	@media(min-width: 1680px) {
-		width: 1600px;
+		max-width: 1600px;
 	}
 
 	@media(max-width:$screen-sm-max) {
@@ -244,4 +244,8 @@ a.nav-skip {
 			color: $base-text-color;
 		}
 	}
+}
+
+.bs-container:before, .bs-container:after {
+	display: none;
 }
