@@ -1,16 +1,10 @@
 .amc--layout--two-col-33-66 {
 
-  &__column {
-    width: 100%;
+  .amc--layout__container {
+    grid-template-columns: 1fr;
 
     @media (min-width: $screen-sm-min) {
-      &.amc--column-one {
-        width: 33.3%;
-      }
-
-      &.amc--column-two {
-        width: 66.6%;
-      }
+      grid-template-columns: 1fr 2fr;
     }
   }
 }

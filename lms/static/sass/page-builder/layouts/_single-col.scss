@@ -1,6 +1,6 @@
 .amc--layout--single-column {
 
-  &__column {
-    width: 100%;
+  .amc--layout__container {
+    grid-template-columns: 1fr;
   }
 }
