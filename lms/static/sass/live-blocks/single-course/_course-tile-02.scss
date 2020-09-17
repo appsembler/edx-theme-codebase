@@ -11,6 +11,8 @@
 
       &:first-of-type {
         width: 50%;
+        @include flex-grow(1);
+        @include flex-shrink(1);
 
         .a--course-tile-02 {
 
