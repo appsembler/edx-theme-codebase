@@ -321,6 +321,7 @@
 
       .a--course-tile-01__wrapper {
         width: 100%;
+        max-width: 42rem;
 
         @media(max-width:$screen-md-max) {
           width: 100%;
