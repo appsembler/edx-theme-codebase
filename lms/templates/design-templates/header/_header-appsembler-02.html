@@ -8,7 +8,7 @@ from django.utils.translation import ugettext as _
 <!-- top navigation -->
 <section class="a--header-design-02 a--site-nav">
   <div class="bs-container a--container a--site-nav__container">
-    <h1 class="a--site-nav__group-left">
+    <div class="a--site-nav__group-left">
       <a href="${logo_url}" class="a--site-nav__logo__container a--site-nav__logo__positive">
         <img class="a--site-nav__logo a--logo-full" src="${logo_positive}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}">
       </a>
@@ -20,8 +20,8 @@ from django.utils.translation import ugettext as _
         <span>${course_number}</span>${course_name}
       </div>
       % endif
-    </h1>
-    <nav class="a--site-nav__group-right" id="site-menu" aria-label="${_("Main navigation")}">
+    </div>
+    <nav class="a--site-nav__group-right" id="site-menu" role="navigation" aria-label="${_("Main navigation")}">
       <ul class="a--site-menu__container">
         % for menu_group in menu_items:
         <li class="a--site-menu__group">
@@ -40,7 +40,7 @@ from django.utils.translation import ugettext as _
         % endfor
         % if user_authenticated:
           <li class="a--site-menu__group a--user-avatar">
-            <img class="a--user-avatar__image" src="${profile_image_url}" alt="${user_name}" role="presentation" />
+            <img class="a--user-avatar__image" src="${profile_image_url}" role="presentation" />
             ${_("Welcome")}, <span>${user_name}</span>.
           </li>
         % endif
@@ -56,10 +56,10 @@ from django.utils.translation import ugettext as _
             % for menu_group in slideout_menu_items:
               % if menu_group and menu_group[0]['link_title']:
                 % if not first_slideout_item:
-                  <li class="a--spacer"></li>
+                  <li style="display: none;" class="a--spacer"></li>
                 % endif
                 % for item in menu_group:
-                  <li class="${item['special_class']}">
+                  <li style="display: none;" class="${item['special_class']}">
                     <a href="${item['link_URL']}"
                     % if item['open_in_new_tab']:
                       target="_blank"

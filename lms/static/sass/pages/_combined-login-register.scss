@@ -53,6 +53,10 @@
 
       input {
         margin: 0 1rem 0 0;
+
+        &:hover, &:focus {
+          border: 1px solid $login-register-hover-border-color;
+        }
       }
 
       label {
@@ -78,6 +82,7 @@
       border-top: $login-register-input-border-top;
       border-left: $login-register-input-border-left;
       border-right: $login-register-input-border-right;
+      border-color: #939393;
       @include transition(all 0.3s ease-in-out);
 
       &:hover, &:focus, &:hover:not(:disabled), &:focus:not(:disabled) {
@@ -85,6 +90,15 @@
         border-top: $login-register-input-border-top;
         border-left: $login-register-input-border-left;
         border-right: $login-register-input-border-right;
+        border-color: $login-register-hover-border-color;
+      }
+    }
+
+    input[type="checkbox"] {
+      position: relative;
+
+      &:hover, &:focus, &:hover:not(:disabled), &:focus:not(:disabled) {
+        border: $login-register-input-border-bottom;
         border-color: $login-register-hover-border-color;
       }
     }
@@ -137,8 +151,8 @@
     @include button_splash($buttons-border-radius);
 
     &:hover, &:focus, &:hover:not(:disabled), &:focus:not(:disabled) {
-      color: rgba(pick-visible-color($cta-button-bg, $base-text-color, #fff), 0.8);
-      background-color: $cta-button-bg;
+      color: $cta-button-bg;
+      background-color: pick-visible-color($cta-button-bg, $base-text-color, #fff);
     }
   }
 

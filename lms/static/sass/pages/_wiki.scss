@@ -20,6 +20,13 @@
             margin: 1.5rem;
           }
         }
+
+        .breadcrumb li a {
+
+          &:hover, &:focus {
+            text-decoration: underline !important;
+          }
+        }
       }
 
       #hint_id_content {

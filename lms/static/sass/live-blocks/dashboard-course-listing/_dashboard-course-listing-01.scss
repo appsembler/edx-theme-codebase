@@ -30,7 +30,7 @@
     position: relative;
 
     &:hover, &:focus {
-      opacity: 0.8;
+      opacity: 0.6;
     }
 
     @media (max-width: $screen-xs-max) {
@@ -79,13 +79,19 @@
     font-size: 2rem;
     line-height: 130%;
 
+    &:hover, &:focus {
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      opacity: 0.7;
+    }
+
     @media (max-width: $screen-xs-max) {
       font-size: 1.6rem;
     }
   }
 
   &__course-organisation-id {
-    color: rgba($base-text-color, 0.7);
+    color: rgba($base-text-color, 0.85);
     @include fontVariantInclude($global-font-h4);
     margin: 0 0 1.5rem;
     font-size: 1.6rem;
@@ -122,6 +128,15 @@
       margin: 0.5rem 2rem 0 0;
       list-style-type: none;
       @include primary-font-bold;
+
+      a, a:visited, a:not(.btn), a:visited:not(.btn), .btn-link {
+
+        &:hover, &:focus {
+          text-decoration: underline;
+          text-decoration-style: dotted;
+          opacity: 0.7;
+        }
+      }
     }
   }
 
@@ -148,8 +163,8 @@
       }
 
       &:hover, &:focus {
-        color: pick-visible-color($cta-button-bg, $base-text-color, #fff);;
-        opacity: 0.6;
+        background: pick-visible-color($cta-button-bg, $base-text-color, #fff);
+        color: $cta-button-bg;
       }
 
       &.archived {

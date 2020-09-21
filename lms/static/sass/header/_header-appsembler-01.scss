@@ -45,7 +45,7 @@
           @include transition(all 0.3s ease-in-out);
 
           &:hover, &:focus {
-            opacity: 0.5;
+            opacity: 0.8;
           }
         }
 
@@ -78,7 +78,7 @@
         @include primary-font;
         font-size: 1.4rem;
         line-height: 120%;
-        color: rgba($header-text-color, 0.7);
+        color: rgba($header-text-color, 0.85);
 
         @media (max-width: $screen-sm-max) {
           display: none;
@@ -219,7 +219,7 @@
       &.a--user-avatar {
         @include display(flex);
         @include align-items(center);
-        color: rgba($header-text-color, 0.6);
+        color: rgba($header-text-color, 1);
 
         .a--user-avatar__image {
           width: 4.8rem;
@@ -227,6 +227,10 @@
           border-radius: 100%;
           display: block;
           margin-right: 1.5rem;
+        }
+
+        p {
+          margin-bottom: 0;
         }
 
         span {
@@ -291,9 +295,9 @@
     }
 
     &:hover, &:focus {
-      opacity: 0.5;
 
       .a--toggle-bar {
+        background-color: $brand-primary-color;
 
         &:nth-child(1) {
           @include transform(translateY(-1.5*$nav-toggle-bar-separation));
@@ -390,20 +394,21 @@
         color: $slideout-menu-text-color;
         @include fontVariantInclude($global-font-header-links);
         letter-spacing: $base-letter-spacing;
+        @include underline_expanding_hover(rgba($slideout-menu-text-color,0.8), 0.5rem);
 
         &:hover, &:focus {
-          color: rgba($slideout-menu-text-color,0.5);
+          color: rgba($slideout-menu-text-color,0.8);
         }
       }
 
       &.a--active a {
         @include fontVariantInclude($global-font-header-links);
         letter-spacing: $base-letter-spacing;
-        color: rgba($slideout-menu-text-color,0.2);
+        color: rgba($slideout-menu-text-color,0);
       }
 
       &.a--spacer {
-        margin: 1.5rem auto;
+        margin: 2rem auto;
         width: 5rem;
         height: 0.2rem;
         background-color: rgba($slideout-menu-text-color,0.4);

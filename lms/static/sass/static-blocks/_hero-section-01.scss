@@ -23,12 +23,12 @@
     }
   }
 
-  h4 {
+  p {
     @include fontVariantInclude($global-font-h4);
     font-size: 1.6rem;
     margin: 0;
     color: inherit;
-    opacity: 0.75
+    opacity: 0.9;
   }
 
   &__cta-container {
@@ -48,6 +48,7 @@
 
       &:hover, &:focus {
         color: rgba($cta-button-text-color, 0.8);
+        color: rgba(pick-visible-color($cta-button-bg, darken($cta-button-text-color, 20%), lighten($cta-button-text-color, 20%)), 1);
       }
     }
   }

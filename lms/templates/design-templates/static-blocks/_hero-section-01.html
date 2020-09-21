@@ -11,7 +11,7 @@
 <section class="a--hero-section-01 ${optional_classes}" style="background-image: url('${bg_image_url}'); color: ${text_color}; background-color: ${background_color}; ${extra_css}">
   <div class="bs-container a--container a--hero-section-01__container">
       <h1>${template_settings['hero_title']}</h1>
-      <h4>${template_settings['hero_subtitle']}</h4>
+      <p>${template_settings['hero_subtitle']}</p>
       <div class="a--hero-section-01__cta-container">
         % if template_settings['popup_video_url']:
           <a href="#" data-toggle="modal" data-target="#${template_settings['popup_video_id']}Modal" class="a--cta">${template_settings['popup_video_text']}</a>
