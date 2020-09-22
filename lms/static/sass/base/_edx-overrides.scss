@@ -95,3 +95,8 @@ a:visited:not(.btn):focus {
 .account-settings-sections .section .account-settings-section-body .u-field .field .field-input {
 	border-color: #939393;
 }
+
+// remove the Order History tab from the Account Settings
+.wrapper-account-settings .account-settings-container .wrapper-header .account-nav #orders-tab {
+	display: none;
+}
