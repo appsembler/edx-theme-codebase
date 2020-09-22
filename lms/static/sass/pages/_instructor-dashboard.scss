@@ -35,6 +35,17 @@
       }
     }
   }
+
+  section.idash-section#cohort_management .cohort-management-settings .form-cancel {
+    background-color: #fff;
+    border: 2px solid rgb(0,117,156);
+    padding: 8px 17px;
+    opacity: 1;
+
+    &:hover, &:focus {
+      opacity: 0.5;
+    }
+  }
 }
 
 .open-response-assessment-block {
