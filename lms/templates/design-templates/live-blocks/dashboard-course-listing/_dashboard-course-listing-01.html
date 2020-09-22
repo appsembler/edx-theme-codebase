@@ -59,7 +59,7 @@ from student.helpers import (
         href="${course_target}"
         tabindex="-1"
       % endif
-      data-course-key="${enrollment.course_id}" class="a--dashboard-course-listing-01__course-image" style="background-image: url('${course_overview.course_image_url}');">
+      data-course-key="${enrollment.course_id}" aria-label="${_('View Course')}" class="a--dashboard-course-listing-01__course-image" style="background-image: url('${course_overview.course_image_url}');">
       % if is_course_blocked:
         <span class="course-blocked-overlay"></span>
         <span class="course-blocked-label">Blocked</span>
