@@ -86,7 +86,9 @@
       @include button_splash($buttons-border-radius);
 
       &:hover, &:focus {
-        color: rgba(#fff, 0.8);
+        color: $cta-button-bg;
+        background-color: pick-visible-color($cta-button-bg, $base-text-color, #fff);
+        border: 0.2rem solid $cta-button-bg;
       }
     }
   }

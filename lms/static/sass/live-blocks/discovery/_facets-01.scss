@@ -54,10 +54,6 @@
     width: 100%;
     @include transition(all 0.3s ease-in-out);
 
-    &:hover, &:focus {
-      opacity: $single-facet-selected-opacity;
-    }
-
     span.name {
       @include display(flex);
       @include flex-shrink(1);
@@ -88,6 +84,18 @@
 
       span.name {
         @include primary-font-bold;
+      }
+    }
+
+    &:hover, &:focus {
+      
+      span.name {
+        color: $brand-primary-color;
+        text-decoration: underline;
+      }
+
+      span.count {
+        background: $brand-primary-color;
       }
     }
   }
