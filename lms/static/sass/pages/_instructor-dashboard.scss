@@ -20,6 +20,21 @@
       margin: 1rem 0;
     }
   }
+
+  .instructor-nav {
+    margin-top: 1.5rem;
+
+    .nav-item {
+      margin-right: 1.5rem;
+      display: inline-block;
+      padding: 1rem 0;
+
+      &.active-section {
+        color: $base-text-color;
+        border-bottom: 0.2rem solid $brand-primary-color;
+      }
+    }
+  }
 }
 
 .open-response-assessment-block {
