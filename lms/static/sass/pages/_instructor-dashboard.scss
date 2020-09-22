@@ -36,6 +36,13 @@
     }
   }
 
+  .idash-section .message-warning .message-title {
+    display: inline-block;
+    padding: 15px;
+    border: 2px solid #ffc01f;
+    color: #222;
+  }
+
   section.idash-section#cohort_management .cohort-management-settings .form-cancel {
     background-color: #fff;
     border: 2px solid rgb(0,117,156);
