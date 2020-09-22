@@ -76,3 +76,10 @@
     }
   }
 }
+
+div.gradebook-wrapper .student-table tr.highlight td a {
+
+  &:focus, &:hover {
+    text-decoration: underline !important;
+  }
+}
