@@ -20,6 +20,48 @@
       margin: 1rem 0;
     }
   }
+
+  .instructor-nav {
+    margin-top: 1.5rem;
+
+    .nav-item {
+      margin-right: 1.5rem;
+      display: inline-block;
+      padding: 1rem 0;
+
+      &.active-section {
+        color: $base-text-color;
+        border-bottom: 0.2rem solid $brand-primary-color;
+      }
+    }
+  }
+
+  .idash-section .message-warning .message-title {
+    display: inline-block;
+    padding: 15px;
+    border: 2px solid #ffc01f;
+    color: #222;
+  }
+
+  .idash-section .message-confirmation {
+    border: 2px solid #008401;
+    background-color: #fff;
+  }
+
+  section.idash-section#cohort_management .cohort-management-settings .form-cancel {
+    background-color: #fff;
+    border: 2px solid rgb(0,117,156);
+    padding: 8px 17px;
+    opacity: 1;
+
+    &:hover, &:focus {
+      opacity: 0.5;
+    }
+  }
+
+  section.idash-section#cohort_management .cohort-management-group-setup {
+    color: #333;
+  }
 }
 
 .open-response-assessment-block {
@@ -32,5 +74,12 @@
     .name {
       width: 230px;
     }
+  }
+}
+
+div.gradebook-wrapper .student-table tr.highlight td a {
+
+  &:focus, &:hover {
+    text-decoration: underline !important;
   }
 }

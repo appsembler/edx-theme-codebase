@@ -31,7 +31,7 @@ from django.utils.translation import ugettext as _
       % if course_vars['course_video']:
         <a href="#" data-toggle="modal" data-target="#videoModal" class="a--course-about-01__header__video-trigger"><i class="fa fa-play-circle"></i></a>
       % endif
-      <img src="${course_image}">
+      <img src="${course_image}" role="presentation" />
     </div>
     <div class="a--course-about-01__header__info">
       <h1 class="a--course-about-01__header__title">${course_vars['course_name']}</h1>

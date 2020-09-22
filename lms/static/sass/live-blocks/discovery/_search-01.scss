@@ -34,9 +34,16 @@
     font-size: $search-bar-icon-button-font-size;
     color: $search-bar-icon-button-color;
     transition: all 0.3s ease-in-out;
+    width: 4.8rem;
+    height: 4.8rem;
+    @include display(flex);
+    @include align-items(center);
+    @include justify-content(center);
+    border: 0.2rem solid rgba($brand-primary-color, 0);
+    border-radius: 4rem;
 
     .inactive {
-      display: block;
+      @include display(flex);
     }
 
     .active {
@@ -46,7 +53,8 @@
 
     &:hover, &:focus, &:hover:not(:disabled), &:focus:not(:disabled) {
       background: none;
-      opacity: 0.7;
+      color: $brand-primary-color;
+      border: 0.2rem solid rgba($brand-primary-color, 1);
     }
 
     &.activated {

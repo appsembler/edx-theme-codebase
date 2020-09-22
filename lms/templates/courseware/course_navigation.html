@@ -62,7 +62,12 @@ include_special_exams = settings.FEATURES.get('ENABLE_SPECIAL_EXAMS', False) and
               tab_is_active = (tab.tab_id == active_page) or (tab.tab_id == default_tab)
           %>
           <li class="a--courseware-top-nav__item">
-            <a href="${tab.link_func(course, reverse) | h}" class="${url_class(tab_is_active)}">
+            <a href="${tab.link_func(course, reverse) | h}"
+              class="${url_class(tab_is_active)}"
+              % if tab_is_active:
+                aria-current="page"
+              % endif
+            >
               ${_(tab.name) | h}
             </a>
           </li>

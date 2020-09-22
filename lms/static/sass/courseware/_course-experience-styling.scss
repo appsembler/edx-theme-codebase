@@ -37,7 +37,7 @@
           @include edx_style_killer;
           @include no_damn_focus_glow;
           background-color: $cta-button-bg;
-          border: $cta-button-border;
+          border: 0.2rem solid $cta-button-bg;
           display: inline-block;
           padding: 1.2rem 2rem;
           line-height: 100%;
@@ -50,6 +50,7 @@
           &:hover, &:focus, &:hover:not(:disabled), &:focus:not(:disabled) {
             background-color: pick-visible-color($cta-button-bg, $base-text-color, #fff);
             color: $cta-button-bg;
+            border: 0.2rem solid $cta-button-bg;
           }
         }
       }
