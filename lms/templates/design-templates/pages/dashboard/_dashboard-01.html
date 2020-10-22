@@ -23,7 +23,8 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
     <ul class="bs-container a--container a--dashboard-01__notifications__container">
       % if display_sidebar_account_activation_message:
         <li class="a--dashboard-01__notifications__notification">
-          ${_("We have sent you an activation email - please click the link inside to activate your account.")}
+          ${_("We have sent you an activation email - please click the link in the email to activate your account, "
+              "as you will not be able to sign in again without activating.")}
         </li>
       % endif
       % if message:

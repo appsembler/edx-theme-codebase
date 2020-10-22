@@ -99,7 +99,8 @@ from student.models import CourseEnrollment
 
     %if display_sidebar_account_activation_message:
       <div class="dashboard-banner">
-        ${_("We have sent you an activation email - please click the link inside to activate your account.")}
+        ${_("We have sent you an activation email - please click the link in the email to activate your account, "
+            "as you will not be able to sign in again without activating.")}
       </div>
     %endif
 
