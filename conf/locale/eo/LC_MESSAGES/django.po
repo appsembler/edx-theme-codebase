@@ -232,3 +232,78 @@ msgid "{copy_sign} {year} {platform_name}. All rights reserved."
 msgstr ""
 "{copy_sign} {year} {platform_name}. Àll rïghts résérvéd. Ⱡ'σяєм ιρѕυм ∂σłσя "
 "ѕιт αмєт, ¢σηѕє¢тє#"
+
+#: customer_specific/cms/templates/site-unavailable.html
+msgid ""
+"The site for {organization_name} is currently unavailable. Please contact "
+"your administrator."
+msgstr ""
+"Thé sïté för {organization_name} ïs çürréntlý ünäväïläßlé. Pléäsé çöntäçt "
+"ýöür ädmïnïsträtör. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєт#"
+
+#: customer_specific/lms/templates/static_templates/site-unavailable.html
+msgid "Site unavailable"
+msgstr "Sïté ünäväïläßlé Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αм#"
+
+#: customer_specific/lms/templates/static_templates/site-unavailable.html
+msgid "{platform_name} Page Unavailable"
+msgstr "{platform_name} Pägé Ûnäväïläßlé Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, #"
+
+#: customer_specific/lms/templates/static_templates/site-unavailable.html
+msgid ""
+"The site {platform_name} is currently unavailable. Please contact your "
+"administrator."
+msgstr ""
+"Thé sïté {platform_name} ïs çürréntlý ünäväïläßlé. Pléäsé çöntäçt ýöür "
+"ädmïnïsträtör. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя#"
+
+#: lms/templates/dashboard.html
+#: lms/templates/design-templates/pages/dashboard/_dashboard-01.html
+msgid ""
+"We have sent you an activation email - please click the link inside to "
+"activate your account."
+msgstr ""
+"Wé hävé sént ýöü än äçtïvätïön émäïl - pléäsé çlïçk thé lïnk ïnsïdé tö "
+"äçtïväté ýöür äççöünt. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
+
+#: lms/templates/course_experience/course-outline-fragment.html
+msgid "Completed"
+msgstr "Çömplétéd Ⱡ'σяєм ιρѕυм ∂σł#"
+
+#: customer_specific/lms/templates/emails/activation_email.txt
+msgid "Thank you for creating an account with {platform_name}!"
+msgstr ""
+"Thänk ýöü för çréätïng än äççöünt wïth {platform_name}! Ⱡ'σяєм ιρѕυм ∂σłσя "
+"ѕιт αмєт, ¢σηѕє¢тєтυя #"
+
+#: customer_specific/lms/templates/emails/activation_email.txt
+msgid ""
+"There's just one more step before you can enroll in a course: you need to "
+"activate your {platform_name} account. To activate your account, click the "
+"following link. If that doesn't work, copy and paste the link into your "
+"browser's address bar."
+msgstr ""
+"Théré's jüst öné möré stép ßéföré ýöü çän énröll ïn ä çöürsé: ýöü nééd tö "
+"äçtïväté ýöür {platform_name} äççöünt. Tö äçtïväté ýöür äççöünt, çlïçk thé "
+"föllöwïng lïnk. Ìf thät döésn't wörk, çöpý änd pästé thé lïnk ïntö ýöür "
+"ßröwsér's äddréss ßär. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α∂ιριѕι¢ιηg "
+"єłιт, ѕє∂ ∂σ єιυѕмσ∂ тємρσя ιη¢ι∂ι∂υηт υт łαвσяє єт ∂σłσяє мαgηα αłιqυα. υт "
+"єηιм α∂ мιηιм νєηιαм, qυιѕ ησѕтяυ∂ єχєя¢ιтαтιση υłłαм¢σ łαвσяιѕ ηιѕι υт "
+"αłιqυιρ єχ єα ¢σммσ∂σ ¢σηѕєqυαт. ∂υιѕ αυтє ιяυяє ∂σłσя ιη яєρяєнєη∂єяιт ιη "
+"νσłυρтαтє νєłιт єѕѕє ¢ιłłυм ∂σłσя#"
+
+#: customer_specific/lms/templates/emails/activation_email.txt
+msgid ""
+"If you didn't create an account, you don't need to do anything; you won't "
+"receive any more email from us. If you need assistance, please do not reply "
+"to this email message. Check the help section of the {platform_name} "
+"website."
+msgstr ""
+"Ìf ýöü dïdn't çréäté än äççöünt, ýöü dön't nééd tö dö änýthïng; ýöü wön't "
+"réçéïvé äný möré émäïl fröm üs. Ìf ýöü nééd ässïstänçé, pléäsé dö nöt réplý "
+"tö thïs émäïl méssägé. Çhéçk thé hélp séçtïön öf thé {platform_name} "
+"wéßsïté. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α∂ιριѕι¢ιηg єłιт, ѕє∂ ∂σ "
+"єιυѕмσ∂ тємρσя ιη¢ι∂ι∂υηт υт łαвσяє єт ∂σłσяє мαgηα αłιqυα. υт єηιм α∂ мιηιм"
+" νєηιαм, qυιѕ ησѕтяυ∂ єχєя¢ιтαтιση υłłαм¢σ łαвσяιѕ ηιѕι υт αłιqυιρ єχ єα "
+"¢σммσ∂σ ¢σηѕєqυαт. ∂υιѕ αυтє ιяυяє ∂σłσя ιη яєρяєнєη∂єяιт ιη νσłυρтαтє νєłιт"
+" єѕѕє ¢ιłłυм ∂σłσяє єυ ƒυgιαт ηυłłα ραяιαтυя.#"

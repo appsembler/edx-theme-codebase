@@ -8,25 +8,25 @@ msgstr ""
 "Language: es\n"
 
 #: lms/templates/discovery/_course-tile-01.underscore:12
-#: lms/templates/discovery/_course-tile-02.underscore:10
+#: lms/templates/discovery/_course-tile-02.underscore:9
 #: lms/templates/discovery/_course-tile-03.underscore:9
 msgid "Self-paced"
 msgstr ""
 
 #: lms/templates/discovery/_course-tile-01.underscore:12
-#: lms/templates/discovery/_course-tile-02.underscore:10
+#: lms/templates/discovery/_course-tile-02.underscore:9
 #: lms/templates/discovery/_course-tile-03.underscore:9
 msgid "Self-Paced"
 msgstr ""
 
 #: lms/templates/discovery/_course-tile-01.underscore:12
-#: lms/templates/discovery/_course-tile-02.underscore:10
+#: lms/templates/discovery/_course-tile-02.underscore:9
 #: lms/templates/discovery/_course-tile-03.underscore:9
 msgid "self-paced"
 msgstr ""
 
 #: lms/templates/discovery/_course-tile-01.underscore:12
-#: lms/templates/discovery/_course-tile-02.underscore:10
+#: lms/templates/discovery/_course-tile-02.underscore:9
 #: lms/templates/discovery/_course-tile-03.underscore:9
 msgid "SELF-PACED"
 msgstr ""

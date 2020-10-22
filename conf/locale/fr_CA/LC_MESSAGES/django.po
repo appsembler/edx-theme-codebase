@@ -19,7 +19,7 @@ msgstr "Modifier le contenu que les apprenants peuvent voir"
 msgid "To hide content from students, select the Configure icon for a section, subsection, or unit, then select {em_start}Hide from students{em_end}."
 msgstr "Afin de cacher le contenu aux étudiants, sélectionnez l'icone de configuration pour une section, sous-section ou unité, et sélectionnez ensuite {em_start}Cacher aux étudiants{em_end}."
 
-#: customer_specific/lms/templates/certificates/_accomplishment-rendering.html:45
+#: customer_specific/lms/templates/certificates/_accomplishment-rendering.html:56
 msgid "Certificate"
 msgstr "Attestation"
 
@@ -27,11 +27,11 @@ msgstr "Attestation"
 msgid "<strong>Warning:</strong> Your browser is not fully supported. We strongly recommend using {chrome_link} or {ff_link}."
 msgstr "<strong>Avertissement</strong> Votre navigateur n'est pas complètement supporté. Nous recommandons vivement d'utiliser {chrome_link} ou {ff_link}."
 
-#: lms/templates/courseware/course_navigation.html:93
+#: lms/templates/courseware/course_navigation.html:98
 msgid "Course is not yet visible to students."
 msgstr "Le cours n'est pas encore visible aux étudiants."
 
-#: lms/templates/courseware/course_navigation.html:104
+#: lms/templates/courseware/course_navigation.html:109
 msgid "You cannot view the course as a student or beta tester before the course release date."
 msgstr "Vous ne pouvez pas voir le cours comme un étudiant ou un bêta-testeur avant la date de sortie du cours."
 
@@ -46,7 +46,7 @@ msgstr "Pour accéder au contenu de cours, vous devez obtenir un score de  {requ
 #: lms/templates/courseware/progress.html:59
 #: lms/templates/courseware/progress.html:160
 msgid "Course Progress"
-msgstr "Progression de Course"
+msgstr "Progression de cours"
 
 #: customer_specific/lms/templates/design-templates/footer/_footer-appsembler-01.html:22
 #: lms/templates/design-templates/footer/_footer-appsembler-01.html:21
@@ -73,7 +73,7 @@ msgstr "Ajouter à votre panier / Prix: "
 msgid "Enroll in "
 msgstr "S'inscrire au "
 
-#: lms/templates/design-templates/pages/dashboard/_dashboard-01.html:129
+#: lms/templates/design-templates/pages/dashboard/_dashboard-01.html:141
 msgid "promote_course_catalog_text"
 msgstr "promote_course_catalog_text"
 
@@ -140,27 +140,27 @@ msgstr "Nom d'affichage du cours:"
 msgid "Terms of Service and Privacy Policy"
 msgstr "Charte de Service et Règles de Confidentialité"
 
-#: customer_specific/lms/templates/theme-variables.html:157
+#: customer_specific/lms/templates/theme-variables.html:162
 msgid "edX, Open edX and the edX and Open edX logos are trademarks or registered trademarks of edX Inc."
 msgstr "edX, Open edX, ainsi que les logos edX et Open edX sont des marques déposées ou marques de edX Inc."
 
-#: customer_specific/lms/templates/theme-variables.html:356
+#: customer_specific/lms/templates/theme-variables.html:361
 msgid "Platform Name"
 msgstr "Nom de la plateforme"
 
-#: customer_specific/lms/templates/theme-variables.html:359
+#: customer_specific/lms/templates/theme-variables.html:365
 msgid "We hereby certify that:"
 msgstr ""
 
-#: customer_specific/lms/templates/theme-variables.html:360
+#: customer_specific/lms/templates/theme-variables.html:366
 msgid "successfully completed, received a passing grade, and was awarded this platform's Honor Code Certificate of Completion in:"
 msgstr ""
 
-#: customer_specific/lms/templates/theme-variables.html:362
+#: customer_specific/lms/templates/theme-variables.html:368
 msgid "Our platform offers interactive online classes and MOOCs."
 msgstr ""
 
-#: customer_specific/lms/templates/theme-variables.html:364
+#: customer_specific/lms/templates/theme-variables.html:370
 msgid "Our platform acknowledges achievements through certificates, which are awarded for course activities that our platform students complete."
 msgstr ""
 
@@ -168,7 +168,44 @@ msgstr ""
 msgid "This course is self-paced."
 msgstr "Ce cours est à votre rythme"
 
-#: customer_specific/lms/templates/theme-variables.html:145
+#: customer_specific/lms/templates/theme-variables.html:150
 msgid "{copy_sign} {year} {platform_name}. All rights reserved."
 msgstr "{copy_sign} {year} {platform_name}. Tous droits réservés."
+
+#: customer_specific/cms/templates/site-unavailable.html:19
+msgid "The site for {organization_name} is currently unavailable. Please contact your administrator."
+msgstr ""
+
+#: customer_specific/lms/templates/static_templates/site-unavailable.html:9
+msgid "Site unavailable"
+msgstr ""
+
+#: customer_specific/lms/templates/static_templates/site-unavailable.html:15
+msgid "{platform_name} Page Unavailable"
+msgstr ""
+
+#: customer_specific/lms/templates/static_templates/site-unavailable.html:26
+msgid "The site {platform_name} is currently unavailable. Please contact your administrator."
+msgstr ""
+
+#: lms/templates/dashboard.html:102
+#: lms/templates/design-templates/pages/dashboard/_dashboard-01.html:26
+msgid "We have sent you an activation email - please click the link inside to activate your account."
+msgstr ""
+
+#: lms/templates/course_experience/course-outline-fragment.html:43
+msgid "Completed"
+msgstr ""
+
+#: customer_specific/lms/templates/emails/activation_email.txt:4
+msgid "Thank you for creating an account with {platform_name}!"
+msgstr ""
+
+#: customer_specific/lms/templates/emails/activation_email.txt:8
+msgid "There's just one more step before you can enroll in a course: you need to activate your {platform_name} account. To activate your account, click the following link. If that doesn't work, copy and paste the link into your browser's address bar."
+msgstr ""
+
+#: customer_specific/lms/templates/emails/activation_email.txt:20
+msgid "If you didn't create an account, you don't need to do anything; you won't receive any more email from us. If you need assistance, please do not reply to this email message. Check the help section of the {platform_name} website."
+msgstr ""
 
