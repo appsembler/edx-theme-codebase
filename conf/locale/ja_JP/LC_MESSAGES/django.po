@@ -73,7 +73,7 @@ msgstr "カートに追加 / 金額："
 msgid "Enroll in "
 msgstr "受講講座："
 
-#: lms/templates/design-templates/pages/dashboard/_dashboard-01.html:141
+#: lms/templates/design-templates/pages/dashboard/_dashboard-01.html:142
 msgid "promote_course_catalog_text"
 msgstr "promote_course_catalog_text"
 
@@ -188,24 +188,24 @@ msgstr ""
 msgid "The site {platform_name} is currently unavailable. Please contact your administrator."
 msgstr ""
 
-#: lms/templates/dashboard.html:102
-#: lms/templates/design-templates/pages/dashboard/_dashboard-01.html:26
-msgid "We have sent you an activation email - please click the link inside to activate your account."
-msgstr ""
-
 #: lms/templates/course_experience/course-outline-fragment.html:43
 msgid "Completed"
 msgstr ""
 
-#: customer_specific/lms/templates/emails/activation_email.txt:4
+#: customer_specific/lms/templates/emails/activation_email.txt:3
 msgid "Thank you for creating an account with {platform_name}!"
 msgstr ""
 
-#: customer_specific/lms/templates/emails/activation_email.txt:8
+#: customer_specific/lms/templates/emails/activation_email.txt:7
 msgid "There's just one more step before you can enroll in a course: you need to activate your {platform_name} account. To activate your account, click the following link. If that doesn't work, copy and paste the link into your browser's address bar."
 msgstr ""
 
-#: customer_specific/lms/templates/emails/activation_email.txt:20
+#: customer_specific/lms/templates/emails/activation_email.txt:19
 msgid "If you didn't create an account, you don't need to do anything; you won't receive any more email from us. If you need assistance, please do not reply to this email message. Check the help section of the {platform_name} website."
+msgstr ""
+
+#: lms/templates/dashboard.html:102
+#: lms/templates/design-templates/pages/dashboard/_dashboard-01.html:26
+msgid "We have sent you an activation email - please click the link in the email to activate your account, as you will not be able to sign in again without activating."
 msgstr ""
 
