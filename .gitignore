@@ -5,3 +5,7 @@ lms/static/css/*
 /lms/static/sass/.sass-cache
 .sass-cache
 /edx-theme-customers
+
+/conf/locale/eo/LC_MESSAGES/djangojs-partial.mo
+/conf/locale/eo/LC_MESSAGES/djangojs-partial.po
+

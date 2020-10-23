@@ -257,15 +257,6 @@ msgstr ""
 "Thé sïté {platform_name} ïs çürréntlý ünäväïläßlé. Pléäsé çöntäçt ýöür "
 "ädmïnïsträtör. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя#"
 
-#: lms/templates/dashboard.html
-#: lms/templates/design-templates/pages/dashboard/_dashboard-01.html
-msgid ""
-"We have sent you an activation email - please click the link inside to "
-"activate your account."
-msgstr ""
-"Wé hävé sént ýöü än äçtïvätïön émäïl - pléäsé çlïçk thé lïnk ïnsïdé tö "
-"äçtïväté ýöür äççöünt. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
-
 #: lms/templates/course_experience/course-outline-fragment.html
 msgid "Completed"
 msgstr "Çömplétéd Ⱡ'σяєм ιρѕυм ∂σł#"
@@ -307,3 +298,19 @@ msgstr ""
 " νєηιαм, qυιѕ ησѕтяυ∂ єχєя¢ιтαтιση υłłαм¢σ łαвσяιѕ ηιѕι υт αłιqυιρ єχ єα "
 "¢σммσ∂σ ¢σηѕєqυαт. ∂υιѕ αυтє ιяυяє ∂σłσя ιη яєρяєнєη∂єяιт ιη νσłυρтαтє νєłιт"
 " єѕѕє ¢ιłłυм ∂σłσяє єυ ƒυgιαт ηυłłα ραяιαтυя.#"
+
+#: lms/templates/dashboard.html
+#: lms/templates/design-templates/pages/dashboard/_dashboard-01.html
+msgid ""
+"We have sent you an activation email - please click the link in the email to"
+" activate your account, as you will not be able to sign in again without "
+"activating."
+msgstr ""
+"Wé hävé sént ýöü än äçtïvätïön émäïl - pléäsé çlïçk thé lïnk ïn thé émäïl tö"
+" äçtïväté ýöür äççöünt, äs ýöü wïll nöt ßé äßlé tö sïgn ïn ägäïn wïthöüt "
+"äçtïvätïng. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α∂ιριѕι¢ιηg єłιт, ѕє∂ "
+"∂σ єιυѕмσ∂ тємρσя ιη¢ι∂ι∂υηт υт łαвσяє єт ∂σłσяє мαgηα αłιqυα. υт єηιм α∂ "
+"мιηιм νєηιαм, qυιѕ ησѕтяυ∂ єχєя¢ιтαтιση υłłαм¢σ łαвσяιѕ ηιѕι υт αłιqυιρ єχ "
+"єα ¢σммσ∂σ ¢σηѕєqυαт. ∂υιѕ αυтє ιяυяє ∂σłσя ιη яєρяєнєη∂єяιт ιη νσłυρтαтє "
+"νєłιт єѕѕє ¢ιłłυм ∂σłσяє єυ ƒυgιαт ηυłłα ραяιαтυя. єχ¢єρтєυя ѕιηт σ¢¢αє¢αт "
+"¢υρι∂αтαт ηση ρяσι∂єηт, ѕυηт ιη ¢υłρα qυι σƒƒι¢ια ∂єѕєяυ#"
