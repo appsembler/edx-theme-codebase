@@ -190,22 +190,22 @@ msgstr ""
 
 #: lms/templates/course_experience/course-outline-fragment.html:43
 msgid "Completed"
-msgstr ""
+msgstr "Complété"
 
 #: customer_specific/lms/templates/emails/activation_email.txt:3
 msgid "Thank you for creating an account with {platform_name}!"
-msgstr ""
+msgstr "Merci d’avoir créé un compte sur {platform_name}!"
 
 #: customer_specific/lms/templates/emails/activation_email.txt:7
 msgid "There's just one more step before you can enroll in a course: you need to activate your {platform_name} account. To activate your account, click the following link. If that doesn't work, copy and paste the link into your browser's address bar."
-msgstr ""
+msgstr "Il ne reste plus qu'une seule étape avant de pouvoir vous inscrire à un cours : vous devez activer votre compte sur {platform_name}. Pour activer votre compte, cliquez sur le lien suivant. Si cela ne fonctionne pas, copiez et collez-le lien dans la barre d'adresse de votre navigateur."
 
 #: customer_specific/lms/templates/emails/activation_email.txt:19
 msgid "If you didn't create an account, you don't need to do anything; you won't receive any more email from us. If you need assistance, please do not reply to this email message. Check the help section of the {platform_name} website."
-msgstr ""
+msgstr "Si vous n'avez pas créé de compte, vous n'avez rien à faire ; vous ne recevrez plus de courriels de notre part. Si vous avez besoin d'aide, ne répondez pas à ce message électronique. Consultez la section d'aide du site web {platform_name}."
 
 #: lms/templates/dashboard.html:102
 #: lms/templates/design-templates/pages/dashboard/_dashboard-01.html:26
 msgid "We have sent you an activation email - please click the link in the email to activate your account, as you will not be able to sign in again without activating."
-msgstr ""
+msgstr "Nous vous avons envoyé votre courriel d’activation – merci de cliquer sur le lien dans ce courriel afin d’activer votre compte, car vous ne pourrez plus vous connecter sans avoir complété l’activation."
 
