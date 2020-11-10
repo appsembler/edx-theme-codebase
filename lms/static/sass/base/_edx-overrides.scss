@@ -100,3 +100,13 @@ a:visited:not(.btn):focus {
 .wrapper-account-settings .account-settings-container .wrapper-header .account-nav #orders-tab {
 	display: none;
 }
+
+
+.xblock-student_view-lti_consumer h2 {
+	@include fontVariantInclude($global-font-h4);
+	font-size: $font-size-h4;
+	line-height: $line-height-h4;
+	color: $base-text-color;
+	margin: $font-size-h4 0;
+	display: block;
+}
