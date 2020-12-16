@@ -275,8 +275,8 @@
   }
 
   .register-form.register-fields-disabled {
-    
-    .required-fields, .checkbox-optional_fields_toggle, .optional-fields, .register-button, .view-disabled {
+
+    .required-fields, .checkbox-optional_fields_toggle, .optional-fields, .register-button, .view-disabled, .checkbox-terms_of_service {
       display: none;
     }
   }
