@@ -102,11 +102,18 @@ a:visited:not(.btn):focus {
 }
 
 
-.xblock-student_view-lti_consumer h2 {
-	@include fontVariantInclude($global-font-h4);
-	font-size: $font-size-h4;
-	line-height: $line-height-h4;
-	color: $base-text-color;
-	margin: $font-size-h4 0;
-	display: block;
+body .xblock-student_view { // body prefix is a nicer `!important`
+	// Change the style of the H2 header to look like H3
+	&.xblock-student_view-lti_consumer,
+	&.xblock-student_view-freetextresponse
+	{
+		h2.problem-header {
+			@include fontVariantInclude($global-font-h4);
+			font-size: $font-size-h4;
+			line-height: $line-height-h4;
+			color: $base-text-color;
+			margin: $font-size-h4 0;
+			display: block;
+		}
+	}
 }
