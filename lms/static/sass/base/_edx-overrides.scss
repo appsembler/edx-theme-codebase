@@ -113,7 +113,7 @@ body .xblock-student_view { // body prefix is a nicer `!important`
 			line-height: $line-height-h4;
 			color: $base-text-color;
 			margin: $font-size-h4 0;
-			display: block;
+			display: inline-block;
 		}
 	}
 }
