@@ -61,7 +61,6 @@ from django.utils.http import urlquote_plus
       %if certificate_data:
       <div class="wrapper-msg wrapper-auto-cert">
           <div id="errors-info" class="errors-info"></div>
-          %if passed:
           <div class="auto-cert-message" id="course-success">
               <div class="has-actions">
                   <% post_url = reverse('generate_user_cert', args=[unicode(course.id)]) %>
@@ -80,7 +79,6 @@ from django.utils.http import urlquote_plus
                   </div>
               </div>
           </div>
-          %endif
       </div>
       %endif
 
