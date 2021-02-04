@@ -1,29 +1,29 @@
 .a--plain-content {
-  padding: 5rem 0;
+  padding: calcRem(50) 0;
   background-color: transparent;
   line-height: 150%;
-  font-size: 1.6rem;
+  font-size: calcRem(16);
 
   h1 {
     @include fontVariantInclude($global-font-h1);
-    font-size: 4.2rem;
-    margin: 0 0 3rem;
+    font-size: calcRem(42);
+    margin: 0 0 calcRem(30);
     color: $brand-primary-color;
     text-transform: none;
   }
 
   h2 {
     @include fontVariantInclude($global-font-h2);
-    font-size: 3.2rem;
-    margin: 4rem 0 3rem;
+    font-size: calcRem(32);
+    margin: calcRem(40) 0 calcRem(30);
     color: $brand-primary-color;
     text-transform: none;
   }
 
   h3 {
     @include fontVariantInclude($global-font-h3);
-    font-size: 1.8rem;
-    margin: 3rem 0 2rem;
+    font-size: calcRem(18);
+    margin: calcRem(30) 0 calcRem(20);
     color: rgba($base-text-color, 0.8);
     text-transform: none;
   }

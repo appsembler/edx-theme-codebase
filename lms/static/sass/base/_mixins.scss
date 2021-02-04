@@ -234,3 +234,12 @@
     @return $c2;
   }
 }
+
+
+@mixin xblock-wide-frame {
+  margin-left: calcRem(-50);
+  margin-right: calcRem(-50);
+  padding: calcRem(20) calcRem(40);
+  border-radius: $in-app-container-border-radius * 2 / 3;
+  background-color: #f5f5f5;
+}

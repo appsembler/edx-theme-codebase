@@ -1,6 +1,6 @@
 .a--discovery-facets {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding-top: calcRem(15);
+  padding-bottom: calcRem(15);
   position: initial;
 
   &__heading {

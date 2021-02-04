@@ -1,8 +1,8 @@
 .amc--element--courses-listing {
   @include display(flex);
   @include flex-wrap(wrap);
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
+  margin-left: calcRem(-15);
+  margin-right: calcRem(-15);
 
   &.course-tile-01--parent-element {
 
@@ -18,7 +18,7 @@
     }
 
     .a--course-tile-03 {
-      margin: 1.5rem auto;
+      margin: calcRem(15) auto;
     }
   }
 }
@@ -44,7 +44,7 @@
     }
 
     .a--course-tile-02__wrapper {
-      padding: 1.5rem;
+      padding: calcRem(15);
       width: 50%;
       @include display(flex);
       @include flex-wrap(wrap);
@@ -58,7 +58,7 @@
           .a--course-tile-02 {
 
             &__info {
-              width: 36rem;
+              width: calcRem(360);
               max-width: 100%
             }
           }
@@ -104,7 +104,7 @@
       }
 
       .a--course-tile-02__wrapper {
-        padding: 1.5rem;
+        padding: calcRem(15);
         width: 100%;
         @include display(flex);
         @include flex-wrap(wrap);
@@ -118,7 +118,7 @@
             .a--course-tile-02 {
 
               &__info {
-                width: 36rem;
+                width: calcRem(360);
                 max-width: 100%
               }
             }
@@ -160,7 +160,7 @@
       }
 
       .a--course-tile-02__wrapper {
-        padding: 1.5rem;
+        padding: calcRem(15);
         width: 50%;
         @include display(flex);
         @include flex-wrap(wrap);
@@ -174,7 +174,7 @@
             .a--course-tile-02 {
 
               &__info {
-                width: 36rem;
+                width: calcRem(360);
                 max-width: 100%
               }
             }
@@ -220,7 +220,7 @@
       }
 
       .a--course-tile-02__wrapper {
-        padding: 1.5rem;
+        padding: calcRem(15);
         width: 50%;
         @include display(flex);
         @include flex-wrap(wrap);
@@ -234,7 +234,7 @@
             .a--course-tile-02 {
 
               &__info {
-                width: 36rem;
+                width: calcRem(360);
                 max-width: 100%
               }
             }
@@ -276,7 +276,7 @@
       }
 
       .a--course-tile-02__wrapper {
-        padding: 1.5rem;
+        padding: calcRem(15);
         width: 100%;
         @include display(flex);
         @include flex-wrap(wrap);
@@ -290,7 +290,7 @@
             .a--course-tile-02 {
 
               &__info {
-                width: 36rem;
+                width: calcRem(360);
                 max-width: 100%
               }
             }
@@ -321,7 +321,7 @@
 
       .a--course-tile-01__wrapper {
         width: 100%;
-        max-width: 42rem;
+        max-width: calcRem(420);
 
         @media(max-width:$screen-md-max) {
           width: 100%;
@@ -337,7 +337,7 @@
       }
 
       .a--course-tile-02__wrapper {
-        padding: 1.5rem;
+        padding: calcRem(15);
         width: 100%;
         @include display(flex);
         @include flex-wrap(wrap);
@@ -351,7 +351,7 @@
             .a--course-tile-02 {
 
               &__info {
-                width: 36rem;
+                width: calcRem(360);
                 max-width: 100%
               }
             }

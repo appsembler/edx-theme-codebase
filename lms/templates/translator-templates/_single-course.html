@@ -2,8 +2,8 @@
 <%namespace name='static' file='static_content.html'/>
 <%!
 from django.utils.translation import ugettext as _
-from django.core.urlresolvers import reverse
-from courseware.courses import get_course_about_section
+from django.urls import reverse
+from six import text_type
 %>
 <%namespace name='static' file='/static_content.html'/>
 <%page args="course" />
@@ -16,7 +16,7 @@ from courseware.courses import get_course_about_section
   course_start_string = course.advertised_start
   return {
     'course_id' : course.id,
-    'course_url' : reverse('about_course', args=[course.id.to_deprecated_string()]),
+    'course_url' : reverse('about_course', args=[text_type(course.id)]),
     'course_image' : course.course_image_url,
     'course_organization' : course.display_org_with_default,
     'course_code' : course.display_number_with_default,

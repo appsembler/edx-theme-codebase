@@ -1,5 +1,5 @@
 .a--photo-grid-01 {
-  padding: 6rem 0;
+  padding: calcRem(60) 0;
 
   &__container {
 
@@ -14,7 +14,7 @@
     width: 100%;
     display: block;
     @include responsive_square_div;
-    margin: 1.5rem 0;
+    margin: calcRem(15) 0;
     @include transition(all 0.3s ease-in-out);
 
     &:hover, &:focus {

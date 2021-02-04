@@ -6,47 +6,47 @@
     }
 
     &-5 {
-      padding-top: 0.5rem;
+      padding-top: calcRem(5);
     }
 
     &-10 {
-      padding-top: 1rem;
+      padding-top: calcRem(10);
     }
 
     &-15 {
-      padding-top: 1.5rem;
+      padding-top: calcRem(15);
     }
 
     &-20 {
-      padding-top: 2rem;
+      padding-top: calcRem(20);
     }
 
     &-30 {
-      padding-top: 3rem;
+      padding-top: calcRem(30);
     }
 
     &-50 {
-      padding-top: 5rem;
+      padding-top: calcRem(50);
     }
 
     &-75 {
-      padding-top: 7.5rem;
+      padding-top: calcRem(75);
     }
 
     &-100 {
-      padding-top: 10rem;
+      padding-top: calcRem(100);
     }
 
     &-200 {
-      padding-top: 20rem;
+      padding-top: calcRem(200);
     }
 
     &-300 {
-      padding-top: 30rem;
+      padding-top: calcRem(300);
     }
 
     &-500 {
-      padding-top: 50rem;
+      padding-top: calcRem(500);
     }
   }
 
@@ -57,47 +57,47 @@
     }
 
     &-5 {
-      padding-right: 0.5rem;
+      padding-right: calcRem(5);
     }
 
     &-10 {
-      padding-right: 1rem;
+      padding-right: calcRem(10);
     }
 
     &-15 {
-      padding-right: 1.5rem;
+      padding-right: calcRem(15);
     }
 
     &-20 {
-      padding-right: 2rem;
+      padding-right: calcRem(20);
     }
 
     &-30 {
-      padding-right: 3rem;
+      padding-right: calcRem(30);
     }
 
     &-50 {
-      padding-right: 5rem;
+      padding-right: calcRem(50);
     }
 
     &-75 {
-      padding-right: 7.5rem;
+      padding-right: calcRem(75);
     }
 
     &-100 {
-      padding-right: 10rem;
+      padding-right: calcRem(100);
     }
 
     &-200 {
-      padding-right: 20rem;
+      padding-right: calcRem(200);
     }
 
     &-300 {
-      padding-right: 30rem;
+      padding-right: calcRem(300);
     }
 
     &-500 {
-      padding-right: 50rem;
+      padding-right: calcRem(500);
     }
   }
 
@@ -108,47 +108,47 @@
     }
 
     &-5 {
-      padding-bottom: 0.5rem;
+      padding-bottom: calcRem(5);
     }
 
     &-10 {
-      padding-bottom: 1rem;
+      padding-bottom: calcRem(10);
     }
 
     &-15 {
-      padding-bottom: 1.5rem;
+      padding-bottom: calcRem(15);
     }
 
     &-20 {
-      padding-bottom: 2rem;
+      padding-bottom: calcRem(20);
     }
 
     &-30 {
-      padding-bottom: 3rem;
+      padding-bottom: calcRem(30);
     }
 
     &-50 {
-      padding-bottom: 5rem;
+      padding-bottom: calcRem(50);
     }
 
     &-75 {
-      padding-bottom: 7.5rem;
+      padding-bottom: calcRem(75);
     }
 
     &-100 {
-      padding-bottom: 10rem;
+      padding-bottom: calcRem(100);
     }
 
     &-200 {
-      padding-bottom: 20rem;
+      padding-bottom: calcRem(200);
     }
 
     &-300 {
-      padding-bottom: 30rem;
+      padding-bottom: calcRem(300);
     }
 
     &-500 {
-      padding-bottom: 50rem;
+      padding-bottom: calcRem(500);
     }
   }
 
@@ -159,47 +159,47 @@
     }
 
     &-5 {
-      padding-left: 0.5rem;
+      padding-left: calcRem(5);
     }
 
     &-10 {
-      padding-left: 1rem;
+      padding-left: calcRem(10);
     }
 
     &-15 {
-      padding-left: 1.5rem;
+      padding-left: calcRem(15);
     }
 
     &-20 {
-      padding-left: 2rem;
+      padding-left: calcRem(20);
     }
 
     &-30 {
-      padding-left: 3rem;
+      padding-left: calcRem(30);
     }
 
     &-50 {
-      padding-left: 5rem;
+      padding-left: calcRem(50);
     }
 
     &-75 {
-      padding-left: 7.5rem;
+      padding-left: calcRem(75);
     }
 
     &-100 {
-      padding-left: 10rem;
+      padding-left: calcRem(100);
     }
 
     &-200 {
-      padding-left: 20rem;
+      padding-left: calcRem(200);
     }
 
     &-300 {
-      padding-left: 30rem;
+      padding-left: calcRem(300);
     }
 
     &-500 {
-      padding-left: 50rem;
+      padding-left: calcRem(500);
     }
   }
 }

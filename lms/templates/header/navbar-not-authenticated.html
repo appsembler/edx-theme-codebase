@@ -1,0 +1,74 @@
+## mako
+
+<%page expression_filter="h"/>
+
+<%namespace name='static' file='../static_content.html'/>
+<%namespace file='../main.html' import="login_query"/>
+
+<%!
+from django.conf import settings
+from django.urls import reverse
+from django.utils.translation import ugettext as _
+from six import text_type
+
+from openedx.core.djangoapps.user_authn.utils import should_redirect_to_logistration_mircrofrontend
+%>
+
+<%
+  mktg_site_enabled = static.get_value('ENABLE_MKTG_SITE', settings.FEATURES.get('ENABLE_MKTG_SITE', False))
+  courses_are_browsable = settings.FEATURES.get('COURSES_ARE_BROWSABLE')
+  allows_login = not settings.FEATURES['DISABLE_LOGIN_BUTTON'] and not combined_login_and_register
+  can_discover_courses = settings.FEATURES.get('ENABLE_COURSE_DISCOVERY')
+  allow_public_account_creation = static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION', settings.FEATURES.get('ALLOW_PUBLIC_ACCOUNT_CREATION'))
+  should_redirect_to_logistration_mfe = should_redirect_to_logistration_mircrofrontend()
+%>
+
+<%namespace file='/theme-variables.html' import="get_header_menu_logged_out_extra_items" />
+
+<nav class="nav-links" aria-label=${_("Supplemental Links")}>
+  <div class="main">
+    <div class="mobile-nav-item hidden-mobile nav-item">
+      <a href="/courses">${_('Explore courses')}</a>
+    </div>
+
+    % if get_header_menu_logged_out_extra_items():
+      % for item in get_header_menu_logged_out_extra_items():
+        <div class="mobile-nav-item hidden-mobile nav-item">
+          <a
+            href="${item['link_URL']}"
+            % if item['open_in_new_tab']:
+              target="_blank"
+            % endif
+          >
+            ${item['link_title']}
+          </a>
+        </div>
+      % endfor
+    % endif
+
+  </div>
+  <div class="secondary">
+    % if allows_login:
+      % if allow_public_account_creation:
+        % if should_redirect_to_logistration_mfe:
+          <div class="mobile-nav-item hidden-mobile nav-item button-item">
+              <a class="register-btn btn" href="${settings.LOGISTRATION_MICROFRONTEND_URL}/register${login_query()}">${_("Register")}</a>
+          </div>
+        % else:
+          <div class="mobile-nav-item hidden-mobile nav-item button-item">
+              <a class="register-btn btn" href="/register${login_query()}">${_("Register")}</a>
+          </div>
+        % endif
+      % endif
+      % if should_redirect_to_logistration_mfe:
+        <div class="mobile-nav-item hidden-mobile nav-item button-item">
+            <a class="sign-in-btn btn" href="${settings.LOGISTRATION_MICROFRONTEND_URL}/login${login_query()}">${_("Sign in")}</a>
+        </div>
+      % else:
+        <div class="mobile-nav-item hidden-mobile nav-item button-item">
+            <a class="sign-in-btn btn" href="/login${login_query()}">${_("Sign in")}</a>
+        </div>
+      % endif
+    % endif
+  </div>
+</nav>

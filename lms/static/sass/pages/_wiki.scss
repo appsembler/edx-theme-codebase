@@ -6,7 +6,7 @@
 
       .breadcrumbs-header {
         height: auto;
-        padding: 1rem 0;
+        padding: calcRem(10) 0;
         @include display(flex);
         @include flex-wrap(wrap);
         @include align-items(center);
@@ -14,10 +14,10 @@
 
 
         .pull-right {
-          margin: 1.5rem 2rem 1.5rem auto;
+          margin: calcRem(15) calcRem(20) calcRem(15) auto;
 
           @media (max-width: $screen-xs-max) {
-            margin: 1.5rem;
+            margin: calcRem(15);
           }
         }
 
@@ -31,7 +31,7 @@
 
       #hint_id_content {
         position: relative;
-        margin-bottom: 20px;
+        margin-bottom: calcRem(20);
       }
 
       .main-article {
@@ -39,7 +39,7 @@
         @media (max-width: $screen-xs-max) {
           float: none;
           width: 100%;
-          padding: 3rem 2.5rem;
+          padding: calcRem(30) calcRem(25);
         }
       }
 

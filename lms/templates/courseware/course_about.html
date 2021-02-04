@@ -127,7 +127,7 @@ from six import string_types
             account=static.get_value('course_about_twitter_account', settings.PLATFORM_TWITTER_ACCOUNT),
             url=u"http://{domain}{path}".format(
                 domain=site_domain,
-                path=reverse('about_course', args=[course.id.to_deprecated_string()])
+                path=reverse('about_course', args=[text_type(course.id)])
             )
         ).replace(u" ", u"+")
         tweet_action = u"http://twitter.com/intent/tweet?text={tweet_text}".format(tweet_text=tweet_text)
@@ -142,7 +142,7 @@ from six import string_types
                 platform=platform_name,
                 url=u"http://{domain}{path}".format(
                     domain=site_domain,
-                    path=reverse('about_course', args=[course.id.to_deprecated_string()]),
+                    path=reverse('about_course', args=[text_type(course.id)])
                 )
             )
         ).replace(u" ", u"%20")
@@ -152,7 +152,7 @@ from six import string_types
 <%
   course_about_vars = {}
 
-  course_about_vars['user_authenticated'] = user.is_authenticated()
+  course_about_vars['user_authenticated'] = user.is_authenticated
   course_about_vars['course_registered'] = registered
   course_about_vars['show_courseware_link'] = show_courseware_link
   course_about_vars['course_in_cart'] = in_cart

@@ -100,3 +100,11 @@
            0.7152 * $-local-green +
            0.0722 * $-local-blue) / 255;
 }
+
+
+$rem-base-size: 16;
+
+
+@function calcRem($value-px) {
+  @return ($value-px / $rem-base-size) + 0rem;
+}

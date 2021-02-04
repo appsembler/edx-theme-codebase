@@ -1,0 +1,49 @@
+## mako
+
+<%page expression_filter="h" args="online_help_token"/>
+
+<%namespace name='static' file='../static_content.html'/>
+<%namespace file='../main.html' import="login_query"/>
+<%!
+from django.urls import reverse
+from django.utils.translation import ugettext as _
+from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
+%>
+
+<%namespace file='/theme-variables.html' import="get_header_menu_logged_in_extra_items" />
+
+<div class="nav-links">
+  <div class="main">
+    <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
+      <a class="${'active ' if reverse('dashboard') == request.path else ''}tab-nav-link" href="${reverse('dashboard')}"
+           aria-current="${'page' if reverse('dashboard') == request.path else 'false'}">
+           ${_("My Courses")}
+      </a>
+    </div>
+    <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
+      <a class="tab-nav-link discover-new-link" href="${marketing_link('COURSES')}"
+         aria-current="${'page' if '/courses' in request.path else 'false'}">
+         ${_('Discover New Courses')}
+      </a>
+    </div>
+
+    % if get_header_menu_logged_in_extra_items():
+      % for item in get_header_menu_logged_in_extra_items():
+        <div class="mobile-nav-item hidden-mobile nav-item nav-tab ${item['special_class']}">
+          <a class="tab-nav-link discover-new-link" href="${item['link_URL']}"
+             aria-current="${'page' if '/courses' in request.path else 'false'}"
+             % if item['open_in_new_tab']:
+              target="_blank"
+            % endif
+          >
+            ${item['link_title']}
+          </a>
+        </div>
+      % endfor
+    % endif
+
+  </div>
+  <div class="secondary">
+    <%include file="user_dropdown.html"/>
+  </div>
+</div>

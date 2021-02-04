@@ -16,7 +16,7 @@
         @include justify-content(space-between);
         padding-top: $header-padding-top;
         padding-bottom: $header-padding-bottom;
-        border-bottom: 0.2rem solid rgba($header-text-color, 0.2);
+        border-bottom: 2px solid rgba($header-text-color, 0.2);
 
         @media(max-width: $screen-sm-max) {
           padding-top: $header-padding-sm-top;
@@ -74,11 +74,11 @@
 
       &__course-name {
         @include flex-shrink(1);
-        margin-left: 2rem;
-        border-left: 0.1rem solid rgba($base-text-color, 0.25);
-        padding: 1rem 0 1rem 2rem;
+        margin-left: calcRem(20);
+        border-left: 1px solid rgba($base-text-color, 0.25);
+        padding: calcRem(10) 0 calcRem(10) calcRem(20);
         @include primary-font;
-        font-size: 1.4rem;
+        font-size: calcRem(14);
         line-height: 120%;
         color: rgba($header-text-color, 0.85);
 
@@ -88,7 +88,7 @@
 
         span {
           @include primary-font;
-          margin-right: 1rem;
+          margin-right: calcRem(10);
         }
       }
     }
@@ -100,7 +100,7 @@
       margin: 0;
       font-size: $header-font-size;
       @include fontVariantInclude($global-font-header-links);
-      letter-spacing: 0.2rem;
+      letter-spacing: calcRem(2);
       letter-spacing: $base-letter-spacing;
       @include display(flex);
       @include align-items(center);
@@ -166,7 +166,7 @@
       ul li {
         display: inline-block;
         list-style-type: none;
-        margin: 1.5rem 2rem;
+        margin: calcRem(15) calcRem(20);
 
         a {
           color: $header-text-color;
@@ -205,7 +205,7 @@
           background-color: $navbar-button-bg;
           border: $navbar-button-border;
           display: inline-block;
-          padding: 1.5rem 2rem;
+          padding: calcRem(15) calcRem(20);
           @include fontVariantInclude($global-font-cta-buttons);
           color: pick-visible-color($navbar-button-bg, $base-text-color, #fff);
           @include button_radius;
@@ -227,11 +227,11 @@
         color: rgba($header-text-color, 1);
 
         .a--user-avatar__image {
-          width: 4.8rem;
+          width: calcRem(48);
           height: auto;
           border-radius: 100%;
           display: block;
-          margin-right: 1.5rem;
+          margin-right: calcRem(15);
         }
 
         p {
@@ -240,7 +240,7 @@
 
         span {
           display: inline-block;
-          margin-left: 0.5rem;
+          margin-left: calcRem(5);
         }
 
         @media(max-width: $screen-sm-max) {
@@ -251,14 +251,14 @@
   }
 
   .a--slide-menu {
-    border-left: 0.2rem solid rgba($header-text-color, 0.2);
+    border-left: 2px solid rgba($header-text-color, 0.2);
     margin-left: $header-group-separation/2;
     padding-left: $header-group-separation !important;
   }
 
   button.a--site-nav__mobile-toggle {
     color: #fff;
-    font-size: 2rem;
+    font-size: calcRem(20);
     background: none;
     border: none;
     outline: none;
@@ -266,7 +266,7 @@
     height: $nav-toggle-bar-width !important;
     padding: 0;
     position: relative;
-    bottom: 0.2rem;
+    bottom: calcRem(2);
     z-index: 1000000;
     opacity: 1;
     @include transition(all 0.3s ease-in-out);
@@ -309,7 +309,7 @@
     }
 
     .a--toggle-bar {
-      width: 2rem;
+      width: calcRem(20);
       height: $nav-toggle-bar-height;
       border-radius: $nav-toggle-bar-radius;
       display: block;
@@ -324,11 +324,11 @@
       opacity: 0;
 
       &:nth-child(1) {
-        @include transform(translateY(-0.5rem) rotate(135deg));
+        @include transform(translateY(calcRem(-5)) rotate(135deg));
       }
 
       &:nth-child(2) {
-        @include transform(translateY(0.65rem) rotate(-135deg));
+        @include transform(translateY(calcRem(6.5)) rotate(-135deg));
       }
     }
 
@@ -343,11 +343,11 @@
         background-color: $brand-primary-color;
 
         &:nth-child(1) {
-          @include transform(translateX($nav-toggle-bar-separation/2) translateY(-0.5rem) rotate(135deg));
+          @include transform(translateX($nav-toggle-bar-separation/2) translateY(calcRem(-5)) rotate(135deg));
         }
 
         &:nth-child(2) {
-          @include transform(translateX($nav-toggle-bar-separation/2) translateY(0.65rem) rotate(-135deg));
+          @include transform(translateX($nav-toggle-bar-separation/2) translateY(calcRem(6.5)) rotate(-135deg));
         }
       }
     }
@@ -377,16 +377,16 @@
 
       .a--toggle-bar {
         background-color: $slideout-menu-text-color;
-        width: 3rem;
+        width: calcRem(30);
         opacity: 1;
 
         &:nth-child(1) {
-          @include transform(translateY(0rem) rotate(-135deg));
+          @include transform(translateY(0) rotate(-135deg));
           width: $nav-toggle-bar-width*0.85;
         }
 
         &:nth-child(2) {
-          @include transform(translateY(0rem) rotate(135deg));
+          @include transform(translateY(0) rotate(135deg));
           width: $nav-toggle-bar-width*0.85
         }
       }
@@ -407,7 +407,7 @@
         color: $slideout-menu-text-color;
         @include fontVariantInclude($global-font-header-links);
         letter-spacing: $base-letter-spacing;
-        @include underline_expanding_hover(rgba($slideout-menu-text-color,0.8), 0.5rem);
+        @include underline_expanding_hover(rgba($slideout-menu-text-color,0.8), calcRem(5));
 
         &:hover, &:focus {
           color: rgba($slideout-menu-text-color,0.8);
@@ -421,9 +421,9 @@
       }
 
       &.a--spacer {
-        margin: 2rem auto;
-        width: 5rem;
-        height: 0.2rem;
+        margin: calcRem(20) auto;
+        width: calcRem(50);
+        height: calcRem(2);
         background-color: rgba($slideout-menu-text-color,0.4);
       }
     }
@@ -435,8 +435,8 @@
     z-index: 1001;
     width: 100%;
     max-width: 100%;
-    padding-top: 10rem;
-    padding-bottom: 50rem;
+    padding-top: calcRem(100);
+    padding-bottom: calcRem(500);
     height: 100vh;
     right: 0;
     top: 0;
@@ -538,7 +538,7 @@
         margin-left: 0;
 
         &.a--cta {
-          margin-top: 2rem;
+          margin-top: calcRem(20);
         }
       }
     }

@@ -1,0 +1,303 @@
+// preview menu
+
+.wrapper-preview-menu {
+  width: 100%;
+  padding: calcRem(15) 0;
+  background-color: $base-text-color;
+  
+  .preview-menu {
+    width: $site-nav-width;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 calcRem(20);
+  }
+}
+
+// content wrapper
+
+.content-wrapper {
+  padding: 0;
+  margin: 0 auto;
+  
+  .navbar.course-tabs, .wrapper-course-material {
+    width: $base-container-width;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: calcRem(20) calcRem(70) !important;
+    overflow-x: auto;
+
+    .course-material {
+      width: $base-learning-container-width;
+      margin: 0 auto;
+    }
+
+    .navbar-nav, .tabs.course-tabs {
+
+      .nav-item, .tab {
+        font-size: calcRem(16);
+        margin: 0;
+        transition: all 0.3s ease-in-out;
+        margin-right: calcRem(30);
+
+        .nav-link, a {
+          padding: calcRem(12) calcRem(4);
+          color: $base-text-color;
+          font-size: calcRem(16);
+        }
+
+        &.active, &:hover, &:focus {
+          
+          .nav-link, a {
+            color: $brand-primary-color;
+            border-bottom-color: $brand-primary-color;
+          }
+        }
+
+        a.active {
+          color: $brand-primary-color;
+          border-bottom-color: $brand-primary-color;
+        }
+      }
+    }
+  }
+
+  .course-view.page-content-container {
+    width: $base-container-width;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: calcRem(30) calcRem(70);
+    border: none;
+    border-radius: $in-app-container-border-radius;
+  }
+}
+
+
+// common elements
+
+.btn {
+  border-radius: $buttons-border-radius;
+  padding: calcRem(10) calcRem(20);
+  border: $cta-button-border;
+
+  &.btn-primary {
+    background-color: $cta-button-bg;
+    color: $cta-button-text-color;
+
+    &:hover, &:focus {
+      background-color: $cta-button-text-color;
+      color: $cta-button-bg;
+      border: $cta-button-border;
+      text-decoration: none;
+    }
+  }
+
+  &.btn-outline-primary {
+    background-color: $cta-button-text-color;
+    color: $cta-button-bg;
+    border: $cta-button-border;
+
+    &:hover, &:focus {
+      background-color: $cta-button-bg;
+      color: $cta-button-text-color;
+      border: $cta-button-border;
+      text-decoration: none;
+    }
+  }
+
+  &.search-button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding-left: calcRem(15);
+  }
+}
+
+.btn-brand {
+  border-radius: $buttons-border-radius;
+  padding: calcRem(10) calcRem(20);
+  border: $cta-button-border;
+  background-color: $cta-button-bg;
+  color: $cta-button-text-color;
+
+  &:hover, &:focus {
+    background-color: $cta-button-text-color;
+    color: $cta-button-bg;
+    border: $cta-button-border;
+  }
+}
+
+
+// course info page {
+
+.course-view.page-content-container {
+  
+  .page-header {
+    border: none;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: calcRem(20);
+
+    .page-header-main {
+
+      .page-title {
+        margin: calcRem(20) 0;
+        font-weight: bold;
+        color: $base-text-color;
+        font-size: calcRem(32);
+      }
+    }
+  }
+
+  .page-header-search {
+
+    .search-form {
+
+      .field-input.search-input, .field-input.search-field {
+        border-top-left-radius: $buttons-border-radius;
+        border-bottom-left-radius: $buttons-border-radius;
+        padding-left: calcRem(20);
+      }
+    }
+  }
+
+  .page-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: calcRem(50);
+    padding: 0;
+
+    .course-sidebar {
+      min-width: unset;
+      max-width: unset;
+      padding-left: calcRem(50);
+      border-left: 1px solid $light-border-color;
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: calcRem(30);
+      
+      .section:not(:last-child) {
+        margin-bottom: 0;
+        border-bottom: 1px solid $light-border-color;
+        padding-bottom: calcRem(30);
+      }
+
+      .section {
+
+        h3 {
+          margin-left: 0 0 calcRem(20);
+          padding-bottom: calcRem(20);
+          border-bottom: 2px solid $brand-primary-color;
+          display: inline-block;
+        }
+
+        .date-summary-container {
+
+          .date-summary {
+            padding: 0;
+            margin-bottom: calcRem(15);
+            padding-bottom: calcRem(15);
+            border-bottom: 1px dotted $light-border-color;
+            display: grid;
+            grid-template-columns: calcRem(20) 1fr;
+            grid-gap: calcRem(10);
+            align-items: center;
+
+            .date.localized-datetime {
+              font-size: calcRem(14);
+              margin-bottom: calcRem(5);
+            }
+
+            .heading {
+              font-size: calcRem(16);
+            }
+
+            .date-summary-link {
+
+              a {
+                color: $brand-primary-color;
+                margin-top: calcRem(10);
+              }
+            }
+          }
+
+          &:last-child {
+
+            .date-summary {
+              border-bottom: none;
+              margin-bottom: 0;
+              padding-bottom: 0;
+            }
+          }
+        }
+      }
+
+      .course-tool-link {
+        font-weight: bold;
+        color: $brand-primary-color;
+        font-size: calcRem(16);
+
+        &:visited {
+          color: $brand-primary-color;
+        }
+      }
+
+      .section-handouts {
+
+        ol {
+          padding-left: calcRem(30);
+        }
+
+        a {
+          font-weight: 600;
+          columns: $brand-primary-color;
+          margin-top: calcRem(10);
+        }
+      }
+    }
+  }
+}
+
+// 
+
+.course-outline {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  #expand-collapse-outline-all-button {
+    font-size: calcRem(14);
+    float: none;
+    margin-left: auto;
+    padding: calcRem(5) 0;
+    background: none;
+    color: $base-text-color;
+    border: none;
+    border-bottom: 1px dotted $base-text-color;
+    border-radius: 0;
+    transition: all 0.3s ease-in-out;
+
+    &:hover, &:focus {
+      padding: calcRem(8) 0;
+      background: none;
+      color: $brand-primary-color;
+      border: none;
+      border-bottom: 1px dotted $brand-primary-color;
+    }
+  }
+
+  .block-tree {
+
+    .outline-button, .section .section-name {
+      outline: none;
+      padding: calcRem(15) 0;
+
+      &:hover, &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .section-title, .subsection-title {
+    font-size: $font-size-base-body;
+  }
+}

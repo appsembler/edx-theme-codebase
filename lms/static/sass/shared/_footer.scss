@@ -32,7 +32,7 @@
     margin-right: $footer-logo-breathe-space;
     padding-top: $footer-logo-padding-vertical;
     padding-bottom: $footer-logo-padding-vertical;
-    border-right: 0.1rem solid rgba($base-text-color, 0.3);
+    border-right: 1px solid rgba($base-text-color, 0.3);
     opacity: $footer-logo-opacity;
 
     img {
@@ -40,7 +40,7 @@
     }
 
     @media (max-width: $screen-sm-max) {
-      border-bottom: 0.1rem solid rgba($base-text-color, 0.3);
+      border-bottom: 1px solid rgba($base-text-color, 0.3);
       border-right: none;
       margin: 0 0 $footer-logo-breathe-space;
       padding: 0 0 $footer-logo-breathe-space;
@@ -70,7 +70,7 @@
     li {
       display: inline-block;
       list-style-type: none;
-      margin: 0.5rem $footer-link-breathe-space 0.5rem 0;
+      margin: calcRem(5) $footer-link-breathe-space calcRem(5) 0;
 
       a {
         text-decoration: none;
@@ -86,7 +86,7 @@
 
     @media(max-width: $screen-sm-max) {
       text-align: center;
-      margin-bottom: 3rem;
+      margin-bottom: calcRem(30);
     }
   }
 
@@ -106,8 +106,8 @@
     }
 
     p {
-      font-size: 1.2rem;
-      margin: 0 1.5rem 0 0;
+      font-size: calcRem(12);
+      margin: 0 calcRem(15) 0 0;
     }
 
     #footer-appsembler-logo {
@@ -119,33 +119,33 @@
       }
 
       img {
-        width: 10rem;
-        margin: 0 1.5rem 0 0;
+        width: calcRem(100);
+        margin: 0 calcRem(15) 0 0;
       }
     }
 
     #footer-openedx-logo {
       @include transition(all 0.3s ease-in-out);
       opacity: 0.7;
-      margin-bottom: 0.6rem;
+      margin-bottom: calcRem(6);
 
       &:hover, &:focus {
         opacity: 1;
       }
 
       img {
-        width: 6.4rem;
-        margin: 0 1.5rem 0 0;
+        width: calcRem(64);
+        margin: 0 calcRem(15) 0 0;
       }
     }
   }
 
   &__edx-disclaimer {
     text-align: center;
-    border-top: 0.1rem solid rgba($footer-text-color, 0.25);
+    border-top: 1px solid rgba($footer-text-color, 0.25);
     color: $footer-text-color;
-    font-size: 1rem;
-    margin-top: 3.5rem;
-    padding-top: 3.5rem;
+    font-size: calcRem(10);
+    margin-top: calcRem(35);
+    padding-top: calcRem(35);
   }
 }

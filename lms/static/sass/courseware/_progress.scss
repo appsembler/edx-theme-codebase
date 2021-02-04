@@ -1,0 +1,35 @@
+.content-wrapper {
+
+  .profile-wrapper {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    display: block;
+    background: none;
+
+    .course-info {
+      width: $base-container-width;
+      max-width: 100%;
+      padding: calcRem(30) calcRem(70);
+      border: none;
+      display: block;
+      background-color: #fff;
+      border-radius: $in-app-container-border-radius;
+      margin: 0 auto calcRem(50);
+
+      .progress-certificates-title {
+        color: $base-text-color;
+        margin: 0 0 calcRem(20);
+      }
+
+      .auto-cert-message {
+        border-color: $brand-primary-color;
+      }
+
+      .chapters {
+        margin-top: calcRem(50);
+      }
+    }
+  }
+}

@@ -1,3 +1,148 @@
-.view-profile .profile-header h2.header {
-    margin: 0 0 1.5rem;
+.view-profile .window-wrap, .view-profile .content-wrapper {
+    background-color: #F5F5F5;
+}
+
+.content-wrapper {
+
+    .wrapper-profile {
+        width: $base-container-width;
+        max-width: 100%;
+        margin: calcRem(30) auto calcRem(50);
+        padding: 0;
+        border: 1px solid $light-border-color;
+        display: block;
+        background-color: #fff;
+        border-radius: $in-app-container-border-radius;
+        overflow: hidden;
+        
+        .profile {
+
+            .wrapper-profile-field-account-privacy {
+                padding: calcRem(30) calcRem(70);
+                display: grid;
+                grid-template-columns: 1fr auto;
+                grid-column-gap: calcRem(60);
+                align-items: center;
+
+                .u-field-message {
+                    margin: calcRem(15) 0 0;
+                }
+
+                .wrapper-profile-records {
+
+                    a {
+
+                        &:after {
+                            display: none;
+                        }
+
+                        &:hover, &:focus {
+                            text-decoration: none;
+                        }
+                    }
+
+                    .profile-records-button {
+                        border-radius: $buttons-border-radius;
+                        padding: calcRem(10) calcRem(20);
+                        background-color: $cta-button-text-color;
+                        color: $cta-button-bg;
+                        border: $cta-button-border;
+
+                        &:hover, &:focus {
+                            background-color: $cta-button-bg;
+                            color: $cta-button-text-color;
+                            border: $cta-button-border;
+                        }
+                    }
+                }
+            }
+
+            .profile-header {
+                padding: calcRem(30) calcRem(70);
+                border-bottom: 1px solid $light-border-color;
+
+                .header {
+                    margin: 0 0 calcRem(20);
+                    font-size: calcRem(32);
+                }
+            }
+
+            .wrapper-profile-sections {
+                padding: calcRem(30) calcRem(70);
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+                grid-gap: calcRem(40);
+
+                &:after {
+                    display: none;
+                }
+
+                .wrapper-profile-section-container-one {
+                    padding-top: calcRem(10);
+
+                    .wrapper-profile-section-one {
+                        border-top: 8px solid $brand-primary-color;
+                    }
+
+                    .profile-section-one-fields {
+                        margin: 0;
+                        padding: calcRem(30) 0 0;
+
+                        .u-field {
+                            padding: calcRem(10) 0;
+
+                            &:first-child {
+                                padding: 0;
+
+                                .u-field-value {
+                                    font-size: calcRem(24);
+                                    font-weight: bold;
+                                }
+                            }
+
+                            .u-field-title {
+                                font-size: calcRem(14);
+                                display: block;
+                                margin: 0 0 calcRem(10);
+                                color: lighten($base-text-color, 20%);
+                            }
+
+                            .u-field-value {
+                                font-size: calcRem(16);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.view-profile .u-field {
+    transition: all 0.3s ease-in-out;
+}
+
+.view-profile .wrapper-profile-section-container-two .u-field.mode-placeholder:hover {
+    border: 2px dashed $brand-primary-color;
+    background-color: lighten($brand-primary-color, 48%);
+
+    span {
+        color: $brand-primary-color;
+    }
+}
+
+.u-field.editable-toggle.mode-display:hover {
+    background-color: lighten($brand-primary-color, 48%);
+
+    .message-can-edit {
+        color: $brand-primary-color;
+    }
+}
+
+.u-field.mode-placeholder:hover {
+    border: 2px dashed $brand-primary-color;
+}
+
+.view-profile .wrapper-profile-section-container-two .u-field.mode-placeholder:hover .u-field-title, .view-profile .wrapper-profile-section-container-two .u-field.mode-placeholder:hover i {
+    color: $brand-primary-color;
 }
