@@ -1,7 +1,7 @@
 <%page args="course_overview, enrollment, entitlement, entitlement_session, course_card_index, is_unfulfilled_entitlement, is_fulfilled_entitlement, entitlement_available_sessions, entitlement_expiration_date, entitlement_expired_at, show_courseware_link, cert_status, can_refund_entitlement, can_unenroll, credit_status, show_email_settings, course_mode_info, is_paid_course, verification_status, course_requirements, dashboard_index, share_settings, display_course_modes_on_dashboard, show_consent_link, enterprise_customer_name, resume_button_url" expression_filter="h"/>
 
 <%!
-import urllib
+import urllib.parse
 import six
 
 from django.utils.translation import ugettext as _
@@ -203,8 +203,8 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
               <%
                 twitter_share_url = "{url}?{utm_params}".format(url=share_url.encode('utf-8'), utm_params=encoded_utm_parameters['twitter'])
                 default_share_text = _("I'm taking {course_name} online with {twitter_brand}. Check it out!").format(course_name=course_overview.display_name_with_default, twitter_brand=share_settings.get('TWITTER_BRAND', '@edxonline'))
-                share_text = urllib.quote_plus(share_settings.get('DASHBOARD_TWITTER_TEXT', default_share_text.encode('utf-8')))
-                twitter_url = 'https://twitter.com/intent/tweet?text=' + share_text + '%20' + urllib.quote_plus(twitter_share_url)
+                share_text = urllib.parse.quote_plus(share_settings.get('DASHBOARD_TWITTER_TEXT', default_share_text).encode('utf-8'))
+                twitter_url = 'https://twitter.com/intent/tweet?text=' + share_text + '%20' + urllib.parse.quote_plus(twitter_share_url.encode('utf-8'))
                 share_msg = _("Share {course_name} on Twitter").format(course_name=course_overview.display_name_with_default)
               %>
               <a
