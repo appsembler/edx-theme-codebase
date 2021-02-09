@@ -1,6 +1,6 @@
 <%!
 from django.utils.translation import ugettext as _
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from student.models import CourseEnrollment
 from entitlements.models import CourseEntitlement
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
@@ -112,10 +112,8 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
                 credit_status = credit_statuses.get(session_id)
                 course_mode_info = all_course_modes.get(session_id)
                 is_paid_course = True if entitlement else (session_id in enrolled_courses_either_paid)
-                is_course_blocked = (session_id in block_courses)
                 course_verification_status = verification_status_by_course.get(session_id, {})
                 course_requirements = courses_requirements_not_met.get(session_id)
-                related_programs = inverted_programs.get(unicode(entitlement.course_uuid if is_unfulfilled_entitlement else session_id))
                 show_consent_link = (session_id in consent_required_courses)
                 course_overview = enrollment.course_overview
                 resume_button_url = resume_button_urls[dashboard_index]

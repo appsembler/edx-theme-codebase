@@ -1,7 +1,7 @@
 .a--course-tile-01 {
 
   &__wrapper {
-    padding: 1.5rem;
+    padding: calcRem(15);
     width: 25%;
     @include display(flex);
     @include flex-wrap(wrap);
@@ -21,7 +21,7 @@
   }
 
   &__container {
-    border: 0.1rem solid #dedede;
+    border: 1px solid #dedede;
     padding: 0;
     @include transition(all 0.3s ease-in-out);
     background-color: #fff;
@@ -29,15 +29,15 @@
     @include display(flex);
     @include flex-direction(column);
     cursor: pointer;
-    -webkit-box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1), 0 0.3rem 0.2rem rgba(0,0,0,0.1);
-    -moz-box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1), 0 0.3rem 0.2rem rgba(0,0,0,0.1);
-    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1), 0 0.3rem 0.2rem rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.1), 0 0.3rem 0.2rem rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 5px 10px rgba(0,0,0,0.1), 0 0.3rem 0.2rem rgba(0,0,0,0.1);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1), 0 0.3rem 0.2rem rgba(0,0,0,0.1);
 
     &:hover, &:focus {
       cursor: pointer;
-      -webkit-box-shadow: 0 1.9rem 3.8rem rgba(0,0,0,0.30), 0 1.5rem 1.2rem rgba(0,0,0,0.22);
-      -moz-box-shadow: 0 1.9rem 3.8rem rgba(0,0,0,0.30), 0 1.5rem 1.2rem rgba(0,0,0,0.22);
-      box-shadow: 0 1.9rem 3.8rem rgba(0,0,0,0.30), 0 1.5rem 1.2rem rgba(0,0,0,0.22);
+      -webkit-box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 1.5rem 1.2rem rgba(0,0,0,0.22);
+      -moz-box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 1.5rem 1.2rem rgba(0,0,0,0.22);
+      box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 1.5rem 1.2rem rgba(0,0,0,0.22);
     }
   }
 
@@ -48,11 +48,11 @@
     background-size: cover;
     background-position: center center;
     @include flex-grow(0);
-    border-bottom: 0.4rem solid $brand-primary-color;
+    border-bottom: 4px solid $brand-primary-color;
   }
 
   &__info {
-    padding: 3rem 2rem;
+    padding: calcRem(30) calcRem(20);
     @include display(flex);
     @include flex-grow(1);
     @include flex-direction(column);
@@ -62,29 +62,29 @@
 
   &__code, &__organization {
     @include fontVariantInclude($global-font-h4);
-    font-size: 1.4rem;
+    font-size: calcRem(14);
     color: rgba($base-text-color, 0.8);
-    margin: 0 0 0.5rem;
+    margin: 0 0 calcRem(5);
   }
 
   &__title {
     @include fontVariantInclude($global-font-h1);
-    font-size: 2rem;
-    margin: 0 0 1.5rem;
+    font-size: calcRem(20);
+    margin: 0 0 calcRem(15);
     color: $brand-primary-color;
     display: block;
   }
 
   &__organization {
-    border-top: 0.1rem solid rgba($base-text-color, 0.1);
-    padding-top: 1.5rem;
+    border-top: 1px solid rgba($base-text-color, 0.1);
+    padding-top: calcRem(15);
     display: block;
   }
 
   &__start-date {
     @include fontVariantInclude($global-font-h4);
     color: $brand-primary-color;
-    font-size: 1.4rem;
+    font-size: calcRem(14);
     text-transform: uppercase;
     margin: 0;
   }
@@ -99,7 +99,7 @@
   &.courses-listing-narrower {
 
     li.courses-listing-item {
-      padding: 1.5rem;
+      padding: calcRem(15);
       width: 33.3%;
       @include display(flex);
 
@@ -118,7 +118,7 @@
   }
 
   li.courses-listing-item {
-    padding: 1.5rem;
+    padding: calcRem(15);
     width: 25%;
     @include display(flex);
 

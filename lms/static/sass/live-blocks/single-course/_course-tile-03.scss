@@ -1,7 +1,7 @@
 .a--course-tile-03 {
-  margin: 1.5rem;
+  margin: calcRem(15);
   display: block;
-  max-width: 92rem;
+  max-width: calcRem(920);
   width: 100%;
   @include transition(all 0.3s ease-in-out);
   text-align: left;
@@ -18,15 +18,15 @@
   @media(min-width: $screen-sm-min) {
     @include display(flex);
     @include align-items(center);
-    margin: 1.5rem 0;
+    margin: calcRem(15) 0;
 
     &__image {
       display: block;
-      width: 26rem;
+      width: calcRem(260);
       @include flex-shrink(0);
-      height: 18rem;
-      margin-left: 2rem;
-      margin-right: 1rem;
+      height: calcRem(180);
+      margin-left: calcRem(20);
+      margin-right: calcRem(10);
     }
   }
 
@@ -36,43 +36,43 @@
   }
 
   &__info-container {
-    padding: 3rem 2rem;
+    padding: calcRem(30) calcRem(20);
     width: 100%;
   }
 
   &__code {
     @include fontVariantInclude($global-font-h4);
-    font-size: 1.4rem;
+    font-size: calcRem(14);
     color: rgba($base-text-color, 0.8);
     margin: 0;
   }
 
   &__title {
     @include fontVariantInclude($global-font-h1);
-    font-size: 2.8rem;
-    margin: 0 0 1.5rem;
+    font-size: calcRem(28);
+    margin: 0 0 calcRem(15);
     color: $brand-primary-color;
     display: block;
   }
 
   &__separator-line {
-    width: 10rem;
-    height: 0.2rem;
+    width: calcRem(100);
+    height: calcRem(2);
     background-color: $brand-primary-color;
     display: block;
-    margin-bottom: 1.5rem;
+    margin-bottom: calcRem(15);
   }
 
   &__start-date {
     @include fontVariantInclude($global-font-h4);
     color: rgba($base-text-color, 0.8);
-    font-size: 1.4rem;
+    font-size: calcRem(14);
     text-transform: none;
     margin: 0;
 
     span {
       text-transform: none;
-      margin-right: 0.5rem;
+      margin-right: calcRem(5);
       color: rgba($base-text-color, 0.5);
     }
   }
@@ -80,12 +80,12 @@
   &__description {
     @include fontVariantInclude($global-font-base-body);
     line-height: 180%;
-    margin: 1rem 0;
+    margin: calcRem(10) 0;
   }
 
   &__more-info {
     @include fontVariantInclude($global-font-cta-buttons);
-    font-size: 1.6rem;
+    font-size: calcRem(16);
   }
 }
 

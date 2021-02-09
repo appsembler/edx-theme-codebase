@@ -1,8 +1,8 @@
 .a--course-listing-01 {
 
   &__container {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: calcRem(50);
+    padding-bottom: calcRem(50);
 
     &.centered {
       text-align: center;
@@ -15,20 +15,20 @@
       }
 
       .a--course-tile-03 {
-        margin: 1rem auto;
+        margin: calcRem(10) auto;
       }
     }
   }
 
   &__header {
-    margin-bottom: 5rem;
-    max-width: 78rem;
+    margin-bottom: calcRem(50);
+    max-width: calcRem(780);
   }
 
   &__section-heading {
     @include fontVariantInclude($global-font-h1);
-    font-size: 4.2rem;
-    margin: 0 0 2rem;
+    font-size: calcRem(42);
+    margin: 0 0 calcRem(20);
     color: $brand-primary-color;
     text-transform: none;
     text-align: inherit;

@@ -1,26 +1,26 @@
 .a--heading-plus-text-plus-cta {
-  padding: 7rem 0;
+  padding: calcRem(70) 0;
   line-height: 150%;
 
   h2 {
     @include fontVariantInclude($global-font-h2);
-    font-size: 4.2rem;
-    margin: 0 0 3rem;
+    font-size: calcRem(42);
+    margin: 0 0 calcRem(30);
     color: $brand-primary-color;
     text-transform: none;
   }
 
   &__cta-container {
-    margin: 3.5rem 0 0;
+    margin: calcRem(35) 0 0;
   }
 
   .a--cta {
     background-color: $cta-button-bg;
     border: $cta-button-border;
     display: inline-block;
-    padding: 1.5rem 2rem;
-    margin: 1rem;
-    font-size: 1.8rem;
+    padding: calcRem(15) calcRem(20);
+    margin: calcRem(10);
+    font-size: calcRem(18);
     @include fontVariantInclude($global-font-cta-buttons);
     color: $cta-button-text-color;
     @include button_radius;
@@ -35,8 +35,8 @@
     text-align: center;
 
     p {
-      max-width: 92rem;
-      margin: 1rem auto;
+      max-width: calcRem(920);
+      margin: calcRem(10) auto;
     }
   }
 
@@ -50,7 +50,7 @@
 
     .a--cta {
       background-color: transparent;
-      border: 0.2rem solid #fff;
+      border: 2px solid #fff;
       color: #fff;
 
       &:hover, &:focus {

@@ -1,0 +1,455 @@
+.content-wrapper {
+
+  .discussion.page-content-container {
+    width: $base-container-width;
+    max-width: 100%;
+    margin: 0 auto calcRem(50);
+    padding: calcRem(10) 0 0;
+    border: none;
+    display: block;
+    background-color: #fff;
+    border-radius: $in-app-container-border-radius;
+
+    .page-header {
+      border: none;
+      align-items: center;
+      padding: calcRem(20) calcRem(70);
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-column-gap: calcRem(50);
+      width: 100%;
+      border-bottom: 1px solid $light-border-color;
+
+      .breadcrumbs {
+        margin: calcRem(8) 0;
+
+        .nav-item {
+          display: inline-block;
+        }
+      }
+
+      button.all-topics {
+        padding: calcRem(8) calcRem(20);
+        border: 2px solid $base-text-color;
+        border-radius: $buttons-border-radius;
+        display: flex;
+        align-items: center;
+        font-size: calcRem(16);
+        transition: all 0.3s ease-in-out;
+        color: $base-text-color;
+
+        .fa {
+          font-size: calcRem(24);
+          flex-grow: 0;
+          flex-shrink: 0;
+          margin-right: calcRem(15);
+          text-decoration: none !important;
+        }
+
+        &:hover {
+          color: $brand-primary-color;
+          text-decoration: none;
+          cursor: pointer;
+          border-color: $brand-primary-color;
+        }
+
+        &:focus {
+          color: $cta-button-text-color;
+          background-color: $cta-button-bg;
+          outline: none;
+        }
+      }
+
+      .forum-search {
+        
+        .field-input {
+          border-top-left-radius: $buttons-border-radius;
+          border-bottom-left-radius: $buttons-border-radius;
+          padding-left: calcRem(15);
+        }
+      }
+
+      .page-header-secondary {
+        margin: 0;
+        flex-wrap: nowrap;
+
+        .forum-search {
+          width: 100%;
+          flex-grow: 1;
+          flex-shrink: 1;
+        }
+      }
+    }
+
+    .page-content {
+      padding: 0;
+      
+      .discussion-body {
+        display: grid;
+        grid-template-columns: calcRem(320) 1fr;
+
+        .forum-nav {
+          padding: calcRem(30) calcRem(30) calcRem(60) calcRem(70);
+          width: 100%;
+          max-width: unset;
+          background-color: #e7e7e7;
+
+          .forum-nav-browse-filter {
+            position: relative;
+
+            .forum-nav-browse-filter-input {
+              padding: calcRem(10);
+              height: auto !important;
+              font-size: calcRem(16) !important;
+            }
+
+            .icon {
+              font-size: calcRem(14);
+              color: #999;
+              top: 0;
+              bottom: 0;
+              right: 0;
+              display: flex;
+              align-items: center;
+              padding-right: calcRem(15);
+              margin: 0;
+            }
+          }
+
+          .forum-nav-browse-menu-wrapper {
+            position: relative;
+
+            &:after {
+              content: '';
+              display: block;
+              background-color: #E7E7E7;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              height: calcRem(50);
+              position: absolute;
+              background: linear-gradient(180deg, rgba(#E7E7E7, 0) 0%, rgba(#E7E7E7, 1) 100%);
+            }
+          }
+
+          .forum-nav-browse-menu {
+            padding-bottom: calcRem(60);
+          }
+
+          .discussion-thread-list-container {
+
+            .forum-nav-refine-bar {
+
+              .forum-nav-filter-main, .forum-nav-sort {
+                float: unset;
+                width: 100%;
+                display: block;
+                margin: 0 0 calcRem(8);
+                text-align: left;
+              }
+            }
+
+            .forum-nav-thread-list {
+              margin: 0 calcRem(-15);
+
+              .forum-nav-thread-link {
+                padding: calcRem(20) calcRem(15);
+
+                .forum-nav-thread-title {
+                  font-size: calcRem(16);
+                  line-height: 120%;
+                }
+
+                .thread-preview-body, .forum-nav-thread-labels {
+                  font-size: calcRem(14);
+
+                  .post-label {
+                    font-size: calcRem(14);
+
+                    &.post-label-following {
+                      color: $brand-primary-color;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        main.discussion-column {
+          padding: calcRem(40) calcRem(70);
+          width: 100%;
+          max-width: unset;
+          margin: 0;
+        }
+
+        .forum-content {
+
+          .discussion-article {
+
+            .thread-main-wrapper {
+
+              .discussion-post {
+                padding: 0;
+
+                .post-header {
+                  display: block;
+                  padding-right: calcRem(100);
+                  position: relative;
+
+                  .post-header-content {
+
+                    .post-title {
+                      margin: 0 0 calcRem(15);
+                      font-size: calcRem(32);
+                    }
+
+                    .posted-details {
+                      font-size: calcRem(14);
+                      font-weight: normal;
+                    }
+                  }
+
+                  .post-header-actions {
+                    float: unset;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+
+                    .actions-item {
+                      display: flex;
+                      justify-content: flex-end;
+                      margin: 2px 0;
+
+                      .action-button {
+                        padding: 3px;
+                        display: flex;
+                        align-items: center;
+
+                        &:hover {
+                          cursor: pointer;
+                        }
+
+                        .action-icon {
+                          width: calcRem(28);
+                          height: calcRem(28);
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                        }
+
+                        &.action-follow {
+
+                          &:hover, &:focus {
+                            border-color: $brand-primary-color;
+
+                            .action-label {
+                              color: $brand-primary-color;
+                            }
+                          }
+
+                          &.is-checked {
+
+                            .action-icon {
+                              background-color: $brand-primary-color;
+                              border: 1px solid $brand-primary-color;
+                            }
+                          }
+                        }
+                      }
+
+                      .actions-dropdown {
+
+                        .actions-dropdown-list {
+
+                          button.action-list-item {
+                            font-size: calcRem(14);
+                            padding: calcRem(6);
+
+                            &:hover {
+                              cursor: pointer;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+
+                .post-context {
+                  font-size: calcRem(14);
+                  line-height: 180%;
+                }
+              }
+            }
+
+            .post-extended-content {
+              padding: 0;
+
+              .response-btn-count-wrapper {
+                margin: calcRem(20) 0 0;
+                padding: calcRem(20) 0 calcRem(30);
+                border-top: 1px dotted $light-border-color;
+                display: grid;
+                grid-template-columns: 1fr auto;
+                grid-column-gap: calcRem(40);
+                align-items: center;
+
+                .add-response, .response-count {
+                  padding: 0;
+                  margin: 0;
+                }
+              }
+
+              .discussion-response {
+                padding: calcRem(30) calcRem(20);
+                border-radius: $in-app-container-border-radius / 2;
+                min-height: calcRem(160);
+
+                .response-header {
+                  position: relative;
+                  padding-right: calcRem(100);
+                  margin: 0;
+
+                  .username {
+                    font-size: calcRem(16);
+                    font-weight: bold;
+                  }
+
+                  .posted-details {
+                    font-size: calcRem(12);
+                    font-weight: normal;
+                  }
+
+                  .response-header-actions {
+                    float: unset;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+  
+                    .actions-item {
+                      display: flex;
+                      justify-content: flex-end;
+                      margin: 2px 0;
+  
+                      .action-button {
+                        padding: 3px;
+                        display: flex;
+                        align-items: center;
+  
+                        &:hover {
+                          cursor: pointer;
+                        }
+  
+                        .action-icon {
+                          width: calcRem(28);
+                          height: calcRem(28);
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                        }
+                      }
+  
+                      .actions-dropdown {
+  
+                        .actions-dropdown-list {
+  
+                          button.action-list-item {
+                            font-size: calcRem(14);
+                            padding: calcRem(6);
+  
+                            &:hover {
+                              cursor: pointer;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+
+                .response-body {
+                  margin: calcRem(20) calcRem(50) 0 0;
+                  border-top: 1px dotted $light-border-color;
+                  padding: calcRem(20) 0 calcRem(10) 0;
+                }
+              }
+
+              .response-pagination {
+
+                .response-display-count {
+                  color: lighten($base-text-color, 25%);
+                  font-style: italic;
+                }
+              }
+
+              .discussion-reply-new {
+                margin-top: calcRem(30);
+                padding-top: calcRem(30);
+                border-top: 1px dotted $light-border-color;
+
+                .add-response {
+                  padding: 0;
+                  margin: 0 0 calcRem(20) 0;
+                }
+
+                .reply-body {
+
+                  .wmd-input {
+                    font-size: calcRem(16);
+
+                    .wmd-preview-container {
+                      padding: calcRem(10);
+
+                      .wmd-preview-label {
+                        margin: 0 0 calcRem(5);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .view-discussion-home {
+
+          .home-header {
+            margin: 0 0 calcRem(20);
+            padding: 0 0 calcRem(20);
+            border-bottom: 1px dotted $light-border-color;
+
+            .label {
+              font-size: calcRem(14);
+              display: block;
+              margin: 0 0 calcRem(10);
+              font-style: italic;
+            }
+
+            .home-title {
+              margin: 0 0 calcRem(15);
+              font-size: calcRem(32);
+            }
+          }
+
+          .label-settings {
+            font-size: calcRem(14);
+            display: block;
+            margin: 0 0 calcRem(10);
+            font-style: italic;
+          }
+
+          .home-helpgrid {
+            box-shadow: none;
+
+            .row-title {
+              font-size: calcRem(14);
+              padding: calcRem(40) calcRem(20);
+            }
+          }
+        }
+      }
+    }
+  }
+}

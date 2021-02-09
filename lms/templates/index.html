@@ -3,7 +3,6 @@
 <%!
 from django.utils.translation import ugettext as _
 from django.urls import reverse
-from microsite_configuration import microsite
 %>
 
 <%namespace file='/theme-variables.html' import="get_index_content" />
@@ -17,7 +16,7 @@ from microsite_configuration import microsite
 % for element in get_index_content():
   ## this check is AMC-specific
   % if (element['element-type'].startswith('layout')):
-    <%include file = '/${element["element-path"]}' args = "options = element['options'], children = element['children'], page_specific_args = courses" />
+    <%include file = '/' args = "options = element['options'], children = element['children'], page_specific_args = courses" />
   ## now follow standard theming checks
   % elif (element['element-type'].startswith('static-block')):
     <%include file = '/${element["element-path"]}' args = "template_settings = element['options']" />

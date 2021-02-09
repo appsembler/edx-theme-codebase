@@ -2,18 +2,18 @@
 
     &__container {
       background-color: rgba($base-text-color, 0.2);
-      height: 0.1rem;
+      height: 1px;
 
       &.two-px {
-        height: 0.2rem;
+        height: 2px;
       }
 
       &.five-px {
-        height: 0.5rem;
+        height: 5px;
       }
 
       &.eight-px {
-        height: 0.8rem;
+        height: 8px;
       }
     }
 }

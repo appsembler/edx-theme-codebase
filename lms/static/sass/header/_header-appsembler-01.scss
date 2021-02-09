@@ -72,11 +72,11 @@
 
       &__course-name {
         @include flex-shrink(1);
-        margin-left: 2rem;
+        margin-left: calcRem(20);
         border-left: 0.1rem solid rgba($base-text-color, 0.25);
-        padding: 1rem 0 1rem 2rem;
+        padding: calcRem(10) 0 calcRem(10) calcRem(20);
         @include primary-font;
-        font-size: 1.4rem;
+        font-size: calcRem(14);
         line-height: 120%;
         color: rgba($header-text-color, 0.85);
 
@@ -86,7 +86,7 @@
 
         span {
           @include primary-font;
-          margin-right: 1rem;
+          margin-right: calcRem(10);
         }
       }
     }
@@ -158,14 +158,14 @@
       ul li {
         display: inline-block;
         list-style-type: none;
-        margin: 1.5rem 2rem;
+        margin: calcRem(15) calcRem(20);
 
         a {
           color: $header-text-color;
 
           @media(min-width: 800px) {
             @if $navbar-link-hover == "expanding-underline" {
-                @include underline_expanding_hover($brand-primary-color, 1rem);
+                @include underline_expanding_hover($brand-primary-color, calcRem(10));
             } @else if $navbar-link-hover == "hover-pop" {
                 @include hover_pop(-0.5rem, 0);
             } @else if $navbar-link-hover == "hover-custom-color" {
@@ -200,7 +200,7 @@
           background-color: $navbar-button-bg;
           border: $navbar-button-border;
           display: inline-block;
-          padding: 1.5rem 2rem;
+          padding: calcRem(15) calcRem(20);
           @include fontVariantInclude($global-font-cta-buttons);
           color: pick-visible-color($navbar-button-bg, $base-text-color, #fff);
           @include button_radius;
@@ -222,11 +222,11 @@
         color: rgba($header-text-color, 1);
 
         .a--user-avatar__image {
-          width: 4.8rem;
+          width: calcRem(48);
           height: auto;
           border-radius: 100%;
           display: block;
-          margin-right: 1.5rem;
+          margin-right: calcRem(15);
         }
 
         p {
@@ -235,7 +235,7 @@
 
         span {
           display: inline-block;
-          margin-left: 0.5rem;
+          margin-left: calcRem(5);
         }
 
         @media(max-width: $screen-sm-max) {
@@ -247,7 +247,7 @@
 
   button.a--site-nav__mobile-toggle {
     color: #fff;
-    font-size: 2rem;
+    font-size: calcRem(20);
     background: none;
     border: none;
     outline: none;
@@ -255,7 +255,7 @@
     height: $nav-toggle-bar-width !important;
     padding: 0;
     position: relative;
-    bottom: 0.2rem;
+    bottom: calcRem(2);
     margin-left: $nav-toggle-bar-margin;
     z-index: 1000000;
     opacity: 1;
@@ -335,25 +335,25 @@
       }
       margin: $nav-toggle-bar-pulsar-visible;
       position: absolute;
-      bottom: -0.5rem;
-      right: -0.7rem;
-      height: 2rem;
-      width: 2rem;
+      bottom: calcRem(-5);
+      right: calcRem(-7);
+      height: calcRem(20);
+      width: calcRem(20);
       background-color: $nav-toggle-bar-pulsar-color;
-      border-radius: 1rem;
+      border-radius: calcRem(10);
       @include animation(togglePulsar 2s ease-in-out infinite);
 
       &__1 {
-        height: 2rem;
-        width: 2rem;
+        height: calcRem(20);
+        width: calcRem(20);
       }
 
       &__2 {
         opacity: 0;
-        height: 1.5rem;
-        width: 1.5rem;
-        bottom: -0.25rem;
-        right: -0.45rem;
+        height: calcRem(15);
+        width: calcRem(15);
+        bottom: calcRem(-2.5);
+        right: calcRem(-4.5);
         @include animation-delay(1s);
       }
     }
@@ -408,9 +408,9 @@
       }
 
       &.a--spacer {
-        margin: 2rem auto;
-        width: 5rem;
-        height: 0.2rem;
+        margin: calcRem(20) auto;
+        width: calcRem(50);
+        height: calcRem(2);
         background-color: rgba($slideout-menu-text-color,0.4);
       }
     }
@@ -421,8 +421,8 @@
     position: absolute;
     z-index: 1001;
     width: 100%;
-    padding-top: 10rem;
-    padding-bottom: 50rem;
+    padding-top: calcRem(100);
+    padding-bottom: calcRem(500);
     height: 100vh;
     left: 0;
     top: 0;
@@ -524,7 +524,7 @@
         margin-left: 0;
 
         &.a--cta {
-          margin-top: 2rem;
+          margin-top: calcRem(20);
         }
       }
     }

@@ -7,35 +7,35 @@
     }
 
     &-5 {
-      margin-top: 0.5rem;
+      margin-top: calcRem(5);
     }
 
     &-10 {
-      margin-top: 1rem;
+      margin-top: calcRem(10);
     }
 
     &-15 {
-      margin-top: 1.5rem;
+      margin-top: calcRem(15);
     }
 
     &-20 {
-      margin-top: 2rem;
+      margin-top: calcRem(20);
     }
 
     &-30 {
-      margin-top: 3rem;
+      margin-top: calcRem(30);
     }
 
     &-50 {
-      margin-top: 5rem;
+      margin-top: calcRem(50);
     }
 
     &-75 {
-      margin-top: 7.5rem;
+      margin-top: calcRem(75);
     }
 
     &-100 {
-      margin-top: 10rem;
+      margin-top: calcRem(100);
     }
   }
 
@@ -46,78 +46,78 @@
     }
 
     &-0 {
-      margin-right: 0;
+      margin-top: 0;
     }
 
     &-5 {
-      margin-right: 0.5rem;
+      margin-top: calcRem(5);
     }
 
     &-10 {
-      margin-right: 1rem;
+      margin-top: calcRem(10);
     }
 
     &-15 {
-      margin-right: 1.5rem;
+      margin-top: calcRem(15);
     }
 
     &-20 {
-      margin-right: 2rem;
+      margin-top: calcRem(20);
     }
 
     &-30 {
-      margin-right: 3rem;
+      margin-top: calcRem(30);
     }
 
     &-50 {
-      margin-right: 5rem;
+      margin-top: calcRem(50);
     }
 
     &-75 {
-      margin-right: 7.5rem;
+      margin-top: calcRem(75);
     }
 
     &-100 {
-      margin-right: 10rem;
+      margin-top: calcRem(100);
     }
   }
 
   &.marg-b {
 
     &-0 {
-      margin-bottom: 0;
+      margin-top: 0;
     }
 
     &-5 {
-      margin-bottom: 0.5rem;
+      margin-top: calcRem(5);
     }
 
     &-10 {
-      margin-bottom: 1rem;
+      margin-top: calcRem(10);
     }
 
     &-15 {
-      margin-bottom: 1.5rem;
+      margin-top: calcRem(15);
     }
 
     &-20 {
-      margin-bottom: 2rem;
+      margin-top: calcRem(20);
     }
 
     &-30 {
-      margin-bottom: 3rem;
+      margin-top: calcRem(30);
     }
 
     &-50 {
-      margin-bottom: 5rem;
+      margin-top: calcRem(50);
     }
 
     &-75 {
-      margin-bottom: 7.5rem;
+      margin-top: calcRem(75);
     }
 
     &-100 {
-      margin-bottom: 10rem;
+      margin-top: calcRem(100);
     }
   }
 
@@ -128,39 +128,39 @@
     }
 
     &-0 {
-      margin-left: 0;
+      margin-top: 0;
     }
 
     &-5 {
-      margin-left: 0.5rem;
+      margin-top: calcRem(5);
     }
 
     &-10 {
-      margin-left: 1rem;
+      margin-top: calcRem(10);
     }
 
     &-15 {
-      margin-left: 1.5rem;
+      margin-top: calcRem(15);
     }
 
     &-20 {
-      margin-left: 2rem;
+      margin-top: calcRem(20);
     }
 
     &-30 {
-      margin-left: 3rem;
+      margin-top: calcRem(30);
     }
 
     &-50 {
-      margin-left: 5rem;
+      margin-top: calcRem(50);
     }
 
     &-75 {
-      margin-left: 7.5rem;
+      margin-top: calcRem(75);
     }
 
     &-100 {
-      margin-left: 10rem;
+      margin-top: calcRem(100);
     }
   }
 }

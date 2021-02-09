@@ -4,8 +4,8 @@
 @import "bourbon/bourbon";
 
 // Import Bootstrap variables
-@import "bootstrap/variables";
-@import "bootstrap";
+// @import "bootstrap/variables";
+// @import "bootstrap";
 
 // Import various vendor specific scss
 @import "vendors/animate";
@@ -26,7 +26,7 @@
 @import "base/typography";
 
 // edX normalizer for elements
-@import "base/edx-overrides";
+// @import "base/edx-overrides";
 
 // Import basic styles
 @import "base/base";
@@ -36,10 +36,11 @@
 
 // Import site shared layout
 @import "shared/footer";
+@import "shared/header";
 
 // Import header styles
-@import "header/header-appsembler-01";
-@import "header/header-appsembler-02";
+// @import "header/header-appsembler-01";
+// @import "header/header-appsembler-02";
 
 // Import static-blocks specific sass
 @import "static-blocks/hero-section-01";
@@ -60,36 +61,38 @@
 @import "live-blocks/dashboard-search-results/dashboard-search-results--default";
 
 // Import courseware stuff
-@import "courseware/top-nav-01";
-@import "courseware/courseware-banner-01";
-@import "courseware/courseware-wrapper-01";
-@import "courseware/course-info-01";
+// @import "courseware/top-nav-01";
+// @import "courseware/courseware-banner-01";
+// @import "courseware/courseware-wrapper-01";
+// @import "courseware/course-info-01";
 @import "courseware/course-content-01";
-@import "courseware/course-progress-01";
-@import "courseware/discussion-in-course";
-@import "courseware/courseware-textbook";
-@import "courseware/course-updates";
-@import "courseware/enroll-staff";
-@import "courseware/course-static-page";
-@import "courseware/bookmarks";
-@import "courseware/course-dates";
-@import "courseware/course-experience-styling";
-@import "courseware/small-screen-optimizations";
+@import "courseware/progress";
+// @import "courseware/course-progress-01";
+// @import "courseware/discussion-in-course";
+// @import "courseware/courseware-textbook";
+// @import "courseware/course-updates";
+// @import "courseware/enroll-staff";
+// @import "courseware/course-static-page";
+// @import "courseware/bookmarks";
+// @import "courseware/course-dates";
+// @import "courseware/course-experience-styling";
+// @import "courseware/small-screen-optimizations";
 
 // Import discussions overrides
-@import "discussion/appsembler-discussion-overrides";
+@import "courseware/appsembler-discussion-overrides";
 
 // Import page specific templates sass
 @import "pages/404";
 @import "pages/course-about-01";
 @import "pages/course-catalogue-01";
 @import "pages/combined-login-register";
-@import "pages/old-login-register";
+// @import "pages/old-login-register";
 @import "pages/account-settings";
-@import "pages/profile-settings";
+// @import "pages/profile-settings";
 @import "pages/sysadmin-dashboard";
 @import "pages/instructor-dashboard";
-@import "pages/dashboard-01";
+// @import "pages/dashboard-01";
+@import "pages/dashboard";
 @import "pages/wiki";
 @import "pages/learner-profile";
 
@@ -97,4 +100,10 @@
 @import "page-builder/page-builder";
 
 // Import custom customer-specific styles
-@import "../../../customer_specific/lms/static/sass/customer-specific";
+// @import "../../../customer_specific/lms/static/sass/customer-specific";
+
+
+
+// Theme v2
+@import "v2/new";
+@import "common-elements/cookie-banner";

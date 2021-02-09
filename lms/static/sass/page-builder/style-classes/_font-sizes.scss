@@ -3,63 +3,63 @@
   &.font-size {
 
     &--8px {
-      font-size: 0.8rem;
+      font-size: calcRem(8);
     }
 
     &--9px {
-      font-size: 0.9rem;
+      font-size: calcRem(9);
     }
 
     &--10px {
-      font-size: 1rem;
+      font-size: calcRem(10);
     }
 
     &--12px {
-      font-size: 1.2rem;
+      font-size: calcRem(12);
     }
 
     &--14px {
-      font-size: 1.4rem;
+      font-size: calcRem(14);
     }
 
     &--16px {
-      font-size: 1.6rem;
+      font-size: calcRem(16);
     }
 
     &--18px {
-      font-size: 1.8rem;
+      font-size: calcRem(18);
     }
 
     &--20px {
-      font-size: 2rem;
+      font-size: calcRem(20);
     }
 
     &--24px {
-      font-size: 2.4rem;
+      font-size: calcRem(24);
     }
 
     &--28px {
-      font-size: 2.8rem;
+      font-size: calcRem(28);
     }
 
     &--32px {
-      font-size: 3.2rem;
+      font-size: calcRem(32);
     }
 
     &--36px {
-      font-size: 3.6rem;
+      font-size: calcRem(36);
     }
 
     &--42px {
-      font-size: 4.2rem;
+      font-size: calcRem(42);
     }
 
     &--48px {
-      font-size: 4.8rem;
+      font-size: calcRem(48);
     }
 
     &--72px {
-      font-size: 7.2rem;
+      font-size: calcRem(72);
     }
   }
 }

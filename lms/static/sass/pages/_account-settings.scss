@@ -24,7 +24,7 @@
 				float: none;
 
 				button.account-nav-link {
-					font-size: 1.6rem;
+					font-size: calcRem(16);
 					display: inline-block;
 					float: none;
 				}
@@ -38,18 +38,18 @@
 				.field {
 
 					.field-label {
-						font-size: 1.4rem;
-						margin: 0 0 1rem 0;
+						font-size: calcRem(14);
+						margin: 0 0 calcRem(10) 0;
 					}
 
 					.field-input {
-						font-size: 1.6rem;
+						font-size: calcRem(16);
 					}
 
 					.u-field-link {
-						font-size: 1.6rem;
-						padding: 1.2rem 1.6rem;
-						border: 0.1rem solid $brand-primary-color;
+						font-size: calcRem(16);
+						padding: calcRem(12) calcRem(16);
+						border: 1px solid $brand-primary-color;
 						background: transparent;
 						color: $brand-primary-color;
 						width: 100%;
@@ -71,10 +71,10 @@
 						width: 100%;
 						display: block;
 						padding: 0;
-						margin-bottom: 1rem;
+						margin-bottom: calcRem(10);
 
 						.fa {
-							margin-right: 1rem;
+							margin-right: calcRem(10);
 						}
 
 						a {
@@ -93,13 +93,13 @@
 		}
 
 		.account-deletion-details {
-			padding-bottom: 5rem;
+			padding-bottom: calcRem(50);
 
 			.btn-outline-primary.paragon__btn {
-				font-size: 1.6rem;
-				padding: 1.2rem 1.6rem;
+				font-size: calcRem(16);
+				padding: calcRem(12) calcRem(16);
 				min-width: 30%;
-				border: 0.1rem solid $brand-primary-color;
+				border: 1px solid $brand-primary-color;
 				background: transparent;
 				color: $brand-primary-color;
 
@@ -113,38 +113,38 @@
 			.delete-confirmation-wrapper, .delete-success-wrapper {
 
 				.paragon__modal-header {
-					padding: 1rem 2rem 2rem;
+					padding: calcRem(10) calcRem(20) calcRem(20);
 				}
 
 				.paragon__modal-body {
-					padding: 2rem;
+					padding: calcRem(20);
 				}
 
 				.paragon__alert {
-					padding: 2rem;
+					padding: calcRem(20);
 				}
 
 				.next-steps {
-					margin-top: 2rem;
-					margin-bottom: 2rem;
+					margin-top: calcRem(20);
+					margin-bottom: calcRem(20);
 				}
 
 				.modal-alert .alert-content .alert-title {
-					font-size: 1.6rem;
-					margin-bottom: 2rem;
+					font-size: calcRem(16);
+					margin-bottom: calcRem(20);
 				}
 
 				.paragon__modal-footer {
-					padding: 2rem;
+					padding: calcRem(20);
 
 					.paragon__btn {
-						font-size: 1.6rem;
-						padding: 1.2rem 1.6rem;
+						font-size: calcRem(16);
+						padding: calcRem(12) calcRem(16);
 						line-height: 140%;
-						border: 0.1rem solid $brand-primary-color;
+						border: 1px solid $brand-primary-color;
 						color: pick-visible-color($brand-primary-color, #000, #fff);
 						background: $brand-primary-color;
-						margin-left: 1rem;
+						margin-left: calcRem(10);
 						box-shadow: none;
 
 						&:hover, &:focus {

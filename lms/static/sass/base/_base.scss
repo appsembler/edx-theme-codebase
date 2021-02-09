@@ -1,5 +1,5 @@
 html {
-	font-size: 10px;
+	font-size: 16px;
 
 	&.certs-page {
 		font-size: 16px;
@@ -11,6 +11,10 @@ body {
 	letter-spacing: 0;
 	@include display(flex);
 	width: 100%;
+}
+
+div {
+	box-sizing: border-box;
 }
 
 h1, h2, h3, h4 {
@@ -52,17 +56,34 @@ p, ul li {
 	margin: 0.5rem 0;
 }
 
-a, a:visited, a:not(.btn), a:visited:not(.btn), .btn-link {
+a:not([class]), a:not([class]):visited, p a:not(.btn), p a:visited:not(.btn) {
 	text-decoration: none;
-	color: $brand-primary-color;
+	color: $inline-link-color;
 	cursor: pointer;
 	@include transition(all 0.3s ease-in-out);
+	position: relative;
+	display: inline-block;
+
+	&:after {
+		position: absolute;
+		bottom: calcRem(-3);
+		left: 0;
+		width: 0;
+		height: 1px;
+		background-color: $inline-link-color;
+		transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+		display: block;
+		content: '';
+	}
 
 	&:hover, &:focus {
-		color: shade($brand-primary-color, 20%);
-		text-decoration: none;
+		color: shade($inline-link-color, 20%);
 		outline: none;
-		box-shadow: none;
+		text-decoration: none;
+
+		&:after {
+			width: 100%;
+		}
 	}
 
 	&.a-- {
@@ -105,6 +126,13 @@ a, a:visited, a:not(.btn), a:visited:not(.btn), .btn-link {
 	}
 }
 
+.content-wrapper {
+
+	.btn-link, a {
+		color: $brand-primary-color;
+	}
+}
+
 .a--button {
 	@include fontVariantInclude($global-font-cta-buttons);
 	border: none;
@@ -113,7 +141,7 @@ a, a:visited, a:not(.btn), a:visited:not(.btn), .btn-link {
 	box-shadow: none;
 	text-shadow: none;
 
-	&:hover, &:focus, &:hover:not(:disabled), &:focus:not(:disabled) {
+	&:hover, &:focus {
 		border: none;
 		outline: none;
 		background: none;
@@ -126,9 +154,11 @@ a, a:visited, a:not(.btn), a:visited:not(.btn), .btn-link {
 	width: 100%;
 	padding-right: 3rem;
 	padding-left: 3rem;
+	margin: 0 auto;
+	max-width: $base-container-width;
 
 	@media(min-width: 1680px) {
-		max-width: 1600px;
+		max-width: $base-container-width + calcRem(200);
 	}
 }
 
@@ -171,13 +201,23 @@ span.a--underlined {
 	@include flex-direction(column);
 	min-height: 100vh;
 	width: 100%;
+	background-color: #F5F5F5;
 
 	.a--site-nav {
 		@include flex-grow(0);
+
+		&__container {
+			width: $site-nav-width;
+			max-width: 100%;
+			margin: 0 auto;
+			padding: 0 calcRem(20);
+		}
 	}
 
 	.content-wrapper {
 		@include flex-grow(1);
+		width: 100%;
+		max-width: unset;
 	}
 
 	.a--footer {
@@ -214,35 +254,6 @@ a.nav-skip {
     width: auto;
     height: auto;
     margin: 0;
-	}
-}
-
-.wrapper-preview-menu {
-	padding: 2rem !important;
-	background-color: darken($brand-primary-color, 10%);
-	color: #fff;
-	width: 100%;
-	height: auto;
-
-	.preview-menu {
-		width: 100%;
-		max-width: 1600px;
-		margin: 0 auto;
-		padding: 0 1.5rem;
-
-		.preview-actions .action-preview .action-preview-label {
-			font-size: 1.4rem;
-			text-shadow: none;
-			color: #fff;
-		}
-
-		select {
-			color: $base-text-color;
-		}
-
-		input {
-			color: $base-text-color;
-		}
 	}
 }
 
