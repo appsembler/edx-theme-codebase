@@ -78,6 +78,7 @@ from pipeline_mako import render_require_js_path_overrides
     </script>
   % endif
   <script type="text/javascript" src="${static.url(jsi18n_path)}"></script>
+  <%static:optional_include_mako file="gettext_staticfiles_fixes/patch_missing_gettext_hack.html" />
   <script type="text/javascript" src="${static.url(ie11_fix_path)}"></script>
 
   <link rel="icon" type="image/x-icon" href="${get_brand_favicon()['brand_favicon']}" />
