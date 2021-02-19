@@ -1,3 +1,5 @@
+/** Commented out by Matej
+
 .login-register {
   padding: calcRem(40) calcRem(70);
   max-width: $login-register-container-width + calcRem(70);
@@ -202,279 +204,81 @@
 }
 
 
-// .login-register {
-//   margin: $login-register-wrapper-margin;
-//   display: block;
+<<<<<<< HEAD
+  .login-providers {
+    margin: 4rem 0 0;
 
-//   form {
-//     border: none;
-//   }
+    .section-title.lines {
+      margin: 0 0 2rem;
+      padding: 0 0 2rem;
 
-//   .form-type, .toggle-form {
-//     min-width: 0;
-//     padding: 0;
-//   }
+      h2 {
+        font-size: 2.4rem;
+        font-weight: normal;
+        margin: 0 auto;
+      }
+    }
 
-//   .form-type {
+    .button.login-provider {
+      padding: 0;
+      border-radius: $buttons-border-radius;
+      overflow: hidden;
+      border: 0.1rem solid #eee;
+      background-color: #fff;
+      margin: 2rem auto;
+      @include display(flex);
+      @include align-items(center);
+      width: 24rem;
+      height: auto;
+      -webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.10), 0 6px 6px rgba(0,0,0,0.15);
+      -moz-box-shadow: 0 10px 20px rgba(0,0,0,0.10), 0 6px 6px rgba(0,0,0,0.15);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.10), 0 6px 6px rgba(0,0,0,0.15);
 
-//     .section-title, .section-title.lines {
-//       margin: 0 0 $login-register-section-title-spacing;
-//       padding: 0 0 $login-register-section-title-spacing;
-//       border-bottom: $login-register-section-title-border-bottom;
+      .icon {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 4.4rem;
+        height: 4.4rem;
+        @include display(flex);
+        @include align-items(center);
+        @include justify-content(center);
+        text-align: center;
+        background-color: $brand-primary-color;
+        color: pick-visible-color($brand-primary-color, $base-text-color, #fff);
+        line-height: 100%;
+        font-size: 1.4rem;
+      }
 
-//       &:after {
-//         display: none;
-//       }
+      span {
+        color: $base-text-color;
+        font-size: 1.6rem;
+        letter-spacing: 0;
+        @include fontVariantInclude($global-font-cta-buttons);
+        padding: 1.2rem 1.5rem;
+      }
 
-//       h2 {
-//         font-size: $login-register-section-title-font-size;
-//         @include fontVariantInclude($global-font-h2);
-//         color: $login-register-section-title-color;
-//         text-align: $login-register-section-title-alignment;
+      &:hover, &:focus, &:hover:not(:disabled) {
+        background-color: $brand-primary-color;
 
-//         @media (max-width: $screen-sm-max) {
-//           font-size: 0.75*$login-register-section-title-font-size;
-//         }
+        .icon {
+          background-color: darken($brand-primary-color, 10%);
+          color: pick-visible-color(darken($brand-primary-color, 10%), $base-text-color, #fff);
+        }
 
-//         @media (max-width: $screen-xs-max) {
-//           font-size: 0.6*$login-register-section-title-font-size;
-//         }
-//       }
+        span {
+          color: pick-visible-color($brand-primary-color, $base-text-color, #fff);
+        }
+      }
+    }
+  }
 
-//       span.text {
-//         background: none;
-//         top: 0;
-//         padding: 0;
-//       }
-//     }
-//   }
+  .register-form.register-fields-disabled {
 
-//   .form-field {
-//     width: 100%;
-//     margin: $login-register-single-input-wrapper-margin;
+    .required-fields, .checkbox-optional_fields_toggle, .optional-fields, .register-button, .view-disabled, .checkbox-terms_of_service {
+      display: none;
+    }
+  }
+}
 
-//     &.checkbox-honor_code, &.checkbox-terms_of_service, &.checkbox-remember {
-
-//       input {
-//         margin: 0 calcRem(10) 0 0;
-
-//         &:hover, &:focus {
-//           border: 1px solid $login-register-hover-border-color;
-//         }
-//       }
-
-//       label {
-//         margin: 0;
-//       }
-
-//       .supplemental-link {
-//         margin: calcRem(10) 0 calcRem(10) calcRem(27);
-//       }
-//     }
-
-//     label {
-//       font-size: $login-register-label-font-size;
-//       @include fontVariantInclude($global-font-base-body);
-//     }
-
-//     input {
-//       @include edx_style_killer;
-//       @include no_damn_focus_glow;
-//       font-size: calcRem(16);
-//       padding: $login-register-input-padding;
-//       border-bottom: $login-register-input-border-bottom;
-//       border-top: $login-register-input-border-top;
-//       border-left: $login-register-input-border-left;
-//       border-right: $login-register-input-border-right;
-//       border-color: #939393;
-//       @include transition(all 0.3s ease-in-out);
-
-//       &:hover, &:focus, &:hover:not(:disabled), &:focus:not(:disabled) {
-//         border-bottom: $login-register-input-border-bottom;
-//         border-top: $login-register-input-border-top;
-//         border-left: $login-register-input-border-left;
-//         border-right: $login-register-input-border-right;
-//         border-color: $login-register-hover-border-color;
-//       }
-//     }
-
-//     input[type="checkbox"] {
-//       position: relative;
-
-//       &:hover, &:focus, &:hover:not(:disabled), &:focus:not(:disabled) {
-//         border: $login-register-input-border-bottom;
-//         border-color: $login-register-hover-border-color;
-//       }
-//     }
-
-//     textarea {
-//       @include edx_style_killer;
-//       @include no_damn_focus_glow;
-//       font-size: calcRem(16);
-//       padding: $login-register-input-padding;
-//       border: $login-register-input-border;
-//       @include transition(all 0.3s ease-in-out);
-//       min-height: $login-register-textarea-min-height;
-
-//       &:hover, &:focus, &:hover:not(:disabled), &:focus:not(:disabled) {
-//         border: $login-register-input-border;
-//         border-color: $login-register-hover-border-color;
-//       }
-//     }
-
-//     .tip {
-//       font-size: $login-register-input-text-size;
-//       @include fontVariantInclude($global-font-base-body);
-//       color: $login-register-tip-text-color;
-//       display: block;
-//       margin: $login-register-tip-top-spacing 0 0;
-//     }
-
-//     .field-link {
-//       font-size: $login-register-field-link-font-size;
-//       @include fontVariantInclude($global-font-base-body);
-//       color: $login-register-field-link-color;
-//       display: block;
-//       margin: $login-register-tip-top-spacing 0 0;
-//     }
-//   }
-
-//   .action-primary {
-//     @include edx_style_killer;
-//     @include no_damn_focus_glow;
-//     background-color: $cta-button-bg;
-//     border: $cta-button-border;
-//     display: inline-block;
-//     padding: calcRem(15) calcRem(20);
-//     margin: calcRem(10) 10%;
-//     width: 80%;
-//     font-size: calcRem(18);
-//     @include fontVariantInclude($global-font-cta-buttons);
-//     color: pick-visible-color($cta-button-bg, $base-text-color, #fff);
-//     @include button_radius;
-//     @include button_splash($buttons-border-radius);
-
-//     &:hover, &:focus, &:hover:not(:disabled), &:focus:not(:disabled) {
-//       color: $cta-button-bg;
-//       background-color: pick-visible-color($cta-button-bg, $base-text-color, #fff);
-//     }
-//   }
-
-//   .nav-btn {
-//     @include edx_style_killer;
-//     @include no_damn_focus_glow;
-//     background-color: transparent;
-//     border: 2px solid $brand-primary-color;
-//     display: inline-block;
-//     padding: calcRem(15) calcRem(20);
-//     margin: calcRem(10) 15%;
-//     width: 70%;
-//     font-size: calcRem(18);
-//     @include fontVariantInclude($global-font-cta-buttons);
-//     color: $brand-primary-color;
-//     @include button_radius;
-//     @include button_splash($buttons-border-radius);
-//     @include transition(all 0.3s ease-in-out);
-//     text-align: center;
-
-//     &:hover, &:focus, &:hover:not(:disabled), &:focus:not(:disabled) {
-//       color: rgba($brand-primary-color, 0.8);
-//       background-color: transparent;
-//       border: 2px solid rgba($brand-primary-color, 0.8);
-//     }
-//   }
-
-//   .toggle-form {
-//     margin-top: calcRem(40);
-//     padding-top: calcRem(40);
-//     border-top: 0.1rem solid rgba($base-text-color, 0.2);
-
-//     .section-title {
-//       margin: 0 0 calcRem(30);
-//       padding: 0 0 calcRem(30);
-
-//       h2 {
-//         font-size: $login-register-toggle-title-font-size;
-//         color: $login-register-toggle-title-color;
-//         text-align: center;
-//         @include fontVariantInclude($global-font-h2);
-//       }
-//     }
-//   }
-// }
-
-// .a--register-disabled {
-//   padding: calcRem(30) 0;
-// }
-
-// // style the login providers buttons
-// .login-register .form-type{
-
-//   .login-providers {
-//     margin: calcRem(40) 0 0;
-
-//     .section-title.lines {
-//       margin: 0 0 calcRem(20);
-//       padding: 0 0 calcRem(20);
-
-//       h2 {
-//         font-size: calcRem(24);
-//         font-weight: normal;
-//         margin: 0 auto;
-//       }
-//     }
-
-//     .button.login-provider {
-//       padding: 0;
-//       border-radius: $buttons-border-radius;
-//       overflow: hidden;
-//       border: 1px solid #eee;
-//       background-color: #fff;
-//       margin: calcRem(20) auto;
-//       @include display(flex);
-//       @include align-items(center);
-//       width: calcRem(240);
-//       height: auto;
-//       -webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.10), 0 6px 6px rgba(0,0,0,0.15);
-//       -moz-box-shadow: 0 10px 20px rgba(0,0,0,0.10), 0 6px 6px rgba(0,0,0,0.15);
-//       box-shadow: 0 10px 20px rgba(0,0,0,0.10), 0 6px 6px rgba(0,0,0,0.15);
-
-//       .icon {
-//         position: relative;
-//         left: 0;
-//         top: 0;
-//         width: calcRem(44);
-//         height: calcRem(44);
-//         @include display(flex);
-//         @include align-items(center);
-//         @include justify-content(center);
-//         text-align: center;
-//         background-color: $brand-primary-color;
-//         color: pick-visible-color($brand-primary-color, $base-text-color, #fff);
-//         line-height: 100%;
-//         font-size: calcRem(14);
-//       }
-
-//       span {
-//         color: $base-text-color;
-//         font-size: calcRem(16);
-//         letter-spacing: 0;
-//         @include fontVariantInclude($global-font-cta-buttons);
-//         padding: calcRem(12) calcRem(15);
-//       }
-
-//       &:hover, &:focus, &:hover:not(:disabled) {
-//         background-color: $brand-primary-color;
-
-//         .icon {
-//           background-color: darken($brand-primary-color, 10%);
-//           color: pick-visible-color(darken($brand-primary-color, 10%), $base-text-color, #fff);
-//         }
-
-//         span {
-//           color: pick-visible-color($brand-primary-color, $base-text-color, #fff);
-//         }
-//       }
-//     }
-//   }
-// }
+*/
