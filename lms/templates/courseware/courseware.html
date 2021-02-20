@@ -20,7 +20,7 @@ from django.utils.translation import ugettext as _
 from lms.djangoapps.edxnotes.helpers import is_feature_enabled as is_edxnotes_enabled
 from openedx.core.djangolib.js_utils import js_escaped_string
 from openedx.core.djangolib.markup import HTML
-from openedx.features.course_experience import course_home_page_title, DISABLE_COURSE_OUTLINE_PAGE_FLAG
+from openedx.features.course_experience import course_home_page_title
 %>
 <%
    include_special_exams = (
@@ -193,12 +193,10 @@ ${HTML(fragment.foot_html())}
                 <nav aria-label="${_('Course')}" class="sr-is-focusable" tabindex="-1">
                     <div class="has-breadcrumbs">
                         <div class="breadcrumbs">
-                            % if not DISABLE_COURSE_OUTLINE_PAGE_FLAG.is_enabled(course.id):
-                                <span class="nav-item nav-item-course">
-                                    <a href="${course_url}">${course_home_page_title(course)}</a>
-                                </span>
-                                <span class="icon fa fa-angle-right" aria-hidden="true"></span>
-                            % endif
+                            <span class="nav-item nav-item-course">
+                              <a href="${course_url}">${course_home_page_title(course)}</a>
+                            </span>
+                            <span class="icon fa fa-angle-right" aria-hidden="true"></span>
                             % if chapter:
                                 <span class="nav-item nav-item-chapter" data-course-position="${course.position}" data-chapter-position="${chapter.position}">
                                     <a href="${course_url}#${six.text_type(chapter.location)}">${chapter.display_name_with_default}</a>

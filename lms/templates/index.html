@@ -16,7 +16,7 @@ from django.urls import reverse
 % for element in get_index_content():
   ## this check is AMC-specific
   % if (element['element-type'].startswith('layout')):
-    <%include file = '/' args = "options = element['options'], children = element['children'], page_specific_args = courses" />
+    <%include file = '/${element["element-path"]}' args = "options = element['options'], children = element['children'], page_specific_args = courses" />
   ## now follow standard theming checks
   % elif (element['element-type'].startswith('static-block')):
     <%include file = '/${element["element-path"]}' args = "template_settings = element['options']" />
