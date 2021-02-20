@@ -9,3 +9,11 @@ lms/static/css/*
 /conf/locale/eo/LC_MESSAGES/djangojs-partial.mo
 /conf/locale/eo/LC_MESSAGES/djangojs-partial.po
 
+
+# Juniper devstack artifacts
+/edx-analytics-pipeline/
+/edx-platform/
+/frontend-app-gradebook/
+/frontend-app-publisher/
+/xqueue/
+
