@@ -2,9 +2,9 @@
 
   &__notifications {
     background-color: $brand-primary-color;
-    padding: 1rem 0;
-    border-top: 0.1rem solid darken($brand-primary-color, 30%);
-    border-bottom: 0.1rem solid darken($brand-primary-color, 30%);
+    padding: calcRem(10) 0;
+    border-top: 1px solid darken($brand-primary-color, 30%);
+    border-bottom: 1px solid darken($brand-primary-color, 30%);
 
     &__container {
 
@@ -12,8 +12,8 @@
 
     &__notification {
       list-style-type: none;
-      padding: 1.5rem 1rem;
-      border-bottom: 0.1rem solid rgba($base-text-color, 0.2);
+      padding: calcRem(15) calcRem(10);
+      border-bottom: 1px solid rgba($base-text-color, 0.2);
       color: pick-visible-color($brand-primary-color, $base-text-color, #fff);
 
       &:last-child {
@@ -35,51 +35,51 @@
     &__content {
       @include flex-shrink(1);
       width: 100%;
-      max-width: 98rem;
+      max-width: calcRem(980);
       margin: 0 auto;
     }
 
     &__search-results {
-      padding: 0 0 4rem;
+      padding: 0 0 calcRem(40);
     }
 
     &__sidebar {
       @include flex-shrink(0);
-      width: 28rem;
-      margin-left: 5rem;
-      padding: 0 1rem 4rem;
+      width: calcRem(280);
+      margin-left: calcRem(50);
+      padding: 0 calcRem(10) calcRem(40);
 
       @media (max-width: $screen-xs-max) {
         width: 100%;
         margin-left: 0;
-        margin-top: 4rem;
-        padding-top: 4rem;
-        border-top: 0.1rem solid rgba($base-text-color, 0.3);
+        margin-top: calcRem(40);
+        padding-top: calcRem(40);
+        border-top: 1px solid rgba($base-text-color, 0.3);
       }
     }
 
     &__courses {
-      padding: 0 0 4rem;
+      padding: 0 0 calcRem(40);
     }
   }
 
   &__promote-catalog {
-    padding: 3rem 0;
-    border-bottom: 0.1rem solid rgba($base-text-color, 0.3);
+    padding: calcRem(30) 0;
+    border-bottom: 1px solid rgba($base-text-color, 0.3);
     text-align: center;
 
     p {
-      font-size: 1.6rem;
+      font-size: calcRem(16);
       @include fontVariantInclude($global-font-base-body);
-      margin: 0 0 1.5rem;
+      margin: 0 0 calcRem(15);
     }
 
     a.a--dashboard-01__promote-catalog__cta {
       background-color: $cta-button-bg;
       border: $navbar-button-border;
       display: inline-block;
-      padding: 1.5rem 2rem;
-      margin: 0.5rem 0 0;
+      padding: calcRem(15) calcRem(20);
+      margin: calcRem(5) 0 0;
       @include fontVariantInclude($global-font-cta-buttons);
       color: pick-visible-color($cta-button-bg, $base-text-color, #fff);
       @include button_radius;
@@ -88,7 +88,7 @@
       &:hover, &:focus {
         color: $cta-button-bg;
         background-color: pick-visible-color($cta-button-bg, $base-text-color, #fff);
-        border: 0.2rem solid $cta-button-bg;
+        border: 2px solid $cta-button-bg;
       }
     }
   }

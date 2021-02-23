@@ -1,10 +1,10 @@
 .container {
-  min-width: 320px;
+  min-width: calcRem(320);
 }
 
 .container>div.sysadmin-dashboard-wrapper {
   border: none;
-  padding: 3rem 1rem;
+  padding: calcRem(30) calcRem(10);
   @include display(flex);
   @include flex-wrap(wrap);
   max-width: 100%;
@@ -18,16 +18,16 @@ section.sysadmin-dashboard-content {
     width: 100%;
     @include big-headings-font;
     color: $brand-primary-color;
-    font-size: 3.6rem;
-    margin: 0 0 3rem;
+    font-size: calcRem(36);
+    margin: 0 0 calcRem(30);
   }
 
   h2.instructor-nav {
 
     a {
-      margin: 0.75rem;
+      margin: calcRem(8);
       display: inline-block;
-      font-size: 1.6rem;
+      font-size: calcRem(16);
       @include primary-font;
     }
   }
@@ -35,8 +35,8 @@ section.sysadmin-dashboard-content {
   h2, h3 {
     @include small-headings-font;
     color: rgba($base-text-color, 0.75);
-    font-size: 1.8rem;
-    margin: 3rem 0 3rem;
+    font-size: calcRem(18);
+    margin: calcRem(30) 0 calcRem(30);
     display: block;
   }
 
@@ -46,30 +46,30 @@ section.sysadmin-dashboard-content {
 
     li {
       list-style-type: none;
-      padding: 1.5rem 0;
-      border-bottom: 0.1rem solid #ddd;
+      padding: calcRem(15) 0;
+      border-bottom: 1px solid #ddd;
 
       label {
         width: 100%;
-        font-size: 1.2rem;
+        font-size: calcRem(12);
         @include primary-font;
         color: rgba($base-text-color, 0.8);
-        margin: 0 0 1rem;
+        margin: 0 0 calcRem(10);
         display: block;
       }
 
       input {
         width: 100%;
-        font-size: 1.6rem;
+        font-size: calcRem(16);
         @include primary-font;
-        padding: 1rem;
+        padding: calcRem(10);
         height: auto;
       }
     }
   }
 
   .form-actions {
-    padding: 1.5rem 0;
+    padding: calcRem(15) 0;
   }
 
   button {
@@ -78,10 +78,10 @@ section.sysadmin-dashboard-content {
     background-color: $cta-button-bg;
     border: $cta-button-border;
     display: inline-block;
-    padding: 1.5rem 2rem;
-    margin: 1rem 2rem;
-    min-width: 26rem;
-    font-size: 1.6rem;
+    padding: calcRem(15) calcRem(20);
+    margin: calcRem(10) calcRem(20);
+    min-width: calcRem(260);
+    font-size: calcRem(16);
     @include primary-font;
     color: $cta-button-text-color;
     @include button_radius;
@@ -98,8 +98,8 @@ section.sysadmin-dashboard-content {
   ol {
 
     li {
-      padding: 1.5rem 1rem;
-      border-bottom: 0.1rem solid #ddd;
+      padding: calcRem(15) calcRem(10);
+      border-bottom: 1px solid #ddd;
 
       &:last-child {
         border-bottom: none;
@@ -113,7 +113,7 @@ section.sysadmin-dashboard-content {
 }
 
 span#djangopid, span#edxver {
-  margin: 5rem 1rem;
+  margin: calcRem(50) calcRem(10);
   display: inline-block;;
   @include small-headings-font;
   color: $brand-primary-color;
