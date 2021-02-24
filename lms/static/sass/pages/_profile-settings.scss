@@ -6,18 +6,18 @@
 
 	.profile-header, .wrapper-profile-sections, .profile-self .wrapper-profile-field-account-privacy .u-field {
 		width: 100%;
-		padding-left: 3rem;
-		padding-right: 3rem;
+		padding-left: calcRem(30);
+		padding-right: calcRem(30);
 		margin-left: auto;
 		margin-right: auto;
 
 		@media(min-width: 1440px) {
-			width: 1280px;
+			width: calcRem(1280);
 		}
 
 		@media(max-width:$screen-sm-max) {
-			padding-left: 0rem;
-			padding-right: 0rem;
+			padding-left: calcRem(0);
+			padding-right: calcRem(0);
 		}
 	}
 
@@ -30,7 +30,7 @@
 
 		.wrapper-profile-field-account-privacy {
 			background-color: rgba($base-text-color, 0.05);
-			padding: 2rem 0;
+			padding: calcRem(20) 0;
 			opacity: 0.9;
 			@include transition(all 0.3s ease-in-out);
 
@@ -48,7 +48,7 @@
 			}
 
       .u-field-message-notification {
-        margin: 1rem 0 0;
+        margin: calcRem(10) 0 0;
         display: block;
       }
 
@@ -56,12 +56,12 @@
 				@include primary-font;
 				color: rgba($base-text-color, 1);
 				text-shadow: none;
-				margin: 5px 15px 5px 0;
-        font-size: 1.4rem;
+				margin: calcRem(5) calcRem(15) calcRem(5) 0;
+        font-size: calcRem(14);
 			}
 
 			.u-field-value {
-				margin: 0px 0px 5px;
+				margin: 0 0 calcRem(5);
 
 				select {
 					@include primary-font-bold;
@@ -80,18 +80,18 @@
 
 	.wrapper-profile-sections {
 		display: grid;
-		grid-template-columns: 30rem 1fr;
-		grid-column-gap: 4rem;
+		grid-template-columns: calcRem(300) 1fr;
+		grid-column-gap: calcRem(40);
 
 		.wrapper-profile-section-container-two {
 			display: grid;
 			grid-template-columns: 1fr;
-			grid-row-gap: 4rem;
+			grid-row-gap: calcRem(40);
 		}
 
 		@media(max-width:$screen-xs-max) {
 			grid-template-columns: 1fr;
-			grid-row-gap: 4rem;
+			grid-row-gap: calcRem(40);
 		}
 	}
 
@@ -111,7 +111,7 @@
 		}
 
 		.editable-toggle {
-			padding: 5px;
+			padding: calcRem(5);
 			@include transition(all 0.2s ease-in-out);
 
 			&:hover, &:focus {
@@ -135,7 +135,7 @@
 		}
 
 		.editable-toggle {
-			padding: 5px;
+			padding: calcRem(5);
 			@include transition(all 0.2s ease-in-out);
 
 			&:hover, &:focus {

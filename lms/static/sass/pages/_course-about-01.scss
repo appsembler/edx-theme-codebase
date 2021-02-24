@@ -1,7 +1,7 @@
 .a--course-about-01 {
 
   &__header {
-    padding: 9rem 0;
+    padding: calcRem(90) 0;
     position: relative;
     overflow: hidden;
 
@@ -40,12 +40,12 @@
       width: 30%;
       @include flex-grow(0);
       @include flex-shrink(0);
-      max-width: 32rem;
-      margin-right: 5rem;
+      max-width: calcRem(320);
+      margin-right: calcRem(50);
       position: relative;
-      -webkit-box-shadow: 0 0 2rem 0 rgba(0,0,0,0.75);
-      -moz-box-shadow: 0 0 2rem 0 rgba(0,0,0,0.75);
-      box-shadow: 0 0 2rem 0 rgba(0,0,0,0.75);
+      -webkit-box-shadow: 0 0 calcRem(20) 0 rgba(0,0,0,0.75);
+      -moz-box-shadow: 0 0 calcRem(20) 0 rgba(0,0,0,0.75);
+      box-shadow: 0 0 calcRem(20) 0 rgba(0,0,0,0.75);
 
       img {
         width: 100%;
@@ -55,7 +55,7 @@
       @media (max-width: $screen-sm-max) {
         width: 100%;
         max-width: 100%;
-        margin-bottom: 3rem;
+        margin-bottom: calcRem(30);
       }
     }
 
@@ -73,8 +73,8 @@
       i {
         margin: 0 auto;
         color: #fff;
-        font-size: 6.4rem;
-        text-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+        font-size: calcRem(64);
+        text-shadow: 0 0 calcRem(20) rgba(0, 0, 0, 0.5);
         @include transition(all 0.2s ease-in-out);
       }
 
@@ -93,20 +93,20 @@
 
     &__title {
       @include fontVariantInclude($global-font-h1);
-      font-size: 5.2rem;
+      font-size: calcRem(52);
       color: #fff;
-      margin: 0 0 3rem;
+      margin: 0 0 calcRem(30);
 
       @media (max-width:$screen-sm-max) {
-        font-size: 3.2rem;
+        font-size: calcRem(32);
       }
     }
 
     &__description {
       @include fontVariantInclude($global-font-base-body);
-      font-size: 1.8rem;
+      font-size: calcRem(18);
       color: #fff;
-      margin: -1rem 0 3rem;
+      margin: calcRem(-10) 0 calcRem(30);
     }
   }
 
@@ -121,10 +121,10 @@
     @include transition(all 0.3s ease-in-out);
     @include display(flex);
     @include align-items(center);
-    padding: 2rem 0;
-    border-top: 0.1rem solid rgba(#fff, 0.15);
-    border-bottom: 0.1rem solid rgba(#fff, 0.15);
-    margin: 0 0 3rem;
+    padding: calcRem(20) 0;
+    border-top: 1px solid rgba(#fff, 0.15);
+    border-bottom: 1px solid rgba(#fff, 0.15);
+    margin: 0 0 calcRem(30);
 
     & .expand-on-parent-hover {
       @include flex-shrink(0);
@@ -139,8 +139,8 @@
       opacity: 1;
 
       & .expand-on-parent-hover {
-        max-width: 30rem;
-        margin-right: 1.5rem;
+        max-width: calcRem(300);
+        margin-right: calcRem(15);
       }
     }
 
@@ -151,8 +151,8 @@
     }
 
     a {
-      font-size: 2rem;
-      margin: 0 1rem;
+      font-size: calcRem(20);
+      margin: 0 calcRem(10);
       color: #fff;
       opacity: 0.7;
 
@@ -166,9 +166,9 @@
     background-color: $cta-button-bg;
     border: $navbar-button-border;
     display: inline-block;
-    padding: 1.5rem 2rem;
-    font-size: 1.6rem;
-    margin: 1rem 2rem 1rem 0;
+    padding: calcRem(15) calcRem(20);
+    font-size: calcRem(16);
+    margin: calcRem(10) calcRem(20) calcRem(10) 0;
     @include fontVariantInclude($global-font-cta-buttons);
     color: pick-visible-color($cta-button-bg, $base-text-color, #fff);
     @include button_radius;
@@ -184,7 +184,7 @@
   }
 
   &__overview {
-    padding: 3rem 0 5rem;
+    padding: calcRem(30) 0 calcRem(50);
     background-color: transparent;
     line-height: 150%;
     display: block;
@@ -198,24 +198,24 @@
 
     h1 {
       @include fontVariantInclude($global-font-h1);
-      font-size: 4.2rem;
-      margin: 0 0 3rem;
+      font-size: calcRem(42);
+      margin: 0 0 calcRem(30);
       color: $brand-primary-color;
       text-transform: none;
     }
 
     h2 {
       @include fontVariantInclude($global-font-h2);
-      font-size: 3.2rem;
-      margin: 4rem 0 3rem;
+      font-size: calcRem(32);
+      margin: calcRem(40) 0 calcRem(30);
       color: $brand-primary-color;
       text-transform: none;
     }
 
     h3 {
       @include fontVariantInclude($global-font-h3);
-      font-size: 1.8rem;
-      margin: 3rem 0 2rem;
+      font-size: calcRem(18);
+      margin: calcRem(30) 0 calcRem(20);
       color: rgba($base-text-color, 0.8);
       text-transform: none;
     }
@@ -231,7 +231,7 @@
     .teacher {
 
       .teacher-image {
-        margin-top: 3rem;
+        margin-top: calcRem(30);
 
         img {
           float: none;
@@ -246,9 +246,9 @@
   &__info {
     display: block;
     width: 30%;
-    max-width: 32rem;
-    margin-right: 5rem;
-    padding: 5rem 0;
+    max-width: calcRem(320);
+    margin-right: calcRem(50);
+    padding: calcRem(50) 0;
     @include flex-grow(0);
     @include flex-shrink(0);
 
@@ -259,27 +259,27 @@
 
     li {
       list-style-type: none;
-      border-bottom: 0.1rem solid rgba($base-text-color, 0.2);
-      padding: 2rem 0;
+      border-bottom: 1px solid rgba($base-text-color, 0.2);
+      padding: calcRem(20) 0;
       @include display(flex);
       @include align-items(center);
-      font-size: 1.6rem;
+      font-size: calcRem(16);
 
       &:last-child {
         border-bottom: none;
       }
 
       i {
-        margin-right: 1.5rem;
+        margin-right: calcRem(15);
         color: rgba($base-text-color, 0.75);
       }
 
       p {
         color: rgba($base-text-color, 0.75);
         @include primary-font-light;
-        margin-right: 1.5rem;
+        margin-right: calcRem(15);
         display: inline-block;
-        width: 13rem;
+        width: calcRem(130);
       }
 
       span {
@@ -291,7 +291,7 @@
   }
 
   &__content {
-    padding-bottom: 4rem;
+    padding-bottom: calcRem(40);
 
     &__container {
       @media (min-width: $screen-md-min) {
