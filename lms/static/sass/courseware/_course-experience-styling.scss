@@ -1,8 +1,8 @@
 .content-wrapper {
   width: 100%;
   max-width: 100%;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: calcRem(30);
+  padding-right: calcRem(30);
 
   .page-content-container {
     @include container-fixed();
@@ -37,9 +37,9 @@
           @include edx_style_killer;
           @include no_damn_focus_glow;
           background-color: $cta-button-bg;
-          border: 0.2rem solid $cta-button-bg;
+          border: 2px solid $cta-button-bg;
           display: inline-block;
-          padding: 1.2rem 2rem;
+          padding: calcRem(12) calcRem(20);
           line-height: 100%;
           font-size: $font-size-base-body;
           @include fontVariantInclude($global-font-cta-buttons);
@@ -50,23 +50,23 @@
           &:hover, &:focus, &:hover:not(:disabled), &:focus:not(:disabled) {
             background-color: pick-visible-color($cta-button-bg, $base-text-color, #fff);
             color: $cta-button-bg;
-            border: 0.2rem solid $cta-button-bg;
+            border: 2px solid $cta-button-bg;
           }
         }
       }
 
       .page-title {
-        font-size: 2.4rem;
-        margin: 1rem 0px;
+        font-size: calcRem(24);
+        margin: calcRem(10) 0;
       }
 
       .field-input.input-text.search-input {
-        width: 18rem;
-        font-size: 1.6rem;
+        width: calcRem(180);
+        font-size: calcRem(16);
       }
 
       .btn.btn-small.search-button {
-        font-size: 1.6rem;
+        font-size: calcRem(16);
         border-color: $brand-primary-color;
         color: $brand-primary-color;
         border-top-right-radius: $buttons-border-radius;
@@ -79,7 +79,7 @@
       }
 
       .btn.btn-brand.action-resume-course {
-        font-size: 1.6rem;
+        font-size: calcRem(16);
         background-color: $cta-button-bg;
         color: $cta-button-text-color;
         border: $cta-button-border;
@@ -105,7 +105,7 @@
       }
 
       .course-outline {
-        padding: 2rem 0;
+        padding: calcRem(20) 0;
 
         #expand-collapse-outline-all-button {
           @include edx_style_killer;
@@ -113,7 +113,7 @@
           background: none;
           border: 1px solid $base-text-color;
           display: inline-block;
-          padding: 1.2rem 2rem;
+          padding: calcRem(12) calcRem(20);
           line-height: 100%;
           font-size: $font-size-base-body;
           @include fontVariantInclude($global-font-cta-buttons);
@@ -135,10 +135,10 @@
 
             .section-name {
               @include transition(all 0.3s ease-in-out);
-              padding: 1rem;
+              padding: calcRem(10);
 
               .section-title {
-                font-size: 1.8rem;
+                font-size: calcRem(18);
                 color: lighten($base-text-color, 15%);
               }
 
@@ -161,10 +161,10 @@
 
                 .subsection-text {
                   @include transition(all 0.3s ease-in-out);
-                  padding: 1rem;
+                  padding: calcRem(10);
 
                   .subsection-title {
-                    font-size: 1.6rem;
+                    font-size: calcRem(16);
                     color: $base-text-color;
                   }
 
@@ -175,7 +175,7 @@
 
                 a.outline-item {
                   @include transition(all 0.3s ease-in-out);
-                  padding: 1rem;
+                  padding: calcRem(10);
 
                   &:hover, &:focus {
                     background-color: lighten($brand-primary-color, 60%);
@@ -193,12 +193,12 @@
       .section {
 
         h3 {
-          font-size: 1.6rem;
+          font-size: calcRem(16);
         }
       }
 
       .date-summary-container .date-summary .heading {
-        font-size: 1.4rem;
+        font-size: calcRem(14);
       }
 
       .hd-6 {

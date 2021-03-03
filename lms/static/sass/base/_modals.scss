@@ -4,7 +4,7 @@
   &__outer-container {
     width: 100%;
     height: 100%;
-    padding: 2rem;
+    padding: calcRem(20);
     @include display(flex);
     @include align-items(center);
   }
@@ -15,14 +15,14 @@
 
   &__close-button {
     position: absolute;
-    top: -1.6rem;
-    right: -1.6rem;
+    top: calcRem(-16);
+    right: calcRem(-16);
     z-index: 10001;
-    width: 3.2rem;
-    height: 3.2rem;
-    padding: 0.2rem;
+    width: calcRem(32);
+    height: calcRem(32);
+    padding: 2px;
     border-radius: 100%;
-    font-size: 2rem;
+    font-size: calcRem(20);
     background: none;
     border: none;
     box-shadow: none;
@@ -44,9 +44,9 @@
 
     &__container {
       padding: 0;
-      -webkit-box-shadow: 0 0 2rem 0 rgba(0,0,0,0.4);
-      -moz-box-shadow: 0 0 2rem 0 rgba(0,0,0,0.4);
-      box-shadow: 0 0 2rem 0 rgba(0,0,0,0.4);
+      -webkit-box-shadow: 0 0 calcRem(20) 0 rgba(0,0,0,0.4);
+      -moz-box-shadow: 0 0 calcRem(20) 0 rgba(0,0,0,0.4);
+      box-shadow: 0 0 calcRem(20) 0 rgba(0,0,0,0.4);
     }
   }
 }
@@ -74,7 +74,7 @@
     left: 0;
     right: 0;
     background-color: #fff;
-    padding: 3rem;
+    padding: calcRem(30);
     @include material-card(1);
   }
 
@@ -84,23 +84,23 @@
 
   &__title {
     @include big-headings-font;
-    font-size: 3.2rem;
+    font-size: calcRem(32);
 
     @media(max-width: $screen-xs-max) {
-      font-size: 2.4rem;
+      font-size: calcRem(24);
     }
   }
 
   &__controls {
-    margin-top: 3rem;
+    margin-top: calcRem(30);
   }
 
   &__content {
-    font-size: 1.6rem;
+    font-size: calcRem(16);
     @include primary-font;
 
     input[type="checkbox"], input[type="radio"] {
-      margin: 1rem;
+      margin: calcRem(10);
     }
   }
 
@@ -109,9 +109,9 @@
     @include no_damn_focus_glow;
     border: $cta-button-border;
     display: inline-block;
-    padding: 1rem 2rem;
-    margin: 1rem 1rem 1rem 0;;
-    font-size: 1.8rem;
+    padding: calcRem(10) calcRem(20);
+    margin: calcRem(10) calcRem(10) calcRem(10) 0;;
+    font-size: calcRem(18);
     @include primary-font;
     color: #fff;
     @include button_radius;
@@ -130,12 +130,12 @@
     }
 
     &.dismiss {
-      border: 0.2rem solid rgba($base-text-color, 0.8) !important;
+      border: 2px solid rgba($base-text-color, 0.8) !important;
       color: rgba($base-text-color, 0.8);
-      padding: 0.8rem 1.8rem;
+      padding: calcRem(8) calcRem(18);
 
       &:hover, &:focus, &:hover:not(:disabled), &:focus:not(:disabled) {
-        border: 0.2rem solid rgba($base-text-color, 0.8) !important;
+        border: 2px solid rgba($base-text-color, 0.8) !important;
         color: rgba($base-text-color, 0.8);
       }
     }

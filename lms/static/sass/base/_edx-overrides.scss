@@ -29,7 +29,7 @@ h2 {
 }
 
 .window-wrap {
-	min-width: 10rem !important;
+	min-width: calcRem(100) !important;
 	background-color: #f5f5f5;
 
 	.content-wrapper {
@@ -51,12 +51,12 @@ h2 {
 // make sure textarea input is at least 16px
 // to avoid input zoom on mobile webview
 .a--course-content__main-content textarea {
-	font-size: 1.6rem;
+	font-size: calcRem(16);
 }
 
 .content-wrapper {
 	.btn, .form-control {
-		font-size: 1.6rem;
+		font-size: calcRem(16);
 	}
 }
 

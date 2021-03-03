@@ -1,20 +1,20 @@
 .a--courseware-banner {
 
   &__wrapper {
-    padding: 2rem;
+    padding: calcRem(20);
     background-color: #dedede;
   }
 
   &__container {
 
     h2 {
-      font-size: 2rem;
+      font-size: calcRem(20);
       @include primary-font-bold;
-      margin: 0.5rem 0 1rem;
+      margin: calcRem(5) 0 calcRem(10);
     }
 
     p {
-      margin: 0.5rem 0;
+      margin: calcRem(5) 0;
 
       a {
         @include primary-font-bold;

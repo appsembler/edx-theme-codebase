@@ -3,7 +3,7 @@
   opacity: 1;
 
   &:hover, &:focus {
-    border: 0.1rem solid $brand-primary-color;
+    border: 1px solid $brand-primary-color;
     opacity: 0.8;
   }
 }

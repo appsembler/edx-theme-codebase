@@ -1,13 +1,13 @@
 .content-wrapper {
 
   .introduction {
-    max-width: 98rem;
+    max-width: calcRem(980);
     width: 100%;
 
     header {
       height: auto;
       background: none;
-      padding: 1.5*$login-register-section-title-spacing 2rem $login-register-section-title-spacing;
+      padding: 1.5*$login-register-section-title-spacing calcRem(20) $login-register-section-title-spacing;
       margin: 0;
       border-bottom: $login-register-section-title-border-bottom;
 
@@ -42,7 +42,7 @@
           color: $brand-accent-color;
           text-align: left;
           text-transform: none;
-          margin: 1rem 0 0;
+          margin: calcRem(10) 0 0;
           text-transform: none;
 
           @media (max-width: $screen-sm-max) {
@@ -58,7 +58,7 @@
   }
 
   .register.container, .view-register.container, .login.container, .view-login.container {
-    max-width: 98rem;
+    max-width: calcRem(980);
     width: 100%;
 
     .content {
@@ -67,7 +67,7 @@
 
       @media (max-width: $screen-sm-max) {
         width: 100%;
-        margin-bottom: 4rem;
+        margin-bottom: calcRem(40);
         margin-right: 0;
       }
 
@@ -79,7 +79,7 @@
           color: $base-text-color;
           text-align: left;
           text-transform: none;
-          margin: 0 0 2rem;
+          margin: 0 0 calcRem(20);
           text-transform: none;
 
           @media (max-width: $screen-sm-max) {
@@ -96,12 +96,12 @@
         }
 
         .field {
-          margin: 0 0 1.5rem;
+          margin: 0 0 calcRem(15);
 
           label {
             @include fontVariantInclude("primary-font-regular");
             font-size: $font-size-base-body;
-            margin: 0 0 0.5rem;
+            margin: 0 0 calcRem(5);
           }
 
           input {
@@ -113,7 +113,7 @@
           }
 
           &.checkbox {
-            margin: 0.5rem 3rem 0.5rem 0;
+            margin: calcRem(5) calcRem(30) calcRem(5) 0;
 
             label {
 
@@ -140,8 +140,8 @@
             background-color: $cta-button-bg;
             border: $cta-button-border;
             display: inline-block;
-            padding: 1.5rem 2rem;
-            margin: 1rem 10%;
+            padding: calcRem(15) calcRem(20);
+            margin: calcRem(10) 10%;
             width: 80%;
             font-size: $font-size-base-body*1.2;
             @include fontVariantInclude($global-font-cta-buttons);
@@ -170,13 +170,13 @@
         border: none;
         background: none;
         border-bottom: $login-register-section-title-border-bottom;
-        padding: 0 0 2rem;
-        margin: 0 0 3rem;
+        padding: 0 0 calcRem(20);
+        margin: 0 0 calcRem(30);
         text-align: center;
 
         .title {
           display: block;
-          margin: 0 0 1rem;
+          margin: 0 0 calcRem(10);
         }
 
         .instructions {
@@ -190,8 +190,8 @@
           border: 2px solid $brand-accent-color;
           text-align: center;
           display: inline-block;
-          padding: 1rem 2rem;
-          margin: 1rem 10%;
+          padding: calcRem(10) calcRem(20);
+          margin: calcRem(10) 10%;
           width: 70%;
           font-size: $font-size-base-body;
           @include fontVariantInclude($global-font-cta-buttons);

@@ -2,16 +2,16 @@
 
   h3.big-section-title {
     @include primary-font;
-    font-size: 2.4rem;
+    font-size: calcRem(24);
     color: rgba($base-text-color, 0.75);
-    margin: 0 0 2.5rem;
+    margin: 0 0 calcRem(25);
   }
 
   &__main-title {
     @include fontVariantInclude($global-font-h1);
-    font-size: 3.2rem;
+    font-size: calcRem(32);
     color: $brand-primary-color;
-    margin: 0 0 2.5rem;
+    margin: 0 0 calcRem(25);
   }
 
   &>ol {
@@ -23,7 +23,7 @@
   }
 
   li h2 {
-    margin: 2rem 0;
+    margin: calcRem(20) 0;
   }
 
   a {
@@ -42,7 +42,7 @@
   .page-title {
     font-size: $font-size-base-body*1.6;
     @include primary-font;
-    margin: 0 0 1rem;
+    margin: 0 0 calcRem(10);
   }
 
   .page-subtitle {
@@ -64,9 +64,9 @@
     color: pick-visible-color($cta-button-bg, $base-text-color, #fff);
     border: $cta-button-border;
     display: inline-block;
-    padding: 1.5rem 2rem;
-    font-size: 1.4rem;
-    margin: 0 0 0 2rem;
+    padding: calcRem(15) calcRem(20);
+    font-size: calcRem(14);
+    margin: 0 0 0 calcRem(20);
     @include fontVariantInclude($global-font-cta-buttons);
     @include button_radius;
     @include button_splash($buttons-border-radius);

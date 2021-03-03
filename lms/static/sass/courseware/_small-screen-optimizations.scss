@@ -29,15 +29,15 @@
         &__content {
           position: relative;
           overflow: hidden;
-          padding: 1.5rem 3rem 4rem 7rem;
+          padding: calcRem(15) calcRem(30) calcRem(40) calcRem(70);
 
           &__side-navigation {
             position: absolute;
-            left: -50rem;
+            left: calcRem(-500);
             top: 0;
             bottom: 0;
-            padding-top: 2.5rem;
-            width: 32rem;
+            padding-top: calcRem(25);
+            width: calcRem(320);
             max-width: 100%;
             @include transition(all 0.3s ease-in-out);
             z-index: 10;
@@ -48,7 +48,7 @@
 
             &.in-view {
               left: 0;
-              padding-left: 3rem;
+              padding-left: calcRem(30);
               -webkit-box-shadow: 12px 0px 20px -10px rgba(0,0,0,0.5);
               -moz-box-shadow: 12px 0px 20px -10px rgba(0,0,0,0.5);
               box-shadow: 12px 0px 20px -10px rgba(0,0,0,0.5);
@@ -61,13 +61,13 @@
 
         &__nav__small-screen-toggle {
           display: block;
-          width: 32rem;
+          width: calcRem(320);
           text-align: center;
           @include transition(all 0.3s ease-in-out);
           @include transform(rotate(270deg));
           @include transform-origin(top left);
           position: absolute;
-          top: 45rem;
+          top: calcRem(450);
           left: 0;
           background: none;
           background-color: $cta-button-bg;
@@ -87,7 +87,7 @@
           span {
 
             i {
-              margin-right: 1rem;
+              margin-right: calcRem(10);
             }
           }
 
@@ -96,7 +96,7 @@
           }
 
           &.toggled {
-            left: 32rem;
+            left: calcRem(320);
             z-index: 11;
 
             .show {
@@ -115,7 +115,7 @@
         .course-content {
 
           .path {
-            margin-bottom: 2.2rem;
+            margin-bottom: calcRem(22);
           }
 
           .sequence-nav {
@@ -128,8 +128,8 @@
                 &.active {
 
                   &:after {
-                    bottom: -0.3rem;
-                    height: 0.3rem;
+                    bottom: calcRem(-3);
+                    height: calcRem(3);
                   }
                 }
               }

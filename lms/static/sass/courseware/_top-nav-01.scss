@@ -1,20 +1,20 @@
 .a--courseware-top-nav {
 
   &__container {
-    padding-top: 1rem;
+    padding-top: calcRem(10);
     margin: $courseware-top-nav-top-margin auto $courseware-top-nav-bottom-margin;
     position: relative;
   }
 
   &__mobile-scroll-indicator {
-    width: 7rem;
+    width: calcRem(70);
     position: absolute;
     right: 0;
     top: 0;
     bottom: 0;
-    font-size: 2rem;
+    font-size: calcRem(20);
     @include linear-gradient(to right, rgba(#fafafa, 0) 0%, rgba(#fafafa, 1) 40%);
-    padding-left: 3rem;
+    padding-left: calcRem(30);
     display: none;
 
     &.visible {
@@ -32,7 +32,7 @@
       opacity: 0;
       @include transition(all 0.3s ease-in-out);
       position: relative;
-      top: -2rem;
+      top: calcRem(-20);
 
       &.a--do-animate {
         opacity: 1;
@@ -58,11 +58,11 @@
         display: block;
         @include primary-font;
         color: $brand-primary-color;
-        font-size: 1.6rem;
-        padding: 0.8rem 1.5rem;
+        font-size: calcRem(16);
+        padding: calcRem(8) calcRem(15);
         background-color: transparent;
-        border: 0.1rem solid $brand-primary-color;
-        border-radius: 0.5rem;
+        border: 1px solid $brand-primary-color;
+        border-radius: calcRem(5);
         letter-spacing: 0;
         @include transition(all 0.2s ease-in-out);
 
@@ -77,25 +77,25 @@
   &__item {
     list-style-type: none;
     display: inline-block;
-    margin: 1rem 0;
+    margin: calcRem(10) 0;
     @include flex-shrink(0);
 
     &:last-child {
-      padding-right: 4rem;
-      margin: 1rem 0;
+      padding-right: calcRem(40);
+      margin: calcRem(10) 0;
     }
 
     a, a:not(.btn), a:visited, a:visited:not(.btn) {
       display: block;
       @include primary-font;
       color: $base-text-color;
-      font-size: 1.6rem;
-      padding: 1rem 1.5rem;
+      font-size: calcRem(16);
+      padding: calcRem(10) calcRem(15);
 
       @if $courseware-link-hover == "expanding-underline" {
-          @include underline_expanding_hover($brand-primary-color, 1rem);
+          @include underline_expanding_hover($brand-primary-color, calcRem(10));
       } @else if $courseware-link-hover == "hover-pop" {
-          @include hover_pop(-0.5rem, 0);
+          @include hover_pop(calcRem(-5), 0);
       } @else if $courseware-link-hover == "hover-custom-color" {
           &:hover, &:focus {
             color: $brand-primary-color;
@@ -110,7 +110,7 @@
       &.active {
         background-color: $base-text-color;
         color: #fff;
-        border-radius: 0.5rem;
+        border-radius: calcRem(5);
 
         &:hover, &:focus {
           top: 0;
@@ -120,12 +120,12 @@
   }
 
   &__preview-menu-wrapper {
-    padding: 2rem !important;
+    padding: calcRem(20) !important;
     background-color: darken($brand-primary-color, 20%);
     color: #fff;
 
     .preview-actions .action-preview .action-preview-label {
-      font-size: 1.4rem;
+      font-size: calcRem(14);
       text-shadow: none;
       color: #fff;
     }

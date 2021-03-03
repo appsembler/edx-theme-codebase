@@ -69,6 +69,42 @@
     border: none;
     border-radius: $in-app-container-border-radius;
   }
+
+  .course-updates.page-content-container {
+    width: $base-container-width;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: calcRem(30) calcRem(70);
+    border: none;
+    border-radius: $in-app-container-border-radius;
+    margin-bottom: calcRem(70);
+
+    .page-header {
+      padding: calcRem(10) 0;
+    }
+
+    .page-content {
+      padding: 0;
+
+      .date {
+        font-weight: bold;
+      }
+
+      .article-content {
+        font-size: calcRem(16);
+        line-height: 170%;
+        margin: calcRem(10) 0 0;
+      }
+    }
+
+    .breadcrumbs {
+      padding: calcRem(10) 0;
+
+      .fa.fa-angle-right {
+        margin: 0 calcRem(5);
+      }
+    }
+  }
 }
 
 

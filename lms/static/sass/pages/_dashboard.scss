@@ -160,8 +160,8 @@
 
                       &:hover, &:focus {
                         background: none;
-                        border-color: $cta-button-bg;
-                        color: $cta-button-bg;
+                        border-color: $brand-primary-color;
+                        color: $brand-primary-color;
                       }
                     }
                   }
@@ -184,6 +184,7 @@
 
                   .message {
                     padding: calcRem(30);
+                    border: none;
                   }
                 }
               }
@@ -229,12 +230,12 @@
               padding: calcRem(10);
               min-width: calcRem(50);
               background: none;
-              border: 2px solid $cta-button-bg;
-              color: $cta-button-bg;
+              border: 2px solid $brand-primary-color;
+              color: $brand-primary-color;
 
               &:hover, &:focus {
-                background-color: $cta-button-bg;
-                color: $cta-button-text-color;
+                background-color: $brand-primary-color;
+                color: pick-visible-color($cta-button-text-color, $base-text-color, #fff);
               }
             }
           }

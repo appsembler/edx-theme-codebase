@@ -3,25 +3,25 @@
 
   &__main-title {
     @include fontVariantInclude($global-font-h1);
-    font-size: 3.2rem;
+    font-size: calcRem(32);
     color: $brand-primary-color;
-    margin: 0 0 4.5rem;
+    margin: 0 0 calcRem(45);
 
     @media (max-width: $screen-xs-max) {
-      font-size: 2.4rem;
+      font-size: calcRem(24);
     }
   }
 
   &__info {
     width: 100%;
-    padding-bottom: 4rem;
-    margin-bottom: 2rem;
-    border-bottom: 0.1rem solid #ddd;
+    padding-bottom: calcRem(40);
+    margin-bottom: calcRem(20);
+    border-bottom: 1px solid #ddd;
 
     .grade-detail-graph {
       width: 100%;
-      min-height: 36rem;
-      margin: 2rem 0 5rem;
+      min-height: calcRem(360);
+      margin: calcRem(20) 0 calcRem(50);
     }
   }
 
@@ -32,41 +32,41 @@
   &__chapter {
     @include display(flex);
     width: 100%;
-    margin: 4rem 0;
+    margin: calcRem(40) 0;
 
     @media(max-width: $screen-xs-max) {
       @include flex-wrap(wrap);
-      border-bottom: 0.2rem solid #eee;
-      padding-bottom: 3rem;
+      border-bottom: 2px solid #eee;
+      padding-bottom: calcRem(30);
     }
 
     &__info {
-      margin-bottom: 3rem;
-      padding-bottom: 3rem;
-      border-bottom: 0.1rem solid #ddd;
+      margin-bottom: calcRem(30);
+      padding-bottom: calcRem(30);
+      border-bottom: 1px solid #ddd;
 
       @media (min-width: $screen-sm-min) {
         margin-bottom: 0;
         border-bottom: none;
         padding-bottom: 0;
-        margin-right: 3rem;
-        padding-right: 3rem;
-        border-right: 0.1rem solid #ddd;
+        margin-right: calcRem(30);
+        padding-right: calcRem(30);
+        border-right: 1px solid #ddd;
         width: 30%;
-        max-width: 36rem;
+        max-width: calcRem(360);
       }
 
       .chapter-name {
         @include fontVariantInclude($global-font-h4);
       	font-size: $font-size-h4;
       	line-height: $line-height-h4;
-        margin: 1.2rem 0;
+        margin: calcRem(12) 0;
         color: rgba($base-text-color, 0.75);
       }
     }
 
     &__section {
-      margin-bottom: 3rem;
+      margin-bottom: calcRem(30);
 
       &:last-of-type {
         margin-bottom: 0;
@@ -78,43 +78,43 @@
       @include flex-shrink(1);
 
       .chapter-section-name {
-        margin: 0 0 2rem;
+        margin: 0 0 calcRem(20);
 
         a {
           @include primary-font;
           color: $brand-primary-color;
-          font-size: 1.8rem;
+          font-size: calcRem(18);
         }
 
         span {
           @include primary-font-bold;
-          margin-left: 0.5rem;
-          font-size: 1.4rem;
+          margin-left: calcRem(5);
+          font-size: calcRem(14);
           color: $base-text-color;
         }
       }
 
       .chapter-due-date {
         display: block;
-        padding: 1.5rem 0;
-        margin: 0 0 2rem;
-        border-top: 0.1rem solid #eee;
-        border-bottom: 0.1rem solid #eee;
+        padding: calcRem(15) 0;
+        margin: 0 0 calcRem(20);
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
         @include primary-font-bold;
       }
 
       .chapter-scores {
-        font-size: 1.4rem;
+        font-size: calcRem(14);
 
         h3 {
-          font-size: 1.4rem;
+          font-size: calcRem(14);
           @include fontVariantInclude($global-font-h3);
           color: $base-text-color;
-          margin: 0 0 1.2rem;
+          margin: 0 0 calcRem(12);
         }
 
         .no-scores {
-          font-size: 1.4rem;
+          font-size: calcRem(14);
           @include primary-font-italic;
           color: rgba($base-text-color, 0.6);
         }
@@ -125,10 +125,10 @@
 
           li {
             list-style-type: none;
-            margin: 0.5rem 1rem 0.5rem 0;
-            padding: 0.25rem 1rem 0.25rem 0;
+            margin: calcRem(5) calcRem(10) calcRem(5) 0;
+            padding: calcRem(3) calcRem(10) calcRem(3) 0;
             display: inline-block;
-            border-right: 0.1rem solid #ddd;
+            border-right: 1px solid #ddd;
             @include primary-font-bold;
             color: $base-text-color;
 

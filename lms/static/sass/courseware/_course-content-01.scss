@@ -380,7 +380,7 @@ body.view-in-course {
     }
 
     ul, ol {
-      padding: 0 0 0 3rem;
+      padding: 0 0 0 calcRem(30);
     }
 
     ul li, ol li, .xmodule_display.xmodule_CapaModule div.problem p {
@@ -392,11 +392,11 @@ body.view-in-course {
     a {
       position: relative;
       display: inline;
-      border-bottom: 0rem solid rgba($brand-primary-color, 0);
+      border-bottom: 0px solid rgba($brand-primary-color, 0);
       @include transition(all 0.2s ease-in-out);
 
       &:hover, &:focus {
-        border-bottom: 0.1rem solid $brand-primary-color;
+        border-bottom: 1px solid $brand-primary-color;
       }
 
       &.loupe {
@@ -426,7 +426,7 @@ body.view-in-course {
       a.forum-nav-thread-link {
         display: flex;
         align-items: center;
-        padding: 1rem;
+        padding: calcRem(10);
       }
     }
   }

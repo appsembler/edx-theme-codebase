@@ -6,7 +6,7 @@
 
   &.a--site-nav {
     background-color: $header-bg-color;
-    border-top: 0.4rem solid $brand-primary-color;
+    border-top: 4px solid $brand-primary-color;
 
     .a--site-nav {
 
@@ -174,9 +174,9 @@
 
           @media(min-width:800px) {
             @if $navbar-link-hover == "expanding-underline" {
-                @include underline_expanding_hover($brand-primary-color, 1rem);
+                @include underline_expanding_hover($brand-primary-color, calcRem(10));
             } @else if $navbar-link-hover == "hover-pop" {
-                @include hover_pop(-0.5rem, 0);
+                @include hover_pop(calcRem(-5), 0);
             } @else if $navbar-link-hover == "hover-custom-color" {
                 &:hover, &:focus {
                   color: $brand-primary-color;

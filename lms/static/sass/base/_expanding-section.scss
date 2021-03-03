@@ -10,7 +10,7 @@
   &.a--expanded {
 
     .a--expanding-section__target {
-      max-height: 100rem;
+      max-height: calcRem(100);
       opacity: 1;
     }
   }

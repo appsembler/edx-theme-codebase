@@ -68,6 +68,12 @@
           border-bottom-left-radius: $buttons-border-radius;
           padding-left: calcRem(15);
         }
+
+        .field-label {
+          margin: 0;
+          top: 3px;
+          left: 15px;
+        }
       }
 
       .page-header-secondary {

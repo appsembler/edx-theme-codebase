@@ -1,27 +1,27 @@
 .a--courseware-wrapper__content__sidebar {
 
   .course-dates-container {
-    margin-bottom: 3.5rem;
+    margin-bottom: calcRem(35);
   }
 
   .date-summary-container {
-    margin: 0.1rem 0;
+    margin: 1px 0;
 
     .date-summary {
 
       h3.heading {
         margin: 0;
-        font-size: 1.4rem;
+        font-size: calcRem(14);
       }
 
       h4.date {
-        margin: 0.5rem 0 0;
-        font-size: 1.2rem;
+        margin: calcRem(5) 0 0;
+        font-size: calcRem(12);
       }
 
       p.description {
         font-style: italic;
-        margin-top: 1.5rem;
+        margin-top: calcRem(15);
       }
     }
 
@@ -29,7 +29,7 @@
 
       h3.heading {
         @include primary-font-bold;
-        font-size: 1.2rem;
+        font-size: calcRem(12);
       }
     }
   }

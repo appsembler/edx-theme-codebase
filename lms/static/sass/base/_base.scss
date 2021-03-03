@@ -53,7 +53,7 @@ p, ul li {
 	@include fontVariantInclude($global-font-base-body);
 	font-size: $font-size-base-body;
 	line-height: $line-height-base-body;
-	margin: 0.5rem 0;
+	margin: calcRem(5) 0;
 }
 
 a:not([class]), a:not([class]):visited, p a:not(.btn), p a:visited:not(.btn) {
@@ -152,8 +152,8 @@ a:not([class]), a:not([class]):visited, p a:not(.btn), p a:visited:not(.btn) {
 
 .a--container {
 	width: 100%;
-	padding-right: 3rem;
-	padding-left: 3rem;
+	padding-right: calcRem(30);
+	padding-left: calcRem(30);
 	margin: 0 auto;
 	max-width: $base-container-width;
 
@@ -164,8 +164,8 @@ a:not([class]), a:not([class]):visited, p a:not(.btn), p a:visited:not(.btn) {
 
 .a--container-full {
 	width: 100%;
-	padding-left: 3rem;
-	padding-right: 3rem;
+	padding-left: calcRem(30);
+	padding-right: calcRem(30);
 	margin-left: auto;
 	margin-right: auto;
 
@@ -174,20 +174,20 @@ a:not([class]), a:not([class]):visited, p a:not(.btn), p a:visited:not(.btn) {
 	}
 
 	@media(max-width:$screen-sm-max) {
-		padding-left: 0rem;
-		padding-right: 0rem;
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
 
 span.a--underlined {
-	@include underline(0.3rem);
+	@include underline(3px);
 }
 
 .spacer {
 	width: 100%;
 
 	&.one-rem {
-		height: 1rem;
+		height: calcRem(10);
 	}
 }
 
@@ -230,8 +230,8 @@ body.discussion {
 	.window-wrap {
 
 		.content-wrapper {
-			padding-right: 3rem;
-			padding-left: 3rem;
+			padding-right: calcRem(30);
+			padding-left: calcRem(30);
 			max-width: 1600px;
 			margin: 0 auto;
 		}

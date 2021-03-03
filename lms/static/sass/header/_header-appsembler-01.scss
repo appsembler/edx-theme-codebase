@@ -73,7 +73,7 @@
       &__course-name {
         @include flex-shrink(1);
         margin-left: calcRem(20);
-        border-left: 0.1rem solid rgba($base-text-color, 0.25);
+        border-left: 1px solid rgba($base-text-color, 0.25);
         padding: calcRem(10) 0 calcRem(10) calcRem(20);
         @include primary-font;
         font-size: calcRem(14);
@@ -167,7 +167,7 @@
             @if $navbar-link-hover == "expanding-underline" {
                 @include underline_expanding_hover($brand-primary-color, calcRem(10));
             } @else if $navbar-link-hover == "hover-pop" {
-                @include hover_pop(-0.5rem, 0);
+                @include hover_pop(calcRem(-5), 0);
             } @else if $navbar-link-hover == "hover-custom-color" {
                 &:hover, &:focus {
                   color: $brand-primary-color;
@@ -364,7 +364,7 @@
         background-color: $slideout-menu-text-color;
 
         &:nth-child(1) {
-          @include transform(translateY(0rem) rotate(135deg));
+          @include transform(translateY(0) rotate(135deg));
           width: $nav-toggle-bar-width*0.85;
         }
 
@@ -373,7 +373,7 @@
         }
 
         &:nth-child(3) {
-          @include transform(translateY(0rem) rotate(-135deg));
+          @include transform(translateY(0) rotate(-135deg));
           width: $nav-toggle-bar-width*0.85
         }
       }
@@ -394,7 +394,7 @@
         color: $slideout-menu-text-color;
         @include fontVariantInclude($global-font-header-links);
         letter-spacing: $base-letter-spacing;
-        @include underline_expanding_hover(rgba($slideout-menu-text-color,0.8), 0.5rem);
+        @include underline_expanding_hover(rgba($slideout-menu-text-color,0.8), calcRem(5));
 
         &:hover, &:focus {
           color: rgba($slideout-menu-text-color,0.8);

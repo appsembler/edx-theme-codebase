@@ -2,15 +2,15 @@
   @include transition(all 0.3s ease-in-out);
   border-radius: $buttons-border-radius;
   height: auto;
-  padding: 1rem 1.5rem;
-  margin: 0 1rem 1rem 0;
+  padding: calcRem(10) calcRem(15);
+  margin: 0 calcRem(10) calcRem(10) 0;
   text-shadow: none;
   box-shadow: none;
-  border: 0.1rem solid #d9d1d1;
+  border: 1px solid #d9d1d1;
 
   &:hover, &:focus {
     background-color: #d9d1d1;
-    border: 0.1rem solid darken(#d9d1d1, 20%);
+    border: 1px solid darken(#d9d1d1, 20%);
   }
 
   &.save {
@@ -38,15 +38,15 @@
     @include transition(all 0.3s ease-in-out);
     border-radius: $buttons-border-radius;
     height: auto;
-    padding: 1rem 1.5rem;
-    margin: 0 1rem 1rem 0;
+    padding: calcRem(10) calcRem(15);
+    margin: 0 calcRem(10) calcRem(10) 0;
     text-shadow: none;
     box-shadow: none;
-    border: 0.1rem solid #d9d1d1;
+    border: 1px solid #d9d1d1;
 
     &:hover, &:focus {
       background-color: #d9d1d1;
-      border: 0.1rem solid darken(#d9d1d1, 20%);
+      border: 1px solid darken(#d9d1d1, 20%);
     }
   }
 }

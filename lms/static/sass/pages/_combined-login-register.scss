@@ -201,14 +201,14 @@
   }
 
   .login-providers {
-    margin: 4rem 0 0;
+    margin: calcRem(40) 0 0;
 
     .section-title.lines {
-      margin: 0 0 2rem;
-      padding: 0 0 2rem;
+      margin: 0 0 calcRem(20);
+      padding: 0 0 calcRem(20);
 
       h2 {
-        font-size: 2.4rem;
+        font-size: calcRem(24);
         font-weight: normal;
         margin: 0 auto;
       }
@@ -218,12 +218,12 @@
       padding: 0;
       border-radius: $buttons-border-radius;
       overflow: hidden;
-      border: 0.1rem solid #eee;
+      border: 1px solid #eee;
       background-color: #fff;
-      margin: 2rem auto;
+      margin: calcRem(20) auto;
       @include display(flex);
       @include align-items(center);
-      width: 24rem;
+      width: calcRem(240);
       height: auto;
       -webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.10), 0 6px 6px rgba(0,0,0,0.15);
       -moz-box-shadow: 0 10px 20px rgba(0,0,0,0.10), 0 6px 6px rgba(0,0,0,0.15);
@@ -233,8 +233,8 @@
         position: relative;
         left: 0;
         top: 0;
-        width: 4.4rem;
-        height: 4.4rem;
+        width: calcRem(44);
+        height: calcRem(44);
         @include display(flex);
         @include align-items(center);
         @include justify-content(center);
@@ -242,15 +242,15 @@
         background-color: $brand-primary-color;
         color: pick-visible-color($brand-primary-color, $base-text-color, #fff);
         line-height: 100%;
-        font-size: 1.4rem;
+        font-size: calcRem(14);
       }
 
       span {
         color: $base-text-color;
-        font-size: 1.6rem;
+        font-size: calcRem(16);
         letter-spacing: 0;
         @include fontVariantInclude($global-font-cta-buttons);
-        padding: 1.2rem 1.5rem;
+        padding: calcRem(12) calcRem(15);
       }
 
       &:hover, &:focus, &:hover:not(:disabled) {

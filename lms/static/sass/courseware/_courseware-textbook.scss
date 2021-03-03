@@ -13,7 +13,7 @@ div.book-wrapper {
     width: 20%;
     padding-right: 2.5%;
     margin-right: 2.5%;
-    border-right: 0.1rem solid #ddd;
+    border-right: 1px solid #ddd;
 
     @media(max-width: $screen-sm-max) {
       display: block;
@@ -22,10 +22,10 @@ div.book-wrapper {
       padding-right: 0;
       margin-right: 0;
       border-right: none;
-      padding-bottom: 3rem;
-      margin-bottom: 3rem;
-      border-bottom: 0.1rem solid #ddd;
-      max-height: 15rem;
+      padding-bottom: calcRem(30);
+      margin-bottom: calcRem(30);
+      border-bottom: 1px solid #ddd;
+      max-height: calcRem(150);
       overflow-x: auto;
     }
   }
