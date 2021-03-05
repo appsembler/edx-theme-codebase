@@ -10,6 +10,10 @@
     max-width: 100%;
     margin: 0 auto;
     padding: 0 calcRem(20);
+
+    @media (max-width: $screen-sm-max) {
+      @include flex-wrap(wrap);
+    }
   }
 }
 
@@ -25,6 +29,10 @@
     margin: 0 auto;
     padding: calcRem(20) calcRem(70) !important;
     overflow-x: auto;
+
+    @media (max-width: $screen-sm-max) {
+      padding: calcRem(20) !important;
+    }
 
     .course-material {
       width: $base-learning-container-width;
@@ -68,6 +76,10 @@
     padding: calcRem(30) calcRem(70);
     border: none;
     border-radius: $in-app-container-border-radius;
+
+    @media (max-width: $screen-sm-max) {
+      padding: calcRem(20);
+    }    
   }
 
   .course-updates.page-content-container {
@@ -78,6 +90,10 @@
     border: none;
     border-radius: $in-app-container-border-radius;
     margin-bottom: calcRem(70);
+
+    @media (max-width: $screen-sm-max) {
+      padding: calcRem(20);
+    }
 
     .page-header {
       padding: calcRem(10) 0;
@@ -201,6 +217,35 @@
     grid-template-columns: 2fr 1fr;
     grid-gap: calcRem(50);
     padding: 0;
+    
+    @media (max-width: $screen-sm-max) {
+      grid-template-columns: 1fr;
+    }
+
+    .page-content-main {
+
+      .section-update-message {
+
+        .btn.btn-primary {
+          float: none;
+          margin-top: calcRem(10);
+          border: none;
+          padding: calcRem(10) 0;
+          text-decoration: underline;
+          text-decoration-style: dotted;
+          color: $brand-primary-color;
+          opacity: 1;
+
+          &:hover, &:focus {
+            background: none;
+            border: none;
+            color: $brand-primary-color;
+            opacity: 0.5;
+            outline: none;
+          }
+        }
+      }
+    }
 
     .course-sidebar {
       min-width: unset;
@@ -211,6 +256,11 @@
       display: grid;
       grid-template-columns: 1fr;
       grid-gap: calcRem(30);
+
+      @media (max-width: $screen-sm-max) {
+        padding: calcRem(20);
+        border-left: none;
+      }
       
       .section:not(:last-child) {
         margin-bottom: 0;

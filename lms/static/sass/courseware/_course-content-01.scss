@@ -31,6 +31,11 @@ body.view-in-course {
           display: grid;
           grid-template-columns: $courseware-content-container-sidebar-width 1fr $courseware-content-container-sidebar-width;
           grid-column-gap: calcRem(40);
+
+          @media (max-width: $screen-sm-max) {
+            grid-template-columns: 1fr;
+            grid-gap: calcRem(20);
+          }
         }
 
         .course-content {
@@ -40,12 +45,36 @@ body.view-in-course {
           border-radius: $in-app-container-border-radius;
           background-color: #fff;
 
+          @media (max-width: $screen-sm-max) {
+            padding: calcRem(20);
+          }
+
           main {
             padding: 0;
           }
 
           .breadcrumbs {
             padding: calcRem(10) 0;
+          }
+        }
+
+        .a--course-content__nav__mobile-toggle {
+          display: block;
+          padding: calcRem(10) calcRem(20);
+          border: 2px solid $cta-button-text-color;
+          color: $cta-button-text-color;
+          background-color: $cta-button-bg;
+          margin: calcRem(20);
+          border-radius: calcRem(40);
+          text-align: center;
+
+          .bookmark-text, &:before {
+            color: $cta-button-bg;
+            background-color: $cta-button-text-color;
+          }
+
+          @media (min-width: $screen-sm-max) {
+            display: none;
           }
         }
 
@@ -59,6 +88,13 @@ body.view-in-course {
           &:hover, &:focus {
             opacity: 1;
             filter: grayscale(0);
+          }
+
+          @media (max-width: $screen-sm-max) {
+            padding: calcRem(20);
+            filter: grayscale(0);
+            opacity: 1;
+            display: none;
           }
 
           .wrapper-course-modes {
@@ -220,6 +256,23 @@ body.view-in-course {
       }
     }
   }
+
+  .wrap-instructor-info {
+
+    &.studio-view {
+      @include display(flex);
+      @include flex-wrap(wrap);
+      @include align-items(center);
+      @include justify-content(flex-end);
+      padding: calcRem(15) 0;
+    }
+
+    .instructor-info-action {
+      display: inline-block;
+      margin-left: calcRem(20);
+      float: none;
+    }
+  }
 }
 
 .breadcrumbs .nav-item a, .breadcrumbs .nav-item a:visited {
@@ -377,6 +430,10 @@ body.view-in-course {
       @include fontVariantInclude($global-font-base-body);
       font-size: $font-size-base-courseware;
       line-height: $line-height-base-courseware !important;
+
+      @media (max-width: $screen-sm-max) {
+        font-size: calcRem(16);
+      }
     }
 
     ul, ol {

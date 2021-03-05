@@ -24,6 +24,11 @@
                 grid-column-gap: calcRem(60);
                 align-items: center;
 
+                @media (max-width: $screen-sm-max) {
+                    padding: calcRem(20);
+                    grid-template-columns: 1fr;
+                }
+
                 .u-field-message {
                     margin: calcRem(15) 0 0;
                 }
@@ -61,6 +66,10 @@
                 padding: calcRem(30) calcRem(70);
                 border-bottom: 1px solid $light-border-color;
 
+                @media (max-width: $screen-sm-max) {
+                    padding: calcRem(30) calcRem(20);
+                }
+
                 .header {
                     margin: 0 0 calcRem(20);
                     font-size: calcRem(32);
@@ -75,6 +84,11 @@
 
                 &:after {
                     display: none;
+                }
+
+                @media (max-width: $screen-sm-max) {
+                    padding: calcRem(30) calcRem(20);
+                    grid-template-columns: 1fr;
                 }
 
                 .wrapper-profile-section-container-one {

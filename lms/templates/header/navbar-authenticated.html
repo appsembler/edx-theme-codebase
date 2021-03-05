@@ -11,6 +11,7 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
 %>
 
 <%namespace file='/theme-variables.html' import="get_header_menu_logged_in_extra_items" />
+<%namespace file='/theme-variables.html' import="translate" />
 
 <div class="nav-links">
   <div class="main">
@@ -36,7 +37,7 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
               target="_blank"
             % endif
           >
-            ${item['link_title']}
+            ${translate(item['link_title'])}
           </a>
         </div>
       % endfor
