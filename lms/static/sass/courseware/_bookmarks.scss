@@ -1,9 +1,0 @@
-.bookmarks-results-list .bookmarks-results-list-item {
-  @include transition(all 0.3s ease-in-out);
-  opacity: 1;
-
-  &:hover, &:focus {
-    border: 0.1rem solid $brand-primary-color;
-    opacity: 0.8;
-  }
-}

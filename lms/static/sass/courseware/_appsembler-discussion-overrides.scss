@@ -10,6 +10,10 @@
     background-color: #fff;
     border-radius: $in-app-container-border-radius;
 
+    @media (max-width: $screen-sm-max) {
+      padding: 0;
+    }
+
     .page-header {
       border: none;
       align-items: center;
@@ -20,6 +24,12 @@
       grid-column-gap: calcRem(50);
       width: 100%;
       border-bottom: 1px solid $light-border-color;
+
+      @media (max-width: $screen-sm-max) {
+        grid-template-columns: 1fr;
+        padding: calcRem(20);
+        grid-gap: calcRem(10);
+      }
 
       .breadcrumbs {
         margin: calcRem(8) 0;
@@ -68,16 +78,26 @@
           border-bottom-left-radius: $buttons-border-radius;
           padding-left: calcRem(15);
         }
+
+        .field-label {
+          margin: 0;
+          top: 3px;
+          left: 15px;
+        }
       }
 
       .page-header-secondary {
         margin: 0;
-        flex-wrap: nowrap;
+        @include flex-wrap(nowrap);
+
+        @media (max-width: $screen-sm-max) {
+          @include flex-wrap(wrap);
+        }
 
         .forum-search {
           width: 100%;
-          flex-grow: 1;
-          flex-shrink: 1;
+          @include flex-grow(1);
+          @include flex-shrink(1);
         }
       }
     }
@@ -89,11 +109,19 @@
         display: grid;
         grid-template-columns: calcRem(320) 1fr;
 
+        @media (max-width: $screen-sm-max) {
+          grid-template-columns: 1fr;
+        }
+
         .forum-nav {
           padding: calcRem(30) calcRem(30) calcRem(60) calcRem(70);
           width: 100%;
           max-width: unset;
           background-color: #e7e7e7;
+
+          @media (max-width: $screen-sm-max) {
+            padding: calcRem(20);
+          }
 
           .forum-nav-browse-filter {
             position: relative;
@@ -182,6 +210,10 @@
           width: 100%;
           max-width: unset;
           margin: 0;
+
+          @media (max-width: $screen-sm-max) {
+            padding: calcRem(30) calcRem(20);
+          }
         }
 
         .forum-content {

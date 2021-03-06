@@ -10,7 +10,7 @@
   &__item {
     list-style-type: none;
     padding: calcRem(25) 0;
-    border-bottom: 0.1rem solid rgba($base-text-color, 0.2);
+    border-bottom: 1px solid rgba($base-text-color, 0.2);
 
     &:last-child {
       border-bottom: none;

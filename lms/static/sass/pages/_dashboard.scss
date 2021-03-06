@@ -8,6 +8,11 @@
     padding: calcRem(40) calcRem(20);
     grid-template-columns: 1fr calcRem(300);
 
+    @media (max-width: $screen-sm-max) {
+      grid-template-columns: 1fr;
+      grid-gap: calcRem(15);
+    }
+
     &:before, &:after {
       display: none;
     }
@@ -15,10 +20,18 @@
     .main-container {
       padding: 0;
 
+      @media (max-width: $screen-sm-max) {
+        order: 2;
+      }
+
       .my-courses {
 
         .wrapper-header-courses {
           padding-bottom: calcRem(30);
+
+          @media (max-width: $screen-sm-max) {
+            padding-bottom: calcRem(15);
+          }
 
           .header-courses {
             margin: 0;
@@ -55,6 +68,10 @@
                 grid-template-columns: calcRem(240) 1fr;
                 grid-gap: calcRem(30);
 
+                @media (max-width: $screen-sm-max) {
+                  grid-template-columns: 1fr;
+                }
+
                 .wrapper-course-image {
                   width: 100%;
                   order: 1;
@@ -62,6 +79,10 @@
                   position: relative;
                   overflow: hidden;
                   border-radius: $in-app-container-border-radius / 2;
+
+                  @media (max-width: $screen-sm-max) {
+                    display: block;
+                  }
 
                   &:before {
                     content: '';
@@ -94,11 +115,24 @@
                     "courseTitle actions"
                     "courseInfo actions";
 
+                    @media (max-width: $screen-sm-max) {
+                      grid-template-columns: 1fr;
+                      grid-gap: calcRem(15);
+                      grid-template-areas:
+                        "courseTitle"
+                        "courseInfo"
+                        "actions";
+                    }
+
                   .course-title {
                     grid-area: courseTitle;
                     margin: 0 0 calcRem(20);
                     align-self: center;
                     padding: 0;
+
+                    @media (max-width: $screen-sm-max) {
+                      margin: 0;
+                    }
                     
                     .course-target-link {
                       margin: 0;
@@ -160,8 +194,8 @@
 
                       &:hover, &:focus {
                         background: none;
-                        border-color: $cta-button-bg;
-                        color: $cta-button-bg;
+                        border-color: $brand-primary-color;
+                        color: $brand-primary-color;
                       }
                     }
                   }
@@ -184,6 +218,7 @@
 
                   .message {
                     padding: calcRem(30);
+                    border: none;
                   }
                 }
               }
@@ -195,6 +230,12 @@
 
     .side-container {
       padding: calcRem(60) calcRem(30);
+
+      @media (max-width: $screen-sm-max) {
+        order: 1;
+        padding: 0;
+        margin: 0;
+      }
 
       .dashboard-search-bar {
 
@@ -229,12 +270,12 @@
               padding: calcRem(10);
               min-width: calcRem(50);
               background: none;
-              border: 2px solid $cta-button-bg;
-              color: $cta-button-bg;
+              border: 2px solid $brand-primary-color;
+              color: $brand-primary-color;
 
               &:hover, &:focus {
-                background-color: $cta-button-bg;
-                color: $cta-button-text-color;
+                background-color: $brand-primary-color;
+                color: pick-visible-color($cta-button-text-color, $base-text-color, #fff);
               }
             }
           }

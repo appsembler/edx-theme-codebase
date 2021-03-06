@@ -8,7 +8,7 @@
     color: rgba($base-text-color, 0.7);
     font-size: $facets-big-heading-font-size;
     margin: $facets-big-heading-margin;
-    border-bottom: 0.1rem solid rgba($base-text-color, 0.2);
+    border-bottom: 1px solid rgba($base-text-color, 0.2);
     padding: $facets-big-heading-padding;
   }
 
@@ -34,8 +34,8 @@
     button {
       @include edx_style_killer;
       @include no_damn_focus_glow;
-      padding: 1rem 0 2rem;
-      font-size: 1.2rem;
+      padding: calcRem(10) 0 calcRem(20);
+      font-size: calcRem(12);
     }
   }
 
@@ -63,10 +63,10 @@
     }
 
     span.disable-label {
-      font-size: 1.2rem;
+      font-size: calcRem(12);
       @include primary-font-bold;
       display: inline-block;
-      margin-left: 1rem;
+      margin-left: calcRem(10);
     }
 
     span.count {
@@ -78,6 +78,16 @@
       border-radius: $facet-results-count-border-radius;
       font-size: $facet-results-count-font-size;
       color: $facet-results-count-text-color;
+      width: calcRem(32);
+      height: calcRem(32);
+      @include align-items(center);
+      @include justify-content(center);
+      border-radius: 100%;
+
+      span.count-number {
+        font-size: calcRem(12);
+        line-height: calcRem(12);
+      }
     }
 
     &.selected {

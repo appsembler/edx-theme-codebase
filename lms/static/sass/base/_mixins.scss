@@ -6,7 +6,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -1rem;
+    bottom: calcRem(-10);
     @include transition(all 0.3s ease-in-out);
     height: $weight;
     content: "";
@@ -60,8 +60,8 @@
     bottom: -$distance;
     left: 0;
     width: 0;
-    height: 0.2rem;
-    border-radius: 0.05rem;
+    height: 2px;
+    border-radius: 5px;
     background-color: $line_color;
     content: "";
     @include transition(0.2s all ease-in-out);

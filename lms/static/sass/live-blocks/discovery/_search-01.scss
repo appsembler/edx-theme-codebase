@@ -11,7 +11,7 @@
     padding: $search-bar-inner-container-padding;
 
     h2 {
-      margin: 0 3rem 0 0;
+      margin: 0 calcRem(30) 0 0;
       font-size: $search-bar-big-message-text-size;
       @include primary-font-bold;
       color: $search-bar-big-message-text-color;
@@ -34,13 +34,13 @@
     font-size: $search-bar-icon-button-font-size;
     color: $search-bar-icon-button-color;
     transition: all 0.3s ease-in-out;
-    width: 4.8rem;
-    height: 4.8rem;
+    width: calcRem(48);
+    height: calcRem(48);
     @include display(flex);
     @include align-items(center);
     @include justify-content(center);
-    border: 0.2rem solid rgba($brand-primary-color, 0);
-    border-radius: 4rem;
+    border: 2px solid rgba($brand-primary-color, 0);
+    border-radius: calcRem(40);
 
     .inactive {
       @include display(flex);
@@ -54,7 +54,7 @@
     &:hover, &:focus, &:hover:not(:disabled), &:focus:not(:disabled) {
       background: none;
       color: $brand-primary-color;
-      border: 0.2rem solid rgba($brand-primary-color, 1);
+      border: 2px solid rgba($brand-primary-color, 1);
     }
 
     &.activated {
@@ -73,7 +73,7 @@
   &__expand-area {
     @include display(flex);
     @include align-items(center);
-    padding: 3rem 0;
+    padding: calcRem(30) 0;
     border-bottom: $search-bar-bottom-border;
   }
 
@@ -90,7 +90,7 @@
     @include no_damn_focus_glow;
     width: 100%;
     @include flex-shrink(1);
-    font-size: 1.6rem;
+    font-size: calcRem(16);
     @include primary-font;
     color: $base-text-color;
 
@@ -100,7 +100,7 @@
   }
 
   &__filters {
-    padding: 3rem 0;
+    padding: calcRem(30) 0;
 
     button.clear-filters, button.facet-option {
       @include edx_style_killer;

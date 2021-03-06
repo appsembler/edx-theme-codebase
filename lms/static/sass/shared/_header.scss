@@ -8,8 +8,16 @@
   border-bottom: 2px solid $brand-primary-color;
   overflow: visible;
 
+  @media (max-width: $screen-sm-max) {
+    padding: calcRem(15) calcRem(20);
+  }
+
   .main-header {
-    display: flex;
+    @include display(flex);
+
+    @media (max-width: $screen-sm-max) {
+      @include align-items(center);
+    }
 
     .header-logo-section {
       flex-grow: 0;
@@ -49,9 +57,7 @@
         padding-right: calcRem(20);
 
         .provider {
-          display: block;
-          font-weight: bold;
-          margin: 0 0 calcRem(5);
+          display: none;
         }
 
         .course-number {
@@ -68,12 +74,27 @@
 
     .hamburger-menu {
 
+      @media (max-width: $screen-sm-max) {
+        @include flex-shrink(0);
+        @include flex-grow(0);
+        position: relative;
+        left: 0;
+        margin-left: auto;
+        width: calcRem(32);
+        height: calcRem(32);
+        box-sizing: border-box;
+        top: 2px;
+      }
     }
 
     .nav-links {
       display: flex;
       flex-grow: 1;
       flex-shrink: 1;
+
+      @media (max-width: $screen-sm-max) {
+        display: none;
+      }
 
       .main, .secondary {
         float: unset;
@@ -94,6 +115,14 @@
         margin: 0 0 0 calcRem(40);
         display: flex;
         padding: 0;
+
+        .nav-item {
+          padding: 0;
+
+          @media (min-width: 992px) {
+            padding: 0;
+          }
+        }
       }
 
       .nav-item {
@@ -204,6 +233,17 @@
       .header-logo-section {
         padding-top: calcRem(10);
         padding-bottom: calcRem(10);
+      }
+    }
+  }
+
+  .mobile-menu {
+
+    .mobile-nav-link {
+
+      a {
+        padding: calcRem(20);
+        font-weight: normal;
       }
     }
   }

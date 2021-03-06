@@ -148,7 +148,10 @@ ${HTML(fragment.foot_html())}
     [APPSEMBLER] We replace the original condition with our own and add some logic to the above div class
   </%doc>
   % if get_global_settings().get('enable_legacy_courseware_nav', True):
-    <div class="course-index">
+    <span class="a--course-content__nav__mobile-toggle show-nav">
+      Show course content navigation
+    </span>
+    <div class="course-index" id="course-nav-wrapper">
 
       <div class="wrapper-course-modes">
 
@@ -186,6 +189,9 @@ ${HTML(fragment.foot_html())}
       </div>
 
     </div>
+    <span class="a--course-content__nav__mobile-toggle hide-nav" style="display: none;">
+      Hide course content navigation
+    </span>
 % endif
     <section class="course-content" id="course-content">
         <header class="page-header has-secondary">

@@ -3,14 +3,14 @@
   .upload {
 
     button {
-      padding: 1rem 2rem;
-      margin: 2rem 0;
+      padding: calcRem(10) calcRem(20);
+      margin: calcRem(20) 0;
       background: none;
       outline: none;
       box-shadow: none;
       text-shadow: none;
       background-color: #ddd;
-      border: 0.1rem solid #ccc;
+      border: 1px solid #ccc;
       border-radius: $buttons-border-radius;
 
       &:hover, &:focus {

@@ -1,12 +1,12 @@
 .a--dashboard-course-listing-01 {
   @include fontVariantInclude($global-font-base-body);
   list-style-type: none;
-  padding: 1.5rem 0;
-  border-bottom: 0.1rem solid rgba($base-text-color, 0.3);
+  padding: calcRem(15) 0;
+  border-bottom: 1px solid rgba($base-text-color, 0.3);
 
   &:last-child {
     border-bottom: none;
-    margin-bottom: 5rem;
+    margin-bottom: calcRem(50);
   }
 
   &__container {
@@ -18,9 +18,9 @@
   }
 
   &__course-image {
-    width: 24rem;
-    margin-right: 3rem;
-    min-height: 18rem;
+    width: calcRem(240);
+    margin-right: calcRem(30);
+    min-height: calcRem(180);
     @include display(flex);
     @include align-items(center);
     @include flex-shrink(0);
@@ -35,7 +35,7 @@
 
     @media (max-width: $screen-xs-max) {
       width: 100%;
-      margin: 0 0 2rem;
+      margin: 0 0 calcRem(20);
     }
 
     .course-blocked-overlay {
@@ -49,9 +49,9 @@
     }
 
     .course-blocked-label {
-      font-size: 2.2rem;
+      font-size: calcRem(22);
       @include primary-font-bold;
-      letter-spacing: 0.1rem;
+      letter-spacing: 1px;
       color: rgba(#fff, 0.8);
       display: block;
       width: 100%;
@@ -60,7 +60,7 @@
   }
 
   &__details-wrapper {
-    padding: 1rem 0;
+    padding: calcRem(10) 0;
     @include display(flex);
     @include align-items(center);
     @include flex-shrink(1);
@@ -75,8 +75,8 @@
     display: block;
     color: $brand-primary-color;
     @include fontVariantInclude($global-font-h2);
-    margin: 0 0 1rem;
-    font-size: 2rem;
+    margin: 0 0 calcRem(10);
+    font-size: calcRem(20);
     line-height: 130%;
 
     &:hover, &:focus {
@@ -86,21 +86,21 @@
     }
 
     @media (max-width: $screen-xs-max) {
-      font-size: 1.6rem;
+      font-size: calcRem(16);
     }
   }
 
   &__course-organisation-id {
     color: rgba($base-text-color, 0.85);
     @include fontVariantInclude($global-font-h4);
-    margin: 0 0 1.5rem;
-    font-size: 1.6rem;
+    margin: 0 0 calcRem(15);
+    font-size: calcRem(16);
   }
 
   &__course-dates {
-    padding: 1.5rem 0;
-    border-top: 0.1rem solid rgba($base-text-color, 0.2);
-    border-bottom: 0.1rem solid rgba($base-text-color, 0.2);
+    padding: calcRem(15) 0;
+    border-top: 1px solid rgba($base-text-color, 0.2);
+    border-bottom: 1px solid rgba($base-text-color, 0.2);
 
     .course-ended {
       color: #c0392b;
@@ -120,12 +120,12 @@
   }
 
   &__course-options {
-    padding: 1rem 0 0 0;
+    padding: calcRem(10) 0 0 0;
     margin: 0;
 
     li {
       display: inline-block;
-      margin: 0.5rem 2rem 0 0;
+      margin: calcRem(5) calcRem(20) 0 0;
       list-style-type: none;
       @include primary-font-bold;
 
@@ -144,12 +144,12 @@
     @include display(flex);
     @include align-items(center);
     @include flex-shrink(0);
-    margin-left: 3rem;
+    margin-left: calcRem(30);
 
     a, a:not(.btn) {
       display: block;
-      padding: 1.5rem 2.5rem;
-      border: 0.2rem solid $brand-primary-color;
+      padding: calcRem(15) calcRem(25);
+      border: 2px solid $brand-primary-color;
       border-radius: $buttons-border-radius;
       background: $cta-button-bg;
       border-color: $cta-button-bg;
@@ -181,7 +181,7 @@
 
   .wrapper-messages-primary {
     padding: 0;
-    margin-top: 2.5rem;
+    margin-top: calcRem(25);
     border: none;
 
     .messages-list {
@@ -193,10 +193,10 @@
         &.message-status {
           color: $base-text-color;
           background-color: #fafafa;
-          padding: 2rem 1.5rem;
+          padding: calcRem(20) calcRem(15);
           margin: 0;
           border: none;
-          border-top: 0.4rem solid #ddd;
+          border-top: 4px solid #ddd;
 
           &.course-status-certrendering {
             border-color: $brand-warning;
@@ -224,17 +224,17 @@
 
         .actions {
           padding: 0;
-          margin: 2rem 0 0;
+          margin: calcRem(20) 0 0;
 
           .action {
             display: inline-block;
             list-style-type: none;
-            margin-right: 1.5rem;
+            margin-right: calcRem(15);
 
             .btn {
               display: block;
               @include primary-font;
-              padding: 1rem 1.5rem;
+              padding: calcRem(10) calcRem(15);
               color: $cta-button-text-color;
               border: $cta-button-border;
               background-color: $cta-button-bg;
