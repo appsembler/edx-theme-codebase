@@ -4,6 +4,7 @@
   margin: calcRem(40) auto;
   border-radius: $in-app-container-border-radius;
   overflow: hidden;
+  min-height: unset;
 
   .form-wrapper {
     padding: 0;
@@ -29,11 +30,33 @@
     border-bottom: 1px dotted $brand-primary-color;
   }
 
-  h2 {
+  h2, .section-title {
     margin: 0 0 calcRem(30);
     font-size: calcRem(42);
     color: $brand-primary-color;
+    text-align: left;
   }
+
+  form .section-title.lines {
+    margin: 0 0 calcRem(30);
+    font-size: calcRem(42);
+    color: $brand-primary-color;
+    text-align: left;
+
+    &:after {
+      display: none;
+    }
+
+    .text {
+      top: 0;
+      padding: 0;
+      background: none;
+      font-size: calcRem(42);
+      line-height: 120%;
+    }
+  }
+
+
 
   form {
 
@@ -113,6 +136,15 @@
         &:hover, &:focus {
           color: $brand-primary-color;
           text-decoration: underline;
+        }
+      }
+
+      &.checkbox-terms_of_service {
+        @include display(flex);
+        @include align-items(center);
+
+        .checkbox {
+          margin-right: calcRem(20);
         }
       }
     }
