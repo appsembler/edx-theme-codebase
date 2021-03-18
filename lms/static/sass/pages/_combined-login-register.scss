@@ -8,6 +8,40 @@
 
   .form-wrapper {
     padding: 0;
+
+    .action-label {
+      font-size: calcRem(16);
+      margin: 0 0 calcRem(20);
+      padding: 0 0 calcRem(20);
+      border-bottom: 1px solid #ccc;
+    }
+
+    .status {
+      background: none !important;
+      padding: calcRem(30) 0;
+      border: none !important;
+      box-shadow: none;
+
+      h4.message-title {
+        font-size: calcRem(24);
+        font-weight: bold;
+        margin: 0 0 calcRem(20);
+      }
+
+      .message-copy {
+
+        p {
+          line-height: 160%;
+          font-size: calcRem(14);
+          margin: 0 0 calcRem(10);
+        }
+      }
+    }
+
+    .paragon__alert {
+      margin: calcRem(-40) calcRem(-70) calcRem(30) calcRem(-70);
+      padding: calcRem(30) calcRem(70);
+    }
   }
 
   .js-form-feedback {
@@ -147,6 +181,56 @@
           margin-right: calcRem(20);
         }
       }
+
+      .paragon__form-group {
+
+        label {
+          font-size: calcRem(14);
+          display: block;
+          margin: 0 0 calcRem(10);
+          color: $base-text-color;
+          position: relative;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          padding: 0;
+        }
+  
+        .paragon__form-control {
+          font-size: calcRem(18);
+          padding: calcRem(8) calcRem(5);
+          border: none;
+          border-radius: 0;
+          border-top: 2px solid rgba($brand-primary-color, 0);
+          border-bottom: 2px solid lighten($base-text-color, 40%);
+          transition: all 0.3s ease-in-out;
+          height: auto;
+          box-shadow: none;
+          margin: calcRem(10) 0;
+          background-color: #fff;
+          min-height: calcRem(51);
+  
+          &:hover, &:focus {
+            outline: none;
+            padding: calcRem(12) calcRem(4);
+            border-bottom: 2px solid $brand-primary-color;
+          }
+  
+          &:focus {
+            outline: none;
+            padding: calcRem(12) calcRem(4);
+            border-top: 2px solid $brand-primary-color;
+            border-bottom: 2px solid $brand-primary-color;
+            box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.2);
+          }
+        }
+
+        .paragon__invalid-feedback {
+          font-size: calcRem(14);
+          margin: calcRem(10) 0 0;
+        }
+      }
     }
 
     .action {
@@ -157,6 +241,7 @@
       margin: calcRem(30) calcRem(30) 0 0;
       outline: none;
       box-shadow: none !important;
+      font-size: calcRem(18);
     
       &.action-primary {
         background-color: $cta-button-bg;
