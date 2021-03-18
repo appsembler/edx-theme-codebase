@@ -6,7 +6,7 @@
 <%namespace name='static' file='/static_content.html'/>
 <%namespace file='/theme-variables.html' import="get_global_settings" />
 
-<%inherit file="../main.html" />
+<%inherit file="/main.html" />
 
 <%block name="pagetitle">${_("Sign in or Register")}</%block>
 
@@ -29,12 +29,18 @@
           <%static:include path="student_account/sso-no-login-no-register.underscore" />
       </script>
     % else:
-      <script type="text/template" id="login-tpl">
-          <%static:include path="student_account/login.underscore" />
-      </script>
+      % if get_global_settings()['enable_registration_link_on_login']:
+        <script type="text/template" id="login-tpl">
+            <%static:include path="student_account/login.underscore" />
+        </script>
+      % else:
+        <script type="text/template" id="login-tpl">
+            <%static:include path="student_account/login-no-register.underscore" />
+        </script>
+      % endif
     % endif
   % else:
-    % for template_name in ["account", "access", "form_field", "institution_login", "institution_register", "password_reset", "hinted_login"]:
+    % for template_name in ["account", "access", "form_field", "password_reset", "hinted_login"]:
         <script type="text/template" id="${template_name}-tpl">
             <%static:include path="student_account/${template_name}.underscore" />
         </script>

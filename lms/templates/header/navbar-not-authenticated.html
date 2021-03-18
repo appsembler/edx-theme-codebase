@@ -26,7 +26,7 @@ from six import text_type
   should_redirect_to_logistration_mfe = False
 %>
 
-<%namespace file='/theme-variables.html' import="get_header_menu_logged_out_extra_items" />
+<%namespace file='/theme-variables.html' import="get_global_settings, get_header_menu_logged_out_extra_items" />
 <%namespace file='/theme-variables.html' import="translate" />
 
 <nav class="nav-links" aria-label=${_("Supplemental Links")}>
@@ -54,13 +54,9 @@ from six import text_type
   <div class="secondary">
     % if allows_login:
       % if allow_public_account_creation:
-        % if should_redirect_to_logistration_mfe:
+        % if get_global_settings()['enable_registration_button']:
           <div class="mobile-nav-item hidden-mobile nav-item button-item">
-              <a class="register-btn btn" href="${settings.LOGISTRATION_MICROFRONTEND_URL}/register${login_query()}">${_("Register")}</a>
-          </div>
-        % else:
-          <div class="mobile-nav-item hidden-mobile nav-item button-item">
-              <a class="register-btn btn" href="/register${login_query()}">${_("Register")}</a>
+            <a class="register-btn btn" href="/register${login_query()}">${_("Register")}</a>
           </div>
         % endif
       % endif
