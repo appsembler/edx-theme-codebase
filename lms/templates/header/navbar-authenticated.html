@@ -21,12 +21,14 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
            ${_("My Courses")}
       </a>
     </div>
-    <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
-      <a class="tab-nav-link discover-new-link" href="${marketing_link('COURSES')}"
-         aria-current="${'page' if '/courses' in request.path else 'false'}">
-         ${_('Discover New Courses')}
-      </a>
-    </div>
+    % if get_global_settings().get('course-catalogue_enabled', True):
+      <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
+        <a class="tab-nav-link discover-new-link" href="${marketing_link('COURSES')}"
+          aria-current="${'page' if '/courses' in request.path else 'false'}">
+          ${_('Discover New Courses')}
+        </a>
+      </div>
+    % endif
 
     % if get_header_menu_logged_in_extra_items():
       % for item in get_header_menu_logged_in_extra_items():
