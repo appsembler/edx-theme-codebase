@@ -72,7 +72,7 @@
       list-style-type: none;
       margin: calcRem(5) $footer-link-breathe-space calcRem(5) 0;
 
-      a {
+      a, a:not(.btn) {
         text-decoration: none;
         color: $footer-link-color;
 
