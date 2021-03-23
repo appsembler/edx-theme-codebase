@@ -1,0 +1,15 @@
+body.view-in-course .content-wrapper {
+ 
+  .static_tab_wrapper {
+    width: $base-container-width;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: calcRem(60) calcRem(70);
+    border: none;
+    border-radius: $in-app-container-border-radius;
+
+    @media (max-width: $screen-sm-max) {
+      padding: calcRem(20);
+    }
+  }
+}
