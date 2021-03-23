@@ -2,6 +2,7 @@
 <%namespace file='/theme-variables.html' import="get_footer_settings" />
 <%namespace name='static' file='/static_content.html'/>
 <%! from django.utils.translation import ugettext as _ %>
+<%namespace file='/theme-variables.html' import="translate" />
 
 <footer class="a--footer" role="contentinfo">
   <div class="bs-container a--container a--footer__container">
@@ -28,7 +29,7 @@
               % if item['open_in_new_tab']:
                 target="_blank"
               % endif
-              >${item['link_title']}</a>
+              >${translate(item['link_title'])}</a>
             </li>
             % endfor
           </ul>

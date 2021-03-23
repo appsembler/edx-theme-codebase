@@ -298,5 +298,30 @@
         }
       }
     }
+
+    .empty-dashboard-message {
+
+      p {
+        font-size: calcRem(20);
+        color: $base-text-color;
+        text-shadow: none;
+      }
+      
+      a.btn {
+        box-shadow: none;
+        border-radius: $buttons-border-radius;
+        background-color: $cta-button-bg;
+        color: $cta-button-text-color;
+        border: $cta-button-border;
+        letter-spacing: normal;
+        margin: calcRem(15) 0 0;
+        padding: calcRem(15) calcRem(25);
+
+        &:hover, &:focus {
+          background: $cta-button-text-color;
+          color: $cta-button-bg;
+        }
+      }
+    }
   }
 }
