@@ -397,3 +397,10 @@
     font-size: $font-size-base-body;
   }
 }
+
+
+// hide the header language selector
+
+.window-wrap > form.settings-language-form {
+  display: none;
+}
