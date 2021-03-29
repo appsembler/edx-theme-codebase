@@ -19,7 +19,7 @@
 
 // content wrapper
 
-.content-wrapper {
+.content-wrapper, body.view-in-course .content-wrapper {
   padding: 0;
   margin: 0 auto;
   
@@ -40,8 +40,12 @@
     }
 
     .navbar-nav, .tabs.course-tabs {
+      @include display(flex);
+      width: 100%;
+      overflow-x: auto;
 
       .nav-item, .tab {
+        @include flex-shrink(0);
         font-size: calcRem(16);
         margin: 0;
         transition: all 0.3s ease-in-out;
@@ -51,6 +55,12 @@
           padding: calcRem(12) calcRem(4);
           color: $base-text-color;
           font-size: calcRem(16);
+          @include fontVariantInclude($global-font-base-body);
+          
+          &:hover, &:focus {
+            outline: none;
+            border-color: $brand-primary-color;
+          }
         }
 
         &.active, &:hover, &:focus {
@@ -386,4 +396,11 @@
   .section-title, .subsection-title {
     font-size: $font-size-base-body;
   }
+}
+
+
+// hide the header language selector
+
+.window-wrap > form.settings-language-form {
+  display: none;
 }
