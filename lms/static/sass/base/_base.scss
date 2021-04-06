@@ -260,3 +260,12 @@ a.nav-skip {
 .bs-container:before, .bs-container:after {
 	display: none;
 }
+
+.window-wrap .btn-default {
+	color: $brand-primary-color;
+
+	&:hover, &:focus {
+		color: $brand-primary-color;
+		border-color: $brand-primary-color;
+	}
+}

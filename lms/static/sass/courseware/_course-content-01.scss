@@ -808,17 +808,43 @@ body.view-in-course {
   .action {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: calcRem(30);
+    grid-gap: calcRem(20);
     padding: calcRem(30) 0;
+
+    @media (max-width: $screen-sm-max) {
+      grid-template-columns: 1fr;
+    }
+
+    .problem-hint {
+      order: 3;
+      grid-column-start: span 2;
+
+      @media (max-width: $screen-sm-max) {
+        grid-column-start: span 1;
+      }
+
+      &.notification li {
+        font-size: calcRem(16);
+      }
+    }
 
     .problem-action-buttons-wrapper {
       order: 2;
       padding: 0;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+
+      .problem-action-button-wrapper {
+        
+      }
     }
 
-    .submit-attempt-container {
+    .submit-attempt-container {
       order: 1;
-      padding: 0;
+      padding: 0 !important;
+      margin: 0;
     }
   }
 }
