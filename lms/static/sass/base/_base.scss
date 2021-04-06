@@ -128,7 +128,7 @@ a:not([class]), a:not([class]):visited, p a:not(.btn), p a:visited:not(.btn) {
 
 .content-wrapper {
 
-	.btn-link, a {
+	.btn-link, a, a:not(.btn), a:visited, a:visited:not(.btn) {
 		color: $brand-primary-color;
 	}
 }

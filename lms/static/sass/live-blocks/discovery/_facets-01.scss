@@ -73,7 +73,7 @@
       @include display(flex);
       @include flex-shrink(0);
       @include primary-font-bold;
-      background-color: $facet-results-count-bg-color;
+      background-color: $brand-primary-color;
       padding: $facet-results-count-padding;
       border-radius: $facet-results-count-border-radius;
       font-size: $facet-results-count-font-size;
