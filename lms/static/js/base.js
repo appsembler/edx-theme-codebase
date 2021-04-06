@@ -1,5 +1,11 @@
 $(document).ready(function(){
 
+	// hotfix for nav underlining
+	$('.instructor-nav .nav-item').on('click', function() {
+		$('.instructor-nav .nav-item').removeClass('active-section');
+		$(this).addClass('active-section');
+	})
+
 	// site mobile nav toggle
 	$('#site-menu-toggle').on('click', function() {
 		$(this).toggleClass('a--toggled');

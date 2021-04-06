@@ -42,6 +42,11 @@
       display: inline-block;
       padding: calcRem(10) 0;
 
+      &:focus {
+        border-bottom: 2px solid $brand-primary-color;
+        outline: none;
+      }
+
       &.active-section {
         color: $base-text-color;
         border-bottom: 2px solid $brand-primary-color;
