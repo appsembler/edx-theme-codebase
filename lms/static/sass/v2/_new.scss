@@ -136,54 +136,57 @@
 
 // common elements
 
-.btn {
-  border-radius: $buttons-border-radius;
-  padding: calcRem(10) calcRem(20);
-  border: $cta-button-border;
+.content-wrapper {
 
-  &.btn-primary {
+  .btn, a.btn {
+    border-radius: $buttons-border-radius;
+    padding: calcRem(10) calcRem(20);
+    border: $cta-button-border;
+  
+    &.btn-primary {
+      background-color: $cta-button-bg;
+      color: $cta-button-text-color;
+  
+      &:hover, &:focus {
+        background-color: $cta-button-text-color;
+        color: $cta-button-bg;
+        border: $cta-button-border;
+        text-decoration: none;
+      }
+    }
+  
+    &.btn-outline-primary {
+      background-color: $cta-button-text-color;
+      color: $cta-button-bg;
+      border: $cta-button-border;
+  
+      &:hover, &:focus {
+        background-color: $cta-button-bg;
+        color: $cta-button-text-color;
+        border: $cta-button-border;
+        text-decoration: none;
+      }
+    }
+  
+    &.search-button {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      padding-left: calcRem(15);
+    }
+  }
+
+  .btn-brand {
+    border-radius: $buttons-border-radius;
+    padding: calcRem(10) calcRem(20);
+    border: $cta-button-border;
     background-color: $cta-button-bg;
     color: $cta-button-text-color;
-
+  
     &:hover, &:focus {
       background-color: $cta-button-text-color;
       color: $cta-button-bg;
       border: $cta-button-border;
-      text-decoration: none;
     }
-  }
-
-  &.btn-outline-primary {
-    background-color: $cta-button-text-color;
-    color: $cta-button-bg;
-    border: $cta-button-border;
-
-    &:hover, &:focus {
-      background-color: $cta-button-bg;
-      color: $cta-button-text-color;
-      border: $cta-button-border;
-      text-decoration: none;
-    }
-  }
-
-  &.search-button {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    padding-left: calcRem(15);
-  }
-}
-
-.btn-brand {
-  border-radius: $buttons-border-radius;
-  padding: calcRem(10) calcRem(20);
-  border: $cta-button-border;
-  background-color: $cta-button-bg;
-  color: $cta-button-text-color;
-
-  &:hover, &:focus {
-    background-color: $cta-button-text-color;
-    color: $cta-button-bg;
-    border: $cta-button-border;
   }
 }
 
