@@ -11,11 +11,11 @@ from lms.djangoapps.ccx.overrides import get_current_ccx
 # App that handles subdomain specific branding
 from branding import api as branding_api
 %>
-<%namespace file='/theme-variables.html' import="get_brand_logos" />
+<%namespace file='/theme-variables.html' import="get_global_settings, get_brand_logos" />
 
 <div class="header-logo-section">
   % if course:
-    <a href="${branding_api.get_home_url()}">
+    <a href="${get_global_settings().get('header_logo_target','/')}">
       <img class="logo logo-positive" src="${get_brand_logos()['icon_color']}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
       <img class="logo logo-negative" src="${get_brand_logos()['icon_white']}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
     </a>
@@ -32,7 +32,7 @@ from branding import api as branding_api
       <span class="course-name">${display_name}</span>
     </div>
   % else:
-    <a href="${branding_api.get_home_url()}">
+    <a href="${get_global_settings().get('header_logo_target','/')}">
       <img  class="logo logo-positive" src="${get_brand_logos()['logo_positive']}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
       <img  class="logo logo-negative" src="${get_brand_logos()['logo_negative']}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
     </a>

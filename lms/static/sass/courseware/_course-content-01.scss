@@ -453,7 +453,7 @@ body.view-in-course {
       @include transition(all 0.2s ease-in-out);
 
       &:hover, &:focus {
-        border-bottom: 1px solid $brand-primary-color;
+        text-decoration: underline;
       }
 
       &.loupe {
@@ -573,7 +573,7 @@ body.view-in-course {
 
   .tc-wrapper {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr;
     border: calcRem(8) solid rgba($base-text-color, 0.04);
     border-radius: $in-app-container-border-radius / 3;
     box-sizing: border-box;
@@ -581,13 +581,50 @@ body.view-in-course {
     .video-wrapper {
       width: 100%;
       margin: 0;
-    }
 
-    .subtitles {
-      width: 100%;
-      padding: calcRem(20);
+      .video-player {
+        width: 100% !important;
+        height: auto !important;
+        overflow: hidden;
+        max-width: 100% !important;
+        position: relative;
+        padding-bottom: 56.25%;
+
+        iframe {
+          position: absolute;
+          top: 0 !important;
+          bottom: 0 !important;
+          left: 0 !important;
+          right: 0 !important;
+        }
+      }
+    }
+  }
+
+  &.is-captions-rendered {
+
+    .tc-wrapper {
+      grid-template-columns: 2fr 1fr;
       background-color: #fff;
-      box-sizing: border-box;
+      border: calcRem(8) solid rgba($base-text-color, 0.04);
+  
+      .subtitles {
+        display: block;
+        width: 100%;
+        padding: calcRem(20);
+        background-color: #fff;
+        box-sizing: border-box;
+        max-height: unset !important;
+        position: relative;
+
+        .subtitles-menu {
+          position: absolute;
+          top: calcRem(20);
+          bottom: calcRem(20);
+          left: calcRem(20);
+          right: calcRem(20);
+        }
+      }
     }
   }
 
@@ -627,14 +664,12 @@ body.view-in-course {
         font-weight: bold;
         border: none;
         outline: none;
-        border-bottom: 2px solid $base-text-color;
         color: $base-text-color;
         border-radius: 0;
         padding: 0 0 4px;
         margin: 0 0 calcRem(15);
 
         &:hover, &:focus {
-          border-bottom: 2px solid $brand-primary-color;
           color: $brand-primary-color;
         }
       } 
@@ -773,17 +808,43 @@ body.view-in-course {
   .action {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: calcRem(30);
+    grid-gap: calcRem(20);
     padding: calcRem(30) 0;
+
+    @media (max-width: $screen-sm-max) {
+      grid-template-columns: 1fr;
+    }
+
+    .problem-hint {
+      order: 3;
+      grid-column-start: span 2;
+
+      @media (max-width: $screen-sm-max) {
+        grid-column-start: span 1;
+      }
+
+      &.notification li {
+        font-size: calcRem(16);
+      }
+    }
 
     .problem-action-buttons-wrapper {
       order: 2;
       padding: 0;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+
+      .problem-action-button-wrapper {
+        
+      }
     }
 
-    .submit-attempt-container {
+    .submit-attempt-container {
       order: 1;
-      padding: 0;
+      padding: 0 !important;
+      margin: 0;
     }
   }
 }

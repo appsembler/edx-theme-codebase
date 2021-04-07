@@ -128,7 +128,7 @@ a:not([class]), a:not([class]):visited, p a:not(.btn), p a:visited:not(.btn) {
 
 .content-wrapper {
 
-	.btn-link, a {
+	.btn-link, a, a:not(.btn), a:visited, a:visited:not(.btn) {
 		color: $brand-primary-color;
 	}
 }
@@ -259,4 +259,13 @@ a.nav-skip {
 
 .bs-container:before, .bs-container:after {
 	display: none;
+}
+
+.window-wrap .btn-default {
+	color: $brand-primary-color;
+
+	&:hover, &:focus {
+		color: $brand-primary-color;
+		border-color: $brand-primary-color;
+	}
 }
