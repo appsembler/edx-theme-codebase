@@ -1,0 +1,15 @@
+[main]
+# This Transifex configuration file is managed by the `skim.py`.
+host = https://www.transifex.com
+
+[open-edx-releases.release-{release}]
+file_filter = scripts/open-edx-releases/<lang>/{release}-django.po
+source_file = scripts/open-edx-releases/en/{release}-django.po
+source_lang = en
+type = PO
+
+[open-edx-releases.release-{release}-js]
+file_filter = scripts/open-edx-releases/<lang>/{release}-djangojs.po
+source_file = scripts/open-edx-releases/en/{release}-djangojs.po
+source_lang = en
+type = PO

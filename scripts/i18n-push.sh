@@ -9,23 +9,27 @@
 #
 #   Usage:
 #
-#       ./i18n-push.sh
+#       $ tox -e i18n-push
 #
 ##################################################################
 
 set -e
 
-cd `dirname $BASH_SOURCE` && cd ..
-
 # Note we only extract the English language strings so they can be
 # sent to POEditor.com. All other language strings will be pulled
 # down from POEditor.com and so don't need to be generated.
 
-CUSTOMER_BRANCH_NAME=$(cd customer_specific && git rev-parse --abbrev-ref HEAD)
 
-if [ "$CUSTOMER_BRANCH_NAME" != "hawthorn/tahoe" ]; then
-    echo "Error: Currently only 'hawthorn/tahoe' is supported for customer_specific."
-    echo "       Checkout hawthorn/tahoe and re-run the script"
+if test -e "${OPENEDX_RELEASE}"; then
+  echo "The OPENEDX_RELEASE environment variable is not set, please only run this script via '$ tox'.";
+fi
+
+cd "${TOX_INI_DIR}"
+
+CUSTOMER_BRANCH_NAME=$(cd customer_specific && git rev-parse --abbrev-ref HEAD)
+if [ "$CUSTOMER_BRANCH_NAME" != "${OPENEDX_RELEASE}/tahoe" ]; then
+    echo "Error: Currently only '${OPENEDX_RELEASE}/tahoe' is supported for customer_specific."
+    echo "       Checkout ${OPENEDX_RELEASE}/tahoe and re-run the script"
     exit 1
 fi
 
