@@ -83,6 +83,7 @@
     @include flex-shrink(0);
     font-size: $search-bar-icon-button-font-size;
     color: $search-bar-icon-button-color;
+    display: block !important;
   }
 
   input[type="text"] {
