@@ -47,3 +47,7 @@ msgstr "%(start_date)s"
 msgid "(Click to disable)"
 msgstr "(Cliquer pour désactiver)"
 
+#: lms/templates/student_account/form_field.underscore:136
+msgid "Forgot password?"
+msgstr ""
+

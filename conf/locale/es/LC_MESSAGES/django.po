@@ -7,15 +7,11 @@ msgstr ""
 "Project-Id-Version: Appsembler Theme\n"
 "Language: es\n"
 
-#: customer_specific/cms/templates/course_outline.html:51
+#: customer_specific/cms/templates/course_outline.html:53
 msgid "No course content is currently visible, and no students are enrolled. Be sure to review and reset all dates, including the Course Start Date; set up the course team; review course updates and other assets for dated material; and seed the discussions and wiki."
 msgstr ""
 
 #: customer_specific/cms/templates/course_outline.html:234
-msgid "Changing the content students see"
-msgstr ""
-
-#: customer_specific/cms/templates/course_outline.html:236
 msgid "To hide content from students, select the Configure icon for a section, subsection, or unit, then select {em_start}Hide from students{em_end}."
 msgstr ""
 
@@ -23,57 +19,23 @@ msgstr ""
 msgid "Certificate"
 msgstr ""
 
-#: lms/templates/header.html:222
-msgid "<strong>Warning:</strong> Your browser is not fully supported. We strongly recommend using {chrome_link} or {ff_link}."
-msgstr ""
-
-#: lms/templates/courseware/course_navigation.html:98
-msgid "Course is not yet visible to students."
-msgstr ""
-
-#: lms/templates/courseware/course_navigation.html:109
-msgid "You cannot view the course as a student or beta tester before the course release date."
-msgstr ""
-
-#: lms/templates/courseware/course_updates.html:3
-msgid "All course updates"
-msgstr ""
-
-#: lms/templates/courseware/courseware.html:217
-msgid "To access course materials, you must score {required_score}% or higher on this                   exam. Your current score is {current_score}%."
-msgstr ""
-
-#: lms/templates/courseware/progress.html:59
-#: lms/templates/courseware/progress.html:160
-msgid "Course Progress"
-msgstr ""
-
-#: customer_specific/lms/templates/design-templates/footer/_footer-appsembler-01.html:22
-#: lms/templates/design-templates/footer/_footer-appsembler-01.html:21
+#: lms/templates/design-templates/footer/_footer-appsembler-01.html:22
 msgid "Apple app on Apple Store"
 msgstr ""
 
-#: customer_specific/lms/templates/design-templates/header/_header-appsembler-02.html:51
-#: lms/templates/design-templates/header/_header-appsembler-02.html:52
-msgid "MENU"
-msgstr ""
-
-#: customer_specific/lms/templates/design-templates/pages/course-about/_course-about-01.html:15
 #: lms/templates/design-templates/pages/course-about/_course-about-01.html:14
 msgid "Course is in your cart."
 msgstr ""
 
-#: customer_specific/lms/templates/design-templates/pages/course-about/_course-about-01.html:19
 #: lms/templates/design-templates/pages/course-about/_course-about-01.html:18
 msgid "Add to Cart / Price: "
 msgstr ""
 
-#: customer_specific/lms/templates/design-templates/pages/course-about/_course-about-01.html:20
 #: lms/templates/design-templates/pages/course-about/_course-about-01.html:19
 msgid "Enroll in "
 msgstr ""
 
-#: lms/templates/design-templates/pages/dashboard/_dashboard-01.html:142
+#: lms/templates/design-templates/pages/dashboard/_dashboard-01.html:140
 msgid "promote_course_catalog_text"
 msgstr ""
 
@@ -93,8 +55,8 @@ msgstr ""
 msgid "Press"
 msgstr ""
 
-#: customer_specific/cms/templates/widgets/header.html:225
-#: customer_specific/cms/templates/widgets/header.html:251
+#: customer_specific/cms/templates/widgets/header.html:230
+#: customer_specific/cms/templates/widgets/header.html:256
 msgid "Appsembler Online Knowledgebase"
 msgstr ""
 
@@ -104,24 +66,6 @@ msgstr ""
 
 #: lms/templates/enroll_staff.html:29
 msgid "Enroll"
-msgstr ""
-
-#: lms/templates/courseware/courseware.html:158
-msgid "Submit search"
-msgstr ""
-
-#: lms/templates/courseware/info.html:29
-msgid "You are not currently enrolled in this course. {link_start}Sign up now!{link_end}"
-msgstr ""
-
-#: lms/templates/design-templates/header/_header-appsembler-01.html:24
-#: lms/templates/design-templates/header/_header-appsembler-02.html:24
-msgid "Main navigation"
-msgstr ""
-
-#: lms/templates/design-templates/header/_header-appsembler-01.html:49
-#: lms/templates/design-templates/header/_header-appsembler-02.html:49
-msgid "Slideout menu toggle"
 msgstr ""
 
 #: lms/templates/design-templates/pages/course-catalogue/_course-catalogue-01.html:20
@@ -140,35 +84,31 @@ msgstr ""
 msgid "Terms of Service and Privacy Policy"
 msgstr ""
 
-#: customer_specific/lms/templates/theme-variables.html:162
+#: customer_specific/lms/templates/theme-variables.html:163
 msgid "edX, Open edX and the edX and Open edX logos are trademarks or registered trademarks of edX Inc."
 msgstr ""
 
-#: customer_specific/lms/templates/theme-variables.html:361
+#: customer_specific/lms/templates/theme-variables.html:370
 msgid "Platform Name"
 msgstr ""
 
-#: customer_specific/lms/templates/theme-variables.html:365
+#: customer_specific/lms/templates/theme-variables.html:374
 msgid "We hereby certify that:"
 msgstr ""
 
-#: customer_specific/lms/templates/theme-variables.html:366
+#: customer_specific/lms/templates/theme-variables.html:375
 msgid "successfully completed, received a passing grade, and was awarded this platform's Honor Code Certificate of Completion in:"
 msgstr ""
 
-#: customer_specific/lms/templates/theme-variables.html:368
+#: customer_specific/lms/templates/theme-variables.html:377
 msgid "Our platform offers interactive online classes and MOOCs."
 msgstr ""
 
-#: customer_specific/lms/templates/theme-variables.html:370
+#: customer_specific/lms/templates/theme-variables.html:379
 msgid "Our platform acknowledges achievements through certificates, which are awarded for course activities that our platform students complete."
 msgstr ""
 
-#: lms/templates/courseware/info.html:110
-msgid "This course is self-paced."
-msgstr ""
-
-#: customer_specific/lms/templates/theme-variables.html:150
+#: customer_specific/lms/templates/theme-variables.html:151
 msgid "{copy_sign} {year} {platform_name}. All rights reserved."
 msgstr ""
 
@@ -188,10 +128,6 @@ msgstr ""
 msgid "The site {platform_name} is currently unavailable. Please contact your administrator."
 msgstr ""
 
-#: lms/templates/course_experience/course-outline-fragment.html:43
-msgid "Completed"
-msgstr ""
-
 #: customer_specific/lms/templates/emails/activation_email.txt:3
 msgid "Thank you for creating an account with {platform_name}!"
 msgstr ""
@@ -204,8 +140,121 @@ msgstr ""
 msgid "If you didn't create an account, you don't need to do anything; you won't receive any more email from us. If you need assistance, please do not reply to this email message. Check the help section of the {platform_name} website."
 msgstr ""
 
-#: lms/templates/dashboard.html:102
 #: lms/templates/design-templates/pages/dashboard/_dashboard-01.html:26
 msgid "We have sent you an activation email - please click the link in the email to activate your account, as you will not be able to sign in again without activating."
+msgstr ""
+
+#: customer_specific/cms/templates/login.html:18
+#: customer_specific/cms/templates/login.html:46
+msgid "Sign In to {studio_name}"
+msgstr ""
+
+#: customer_specific/cms/templates/login.html:21
+msgid "Don't have a {studio_name} Account? Sign up!"
+msgstr ""
+
+#: customer_specific/cms/templates/login.html:29
+msgid "Required Information to Sign In to {studio_name}"
+msgstr ""
+
+#: customer_specific/lms/templates/emails/add_beta_tester_email_message.txt:8
+#: customer_specific/lms/templates/emails/enroll_email_enrolledmessage.txt:7
+msgid "Dear {full_name}"
+msgstr ""
+
+#: customer_specific/lms/templates/emails/add_beta_tester_email_message.txt:10
+msgid "You have been invited to be a beta tester for {course_name} at {site_name} by a member of the course staff."
+msgstr ""
+
+#: customer_specific/lms/templates/emails/add_beta_tester_email_message.txt:17
+#: customer_specific/lms/templates/emails/enroll_email_enrolledmessage.txt:16
+msgid "To start accessing course materials, please visit {course_url}"
+msgstr ""
+
+#: customer_specific/lms/templates/emails/add_beta_tester_email_message.txt:21
+msgid "Visit {course_about_url} to join the course and begin the beta test."
+msgstr ""
+
+#: customer_specific/lms/templates/emails/add_beta_tester_email_message.txt:23
+msgid "Visit {site_name} to enroll in the course and begin the beta test."
+msgstr ""
+
+#: customer_specific/lms/templates/emails/add_beta_tester_email_message.txt:27
+#: customer_specific/lms/templates/emails/enroll_email_allowedmessage.txt:46
+msgid "This email was automatically sent from {site_name} to {email_address}"
+msgstr ""
+
+#: customer_specific/lms/templates/emails/confirm_email_change.txt:4
+msgid "This is to confirm that you changed the e-mail associated with {platform_name} from {old_email} to {new_email}. If you did not make this request, please contact us immediately. Contact information is listed at:"
+msgstr ""
+
+#: customer_specific/lms/templates/emails/email_change.txt:19
+msgid "If you didn't request this, you don't need to do anything; you won't receive any more email from us. Please do not reply to this e-mail; if you require assistance, check the help section of the {platform_name} web site."
+msgstr ""
+
+#: customer_specific/lms/templates/emails/enroll_email_allowedmessage.txt:11
+msgid "You have been invited to join {course_name} at {site_name} by a member of the course staff."
+msgstr ""
+
+#: customer_specific/lms/templates/emails/enroll_email_allowedmessage.txt:19
+msgid "To access the course visit {course_url} and login."
+msgstr ""
+
+#: customer_specific/lms/templates/emails/enroll_email_allowedmessage.txt:22
+msgid "To access the course visit {course_about_url} and register for the course."
+msgstr ""
+
+#: customer_specific/lms/templates/emails/enroll_email_allowedmessage.txt:27
+msgid "To finish your registration, please visit {registration_url} and fill out the registration form making sure to use {email_address} in the E-mail field."
+msgstr ""
+
+#: customer_specific/lms/templates/emails/enroll_email_allowedmessage.txt:33
+msgid "Once you have registered and activated your account, you will see {course_name} listed on your dashboard."
+msgstr ""
+
+#: customer_specific/lms/templates/emails/enroll_email_allowedmessage.txt:38
+msgid "Once you have registered and activated your account, visit {course_about_url} to join the course."
+msgstr ""
+
+#: customer_specific/lms/templates/emails/enroll_email_allowedmessage.txt:41
+msgid "You can then enroll in {course_name}."
+msgstr ""
+
+#: customer_specific/lms/templates/emails/enroll_email_enrolledmessage.txt:9
+msgid "You have been enrolled in {course_name} at {site_name} by a member of the course staff. The course should now appear on your {site_name} dashboard."
+msgstr ""
+
+#: customer_specific/lms/templates/emails/enroll_email_enrolledmessage.txt:21
+msgid "This email was automatically sent from {site_name} to {full_name}"
+msgstr ""
+
+#: lms/templates/vert_module.html:22
+msgid "Due {date}"
+msgstr ""
+
+#: lms/templates/courseware/course_about.html:66
+msgid "The currently logged-in user account does not have permission to enroll in this course. You may need to {start_logout_tag}log out{end_tag} then try the enroll button again. Please visit the {start_help_tag}help page{end_tag} for a possible solution."
+msgstr ""
+
+#: lms/templates/design-templates/live-blocks/dashboard-course-listing/_dashboard-course-listing-01.html:299
+msgid "You will see a message on your dashboard when the verification process is complete (usually within 1-2 days)."
+msgstr ""
+
+#: lms/templates/design-templates/live-blocks/dashboard-course-listing/_dashboard-course-listing-01.html:302
+msgid "You have submitted your reverification information. You will see a message on your dashboard when the verification process is complete (usually within 1-2 days)."
+msgstr ""
+
+#: lms/templates/header/navbar-authenticated.html:28
+msgid "Discover New Courses"
+msgstr ""
+
+#: lms/templates/static_templates/tracks.html:8
+msgid "Tracks"
+msgstr ""
+
+#: lms/templates/logout.html:33
+msgid "\n"
+"                    This may take a minute. If you are not redirected, go to the home page.\n"
+"                    "
 msgstr ""
 

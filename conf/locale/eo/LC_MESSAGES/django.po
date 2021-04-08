@@ -25,11 +25,6 @@ msgstr ""
 "ηιѕι υт αłιqυιρ єχ єα ¢σммσ∂σ ¢σηѕєqυαт. ∂υιѕ αυтє ιяυяє ∂σłσя ι#"
 
 #: customer_specific/cms/templates/course_outline.html
-msgid "Changing the content students see"
-msgstr ""
-"Çhängïng thé çöntént stüdénts séé Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тє#"
-
-#: customer_specific/cms/templates/course_outline.html
 msgid ""
 "To hide content from students, select the Configure icon for a section, "
 "subsection, or unit, then select {em_start}Hide from students{em_end}."
@@ -41,68 +36,18 @@ msgstr ""
 msgid "Certificate"
 msgstr "Çértïfïçäté Ⱡ'σяєм ιρѕυм ∂σłσя #"
 
-#: lms/templates/header.html
-msgid ""
-"<strong>Warning:</strong> Your browser is not fully supported. We strongly "
-"recommend using {chrome_link} or {ff_link}."
-msgstr ""
-"<strong>Wärnïng:</strong> Ýöür ßröwsér ïs nöt füllý süppörtéd. Wé strönglý "
-"réçömménd üsïng {chrome_link} ör {ff_link}. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
-"¢ση#"
-
-#: lms/templates/courseware/course_navigation.html
-msgid "Course is not yet visible to students."
-msgstr ""
-"Çöürsé ïs nöt ýét vïsïßlé tö stüdénts. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
-"¢σηѕє¢тєтυя#"
-
-#: lms/templates/courseware/course_navigation.html
-msgid ""
-"You cannot view the course as a student or beta tester before the course "
-"release date."
-msgstr ""
-"Ýöü çännöt vïéw thé çöürsé äs ä stüdént ör ßétä téstér ßéföré thé çöürsé "
-"réléäsé däté. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢#"
-
-#: lms/templates/courseware/course_updates.html
-msgid "All course updates"
-msgstr "Àll çöürsé üpdätés Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт#"
-
-#: lms/templates/courseware/courseware.html
-msgid ""
-"To access course materials, you must score {required_score}% or higher on "
-"this                   exam. Your current score is {current_score}%."
-msgstr ""
-"Tö äççéss çöürsé mätérïäls, ýöü müst sçöré {required_score}% ör hïghér ön "
-"thïs                   éxäm. Ýöür çürrént sçöré ïs {current_score}%. Ⱡ'σяєм "
-"ιρѕυм ∂#"
-
-#: lms/templates/courseware/progress.html
-#: lms/templates/courseware/progress.html
-msgid "Course Progress"
-msgstr "Çöürsé Prögréss Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт α#"
-
-#: customer_specific/lms/templates/design-templates/footer/_footer-appsembler-01.html
 #: lms/templates/design-templates/footer/_footer-appsembler-01.html
 msgid "Apple app on Apple Store"
 msgstr "Àpplé äpp ön Àpplé Störé Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢ση#"
 
-#: customer_specific/lms/templates/design-templates/header/_header-appsembler-02.html
-#: lms/templates/design-templates/header/_header-appsembler-02.html
-msgid "MENU"
-msgstr "MÉNÛ Ⱡ'σяєм ι#"
-
-#: customer_specific/lms/templates/design-templates/pages/course-about/_course-about-01.html
 #: lms/templates/design-templates/pages/course-about/_course-about-01.html
 msgid "Course is in your cart."
 msgstr "Çöürsé ïs ïn ýöür çärt. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
 
-#: customer_specific/lms/templates/design-templates/pages/course-about/_course-about-01.html
 #: lms/templates/design-templates/pages/course-about/_course-about-01.html
 msgid "Add to Cart / Price: "
 msgstr "Àdd tö Çärt / Prïçé:  Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, #"
 
-#: customer_specific/lms/templates/design-templates/pages/course-about/_course-about-01.html
 #: lms/templates/design-templates/pages/course-about/_course-about-01.html
 msgid "Enroll in "
 msgstr "Énröll ïn  Ⱡ'σяєм ιρѕυм ∂σłσ#"
@@ -139,28 +84,6 @@ msgstr "Thé ïnstïtütïön&#39;s lögö. Ⱡ'σяєм ιρѕυм ∂σłσя 
 #: lms/templates/enroll_staff.html
 msgid "Enroll"
 msgstr "Énröll Ⱡ'σяєм ιρѕυ#"
-
-#: lms/templates/courseware/courseware.html
-msgid "Submit search"
-msgstr "Süßmït séärçh Ⱡ'σяєм ιρѕυм ∂σłσя ѕι#"
-
-#: lms/templates/courseware/info.html
-msgid ""
-"You are not currently enrolled in this course. {link_start}Sign up "
-"now!{link_end}"
-msgstr ""
-"Ýöü äré nöt çürréntlý énrölléd ïn thïs çöürsé. {link_start}Sïgn üp "
-"nöw!{link_end} Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α#"
-
-#: lms/templates/design-templates/header/_header-appsembler-01.html
-#: lms/templates/design-templates/header/_header-appsembler-02.html
-msgid "Main navigation"
-msgstr "Mäïn nävïgätïön Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт α#"
-
-#: lms/templates/design-templates/header/_header-appsembler-01.html
-#: lms/templates/design-templates/header/_header-appsembler-02.html
-msgid "Slideout menu toggle"
-msgstr "Slïdéöüt ménü tögglé Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, #"
 
 #: lms/templates/design-templates/pages/course-catalogue/_course-catalogue-01.html
 msgid "Hide search filters"
@@ -223,10 +146,6 @@ msgstr ""
 "¢ιłłυм ∂σłσяє єυ ƒυgιαт ηυłłα ραяιαтυя. єχ¢єρтєυя ѕιηт σ¢¢αє¢αт ¢υρι∂αтαт "
 "ηση ρяσι∂єηт, ѕυηт ιη ¢υłρα qυι σƒƒι¢ια ∂єѕєяυηт мσłłιт αηιм ι∂ єѕт łαвσ#"
 
-#: lms/templates/courseware/info.html
-msgid "This course is self-paced."
-msgstr "Thïs çöürsé ïs sélf-päçéd. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕ#"
-
 #: customer_specific/lms/templates/theme-variables.html
 msgid "{copy_sign} {year} {platform_name}. All rights reserved."
 msgstr ""
@@ -256,10 +175,6 @@ msgid ""
 msgstr ""
 "Thé sïté {platform_name} ïs çürréntlý ünäväïläßlé. Pléäsé çöntäçt ýöür "
 "ädmïnïsträtör. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя#"
-
-#: lms/templates/course_experience/course-outline-fragment.html
-msgid "Completed"
-msgstr "Çömplétéd Ⱡ'σяєм ιρѕυм ∂σł#"
 
 #: customer_specific/lms/templates/emails/activation_email.txt
 msgid "Thank you for creating an account with {platform_name}!"
@@ -299,7 +214,6 @@ msgstr ""
 "¢σммσ∂σ ¢σηѕєqυαт. ∂υιѕ αυтє ιяυяє ∂σłσя ιη яєρяєнєη∂єяιт ιη νσłυρтαтє νєłιт"
 " єѕѕє ¢ιłłυм ∂σłσяє єυ ƒυgιαт ηυłłα ραяιαтυя.#"
 
-#: lms/templates/dashboard.html
 #: lms/templates/design-templates/pages/dashboard/_dashboard-01.html
 msgid ""
 "We have sent you an activation email - please click the link in the email to"
@@ -314,3 +228,220 @@ msgstr ""
 "єα ¢σммσ∂σ ¢σηѕєqυαт. ∂υιѕ αυтє ιяυяє ∂σłσя ιη яєρяєнєη∂єяιт ιη νσłυρтαтє "
 "νєłιт єѕѕє ¢ιłłυм ∂σłσяє єυ ƒυgιαт ηυłłα ραяιαтυя. єχ¢єρтєυя ѕιηт σ¢¢αє¢αт "
 "¢υρι∂αтαт ηση ρяσι∂єηт, ѕυηт ιη ¢υłρα qυι σƒƒι¢ια ∂єѕєяυ#"
+
+#: customer_specific/cms/templates/login.html
+#: customer_specific/cms/templates/login.html
+msgid "Sign In to {studio_name}"
+msgstr "Sïgn Ìn tö {studio_name} Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт#"
+
+#: customer_specific/cms/templates/login.html
+msgid "Don't have a {studio_name} Account? Sign up!"
+msgstr ""
+"Dön't hävé ä {studio_name} Àççöünt? Sïgn üp! Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тєт#"
+
+#: customer_specific/cms/templates/login.html
+msgid "Required Information to Sign In to {studio_name}"
+msgstr ""
+"Réqüïréd Ìnförmätïön tö Sïgn Ìn tö {studio_name} Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт "
+"αмєт, ¢σηѕє¢тєтυя#"
+
+#: customer_specific/lms/templates/emails/add_beta_tester_email_message.txt
+#: customer_specific/lms/templates/emails/enroll_email_enrolledmessage.txt
+msgid "Dear {full_name}"
+msgstr "Déär {full_name} Ⱡ'σяєм ιρѕυм ∂#"
+
+#: customer_specific/lms/templates/emails/add_beta_tester_email_message.txt
+msgid ""
+"You have been invited to be a beta tester for {course_name} at {site_name} "
+"by a member of the course staff."
+msgstr ""
+"Ýöü hävé ßéén ïnvïtéd tö ßé ä ßétä téstér för {course_name} ät {site_name} "
+"ßý ä mémßér öf thé çöürsé stäff. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕ#"
+
+#: customer_specific/lms/templates/emails/add_beta_tester_email_message.txt
+#: customer_specific/lms/templates/emails/enroll_email_enrolledmessage.txt
+msgid "To start accessing course materials, please visit {course_url}"
+msgstr ""
+"Tö stärt äççéssïng çöürsé mätérïäls, pléäsé vïsït {course_url} Ⱡ'σяєм ιρѕυм "
+"∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+
+#: customer_specific/lms/templates/emails/add_beta_tester_email_message.txt
+msgid "Visit {course_about_url} to join the course and begin the beta test."
+msgstr ""
+"Vïsït {course_about_url} tö jöïn thé çöürsé änd ßégïn thé ßétä tést. Ⱡ'σяєм "
+"ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+
+#: customer_specific/lms/templates/emails/add_beta_tester_email_message.txt
+msgid "Visit {site_name} to enroll in the course and begin the beta test."
+msgstr ""
+"Vïsït {site_name} tö énröll ïn thé çöürsé änd ßégïn thé ßétä tést. Ⱡ'σяєм "
+"ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+
+#: customer_specific/lms/templates/emails/add_beta_tester_email_message.txt
+#: customer_specific/lms/templates/emails/enroll_email_allowedmessage.txt
+msgid "This email was automatically sent from {site_name} to {email_address}"
+msgstr ""
+"Thïs émäïl wäs äütömätïçällý sént fröm {site_name} tö {email_address} Ⱡ'σяєм"
+" ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+
+#: customer_specific/lms/templates/emails/confirm_email_change.txt
+msgid ""
+"This is to confirm that you changed the e-mail associated with "
+"{platform_name} from {old_email} to {new_email}. If you did not make this "
+"request, please contact us immediately. Contact information is listed at:"
+msgstr ""
+"Thïs ïs tö çönfïrm thät ýöü çhängéd thé é-mäïl ässöçïätéd wïth "
+"{platform_name} fröm {old_email} tö {new_email}. Ìf ýöü dïd nöt mäké thïs "
+"réqüést, pléäsé çöntäçt üs ïmmédïätélý. Çöntäçt ïnförmätïön ïs lïstéd ät: "
+"Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α∂ιριѕι¢ιηg єłιт, ѕє∂ ∂σ єιυѕмσ∂ "
+"тємρσя ιη¢ι∂ι∂υηт υт łαвσяє єт ∂σłσяє мαgηα αłιqυα. υт єηιм α∂ мιηιм νєηιαм,"
+" qυιѕ ησѕтяυ∂ єχєя¢ιтαтιση υłłαм¢σ łαвσяιѕ ηιѕι υт αłιqυιρ єχ єα ¢σммσ∂σ "
+"¢σηѕєqυαт. ∂υιѕ αυтє ιяυяє ∂σłσя ιη яєρяєнєη∂єяιт ιη νσłυρтαтє νєłιт єѕѕє "
+"¢ιłłυм ∂σłσяє єυ ƒυgιαт ηυłłα ραяιαтυя. єχ¢єρтєυя ѕιηт σ¢¢αє¢αт ¢υρι∂αтαт "
+"ηση ρяσι∂єηт, ѕυ#"
+
+#: customer_specific/lms/templates/emails/email_change.txt
+msgid ""
+"If you didn't request this, you don't need to do anything; you won't receive"
+" any more email from us. Please do not reply to this e-mail; if you require "
+"assistance, check the help section of the {platform_name} web site."
+msgstr ""
+"Ìf ýöü dïdn't réqüést thïs, ýöü dön't nééd tö dö änýthïng; ýöü wön't réçéïvé"
+" äný möré émäïl fröm üs. Pléäsé dö nöt réplý tö thïs é-mäïl; ïf ýöü réqüïré "
+"ässïstänçé, çhéçk thé hélp séçtïön öf thé {platform_name} wéß sïté. Ⱡ'σяєм "
+"ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α∂ιριѕι¢ιηg єłιт, ѕє∂ ∂σ єιυѕмσ∂ тємρσя "
+"ιη¢ι∂ι∂υηт υт łαвσяє єт ∂σłσяє мαgηα αłιqυα. υт єηιм α∂ мιηιм νєηιαм, qυιѕ "
+"ησѕтяυ∂ єχєя¢ιтαтιση υłłαм¢σ łαвσяιѕ ηιѕι υт αłιqυιρ єχ єα ¢σммσ∂σ "
+"¢σηѕєqυαт. ∂υιѕ αυтє ιяυяє ∂σłσя ιη яєρяєнєη∂єяιт ιη νσłυρтαтє νєłιт єѕѕє "
+"¢ιłłυм ∂σłσяє єυ ƒυgιαт ηυłłα ραяιαтυя. єχ¢єρтєυя ѕι#"
+
+#: customer_specific/lms/templates/emails/enroll_email_allowedmessage.txt
+msgid ""
+"You have been invited to join {course_name} at {site_name} by a member of "
+"the course staff."
+msgstr ""
+"Ýöü hävé ßéén ïnvïtéd tö jöïn {course_name} ät {site_name} ßý ä mémßér öf "
+"thé çöürsé stäff. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя#"
+
+#: customer_specific/lms/templates/emails/enroll_email_allowedmessage.txt
+msgid "To access the course visit {course_url} and login."
+msgstr ""
+"Tö äççéss thé çöürsé vïsït {course_url} änd lögïn. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт "
+"αмєт, ¢σηѕє¢тєтυя #"
+
+#: customer_specific/lms/templates/emails/enroll_email_allowedmessage.txt
+msgid ""
+"To access the course visit {course_about_url} and register for the course."
+msgstr ""
+"Tö äççéss thé çöürsé vïsït {course_about_url} änd régïstér för thé çöürsé. "
+"Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+
+#: customer_specific/lms/templates/emails/enroll_email_allowedmessage.txt
+msgid ""
+"To finish your registration, please visit {registration_url} and fill out "
+"the registration form making sure to use {email_address} in the E-mail "
+"field."
+msgstr ""
+"Tö fïnïsh ýöür régïsträtïön, pléäsé vïsït {registration_url} änd fïll öüt "
+"thé régïsträtïön förm mäkïng süré tö üsé {email_address} ïn thé É-mäïl "
+"fïéld. Ⱡ'σяєм ι#"
+
+#: customer_specific/lms/templates/emails/enroll_email_allowedmessage.txt
+msgid ""
+"Once you have registered and activated your account, you will see "
+"{course_name} listed on your dashboard."
+msgstr ""
+"Önçé ýöü hävé régïstéréd änd äçtïvätéd ýöür äççöünt, ýöü wïll séé "
+"{course_name} lïstéd ön ýöür däshßöärd. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢#"
+
+#: customer_specific/lms/templates/emails/enroll_email_allowedmessage.txt
+msgid ""
+"Once you have registered and activated your account, visit "
+"{course_about_url} to join the course."
+msgstr ""
+"Önçé ýöü hävé régïstéréd änd äçtïvätéd ýöür äççöünt, vïsït "
+"{course_about_url} tö jöïn thé çöürsé. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тє#"
+
+#: customer_specific/lms/templates/emails/enroll_email_allowedmessage.txt
+msgid "You can then enroll in {course_name}."
+msgstr ""
+"Ýöü çän thén énröll ïn {course_name}. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє#"
+
+#: customer_specific/lms/templates/emails/enroll_email_enrolledmessage.txt
+msgid ""
+"You have been enrolled in {course_name} at {site_name} by a member of the "
+"course staff. The course should now appear on your {site_name} dashboard."
+msgstr ""
+"Ýöü hävé ßéén énrölléd ïn {course_name} ät {site_name} ßý ä mémßér öf thé "
+"çöürsé stäff. Thé çöürsé shöüld nöw äppéär ön ýöür {site_name} däshßöärd. "
+"Ⱡ'σяєм ιρѕυ#"
+
+#: customer_specific/lms/templates/emails/enroll_email_enrolledmessage.txt
+msgid "This email was automatically sent from {site_name} to {full_name}"
+msgstr ""
+"Thïs émäïl wäs äütömätïçällý sént fröm {site_name} tö {full_name} Ⱡ'σяєм "
+"ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+
+#: lms/templates/vert_module.html
+msgid "Due {date}"
+msgstr "Düé {date} Ⱡ'σяєм ιρѕυм #"
+
+#: lms/templates/courseware/course_about.html
+msgid ""
+"The currently logged-in user account does not have permission to enroll in "
+"this course. You may need to {start_logout_tag}log out{end_tag} then try the"
+" enroll button again. Please visit the {start_help_tag}help page{end_tag} "
+"for a possible solution."
+msgstr ""
+"Thé çürréntlý löggéd-ïn üsér äççöünt döés nöt hävé pérmïssïön tö énröll ïn "
+"thïs çöürsé. Ýöü mäý nééd tö {start_logout_tag}lög öüt{end_tag} thén trý thé"
+" énröll ßüttön ägäïn. Pléäsé vïsït thé {start_help_tag}hélp pägé{end_tag} "
+"för ä pössïßlé sölütïön. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя "
+"α∂ιριѕι¢ιηg єłιт, ѕє∂ ∂σ єιυѕмσ∂ тємρσя ιη¢ι∂ι∂υηт υт łαвσяє єт ∂σłσяє мαgηα"
+" αłιqυα. υт єηιм α∂ мιηιм νєηιαм, qυιѕ ησѕтяυ∂ єχєя¢ιтαтιση υłłαм¢σ łαвσяιѕ "
+"ηιѕι υт αłιqυιρ єχ єα ¢σммσ∂σ ¢σηѕєqυαт. ∂υιѕ αυтє ιяυяє ∂σłσя ιη "
+"яєρяєнєη∂єяιт ιη νσłυρтαтє νєłιт єѕѕє ¢ιłłυм ∂σłσяє єυ ƒυgιαт ηυłłα "
+"ραяιαтυя. єχ¢єρтєυя#"
+
+#: lms/templates/design-templates/live-blocks/dashboard-course-listing/_dashboard-course-listing-01.html
+msgid ""
+"You will see a message on your dashboard when the verification process is "
+"complete (usually within 1-2 days)."
+msgstr ""
+"Ýöü wïll séé ä méssägé ön ýöür däshßöärd whén thé vérïfïçätïön pröçéss ïs "
+"çömplété (üsüällý wïthïn 1-2 däýs). Ⱡ'σяєм ιρѕυм ∂σłσя ѕ#"
+
+#: lms/templates/design-templates/live-blocks/dashboard-course-listing/_dashboard-course-listing-01.html
+msgid ""
+"You have submitted your reverification information. You will see a message "
+"on your dashboard when the verification process is complete (usually within "
+"1-2 days)."
+msgstr ""
+"Ýöü hävé süßmïttéd ýöür révérïfïçätïön ïnförmätïön. Ýöü wïll séé ä méssägé "
+"ön ýöür däshßöärd whén thé vérïfïçätïön pröçéss ïs çömplété (üsüällý wïthïn "
+"1-2 däýs). Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α∂ιριѕι¢ιηg єłιт, ѕє∂ ∂σ"
+" єιυѕмσ∂ тємρσя ιη¢ι∂ι∂υηт υт łαвσяє єт ∂σłσяє мαgηα αłιqυα. υт єηιм α∂ "
+"мιηιм νєηιαм, qυιѕ ησѕтяυ∂ єχєя¢ιтαтιση υłłαм¢σ łαвσяιѕ ηιѕι υт αłιqυιρ єχ "
+"єα ¢σммσ∂σ ¢σηѕєqυαт. ∂υιѕ αυтє ιяυяє ∂σłσя ιη яєρяєнєη∂єяιт ιη νσłυρтαтє "
+"νєłιт єѕѕє ¢ιłłυм ∂σłσяє єυ ƒυgιαт ηυłłα ραяιαтυя. єχ¢єρтєυя ѕιηт σ¢¢αє¢αт "
+"¢υρι∂αтαт ηση ρяσι∂єηт, ѕυηт ιη ¢υłρα qυι σƒƒι¢ια ∂єѕє#"
+
+#: lms/templates/header/navbar-authenticated.html
+msgid "Discover New Courses"
+msgstr "Dïsçövér Néw Çöürsés Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, #"
+
+#: lms/templates/static_templates/tracks.html
+msgid "Tracks"
+msgstr "Träçks Ⱡ'σяєм ιρѕυ#"
+
+#: lms/templates/logout.html
+msgid ""
+"\n"
+"                    This may take a minute. If you are not redirected, go to the home page.\n"
+"                    "
+msgstr ""
+"\n"
+"                    Thïs mäý täké ä mïnüté. Ìf ýöü äré nöt rédïréçtéd, gö tö thé hömé pägé.\n"
+"                     Ⱡ'σяєм ιρѕυм ∂σłσ#"
