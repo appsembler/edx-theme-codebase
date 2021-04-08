@@ -547,6 +547,21 @@ body.view-in-course {
   }
 }
 
+.course-wrapper .course-content div.timed-exam .exam-action-button.btn-pl-primary {
+  border-radius: $buttons-border-radius;
+  padding: calcRem(10) calcRem(20);
+  border: $cta-button-border;
+  background-color: $cta-button-bg;
+  color: $cta-button-text-color;
+  min-width: calcRem(180);
+
+  &:hover, &:focus {
+    background-color: $cta-button-text-color;
+    color: $cta-button-bg;
+    border: $cta-button-border;
+  }
+}
+
 .modal.staff-modal {
   width: 980px;
   max-width: 100%;
