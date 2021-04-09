@@ -17,3 +17,5 @@ lms/static/css/*
 /frontend-app-publisher/
 /xqueue/
 
+# Tox files
+/.tox

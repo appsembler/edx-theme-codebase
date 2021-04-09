@@ -9,15 +9,17 @@
 #
 #   Usage:
 #
-#       ./i18n-pull.sh
+#       $ tox -e i18n-pull
 #
 ##################################################################
 
-EXIT=0
 set -e
 
-cd `dirname $BASH_SOURCE` && cd ..
+if test -e "${OPENEDX_RELEASE}"; then
+  echo "The OPENEDX_RELEASE environment variable is not set, please only run this script via '$ tox'.";
+fi
 
+cd "${TOX_INI_DIR}"
 
 rm -rf conf/locale/en/LC_MESSAGES/*.po
 
@@ -39,10 +41,5 @@ sed -i -e 's/^#, fuzzy.*$//' -- conf/locale/*/LC_MESSAGES/*.po
 echo "Building dummy Esperanto strings..."
 i18n_tool dummy
 
-echo "Validating strings..."
-i18n_tool validate || EXIT=1
-
 echo "Compiling strings..."
-i18n_tool generate
-
-exit $EXIT
+i18n_tool generate --strict -v

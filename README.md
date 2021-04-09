@@ -58,26 +58,21 @@ Dashboard page
 Theme Authoring
 ===============
 To customize your theme:
-- Fork this repository.
-- Clone it into the theme directory next to your edx-platform directory and rename the theme directory to your new theme's name.
-- Edit the .scss file in static/sass/ and rename the file with your theme's name.
-- Edit the lms.envs.json file in edx-platform and set 'USE_CUSTOM_THEME' to true, and 'THEME_NAME' to your theme's name.
-- Play around with the theme-variables.html template and basic-branding.scss files :)
+- Install [Devstack](https://github.com/appsembler/devstack) either on your host or via [Sultan](https://github.com/appsembler/sultan). 
+- Make a new branch in this repository e.g. `omar/header-color`
+- Change the files you'd like and make a pull request against the release branch e.g. `juniper/main`.
 
 
 How to use on Devstack
 ======================
- 1. Go to your devstacks `themes` directory.
- 2. Clone this repo: `$ git clone git@github.com:appsembler/edx-theme-codebase.git`
- 3. Inside the `edx-theme-codebase` directory, clone the customers repo: `$ git clone git@github.com:appsembler/edx-theme-customers customer_specific`
- 3. To change to a specific customer's code:
+ 1. Go to your devstacks main directory and you should see the `edx-theme-codebase` directory besides the `edx-platform`
+ 2. To change to a specific customer's code:
    - Go to `customer_specific` directory
-   - Checkout the customer's branch `$ git checkout ficus/easycare`
- 4. Edit your `lms.env.json` and set the following values:
-   - `COMPREHENSIVE_THEME_DIRS: ["/edx/app/edxapp/themes"]`
-   - `"DEFAULT_SITE_THEME": "edx-theme-codebase"`
-   - `"ENABLE_COMPREHENSIVE_THEMING": true`
- 5. Run `paver lms --settings=devstack_appsembler`
+   - Checkout the customer's branch `$ git checkout juniper/tahoe`
+ 5. To compile the SCSS files run the following command in LMS:
+    - `$ make lms-shell`
+    - `$ paver update_assets lms --skip-collect`  # Compiles lms
+    - `$ paver update_assets studio --skip-collect`  # Compiles Studio styles
  6. In another shell, use the following command to compile the SASS file:
    - `$ cd edx-theme-codebase`
    - `$ sassc lms/static/sass/main.scss lms/static/css/main.css`
@@ -95,23 +90,24 @@ The translation strings of this theme are split into two POEditor.com projects:
 Working with POEditor
 ---------------------
 
-Prepare your environment:
-```
-$ mkvirtualenv theme
-$ pip install -r requirements.txt
-```
 Also ensure that the [POEditor client](https://github.com/lukin0110/poeditor-client) has the correct API access token
-by setting the environment varialbe `POEDITOR_TOKEN` to the value from your [account settings](https://poeditor.com/account/api).
+by setting the environment variable `POEDITOR_TOKEN` to the value from your [account settings](https://poeditor.com/account/api).
 
 Push new strings to POEditor:
 ```
-$ ./scripts/i18n-push.sh
+$ tox -e i18n-push
 ```
 
 To get the latest translations from POEditor:
 ```
-$ ./scripts/i18n-pull.sh
+$ tox -e i18n-pull
 ```
+
+Upgrading to another release
+============================
+ - The `OPENEDX_RELEASE` environment variable should be updated (hardcoded) in the `tox.ini` file,
+so the i18n scripts work properly.
+ - The `tox -e build-release-requirements` should be run to update the release file. Other tox scripts will fail otherwise due to missing requirements file.
 
 License
 =======
