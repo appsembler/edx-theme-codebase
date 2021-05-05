@@ -42,6 +42,7 @@ from six import text_type
       % for item in get_header_menu_logged_out_extra_items():
         <div class="mobile-nav-item hidden-mobile nav-item">
           <a
+            class="${item['special_class']}"
             href="${item['link_URL']}"
             % if item['open_in_new_tab']:
               target="_blank"

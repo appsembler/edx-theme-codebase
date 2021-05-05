@@ -137,6 +137,7 @@
       .nav-item {
         margin: 0 calcRem(20);
         display: flex;
+        align-items: center;
 
         &.button-item {
           align-items: center;
@@ -200,6 +201,43 @@
               }
             }
           }
+        }
+
+        @if $navbar-style == "white" {
+        
+          .a--cta-button {
+            border-radius: $buttons-border-radius;
+            padding: calcRem(10) calcRem(20);
+            background-color: $header-bg-color;
+            color: $navbar-button-bg;
+            border: $cta-button-border;
+            border-color: $navbar-button-bg;
+    
+            &:hover, &:focus {
+              background-color: $navbar-button-bg;
+              color: pick-visible-color($navbar-button-bg, $base-text-color, #fff);
+              border: $cta-button-border;
+              text-decoration: none;
+            }
+          }
+  
+        } @else {
+          
+          .a--cta-button {
+            border-radius: $buttons-border-radius;
+            padding: calcRem(10) calcRem(20);
+            background-color: $header-bg-color;
+            color: pick-visible-color($header-bg-color, $base-text-color, #fff);
+            border: 2px solid pick-visible-color($header-bg-color, $base-text-color, #fff);
+    
+            &:hover, &:focus {
+              background-color: pick-visible-color($header-bg-color, $base-text-color, #fff);
+              color: $header-bg-color;
+              border: 2px solid pick-visible-color($header-bg-color, $base-text-color, #fff);
+              text-decoration: none;
+            }
+          }
+  
         }
       }
 
@@ -291,6 +329,7 @@
       a {
         padding: calcRem(20);
         font-weight: normal;
+        color: $brand-primary-color;
       }
 
       .btn {
