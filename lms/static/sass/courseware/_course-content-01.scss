@@ -17,7 +17,7 @@ body.view-in-course {
     .container {
 
       .course-wrapper {
-        width: $courseware-content-container-width + $courseware-content-container-sidebar-width * 2 + calcRem(80);
+        width: $courseware-content-container-width + $courseware-content-container-sidebar-width + calcRem(80);
         max-width: 100%;
         margin: 0 auto;
         padding: calcRem(40);
@@ -26,15 +26,24 @@ body.view-in-course {
         box-shadow: none;
 
         &.legacy-nav-enabled {
-          width: $courseware-content-container-width + $courseware-content-container-sidebar-width * 2 + calcRem(80);
+          width: $courseware-content-container-width + $courseware-content-container-sidebar-width + calcRem(80);
           padding: 0;
           display: grid;
-          grid-template-columns: $courseware-content-container-sidebar-width 1fr $courseware-content-container-sidebar-width;
+          // grid-template-columns: $courseware-content-container-sidebar-width 1fr $courseware-content-container-sidebar-width;
+          grid-template-columns: $courseware-content-container-sidebar-width 1fr;
           grid-column-gap: calcRem(40);
+
+          @media (max-width: 1700px) {
+            grid-template-columns: $courseware-content-container-sidebar-width 1fr;
+            padding-left: calcRem(40);
+            padding-right: calcRem(40);
+          }
 
           @media (max-width: $screen-sm-max) {
             grid-template-columns: 1fr;
             grid-gap: calcRem(20);
+            padding-left: calcRem(20);
+            padding-right: calcRem(20);
           }
         }
 
