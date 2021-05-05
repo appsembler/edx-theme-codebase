@@ -866,3 +866,15 @@ body.view-in-course {
 .xmodule_display.xmodule_ProblemBlock div.problem .choicegroup label {
   padding-left: calcRem(45);
 }
+
+.course-bookmarks .bookmarks-results-list {
+  margin-top: calcRem(20);
+
+  .bookmarks-results-list-item {
+    padding: 0 calcRem(20) calcRem(30) calcRem(20);
+  }
+
+  .list-item-content {
+    overflow: visible;
+  }
+}
