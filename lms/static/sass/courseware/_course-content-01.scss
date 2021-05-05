@@ -449,7 +449,6 @@ body.view-in-course {
     a {
       position: relative;
       display: inline;
-      border-bottom: 0px solid rgba($brand-primary-color, 0);
       @include transition(all 0.2s ease-in-out);
 
       &:hover, &:focus {
