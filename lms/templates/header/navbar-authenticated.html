@@ -32,8 +32,8 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
 
     % if get_header_menu_logged_in_extra_items():
       % for item in get_header_menu_logged_in_extra_items():
-        <div class="mobile-nav-item hidden-mobile nav-item nav-tab ${item['special_class']}">
-          <a class="tab-nav-link discover-new-link" href="${item['link_URL']}"
+        <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
+          <a class="tab-nav-link discover-new-link ${item['special_class']}" href="${item['link_URL']}"
              aria-current="${'page' if '/courses' in request.path else 'false'}"
              % if item['open_in_new_tab']:
               target="_blank"

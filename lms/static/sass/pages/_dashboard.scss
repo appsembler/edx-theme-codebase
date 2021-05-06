@@ -325,3 +325,28 @@
     }
   }
 }
+
+div#unenroll-modal {
+  background: none;
+  overflow: unset;
+  box-shadow: none;
+
+  input.submit-button {
+    background: none;
+    border-radius: $buttons-border-radius;
+    padding: calcRem(10) calcRem(30);
+    background-color: $header-bg-color;
+    color: $navbar-button-bg;
+    border: $cta-button-border;
+    border-color: $navbar-button-bg;
+    text-shadow: none;
+    box-shadow: none;
+
+    &:hover, &:focus {
+      background-color: $navbar-button-bg;
+      color: pick-visible-color($navbar-button-bg, $base-text-color, #fff);
+      border: $cta-button-border;
+      text-decoration: none;
+    }
+  }
+}
