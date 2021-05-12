@@ -282,6 +282,10 @@ body.view-in-course {
       float: none;
     }
   }
+
+  .xmodule_display.xmodule_HtmlBlock img {
+    height: auto;
+  }
 }
 
 .breadcrumbs .nav-item a, .breadcrumbs .nav-item a:visited {
