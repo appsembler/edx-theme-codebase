@@ -194,6 +194,10 @@
             min-width: calcRem(180);
             max-width: 80%;
 
+            .dropdown-item {
+              white-space: unset;
+            }
+
             .dropdown-nav-item {
               
               a {
