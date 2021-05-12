@@ -192,6 +192,28 @@ body.view-in-course {
                   margin-left: calcRem(10);
                   border-left: 1px solid $light-border-color;
                 }
+
+                .menu-item.graded {
+
+                  .subtitle {
+                    display: grid;
+                    align-items: center;
+                    grid-template-columns: 1fr auto;
+                    grid-gap: calcRem(8);
+
+                    .subtitle-name {
+                      display: block;
+                    }
+
+                    .menu-icon {
+                      position: relative;
+                      top: 0;
+                      left: 0;
+                      right: 0;
+                      color: $brand-primary-color;  
+                    }
+                  }
+                }
               }
 
               .menu-item {
