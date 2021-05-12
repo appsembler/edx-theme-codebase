@@ -614,6 +614,14 @@ body.view-in-course {
   border-radius: $in-app-container-border-radius * 2 / 3;
 }
 
+.xmodule_display.xmodule_VideoBlock .video .video-wrapper .video-player>div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .xblock .video {
   font-size: calcRem(16);
   margin-left: clacRem(-50);
