@@ -18,9 +18,13 @@
 
     .status {
       background: none !important;
-      padding: calcRem(30) 0;
+      padding: calcRem(30) calcRem(70);
       border: none !important;
       box-shadow: none;
+
+      @media (max-width: $screen-sm-max) {
+        padding: calcRem(30) calcRem(20);
+      }
 
       h4.message-title {
         font-size: calcRem(24);

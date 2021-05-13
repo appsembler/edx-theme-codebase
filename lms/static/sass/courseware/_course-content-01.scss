@@ -192,6 +192,28 @@ body.view-in-course {
                   margin-left: calcRem(10);
                   border-left: 1px solid $light-border-color;
                 }
+
+                .menu-item.graded {
+
+                  .subtitle {
+                    display: grid;
+                    align-items: center;
+                    grid-template-columns: 1fr auto;
+                    grid-gap: calcRem(8);
+
+                    .subtitle-name {
+                      display: block;
+                    }
+
+                    .menu-icon {
+                      position: relative;
+                      top: 0;
+                      left: 0;
+                      right: 0;
+                      color: $brand-primary-color;  
+                    }
+                  }
+                }
               }
 
               .menu-item {
@@ -281,6 +303,10 @@ body.view-in-course {
       margin-left: calcRem(20);
       float: none;
     }
+  }
+
+  .xmodule_display.xmodule_HtmlBlock img {
+    height: auto;
   }
 }
 
@@ -586,6 +612,14 @@ body.view-in-course {
   margin-right: calcRem(-50);
   padding: calcRem(20) calcRem(40);
   border-radius: $in-app-container-border-radius * 2 / 3;
+}
+
+.xmodule_display.xmodule_VideoBlock .video .video-wrapper .video-player>div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .xblock .video {
