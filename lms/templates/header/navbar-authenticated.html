@@ -15,12 +15,7 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
 
 <div class="nav-links">
   <div class="main">
-    <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
-      <a class="${'active ' if reverse('dashboard') == request.path else ''}tab-nav-link" href="${reverse('dashboard')}"
-           aria-current="${'page' if reverse('dashboard') == request.path else 'false'}">
-           ${_("My Courses")}
-      </a>
-    </div>
+
     % if get_global_settings().get('course-catalogue_enabled', True):
       <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
         <a class="tab-nav-link discover-new-link" href="${marketing_link('COURSES')}"
@@ -44,6 +39,13 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
         </div>
       % endfor
     % endif
+
+    <div class="mobile-nav-item hidden-mobile nav-item nav-tab nav-item-my-courses">
+      <a class="${'active ' if reverse('dashboard') == request.path else ''}tab-nav-link" href="${reverse('dashboard')}"
+           aria-current="${'page' if reverse('dashboard') == request.path else 'false'}">
+           ${_("My Courses")}
+      </a>
+    </div>
 
   </div>
   <div class="secondary">

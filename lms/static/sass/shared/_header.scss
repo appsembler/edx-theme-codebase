@@ -139,6 +139,13 @@
         display: flex;
         align-items: center;
 
+        &.nav-item-my-courses {
+
+          @media (min-width: 992px) {
+            margin-left: auto;
+          }
+        }
+
         &.button-item {
           align-items: center;
         }
