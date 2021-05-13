@@ -90,13 +90,11 @@ body.view-in-course {
         .course-index {
           transition: all 0.3s ease-in-out;
           opacity: 0.6;
-          filter: grayscale(1);
           padding: calcRem(50) 0 calcRem(30);
           border: none;
 
           &:hover, &:focus {
             opacity: 1;
-            filter: grayscale(0);
           }
 
           @media (max-width: $screen-sm-max) {
