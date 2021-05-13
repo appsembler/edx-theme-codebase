@@ -191,6 +191,10 @@ body.view-in-course {
                   padding: 0 0 0 calcRem(15);
                   margin-left: calcRem(10);
                   border-left: 1px solid $light-border-color;
+
+                  .menu-item {
+                    margin: calcRem(10) 0;
+                  }
                 }
 
                 .menu-item.graded {
