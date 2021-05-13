@@ -90,13 +90,11 @@ body.view-in-course {
         .course-index {
           transition: all 0.3s ease-in-out;
           opacity: 0.6;
-          filter: grayscale(1);
           padding: calcRem(50) 0 calcRem(30);
           border: none;
 
           &:hover, &:focus {
             opacity: 1;
-            filter: grayscale(0);
           }
 
           @media (max-width: $screen-sm-max) {
@@ -191,6 +189,10 @@ body.view-in-course {
                   padding: 0 0 0 calcRem(15);
                   margin-left: calcRem(10);
                   border-left: 1px solid $light-border-color;
+
+                  .menu-item {
+                    margin: calcRem(10) 0;
+                  }
                 }
 
                 .menu-item.graded {
@@ -220,7 +222,7 @@ body.view-in-course {
 
                 a {
                   font-size: calcRem(14);
-                  padding: 0 0 0 calcRem(20);
+                  padding: 0 0 0 calcRem(10);
 
                   p {
                     margin: 0;
