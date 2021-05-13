@@ -77,7 +77,7 @@
 
   form .section-title.lines {
     margin: 0 0 calcRem(30);
-    font-size: calcRem(42);
+    font-size: calcRem(24);
     color: $brand-primary-color;
     text-align: left;
 
@@ -335,7 +335,7 @@
       }
     }
 
-    .button.login-provider {
+    button.login-provider {
       padding: 0;
       border-radius: $buttons-border-radius;
       overflow: hidden;
@@ -395,4 +395,10 @@
       display: none;
     }
   }
+}
+
+.login-register .form-wrapper .login-providers, .financial-assistance-wrapper .financial-assistance-form .form-wrapper .login-providers {
+  margin-top: calcRem(40);
+  padding-top: calcRem(30);
+  border-top: 1px solid #ddd;
 }
