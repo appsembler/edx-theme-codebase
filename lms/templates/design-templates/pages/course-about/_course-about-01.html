@@ -5,6 +5,7 @@ from django.utils.translation import ugettext as _
 %>
 
 <%page args="template_settings, course_vars" />
+<%namespace file='/theme-variables.html' import="translate" />
 
 <%
   course_image = course_vars['course_image']
@@ -48,49 +49,49 @@ from django.utils.translation import ugettext as _
         % if course_vars['user_authenticated'] and course_vars['course_registered']:
           % if course_vars['show_courseware_link']:
             <a href="${course_vars['course_href_target']}" class="a--course-about-01__courseware-btn">
-              ${courseware_button_view_courseware_text}
+              ${translate(courseware_button_view_courseware_text)}
             </a>
           % else:
             <span class="a--course-about-01__courseware-btn register disabled">
-              ${courseware_button_already_enrolled_text}
+              ${translate(courseware_button_already_enrolled_text)}
             </span>
           % endif
         % elif course_vars['course_in_cart']:
           <a href="${course_vars['cart_link']}" class="a--course-about-01__courseware-btn add-to-cart">
-            ${courseware_button_already_enrolled_text}
+            ${translate(courseware_button_already_enrolled_text)}
           </a>
         % elif course_vars['course_is_full']:
           <span class="a--course-about-01__courseware-btn register disabled">
-            ${courseware_button_course_full_text}
+            ${translate(courseware_button_course_full_text)}
           </span>
         % elif course_vars['course_is_invitation_only'] and not course_vars['user_can_enroll']:
           <span class="a--course-about-01__courseware-btn register disabled">
-            ${courseware_button_invitation_only_text}
+            ${translate(courseware_button_invitation_only_text)}
           </span>
         % elif not course_vars['is_shib_course'] and not course_vars['user_can_enroll']:
           <span class="a--course-about-01__courseware-btn register disabled">
-            ${courseware_button_enrollment_closed_text}
+            ${translate(courseware_button_enrollment_closed_text)}
           </span>
         % elif course_vars['can_add_course_to_cart']:
           % if course_vars['user_authenticated']:
             <a href="#" id="${course_vars['user_authenticated_reg_element_id']}" class="a--course-about-01__courseware-btn add-to-cart">
-              ${courseware_button_add_to_cart_text}
+              ${translate(courseware_button_add_to_cart_text)}
             </a>
           % else:
             <a href="${course_vars['public_reg_element_href']}" id="${course_vars['public_reg_element_id']}" class="a--course-about-01__courseware-btn add-to-cart">
-              ${courseware_button_add_to_cart_text}
+              ${translate(courseware_button_add_to_cart_text)}
             </a>
           % endif
         % else:
           <a href="#" class="a--course-about-01__courseware-btn register">
-            ${courseware_button_enroll_text}
+            ${translate(courseware_button_enroll_text)}
           </a>
           <div id="register_error"></div>
         % endif
 
         % if course_vars['user_has_staff_access'] and course_vars['course_studio_url'] is not None:
           <a href="${course_vars['course_studio_url']}" class="a--course-about-01__courseware-btn">
-            ${view_in_studio_button_text}
+            ${translate(view_in_studio_button_text)}
           </a>
         % endif
       </div>
