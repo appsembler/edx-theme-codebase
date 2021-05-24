@@ -350,3 +350,20 @@ div#unenroll-modal {
     }
   }
 }
+
+.content-wrapper .dashboard .main-container .my-courses .listing-courses .course-item .course .details .wrapper-course-details .wrapper-course-actions .enter-course, .wrapper-messages-primary .message.message-status.course-status-certavailable .actions-primary .action-certificate .btn {
+  background: none;
+  letter-spacing: normal;
+  border: $cta-button-border;
+  border-radius: $buttons-border-radius;
+  padding: calcRem(10) calcRem(20);
+  background-color: $cta-button-bg;
+  color: $cta-button-text-color;
+  width: 100%;
+
+  &:hover, &:focus {
+    background-color: $cta-button-text-color;
+    color: $cta-button-bg;
+    border: $cta-button-border;
+  }
+}
