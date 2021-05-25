@@ -485,3 +485,11 @@
     }
   }
 }
+
+.forum-nav-filter-main-control, .forum-nav-filter-cohort-control, .forum-nav-sort-control {
+  width: 100%;
+}
+
+.discussion.inline-discussion .inline-thread .forum-nav-bar .all-posts-btn {
+  color: $brand-primary-color;
+}
