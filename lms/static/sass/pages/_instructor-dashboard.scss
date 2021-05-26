@@ -101,3 +101,11 @@ div.gradebook-wrapper .student-table tr.highlight td a {
     text-decoration: underline !important;
   }
 }
+
+.idash-section .data-display-table .slick-header .slick-header-columns .slick-header-column {
+  height: auto;
+}
+
+.idash-section .data-display-table .slick-row .slick-cell {
+  height: calcRem(100);
+}
