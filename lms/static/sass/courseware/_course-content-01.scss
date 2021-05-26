@@ -928,3 +928,13 @@ body.view-in-course {
     overflow: visible;
   }
 }
+
+
+.xmodule_display.xmodule_SequenceModule .sequence-nav-button.focused, .xmodule_display.xmodule_SequenceModule .sequence-nav-button:hover, .xmodule_display.xmodule_SequenceModule .sequence-nav-button:active, .xmodule_display.xmodule_SequenceModule .sequence-nav-button.active, .xmodule_display.xmodule_SequenceModule .sequence-nav button.focused, .xmodule_display.xmodule_SequenceModule .sequence-nav button:hover, .xmodule_display.xmodule_SequenceModule .sequence-nav button:active, .xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
+  background-color: $brand-primary-color;
+  color: pick-visible-color($brand-primary-color, $base-text-color, #fff);
+}
+
+.xmodule_display.xmodule_SequenceModule .sequence-nav-button.focused .icon, .xmodule_display.xmodule_SequenceModule .sequence-nav-button:hover .icon, .xmodule_display.xmodule_SequenceModule .sequence-nav-button:active .icon, .xmodule_display.xmodule_SequenceModule .sequence-nav-button.active .icon, .xmodule_display.xmodule_SequenceModule .sequence-nav button.focused .icon, .xmodule_display.xmodule_SequenceModule .sequence-nav button:hover .icon, .xmodule_display.xmodule_SequenceModule .sequence-nav button:active .icon, .xmodule_display.xmodule_SequenceModule .sequence-nav button.active .icon {
+  color: pick-visible-color($brand-primary-color, $base-text-color, #fff);
+}
