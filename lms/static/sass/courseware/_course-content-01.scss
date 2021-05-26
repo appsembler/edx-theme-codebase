@@ -17,7 +17,9 @@ body.view-in-course {
     .container {
 
       .course-wrapper {
-        width: $courseware-content-container-width + $courseware-content-container-sidebar-width + calcRem(80);
+        // width: $courseware-content-container-width + $courseware-content-container-sidebar-width + calcRem(80);
+          // line above is to be used if we decide to expose the variables in AMC Dashboard
+        width: calcRem(1180) + $courseware-content-container-sidebar-width + calcRem(80);
         max-width: 100%;
         margin: 0 auto;
         padding: calcRem(40);
@@ -26,7 +28,9 @@ body.view-in-course {
         box-shadow: none;
 
         &.legacy-nav-enabled {
-          width: $courseware-content-container-width + $courseware-content-container-sidebar-width + calcRem(80);
+          // width: $courseware-content-container-width + $courseware-content-container-sidebar-width + calcRem(80);
+          // line above is to be used if we decide to expose the variables in AMC Dashboard
+          width: calcRem(1180) + $courseware-content-container-sidebar-width + calcRem(80);
           padding: 0;
           display: grid;
           // grid-template-columns: $courseware-content-container-sidebar-width 1fr $courseware-content-container-sidebar-width;
