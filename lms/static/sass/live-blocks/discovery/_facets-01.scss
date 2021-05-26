@@ -6,23 +6,23 @@
   &__heading {
     @include primary-font-bold;
     color: rgba($base-text-color, 0.7);
-    font-size: $facets-big-heading-font-size;
-    margin: $facets-big-heading-margin;
+    font-size: calcRem(20);
+    margin: 0 0 calcRem(20);
     border-bottom: 1px solid rgba($base-text-color, 0.2);
-    padding: $facets-big-heading-padding;
+    padding: 0 0 calcRem(20);
   }
 
   &__group-title {
     @include primary-font;
-    color: $facets-group-title-color;
-    font-size: $facets-group-title-font-size;
-    margin: $facets-group-title-margin;
+    color: $brand-primary-color;
+    font-size: calcRem(16);
+    margin: calcRem(15) 0 calcRem(15);
   }
 
   &__list {
     margin: 0;
-    padding: $facets-group-list-padding;
-    border-bottom: $single-facet-bottom-border;
+    padding: 0 0 calcRem(15);
+    border-bottom: 1px solid rgba($base-text-color, 0.2);
 
     li {
       list-style-type: none;
@@ -50,7 +50,7 @@
     @include edx_style_killer;
     @include no_damn_focus_glow;
     list-style-type: none;
-    padding: $single-facet-padding;
+    padding: calcRem(8) 0;
     width: 100%;
     @include transition(all 0.3s ease-in-out);
 
@@ -59,7 +59,7 @@
       @include flex-shrink(1);
       @include primary-font;
       width: 100%;
-      font-size: $facet-font-size;
+      font-size: calcRem(16);
     }
 
     span.disable-label {
@@ -74,9 +74,9 @@
       @include flex-shrink(0);
       @include primary-font-bold;
       background-color: $brand-primary-color;
-      padding: $facet-results-count-padding;
-      border-radius: $facet-results-count-border-radius;
-      font-size: $facet-results-count-font-size;
+      padding: calcRem(3) calcRem(8);
+      border-radius: calcRem(30);
+      font-size: calcRem(12);
       color: $facet-results-count-text-color;
       width: calcRem(32);
       height: calcRem(32);
