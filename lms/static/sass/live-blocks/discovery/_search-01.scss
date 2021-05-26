@@ -1,18 +1,18 @@
 .a--discovery-search-01 {
   width: 100%;
-  margin-top: $search-bar-vertical-margin;
-  margin-bottom: $search-bar-vertical-margin;
-  padding: $search-bar-wrapper-padding;
-  border-bottom: $search-bar-bottom-border;
+  margin-top: calcRem(30);
+  margin-bottom: calcRem(30);
+  padding: 0 calcRem(20);
+  border-bottom: 1px solid rgba($base-text-color, 0.25);
 
   &__main {
     @include display(flex);
     @include align-items(center);
-    padding: $search-bar-inner-container-padding;
+    padding: calcRem(30) 0;
 
     h2 {
       margin: 0 calcRem(30) 0 0;
-      font-size: $search-bar-big-message-text-size;
+      font-size: calcRem(24);
       @include primary-font-bold;
       color: $search-bar-big-message-text-color;
     }
@@ -31,7 +31,7 @@
     @include edx_style_killer;
     @include no_damn_focus_glow;
     @include flex-shrink(0);
-    font-size: $search-bar-icon-button-font-size;
+    font-size: calcRem(20);
     color: $search-bar-icon-button-color;
     transition: all 0.3s ease-in-out;
     width: calcRem(48);
@@ -74,14 +74,14 @@
     @include display(flex);
     @include align-items(center);
     padding: calcRem(30) 0;
-    border-bottom: $search-bar-bottom-border;
+    border-bottom: 1px solid rgba($base-text-color, 0.25);
   }
 
   &__search-button {
     @include edx_style_killer;
     @include no_damn_focus_glow;
     @include flex-shrink(0);
-    font-size: $search-bar-icon-button-font-size;
+    font-size: calcRem(20);
     color: $search-bar-icon-button-color;
   }
 
@@ -108,13 +108,13 @@
       background-color: $search-filter-bg-color;
       color: $search-filter-text-color;
       @include transition(all 0.3s ease-in-out);
-      padding: $search-filter-padding;
-      margin: $search-filter-margin;
+      padding: calcRem(10) calcRem(15);
+      margin: calcRem(7.5);
 
       &:hover, &:focus {
         background-color: $brand-primary-color;
         color: #fff;
-        padding: $search-filter-padding;
+        padding: calcRem(10) calcRem(15);
       }
     }
 
@@ -126,7 +126,7 @@
       li {
         list-style-type: none;
         display: inline-block;
-        margin: $search-filter-margin;
+        margin: calcRem(10) calcRem(15);
       }
     }
   }
