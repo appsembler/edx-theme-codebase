@@ -537,6 +537,10 @@ body.view-in-course {
   grid-column-gap: calcRem(40);
   grid-row-gap: calcRem(30);
 
+  @media (max-width: $screen-sm-max) {
+    display: block;
+  }
+
   .unit-title {
     margin: 0 !important;
   }
@@ -550,6 +554,11 @@ body.view-in-course {
   .bookmark-button-wrapper {
     margin-bottom: 0;
     text-align: right;
+
+    @media (max-width: $screen-sm-max) {
+      margin: calcRem(20) 0;
+      text-align: left;
+    }
 
     .bookmark-button {
       padding: calcRem(8) calcRem(15);
