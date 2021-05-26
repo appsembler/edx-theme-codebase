@@ -950,3 +950,7 @@ body.view-in-course {
 .xmodule_display.xmodule_SequenceModule .sequence-nav-button.focused .icon, .xmodule_display.xmodule_SequenceModule .sequence-nav-button:hover .icon, .xmodule_display.xmodule_SequenceModule .sequence-nav-button:active .icon, .xmodule_display.xmodule_SequenceModule .sequence-nav-button.active .icon, .xmodule_display.xmodule_SequenceModule .sequence-nav button.focused .icon, .xmodule_display.xmodule_SequenceModule .sequence-nav button:hover .icon, .xmodule_display.xmodule_SequenceModule .sequence-nav button:active .icon, .xmodule_display.xmodule_SequenceModule .sequence-nav button.active .icon {
   color: pick-visible-color($brand-primary-color, $base-text-color, #fff);
 }
+
+.course-wrapper .course-content .vert-mod>div ul, .course-wrapper .courseware-results-wrapper .vert-mod>div ul {
+  padding-left: calcRem(24);
+}
