@@ -132,6 +132,20 @@
             padding: 0;
           }
         }
+
+        @if $navbar-style == "white" {
+        
+          .toggle-user-dropdown {
+            color: $header-text-color;
+          }
+  
+        } @else {
+          
+          .toggle-user-dropdown {
+            color: pick-visible-color($header-bg-color, $header-text-color, #fff);
+          }
+  
+        }
       }
 
       .nav-item {
@@ -335,6 +349,7 @@
   }
 
   .mobile-menu {
+    border-color: $brand-primary-color;
 
     .mobile-nav-link {
 

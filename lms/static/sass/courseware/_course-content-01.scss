@@ -17,7 +17,9 @@ body.view-in-course {
     .container {
 
       .course-wrapper {
-        width: $courseware-content-container-width + $courseware-content-container-sidebar-width + calcRem(80);
+        // width: $courseware-content-container-width + $courseware-content-container-sidebar-width + calcRem(80);
+          // line above is to be used if we decide to expose the variables in AMC Dashboard
+        width: calcRem(1180) + $courseware-content-container-sidebar-width + calcRem(80);
         max-width: 100%;
         margin: 0 auto;
         padding: calcRem(40);
@@ -26,7 +28,9 @@ body.view-in-course {
         box-shadow: none;
 
         &.legacy-nav-enabled {
-          width: $courseware-content-container-width + $courseware-content-container-sidebar-width + calcRem(80);
+          // width: $courseware-content-container-width + $courseware-content-container-sidebar-width + calcRem(80);
+          // line above is to be used if we decide to expose the variables in AMC Dashboard
+          width: calcRem(1180) + $courseware-content-container-sidebar-width + calcRem(80);
           padding: 0;
           display: grid;
           // grid-template-columns: $courseware-content-container-sidebar-width 1fr $courseware-content-container-sidebar-width;
@@ -247,6 +251,7 @@ body.view-in-course {
                   display: flex;
                   align-items: center;
                   padding: calcRem(15) 0;
+                  font-size: calcRem(18);
 
                   .icon {
                     position: relative;
@@ -532,6 +537,10 @@ body.view-in-course {
   grid-column-gap: calcRem(40);
   grid-row-gap: calcRem(30);
 
+  @media (max-width: $screen-sm-max) {
+    display: block;
+  }
+
   .unit-title {
     margin: 0 !important;
   }
@@ -545,6 +554,11 @@ body.view-in-course {
   .bookmark-button-wrapper {
     margin-bottom: 0;
     text-align: right;
+
+    @media (max-width: $screen-sm-max) {
+      margin: calcRem(20) 0;
+      text-align: left;
+    }
 
     .bookmark-button {
       padding: calcRem(8) calcRem(15);
@@ -655,12 +669,14 @@ body.view-in-course {
           bottom: 0 !important;
           left: 0 !important;
           right: 0 !important;
+          width: 100% !important;
+          height: 100% !important;
         }
       }
     }
   }
 
-  &.is-captions-rendered {
+  &.is-captions-rendered:not(.closed) {
 
     .tc-wrapper {
       grid-template-columns: 2fr 1fr;
@@ -825,6 +841,7 @@ body.view-in-course {
 
         .thread-preview-body {
           font-size: calcRem(14);
+          white-space: nowrap;
         }
 
         .forum-nav-thread-labels {
@@ -922,4 +939,18 @@ body.view-in-course {
   .list-item-content {
     overflow: visible;
   }
+}
+
+
+.xmodule_display.xmodule_SequenceModule .sequence-nav-button.focused, .xmodule_display.xmodule_SequenceModule .sequence-nav-button:hover, .xmodule_display.xmodule_SequenceModule .sequence-nav-button:active, .xmodule_display.xmodule_SequenceModule .sequence-nav-button.active, .xmodule_display.xmodule_SequenceModule .sequence-nav button.focused, .xmodule_display.xmodule_SequenceModule .sequence-nav button:hover, .xmodule_display.xmodule_SequenceModule .sequence-nav button:active, .xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
+  background-color: $brand-primary-color;
+  color: pick-visible-color($brand-primary-color, $base-text-color, #fff);
+}
+
+.xmodule_display.xmodule_SequenceModule .sequence-nav-button.focused .icon, .xmodule_display.xmodule_SequenceModule .sequence-nav-button:hover .icon, .xmodule_display.xmodule_SequenceModule .sequence-nav-button:active .icon, .xmodule_display.xmodule_SequenceModule .sequence-nav-button.active .icon, .xmodule_display.xmodule_SequenceModule .sequence-nav button.focused .icon, .xmodule_display.xmodule_SequenceModule .sequence-nav button:hover .icon, .xmodule_display.xmodule_SequenceModule .sequence-nav button:active .icon, .xmodule_display.xmodule_SequenceModule .sequence-nav button.active .icon {
+  color: pick-visible-color($brand-primary-color, $base-text-color, #fff);
+}
+
+.course-wrapper .course-content .vert-mod>div ul, .course-wrapper .courseware-results-wrapper .vert-mod>div ul {
+  padding-left: calcRem(24);
 }

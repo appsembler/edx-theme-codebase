@@ -31,5 +31,17 @@
         margin-top: calcRem(50);
       }
     }
+
+    .auto-cert-message {
+
+      .msg-content {
+        width: 100%;
+
+        h4.title, p.copy {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
   }
 }

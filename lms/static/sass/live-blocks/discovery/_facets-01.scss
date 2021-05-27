@@ -14,7 +14,7 @@
 
   &__group-title {
     @include primary-font;
-    color: $facets-group-title-color;
+    color: $brand-primary-color;
     font-size: calcRem(16);
     margin: calcRem(15) 0 calcRem(15);
   }
@@ -50,7 +50,7 @@
     @include edx_style_killer;
     @include no_damn_focus_glow;
     list-style-type: none;
-    padding: calcRem(7.5) 0;
+    padding: calcRem(8) 0;
     width: 100%;
     @include transition(all 0.3s ease-in-out);
 

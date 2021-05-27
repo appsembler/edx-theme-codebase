@@ -14,7 +14,7 @@
       margin: 0 calcRem(30) 0 0;
       font-size: calcRem(24);
       @include primary-font-bold;
-      color: $search-bar-big-message-text-color;
+      color: rgba($base-text-color, 0.7);
     }
 
     &__content {
@@ -32,7 +32,7 @@
     @include no_damn_focus_glow;
     @include flex-shrink(0);
     font-size: calcRem(20);
-    color: $search-bar-icon-button-color;
+    color: rgba($base-text-color, 0.7);
     transition: all 0.3s ease-in-out;
     width: calcRem(48);
     height: calcRem(48);
@@ -82,7 +82,7 @@
     @include no_damn_focus_glow;
     @include flex-shrink(0);
     font-size: calcRem(20);
-    color: $search-bar-icon-button-color;
+    color: rgba($base-text-color, 0.7);
   }
 
   input[type="text"] {
@@ -105,11 +105,11 @@
     button.clear-filters, button.facet-option {
       @include edx_style_killer;
       @include no_damn_focus_glow;
-      background-color: $search-filter-bg-color;
+      background-color: rgba($base-text-color, 0.4);
       color: $search-filter-text-color;
       @include transition(all 0.3s ease-in-out);
       padding: calcRem(10) calcRem(15);
-      margin: calcRem(7.5);
+      margin: calcRem(8);
 
       &:hover, &:focus {
         background-color: $brand-primary-color;
