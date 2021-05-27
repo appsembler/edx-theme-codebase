@@ -954,3 +954,7 @@ body.view-in-course {
 .course-wrapper .course-content .vert-mod>div ul, .course-wrapper .courseware-results-wrapper .vert-mod>div ul {
   padding-left: calcRem(24);
 }
+
+.course-wrapper .course-content .hd-1.unit-title {
+  color: $brand-primary-color;
+}
