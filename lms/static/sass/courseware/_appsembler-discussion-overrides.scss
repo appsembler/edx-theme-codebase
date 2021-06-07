@@ -494,13 +494,6 @@
   color: $brand-primary-color;
 }
 
-.discussion .actions-dropdown .action-list-item {
-
-  &.action-pin, &.action-close {
-    display: none;
-  }
-}
-
 .discussion .actions-dropdown .action-list-item:hover, .discussion .actions-dropdown .action-list-item:focus {
   color: $brand-primary-color;
 }
