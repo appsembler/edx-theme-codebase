@@ -402,3 +402,7 @@
   padding-top: calcRem(30);
   border-top: 1px solid #ddd;
 }
+
+.register-form.register-fields-disabled {
+  display: none;
+}
