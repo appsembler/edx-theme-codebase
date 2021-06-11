@@ -441,7 +441,7 @@ body.view-in-course {
       margin: $font-size-h4 0;
     }
 
-    h3.problem-header, h3.scorm_name, h3.hd.hd-2, h3.openassessment__title, h3.discussion-module-title {
+    h3.problem-header, h3.scorm_name, h3.hd.hd-2, h3.openassessment__title, h3.discussion-module-title, h2.problem-header {
       @include fontVariantInclude($global-font-h4);
       font-size: $font-size-h4;
       line-height: $line-height-h4;
@@ -582,7 +582,9 @@ body.view-in-course {
   }
 }
 
-.xmodule_display.xmodule_ProblemBlock div.problem .action .submit-attempt-container .submit.btn-brand {
+.xmodule_display.xmodule_ProblemBlock div.problem .action .submit-attempt-container .submit.btn-brand, .xmodule_display.xmodule_SequenceModule .xblock-student_view-problem-builder .mentoring .input-main, .xmodule_display.xmodule_SequenceModule .xblock-student_view-freetextresponse .action .check, .xmodule_display.xmodule_SequenceModule .xblock-student_view-poll form .input-main, .xmodule_display.xmodule_SequenceModule .xblock-student_view-step-builder .submit .input-main, .xmodule_display.xmodule_SequenceModule .xblock-student_view-step-builder .submit .input-review {
+  background: none;
+  box-shadow: none;
   border-radius: $buttons-border-radius;
   padding: calcRem(10) calcRem(20);
   border: $cta-button-border;
@@ -593,6 +595,23 @@ body.view-in-course {
   &:hover, &:focus {
     background-color: $cta-button-text-color;
     color: $cta-button-bg;
+    border: $cta-button-border;
+  }
+}
+
+.xmodule_display.xmodule_SequenceModule .xblock-student_view-freetextresponse .action .save, .xmodule_display.xmodule_SequenceModule .xblock-student_view-step-builder .submit .input-next, .xmodule_display.xmodule_SequenceModule .xblock-student_view-step-builder .submit .input-previous {
+  background: none;
+  box-shadow: none;
+  border-radius: $buttons-border-radius;
+  padding: calcRem(10) calcRem(20);
+  border: 1px solid $cta-button-bg;
+  background-color: #fff;
+  color: $cta-button-bg;
+  min-width: calcRem(180);
+
+  &:hover, &:focus {
+    background-color: $cta-button-bg;
+    color: $cta-button-text-color;
     border: $cta-button-border;
   }
 }
@@ -957,4 +976,28 @@ body.view-in-course {
 
 .course-wrapper .course-content .hd-1.unit-title {
   color: $brand-primary-color;
+}
+
+
+.xmodule_display.xmodule_SequenceModule .xblock-student_view-problem-builder h3, .xmodule_display.xmodule_SequenceModule .xblock-student_view-step-builder h3, .xmodule_display.xmodule_SequenceModule .xblock-student_view-poll h3 {
+  @include fontVariantInclude($global-font-h4);
+  font-size: $font-size-h4;
+  line-height: $line-height-h4;
+  color: $base-text-color;
+  margin: $font-size-h4 0;
+  display: inline-block;
+}
+
+.xblock-student_view-step-builder .submit {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; 
+
+  button, input {
+    margin-right: 1rem;
+  }
+}
+
+.xmodule_display.xmodule_SequenceModule .xblock-student_view-poll form .input-main {
+  margin-top: 1rem;
 }
