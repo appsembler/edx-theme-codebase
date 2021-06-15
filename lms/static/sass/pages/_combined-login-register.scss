@@ -406,3 +406,53 @@
 .register-form.register-fields-disabled {
   display: none;
 }
+
+.login-register form.register-form .section-title.lines .text {
+  font-size: calcRem(32);
+
+  @media (max-width: $screen-sm-max) {
+    font-size: calcRem(28);
+  }
+}
+
+// style SSO button
+
+.login-register .login-provider, .financial-assistance-wrapper .financial-assistance-form .login-provider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: calcRem(260);
+  margin: calcRem(5) auto;
+  border: 2px solid $brand-primary-color;
+  color: $brand-primary-color;
+  height: auto;
+
+  &:hover, &:focus {
+    background-color: $brand-primary-color;
+    color: #fff;
+  }
+}
+
+.login-register .login-provider .icon, .financial-assistance-wrapper .financial-assistance-form .login-provider .icon {
+  background: none;
+  background-color: blue;
+  color: #fff;
+  width: calcRem(36);
+  font-size: calcRem(16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.login-register .login-provider span, .financial-assistance-wrapper .financial-assistance-form .login-provider span {
+  width: 100%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin-left: calcRem(10);
+  font-size: calcRem(16);
+  display: block;
+  padding: calcRem(12) 0;
+  letter-spacing: normal;
+}
