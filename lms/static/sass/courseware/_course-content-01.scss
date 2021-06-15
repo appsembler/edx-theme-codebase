@@ -1001,3 +1001,12 @@ body.view-in-course {
 .xmodule_display.xmodule_SequenceModule .xblock-student_view-poll form .input-main {
   margin-top: 1rem;
 }
+
+.search-results .search-results-item .result-type {
+  display: block;
+  position: relative;
+  bottom: 0;
+  right: 0;
+  opacity: 0.7;
+  font-size: calcRem(12);
+}
