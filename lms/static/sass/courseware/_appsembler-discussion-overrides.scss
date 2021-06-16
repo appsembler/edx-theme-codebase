@@ -501,3 +501,17 @@
 .discussion .action-button.action-follow.is-checked .action-icon, .discussion .action-button.action-follow:hover .action-icon, .discussion .action-button.action-follow:focus .action-icon {
   color: $brand-primary-color;
 }
+
+.field-label .field-input:checked+.field-input-label {
+  color: $brand-primary-color;
+}
+
+.content-wrapper .discussion.page-content-container .page-content .discussion-body .forum-content .discussion-article .thread-main-wrapper .discussion-post .post-header .post-header-actions .actions-item .action-button.is-checked .action-icon {
+  color: #fff;
+}
+
+.discussion .action-button.action-follow.is-checked .action-icon, .discussion .action-button.action-follow:hover .action-icon, .discussion .action-button:focus .action-icon {
+  background-color: $brand-primary-color;
+  border: none;
+  color: #fff;
+}
