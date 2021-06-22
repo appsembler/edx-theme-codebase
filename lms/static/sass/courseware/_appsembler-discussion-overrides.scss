@@ -254,6 +254,10 @@
                       justify-content: flex-end;
                       margin: 2px 0;
 
+                      &.is-hidden {
+                        display: none;
+                      }
+
                       .action-button {
                         padding: 3px;
                         display: flex;
@@ -298,6 +302,7 @@
                           button.action-list-item {
                             font-size: calcRem(14);
                             padding: calcRem(6);
+                            border: none;
 
                             &:hover {
                               cursor: pointer;
@@ -364,6 +369,10 @@
                       display: flex;
                       justify-content: flex-end;
                       margin: 2px 0;
+
+                      &.is-hidden {
+                        display: none;
+                      }
   
                       .action-button {
                         padding: 3px;
@@ -500,4 +509,43 @@
 
 .discussion .action-button.action-follow.is-checked .action-icon, .discussion .action-button.action-follow:hover .action-icon, .discussion .action-button.action-follow:focus .action-icon {
   color: $brand-primary-color;
+}
+
+.field-label .field-input:checked+.field-input-label {
+  color: $brand-primary-color;
+}
+
+.content-wrapper .discussion.page-content-container .page-content .discussion-body .forum-content .discussion-article .thread-main-wrapper .discussion-post .post-header .post-header-actions .actions-item .action-button.is-checked .action-icon {
+  color: #fff;
+}
+
+.discussion .action-button.action-follow.is-checked .action-icon, .discussion .action-button.action-follow:hover .action-icon, .discussion .action-button:focus .action-icon {
+  background-color: $brand-primary-color;
+  border: none;
+  color: #fff;
+}
+
+.forum-nav-thread.never-read .forum-nav-thread-link {
+  border-color: $brand-primary-color;
+  color: $brand-primary-color;
+}
+
+.forum-new-post-form .post-field, .edit-post-form .post-field {
+  width: 100%;
+
+  .edit-post-body {
+    width: 100%;
+  }
+}
+
+.content-wrapper .discussion.page-content-container .page-content .discussion-body .forum-content .discussion-article .post-extended-content .discussion-response .response-header .response-header-actions .actions-item .actions-dropdown .actions-dropdown-list button.action-list-item {
+  border: none;
+}
+
+.edit-post-body .wmd-panel, .discussion-response .response-body, .discussion-post .post-body {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
 }
