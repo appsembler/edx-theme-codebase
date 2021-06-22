@@ -541,3 +541,11 @@
 .content-wrapper .discussion.page-content-container .page-content .discussion-body .forum-content .discussion-article .post-extended-content .discussion-response .response-header .response-header-actions .actions-item .actions-dropdown .actions-dropdown-list button.action-list-item {
   border: none;
 }
+
+.edit-post-body .wmd-panel, .discussion-response .response-body, .discussion-post .post-body {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+}
