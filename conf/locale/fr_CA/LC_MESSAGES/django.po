@@ -23,15 +23,15 @@ msgstr "Attestation"
 msgid "Apple app on Apple Store"
 msgstr "Application Apple sur Apple Store"
 
-#: lms/templates/design-templates/pages/course-about/_course-about-01.html:14
+#: lms/templates/design-templates/pages/course-about/_course-about-01.html:15
 msgid "Course is in your cart."
 msgstr "Cours ajouté au panier."
 
-#: lms/templates/design-templates/pages/course-about/_course-about-01.html:18
+#: lms/templates/design-templates/pages/course-about/_course-about-01.html:19
 msgid "Add to Cart / Price: "
 msgstr "Ajouter à votre panier / Prix: "
 
-#: lms/templates/design-templates/pages/course-about/_course-about-01.html:19
+#: lms/templates/design-templates/pages/course-about/_course-about-01.html:20
 msgid "Enroll in "
 msgstr "S'inscrire au "
 
@@ -244,7 +244,7 @@ msgstr ""
 msgid "You have submitted your reverification information. You will see a message on your dashboard when the verification process is complete (usually within 1-2 days)."
 msgstr ""
 
-#: lms/templates/header/navbar-authenticated.html:28
+#: lms/templates/header/navbar-authenticated.html:23
 msgid "Discover New Courses"
 msgstr ""
 
@@ -257,4 +257,16 @@ msgid "\n"
 "                    This may take a minute. If you are not redirected, go to the home page.\n"
 "                    "
 msgstr ""
+
+#: customer_specific/lms/templates/certificates/_accomplishment-rendering.html:77
+msgid "Certificate ID number"
+msgstr "No d’identification du certificat"
+
+#: customer_specific/lms/templates/certificates/_accomplishment-rendering.html:80
+msgid "Date issued"
+msgstr "Date d’émission"
+
+#: customer_specific/lms/templates/certificates/_accomplishment-rendering.html:85
+msgid "Verify the authenticity of this certificate at"
+msgstr "Vérifiez l’authenticité de ce certificat à"
 
