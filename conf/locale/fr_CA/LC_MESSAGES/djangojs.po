@@ -7,25 +7,25 @@ msgstr ""
 "Project-Id-Version: Appsembler Theme (JavaScript)\n"
 "Language: fr-ca\n"
 
-#: lms/templates/discovery/_course-tile-01.underscore:12
+#: lms/templates/discovery/_course-tile-01.underscore:18
 #: lms/templates/discovery/_course-tile-02.underscore:9
 #: lms/templates/discovery/_course-tile-03.underscore:9
 msgid "Self-paced"
 msgstr "À votre rythme"
 
-#: lms/templates/discovery/_course-tile-01.underscore:12
+#: lms/templates/discovery/_course-tile-01.underscore:18
 #: lms/templates/discovery/_course-tile-02.underscore:9
 #: lms/templates/discovery/_course-tile-03.underscore:9
 msgid "Self-Paced"
 msgstr "À votre rythme"
 
-#: lms/templates/discovery/_course-tile-01.underscore:12
+#: lms/templates/discovery/_course-tile-01.underscore:18
 #: lms/templates/discovery/_course-tile-02.underscore:9
 #: lms/templates/discovery/_course-tile-03.underscore:9
 msgid "self-paced"
 msgstr "À votre rythme"
 
-#: lms/templates/discovery/_course-tile-01.underscore:12
+#: lms/templates/discovery/_course-tile-01.underscore:18
 #: lms/templates/discovery/_course-tile-02.underscore:9
 #: lms/templates/discovery/_course-tile-03.underscore:9
 msgid "SELF-PACED"
