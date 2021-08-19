@@ -369,3 +369,9 @@ div#unenroll-modal {
     border: $cta-button-border;
   }
 }
+
+.profile-wrapper .tickLabel {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
