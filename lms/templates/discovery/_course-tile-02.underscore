@@ -3,8 +3,17 @@
     <div class="a--course-tile-02__image" style="background-image: url('<%- image_url %>');">
     </div>
     <div class="a--course-tile-02__info">
-      <p class="a--course-tile-02__code"><%= content.number %></p>
-      <p class="a--course-tile-02__title"><%= content.display_name %></p>
+      <div>
+        <p class="a--course-tile-02__code">
+          <% if (content.display_coursenumber) { %>
+            <%= content.display_coursenumber %>
+          <% } else { %>
+            <%= content.number %>
+          <% } %>
+        </p>
+        <p class="a--course-tile-02__title"><%= content.display_name %></p>
+      </div>
+      <div>
       <p class="a--course-tile-02__start-date">
           <% if ([gettext("Self-paced"), gettext("Self-Paced"), gettext("self-paced"), gettext("SELF-PACED")].indexOf(gettext(start)) !== -1) { %>
             <%= gettext(start) %>
@@ -15,6 +24,7 @@
             ) %>
           <% } %>
         </p>
+      </div>
     </div>
   </a>
 </article>
