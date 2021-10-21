@@ -2,7 +2,7 @@ name: Sync prod with main
 on:
   push:
     branches:
-      - juniper/tahoe
+      - juniper/main
 jobs:
   auto-pull-request:
     name: PullRequestAction
