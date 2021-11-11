@@ -701,6 +701,12 @@ body.view-in-course {
       grid-template-columns: 2fr 1fr;
       background-color: #fff;
       border: calcRem(8) solid rgba($base-text-color, 0.04);
+
+      .video-wrapper {
+        width: 100% !important;
+        height: auto !important;
+        background-color: transparent;
+      }
   
       .subtitles {
         display: block;
