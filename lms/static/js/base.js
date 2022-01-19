@@ -87,6 +87,29 @@ $(document).ready(function(){
 	tag.src = "//www.youtube.com/player_api";
 	var firstScriptTag = document.getElementsByTagName('script')[0];
 	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+	console.log('something1')
+	// Load parameters automatically into registration form
+	if ($("#login-and-registration-container").length) {
+
+		console.log('something2')
+
+		const urlParams = new URLSearchParams(window.location.search);
+
+		if (urlParams.get('email') && $("#register-email").length) {
+			$("#register-email").value = urlParams.get('email');
+			$("#register-email").readOnly = true;
+		}
+
+		if (urlParams.get('fullname') && $("#register-name").length) {
+			$("#register-name").value = urlParams.get('fullname');
+			$("#register-name").readOnly = true;
+		}
+
+		if (urlParams.get('username') && $("#register-username").length) {
+			$("#register-username").value = urlParams.get('username');
+			$("#register-username").readOnly = true;
+		}
+	}
 });
 
 
