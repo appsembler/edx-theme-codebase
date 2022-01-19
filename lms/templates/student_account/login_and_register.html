@@ -17,6 +17,7 @@
     </%static:require_module>
 </%block>
 
+
 <%block name="header_extras">
   % if get_global_settings()['enable_registration_form']:
     % for template_name in ["account", "access", "form_field", "register", "institution_login", "institution_register", "password_reset", "hinted_login"]:
@@ -63,3 +64,39 @@
 <div class="section-bkg-wrapper">
     <div id="login-and-registration-container" class="login-register bs-container"></div>
 </div>
+
+
+<script type="text/javascript" defer>
+	// Load parameters automatically into registration form
+  function setFields(urlParams, attempts = 0) {
+    setTimeout(() => {
+      attempts = attempts + 1;
+      let set = false;
+      if (urlParams.get('email') && $("#register-email").length) {
+        $("#register-email").val(urlParams.get('email'));
+        $("#register-email").attr('disabled', 'true');
+        set = true;
+      }
+      if (urlParams.get('fullname') && $("#register-name").length) {
+        $("#register-name").val(urlParams.get('fullname'));
+        $("#register-name").attr('disabled', 'true');
+        set = true;
+      }
+      if (urlParams.get('username') && $("#register-username").length) {
+        $("#register-username").val(urlParams.get('username'));
+        $("#register-username").attr('disabled', 'true');
+        set = true;
+      }
+      if ((attempts < 12) && !set) {
+        setFields(urlParams, attempts);
+      }
+    }, 500)
+  };
+
+  $(document).ready(function(){
+    const urlParams = new URLSearchParams(window.location.search);
+    if ($("#login-and-registration-container").length && (urlParams.get('email') || urlParams.get('fullname') || urlParams.get('username'))) {
+      setFields(urlParams);
+    }
+  })
+</script>
