@@ -234,4 +234,4 @@ from pipeline_mako import render_require_js_path_overrides
     return url
 %>
 
-<%def name="add_login_query(url)">${_add_login_query(url, request, login_redirect_url)}</%def>
+<%def name="add_login_query(url, login_redirect_url=None)">${_add_login_query(url, request, login_redirect_url)}</%def>
