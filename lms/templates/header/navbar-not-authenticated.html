@@ -3,7 +3,7 @@
 <%page expression_filter="h"/>
 
 <%namespace name='static' file='../static_content.html'/>
-<%namespace file='../main.html' import="login_query"/>
+<%namespace file='../main.html' import="add_login_query"/>
 
 <%!
 from django.conf import settings
@@ -54,12 +54,12 @@ from six import text_type
       % if allow_public_account_creation:
         % if get_global_settings()['enable_registration_button']:
           <div class="mobile-nav-item hidden-mobile nav-item button-item">
-            <a class="register-btn btn" href="${get_global_settings()['register_url']}${login_query()}">${_("Register")}</a>
+            <a class="register-btn btn" href="${add_login_query(get_global_settings()['register_url'])}">${_("Register")}</a>
           </div>
         % endif
       % endif
       <div class="mobile-nav-item hidden-mobile nav-item button-item">
-          <a class="sign-in-btn btn" href="${get_global_settings()['login_url']}${login_query()}">${_("Sign in")}</a>
+          <a class="sign-in-btn btn" href="${add_login_query(get_global_settings()['login_url'])}">${_("Sign in")}</a>
       </div>
     % endif
   </div>

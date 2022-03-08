@@ -1,0 +1,92 @@
+
+
+// Import Bourbon.io
+@import "bourbon/bourbon";
+
+// Import Bootstrap variables
+@import "bootstrap/variables";
+@import "bootstrap";
+
+// Import various vendor specific scss
+@import "vendors/animate";
+
+// Import bg functions
+@import "base/functions";
+
+// Import variables
+@import "base/variables";
+
+// Import mixins
+@import "base/mixins";
+
+// Inject variables from site configuration
+@import "../../../customer_specific/lms/static/sass/base/branding-basics";
+
+// Set defaults in case some variables aren't defined
+@import "../../../customer_specific/lms/static/sass/base/site-config-variables-defaults";
+
+// Assign variables (adapt) to old variable names in the theme
+@import "../../../customer_specific/lms/static/sass/base/site-config-variables-adapter";
+
+// Import typography
+@import "base/typography";
+
+// Import basic styles
+@import "base/base";
+@import "base/buttons";
+@import "base/modals";
+@import "base/expanding-section";
+
+// Import site shared layout
+@import "shared/footer";
+@import "shared/header";
+
+// Import static-blocks specific sass
+@import "static-blocks/hero-section-01";
+@import "static-blocks/header-plus-text-plus-cta";
+@import "static-blocks/plain-content-01";
+@import "static-blocks/expanding-sections-list-01";
+@import "static-blocks/line-separator";
+@import "static-blocks/photo-grid-01";
+
+// Import live-blocks specific sass
+@import "live-blocks/single-course/course-tile-01";
+@import "live-blocks/single-course/course-tile-02";
+@import "live-blocks/single-course/course-tile-03";
+@import "live-blocks/course-listing/course-listing-01";
+@import "live-blocks/discovery/search-01";
+@import "live-blocks/discovery/facets-01";
+@import "live-blocks/dashboard-course-listing/dashboard-course-listing-01";
+@import "live-blocks/dashboard-search-results/dashboard-search-results--default";
+
+// Import courseware stuff
+@import "courseware/course-content-01";
+@import "courseware/progress";
+@import "courseware/static-pages";
+
+// Import discussions overrides
+@import "courseware/appsembler-discussion-overrides";
+
+// Import page specific templates sass
+@import "pages/404";
+@import "pages/course-about-01";
+@import "pages/course-catalogue-01";
+@import "pages/combined-login-register";
+@import "pages/account-settings";
+@import "pages/sysadmin-dashboard";
+@import "pages/instructor-dashboard";
+@import "pages/dashboard";
+@import "pages/wiki";
+@import "pages/learner-profile";
+
+// Import page builder sass
+@import "page-builder/page-builder";
+
+// Import custom customer-specific styles
+@import "../../../customer_specific/lms/static/sass/customer-specific";
+
+
+
+// Theme v2
+@import "v2/new";
+@import "common-elements/cookie-banner";
