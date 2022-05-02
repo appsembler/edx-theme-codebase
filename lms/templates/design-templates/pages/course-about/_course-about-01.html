@@ -137,7 +137,7 @@ from django.utils.translation import ugettext as _
           <li><i class="fa fa-calendar"></i><p>${_("Self-Paced")}</p></li>
       % endif
       % if course_vars['course_effort']:
-        <li><i class="fa fa-pencil"></i><p>${_("Estimated Effort")}</p><span>${course_vars['course_effort']}/week</span></li>
+        <li><i class="fa fa-pencil"></i><p>${_("Estimated Effort")}</p><span>${course_vars['course_effort']}<span id='effort-week-suffix'>/week</span></li>
       % endif
       % if course_vars['course_price'] and (course_vars['can_add_course_to_cart'] or course_vars['is_cosmetic_price_enabled']):
         <li><i class="fa fa-dollar"></i><p>${_("Price")}</p><span>${course_vars['course_price']}</span></li>
