@@ -18,7 +18,7 @@
 </%block>
 
 <%block name="header_extras">
-  % if get_global_settings()['enable_registration_form']:
+  % if get_global_settings().get('enable_registration_form', True):
     % for template_name in ["account", "access", "form_field", "register", "institution_login", "institution_register", "password_reset", "hinted_login"]:
         <script type="text/template" id="${template_name}-tpl">
             <%static:include path="student_account/${template_name}.underscore" />
@@ -29,7 +29,7 @@
           <%static:include path="student_account/sso-no-login-no-register.underscore" />
       </script>
     % else:
-      % if get_global_settings()['enable_registration_link_on_login']:
+      % if get_global_settings().get('enable_registration_link_on_login', True):
         <script type="text/template" id="login-tpl">
             <%static:include path="student_account/login.underscore" />
         </script>

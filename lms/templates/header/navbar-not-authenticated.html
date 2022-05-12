@@ -52,14 +52,14 @@ from six import text_type
   <div class="secondary">
     % if allows_login:
       % if allow_public_account_creation:
-        % if get_global_settings()['enable_registration_button']:
+        % if get_global_settings().get('enable_registration_button', True):
           <div class="mobile-nav-item hidden-mobile nav-item button-item">
-            <a class="register-btn btn" href="${add_login_query(get_global_settings()['register_url'])}">${_("Register")}</a>
+            <a class="register-btn btn" href="${add_login_query(get_global_settings().get('register_url', '/register'))}">${_("Register")}</a>
           </div>
         % endif
       % endif
       <div class="mobile-nav-item hidden-mobile nav-item button-item">
-          <a class="sign-in-btn btn" href="${add_login_query(get_global_settings()['login_url'])}">${_("Sign in")}</a>
+          <a class="sign-in-btn btn" href="${add_login_query(get_global_settings().get('login_url', '/login'))}">${_("Sign in")}</a>
       </div>
     % endif
   </div>
