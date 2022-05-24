@@ -22,6 +22,9 @@ from student.helpers import (
   DISABLE_UNENROLL_CERT_STATES,
 )
 from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_params
+from openedx.core.djangoapps.appsembler.html_certificates.helpers import get_course_blocks_completion_summary
+from openedx.core.djangoapps.content.block_structure.api import get_block_structure_manager
+from lms.djangoapps.grades.api import CourseGradeFactory
 %>
 
 <%
@@ -36,11 +39,40 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
   billing_email = settings.PAYMENT_SUPPORT_EMAIL
 
   is_course_expired = hasattr(show_courseware_link, 'error_code') and show_courseware_link.error_code == 'audit_expired'
+  
+  completion_summary = get_course_blocks_completion_summary(enrollment.course_id, user)
+  collected_block_structure = get_block_structure_manager(enrollment.course_id).get_collected()
+  course_grade = CourseGradeFactory().read(user, collected_block_structure=collected_block_structure)
 %>
 
 <%namespace name='static' file='../static_content.html'/>
 
 <li class="course-item">
+<p>start examples</p>
+<p>Certificates: Most of the certificates info you can find it on _dashboard_certificate_information.html, 
+  is well documented there what to show depending on the status. In the folowing variable you can access to the same info.</p>
+<p>${cert_status}</p>
+
+<p>Completion info:</p>
+<p>Here is the completion summary:</p>
+<p>${completion_summary}</p>
+<p>You can calculate the percentage like this:</p>
+<% 
+  if completion_summary['incomplete_count'] > 0:
+    completion_percent = 100 * float(completion_summary['complete_count'])/float(completion_summary['incomplete_count'])
+  else:
+    completion_percent = 0
+%>
+<p>${completion_percent}%</p>
+
+<p>And finally the grade info:</p>
+<p>${course_grade}</p>
+<p>you can access to it as an object</p>
+<p>${course_grade.percent}</p>
+<p>${course_grade.letter_grade}</p>
+<p>${course_grade.passed}</p>
+
+<p>end examples</p>
   % if display_course_modes_on_dashboard:
     <%
         course_verified_certs = enrollment_mode_display(
