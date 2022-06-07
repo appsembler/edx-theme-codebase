@@ -1,0 +1,62 @@
+<%namespace name='static' file='/static_content.html'/>
+<%page expression_filter="h"/>
+<%inherit file="base.html" />
+<%def name="online_help_token()"><% return "login" %></%def>
+<%!
+from django.utils.translation import ugettext as _
+from django.urls import reverse
+from openedx.core.djangoapps.appsembler.tahoe_idp import helpers as tahoe_idp_helpers
+%>
+<%block name="title">${_("Sign In")}</%block>
+<%block name="bodyclass">not-signedin view-signin</%block>
+
+<%block name="content">
+
+<div class="wrapper-content wrapper">
+  <section class="content">
+    <header>
+      <h1 class="title title-1">${_("Sign In to {studio_name}").format(studio_name=settings.STUDIO_NAME)}</h1>
+    </header>
+    %if tahoe_idp_helpers.is_studio_login_form_overridden():
+      <div class="studio-no-login-container">
+        <span class="studio-no-login-message">
+        ${_("You’re not logged into studio yet.")}
+        <br><br>
+        ${_("If you’re authorized to access Studio, then please go to LMS and open studio from the menu.")}
+        ${_("If the Studio link does not show in your menu, then please contact your administrator to give you access")}
+        </span>
+        <img src="${static.url('images/studio-in-menu.png')}" class="studio-no-login-screenshot"/>
+      </div>
+    %else:
+      <article class="content-primary">
+        <div class=""><!-- What class for a dive to wrap the form? -->
+          <form method="post">
+            %if login_error_message:
+              <div id="login_error"
+                   class="message message-status error is-shown"
+                   style="display: block;">
+                 <p>${_(login_error_message)}</p>
+               </div>
+            %endif
+            <fieldset>
+              <input type="hidden" id="csrf_token" name="csrfmiddlewaretoken" value="${csrf_token}">
+              <ol class="list-input">
+                <li class="field text required" id="field-email">
+                  <label for="email">${_("E-mail")}</label>
+                  <input id="email" type="email" name="email" placeholder="${_('example: username@domain.com')}"/>
+                </li>
+                   <li class="field text required" id="field-password">
+                  <label for="password">${_("Password")}</label>
+                  <input id="password" type="password" name="password" />
+                  <a href="${forgot_password_link}" class="action action-forgotpassword">${_("Forgot password?")}</a>
+                </li>
+              </ol>
+            </fieldset>
+            <button type="submit" name="submit" class="action action-primary">Sign in here</button>
+          </form>
+        </div>
+      </article>
+    %endif
+  </section>
+</div>
+</%block>
