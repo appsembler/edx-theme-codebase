@@ -19,14 +19,16 @@
 // Import mixins
 @import "base/mixins";
 
-// Inject variables from site configuration
-@import "../../../customer_specific/lms/static/sass/base/branding-basics";
-
 // Set defaults in case some variables aren't defined
 @import "../../../customer_specific/lms/static/sass/base/tahoe-v2-variables-defaults";
 
+// Load set variables from site config
+@import "../../../customer_specific/lms/static/sass/base/tahoe-v2-variables-overrides";
+
 // Assign variables (adapt) to old variable names in the theme
 @import "../../../customer_specific/lms/static/sass/base/tahoe-v2-variables-adapter";
+
+
 
 // Import typography
 @import "base/typography";
