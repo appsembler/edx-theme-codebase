@@ -29,7 +29,7 @@
               % if item.get('open_in_new_tab'):
                 target="_blank"
               % endif
-              >${translate(item.get('link_title', 'Link title'))}</a>
+              >${translate(item.get('link_title', item.get('label', 'Link title')))}</a>
             </li>
             % endfor
           </ul>
