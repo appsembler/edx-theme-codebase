@@ -34,7 +34,7 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
               target="_blank"
             % endif
           >
-            ${translate(item.get('link_title', 'Link title'))}
+            ${translate(item.get('link_title', item.get('label', 'Link title')))}
           </a>
         </div>
       % endfor
