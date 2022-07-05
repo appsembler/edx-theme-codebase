@@ -18,6 +18,8 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
 
 %>
 
+<%namespace file='/theme-variables.html' import="get_global_settings" />
+
 ## Provide a hook for themes to inject branding on top.
 <%block name="navigation_top" />
 
@@ -77,7 +79,7 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
 <![endif]-->
 % endif
 
-% if settings.FEATURES.get('ENABLE_COOKIE_CONSENT', False):
+% if get_global_settings().get('cookie_notification_enabled', False):
   <%include file="../widgets/cookie-consent.html" />
 % endif
 
