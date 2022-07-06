@@ -9,9 +9,17 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.1/cookieconsent.min.js"></script>
 
 <%
-  cookie_notification_body = translate(get_global_settings().get('cookie_notification_body', _('This website uses cookies to ensure you get the best experience on our website. If you continue browsing this site, we understand that you accept the use of cookies.')))
+  cookie_notification_custom_body = translate(get_global_settings().get('cookie_notification_body', ''))
+  cookie_notification_default_body = _('This website uses cookies to ensure you get the best experience on our website. If you continue browsing this site, we understand that you accept the use of cookies.')
+  if cookie_notification_custom_body:
+    cookie_notification_body = cookie_notification_custom_body
+  else:
+    cookie_notification_body = cookie_notification_default_body
+  endif
   cookie_notification_dismiss_button_text = translate(get_global_settings().get('cookie_notification_dismiss_button_text', _('Got it!')))
 %>
+
+## Docs for the JS widget: https://www.osano.com/cookieconsent/documentation/javascript-api/
 
 <script>
 window.addEventListener("load", function(){
@@ -26,7 +34,6 @@ window.addEventListener("load", function(){
     "content": {
       "message": "${cookie_notification_body}",
       "dismiss": "${cookie_notification_dismiss_button_text}",
-      "link": "${_('Learn more')}",
     },
     theme: "classic",
     "elements": {
