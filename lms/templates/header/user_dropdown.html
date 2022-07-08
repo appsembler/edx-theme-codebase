@@ -25,6 +25,11 @@ displayname = get_enterprise_learner_generic_name(request) or username
 ## Enterprises with the learner portal enabled should not show order history, as it does
 ## not apply to the learner's method of purchasing content.
 should_show_order_history = should_redirect_to_order_history_microfrontend() and not enterprise_customer_portal
+
+def show_studio_link(user):
+    if tahoe_idp_helpers.is_studio_login_form_overridden() or tahoe_idp_helpers.is_tahoe_idp_enabled():
+        return tahoe_idp_helpers.is_studio_allowed_for_user(user)
+    return False
 %>
 <%! from openedx.core.djangoapps.appsembler.tahoe_idp import helpers as tahoe_idp_helpers %>
 
@@ -44,7 +49,7 @@ should_show_order_history = should_redirect_to_order_history_microfrontend() and
             <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${resume_block}" role="menuitem">${_("Resume your last course")}</a></div>
         % endif
         <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${reverse('dashboard')}" role="menuitem">${_("Dashboard")}</a></div>
-        % if tahoe_idp_helpers.is_tahoe_idp_enabled() and tahoe_idp_helpers.is_studio_allowed_for_user(self.real_user):
+        % if show_studio_link(self.real_user):
             <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${reverse('tahoe_idp:studio')}" role="menuitem">${_("Studio")}</a></div>
         % endif
         <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${reverse('learner_profile', kwargs={'username': username})}" role="menuitem">${_("Profile")}</a></div>
