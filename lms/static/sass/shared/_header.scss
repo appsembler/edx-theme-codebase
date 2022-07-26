@@ -285,7 +285,7 @@
           }
         }
   
-        a.sign-in-btn {
+        a.sign-in-btn, a.menu-btn {
           border-radius: $buttons-border-radius;
           padding: calcRem(10) calcRem(20);
           border: $cta-button-border;
@@ -318,7 +318,7 @@
           }
         }
   
-        a.sign-in-btn {
+        a.sign-in-btn, a.menu-btn {
           border-radius: $buttons-border-radius;
           padding: calcRem(10) calcRem(20);
           border: 2px solid pick-visible-color($header-bg-color, $base-text-color, #fff);
