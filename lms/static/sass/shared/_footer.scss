@@ -81,6 +81,21 @@
           text-decoration: underline;
           text-decoration-style: dotted;
         }
+
+        &.menu-btn {
+          border-radius: $buttons-border-radius;
+          padding: calcRem(10) calcRem(20);
+          border: 2px solid $footer-link-color;
+          background-color: $footer-link-color;
+          color: $footer-bg-color;
+  
+          &:hover, &:focus {
+            background-color: $footer-bg-color;
+            color: $footer-link-color;
+            border: 2px solid $footer-link-color;
+            text-decoration: none;
+          }
+        }
       }
     }
 

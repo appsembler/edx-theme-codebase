@@ -25,11 +25,17 @@
             % endif
             % for item in footer_links:
             <li class="">
-              <a href="${item.get('link_URL', item.get('url'))}" class="${item.get('special_class')}"
-              % if item.get('open_in_new_tab'):
+              <a
+                href="${item.get('link_URL', item.get('url'))}"
+                % if item.get('is_button'):
+                class="menu-btn"
+              % endif
+              % if item.get('open_in_new_tab', item.get('opens_new_tab')):
                 target="_blank"
               % endif
-              >${translate(item.get('link_title', item.get('label', 'Link title')))}</a>
+              >
+                ${translate(item.get('link_title', item.get('label', 'Link title')))}
+              </a>
             </li>
             % endfor
           </ul>
