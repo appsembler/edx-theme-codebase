@@ -17,6 +17,8 @@
     cookie_notification_body = cookie_notification_default_body
   endif
   cookie_notification_dismiss_button_text = translate(get_global_settings().get('cookie_notification_dismiss_button_text', _('Got it!')))
+  cookie_notification_link_text = translate(get_global_settings().get('cookie_notification_link_text', _('Learn more')))
+  cookie_notification_link_href = translate(get_global_settings().get('cookie_notification_link_href', 'https://www.cookiesandyou.com'))
 %>
 
 ## Docs for the JS widget: https://www.osano.com/cookieconsent/documentation/javascript-api/
@@ -34,6 +36,8 @@ window.addEventListener("load", function(){
     "content": {
       "message": "${cookie_notification_body}",
       "dismiss": "${cookie_notification_dismiss_button_text}",
+      "link": "${cookie_notification_link_text}",
+      "href": "${cookie_notification_link_href}",
     },
     theme: "classic",
     "elements": {
