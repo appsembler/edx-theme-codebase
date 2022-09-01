@@ -21,6 +21,16 @@
       box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     }
 
+    .cc-link {
+      color: $brand-primary-color;
+      font-weight: bold;
+      text-decoration: underline;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+
     .cc-btn {
       border-radius: $buttons-border-radius;
       padding: calcRem(10) calcRem(20);
