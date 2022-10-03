@@ -1,6 +1,8 @@
 ## mako
 <%page expression_filter="h"/>
-<%namespace name='static' file='static_content.html'/>
+<%namespace name='static' file='../static_content.html'/>
+
+<%namespace file='/theme-variables.html' import="get_global_settings" />
 
 <%!
 import json
@@ -22,8 +24,13 @@ from openedx.core.djangoapps.appsembler.tahoe_idp import helpers as tahoe_idp_he
 self.real_user = getattr(user, 'real_user', user)
 profile_image_url = get_profile_image_urls_for_user(self.real_user)['medium']
 username = self.real_user.username
+email = self.real_user.email
 resume_block = retrieve_last_sitewide_block_completed(self.real_user)
-displayname = get_enterprise_learner_generic_name(request) or username
+if (get_global_settings().get('lms_dropdown_displayname_setting', 'username') == 'username'):
+    displayname = get_enterprise_learner_generic_name(request) or username
+else:
+    displayname = get_enterprise_learner_generic_name(request) or email
+endif
 ## Enterprises with the learner portal enabled should not show order history, as it does
 ## not apply to the learner's method of purchasing content.
 should_show_order_history = should_redirect_to_order_history_microfrontend() and not enterprise_customer_portal
