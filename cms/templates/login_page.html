@@ -6,7 +6,15 @@
 from django.utils.translation import ugettext as _
 from django.urls import reverse
 from openedx.core.djangoapps.appsembler.tahoe_idp import helpers as tahoe_idp_helpers
+from openedx.core.djangoapps.theming.helpers import get_current_request
+
+cusomized_form = tahoe_idp_helpers.is_studio_login_form_overridden()
 %>
+
+<%def name="get_redirect_url_to_lms()"><%
+return tahoe_idp_helpers.get_redirect_to_lms_login_url(get_current_request()) if cusomized_form else ''
+%></%def>
+
 <%block name="title">${_("Sign In")}</%block>
 <%block name="bodyclass">not-signedin view-signin</%block>
 
@@ -14,10 +22,27 @@ from openedx.core.djangoapps.appsembler.tahoe_idp import helpers as tahoe_idp_he
 
 <div class="wrapper-content wrapper">
   <section class="content">
-    <header>
-      <h1 class="title title-1">${_("Sign In to {studio_name}").format(studio_name=settings.STUDIO_NAME)}</h1>
-    </header>
-    %if tahoe_idp_helpers.is_studio_login_form_overridden():
+    %if cusomized_form and get_redirect_url_to_lms():
+      <header>
+        <h1 class="title title-1">
+          ${_("Redirecting to LMS login...")}
+        </h1>
+      </header>
+      <div>
+        <span>
+          ${_("if the page doesn't redirect automatically, then please ")}
+        </span>
+        <a href="${get_redirect_url_to_lms()}">click here</a>
+        <br><br><br>
+      </div>
+      <script id="tahoe-studio-logout-script" type="application/javascript" data-url="${get_redirect_url_to_lms()}">
+        const redirectUrl = document.getElementById('tahoe-studio-logout-script').dataset.url;
+        window.location = redirectUrl;
+      </script>
+    %elif cusomized_form:
+      <header>
+        <h1 class="title title-1">${_("Sign In to {studio_name}").format(studio_name=settings.STUDIO_NAME)}</h1>
+      </header>
       <div class="studio-no-login-container">
         <span class="studio-no-login-message">
         ${_("You’re not logged into studio yet.")}
