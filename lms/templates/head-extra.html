@@ -20,6 +20,10 @@
   <meta name="apple-itunes-app" content="app-id=${get_global_settings().get('apple_app_id', '')}">
 % endif
 
+% if get_global_settings().get('seo_default_site_description'):
+  <meta name="description" content="${get_global_settings().get('seo_default_site_description')}" />
+% endif
+
 % if get_global_settings().get('custom_site_meta_tags'):
   % for meta_tag in get_global_settings().get('custom_site_meta_tags'):
     % if meta_tag.get('tagName'):
