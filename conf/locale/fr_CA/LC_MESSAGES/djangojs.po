@@ -8,26 +8,26 @@ msgstr ""
 "Language: fr-ca\n"
 
 #: lms/templates/discovery/_course-tile-01.underscore:18
-#: lms/templates/discovery/_course-tile-02.underscore:9
-#: lms/templates/discovery/_course-tile-03.underscore:9
+#: lms/templates/discovery/_course-tile-02.underscore:18
+#: lms/templates/discovery/_course-tile-03.underscore:15
 msgid "Self-paced"
 msgstr "À votre rythme"
 
 #: lms/templates/discovery/_course-tile-01.underscore:18
-#: lms/templates/discovery/_course-tile-02.underscore:9
-#: lms/templates/discovery/_course-tile-03.underscore:9
+#: lms/templates/discovery/_course-tile-02.underscore:18
+#: lms/templates/discovery/_course-tile-03.underscore:15
 msgid "Self-Paced"
 msgstr "À votre rythme"
 
 #: lms/templates/discovery/_course-tile-01.underscore:18
-#: lms/templates/discovery/_course-tile-02.underscore:9
-#: lms/templates/discovery/_course-tile-03.underscore:9
+#: lms/templates/discovery/_course-tile-02.underscore:18
+#: lms/templates/discovery/_course-tile-03.underscore:15
 msgid "self-paced"
 msgstr "À votre rythme"
 
 #: lms/templates/discovery/_course-tile-01.underscore:18
-#: lms/templates/discovery/_course-tile-02.underscore:9
-#: lms/templates/discovery/_course-tile-03.underscore:9
+#: lms/templates/discovery/_course-tile-02.underscore:18
+#: lms/templates/discovery/_course-tile-03.underscore:15
 msgid "SELF-PACED"
 msgstr "À votre rythme"
 
@@ -39,7 +39,7 @@ msgstr "Connectez-vous en utilisant l'un des fournisseurs ci-dessous."
 msgid "Sign in with:"
 msgstr "S'enregistrer avec:"
 
-#: lms/templates/discovery/_course-tile-03.underscore:18
+#: lms/templates/discovery/_course-tile-03.underscore:24
 msgid "%(start_date)s"
 msgstr "%(start_date)s"
 
@@ -49,5 +49,5 @@ msgstr "(Cliquer pour désactiver)"
 
 #: lms/templates/student_account/form_field.underscore:136
 msgid "Forgot password?"
-msgstr ""
+msgstr "Mot de passe oublié?"
 

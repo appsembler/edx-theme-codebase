@@ -103,6 +103,7 @@ msgstr ""
 "Térms öf Sérvïçé änd Prïväçý Pölïçý Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєт#"
 
 #: customer_specific/lms/templates/theme-variables.html
+#: customer_specific/lms/templates/theme-variables.html
 msgid ""
 "edX, Open edX and the edX and Open edX logos are trademarks or registered "
 "trademarks of edX Inc."
@@ -111,13 +112,16 @@ msgstr ""
 "trädémärks öf édX Ìnç. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, #"
 
 #: customer_specific/lms/templates/theme-variables.html
+#: customer_specific/lms/templates/theme-variables.html
 msgid "Platform Name"
 msgstr "Plätförm Nämé Ⱡ'σяєм ιρѕυм ∂σłσя ѕι#"
 
 #: customer_specific/lms/templates/theme-variables.html
+#: customer_specific/lms/templates/theme-variables.html
 msgid "We hereby certify that:"
 msgstr "Wé héréßý çértïfý thät: Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
 
+#: customer_specific/lms/templates/theme-variables.html
 #: customer_specific/lms/templates/theme-variables.html
 msgid ""
 "successfully completed, received a passing grade, and was awarded this "
@@ -127,11 +131,13 @@ msgstr ""
 "plätförm's Hönör Çödé Çértïfïçäté öf Çömplétïön ïn: Ⱡ'σяєм ιρѕ#"
 
 #: customer_specific/lms/templates/theme-variables.html
+#: customer_specific/lms/templates/theme-variables.html
 msgid "Our platform offers interactive online classes and MOOCs."
 msgstr ""
 "Öür plätförm öfférs ïntéräçtïvé önlïné çlässés änd MÖÖÇs. Ⱡ'σяєм ιρѕυм ∂σłσя"
 " ѕιт αмєт, ¢σηѕє¢тєтυя α#"
 
+#: customer_specific/lms/templates/theme-variables.html
 #: customer_specific/lms/templates/theme-variables.html
 msgid ""
 "Our platform acknowledges achievements through certificates, which are "
@@ -146,6 +152,7 @@ msgstr ""
 "¢ιłłυм ∂σłσяє єυ ƒυgιαт ηυłłα ραяιαтυя. єχ¢єρтєυя ѕιηт σ¢¢αє¢αт ¢υρι∂αтαт "
 "ηση ρяσι∂єηт, ѕυηт ιη ¢υłρα qυι σƒƒι¢ια ∂єѕєяυηт мσłłιт αηιм ι∂ єѕт łαвσ#"
 
+#: customer_specific/lms/templates/theme-variables.html
 #: customer_specific/lms/templates/theme-variables.html
 msgid "{copy_sign} {year} {platform_name}. All rights reserved."
 msgstr ""
@@ -229,7 +236,7 @@ msgstr ""
 "νєłιт єѕѕє ¢ιłłυм ∂σłσяє єυ ƒυgιαт ηυłłα ραяιαтυя. єχ¢єρтєυя ѕιηт σ¢¢αє¢αт "
 "¢υρι∂αтαт ηση ρяσι∂єηт, ѕυηт ιη ¢υłρα qυι σƒƒι¢ια ∂єѕєяυ#"
 
-#: customer_specific/cms/templates/login.html
+#: cms/templates/login_page.html customer_specific/cms/templates/login.html
 #: customer_specific/cms/templates/login.html
 msgid "Sign In to {studio_name}"
 msgstr "Sïgn Ìn tö {studio_name} Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт#"
@@ -445,3 +452,77 @@ msgstr ""
 "\n"
 "                    Thïs mäý täké ä mïnüté. Ìf ýöü äré nöt rédïréçtéd, gö tö thé hömé pägé.\n"
 "                     Ⱡ'σяєм ιρѕυм ∂σłσ#"
+
+#: customer_specific/lms/templates/certificates/_accomplishment-rendering.html
+msgid "Certificate ID number"
+msgstr "Çértïfïçäté ÌD nümßér Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, #"
+
+#: customer_specific/lms/templates/certificates/_accomplishment-rendering.html
+msgid "Date issued"
+msgstr "Däté ïssüéd Ⱡ'σяєм ιρѕυм ∂σłσя #"
+
+#: customer_specific/lms/templates/certificates/_accomplishment-rendering.html
+msgid "Verify the authenticity of this certificate at"
+msgstr ""
+"Vérïfý thé äüthéntïçïtý öf thïs çértïfïçäté ät Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тєтυя α#"
+
+#: cms/templates/login_page.html
+msgid "Redirecting to LMS login..."
+msgstr "Rédïréçtïng tö LMS lögïn... Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє#"
+
+#: cms/templates/login_page.html
+msgid "if the page doesn't redirect automatically, then please "
+msgstr ""
+"ïf thé pägé döésn't rédïréçt äütömätïçällý, thén pléäsé  Ⱡ'σяєм ιρѕυм ∂σłσя "
+"ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+
+#: cms/templates/login_page.html
+msgid "You’re not logged into studio yet."
+msgstr ""
+"Ýöü’ré nöt löggéd ïntö stüdïö ýét. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєт#"
+
+#: cms/templates/login_page.html
+msgid ""
+"If you’re authorized to access Studio, then please go to LMS and open studio"
+" from the menu."
+msgstr ""
+"Ìf ýöü’ré äüthörïzéd tö äççéss Stüdïö, thén pléäsé gö tö LMS änd öpén stüdïö"
+" fröm thé ménü. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢ση#"
+
+#: cms/templates/login_page.html
+msgid ""
+"If the Studio link does not show in your menu, then please contact your "
+"administrator to give you access"
+msgstr ""
+"Ìf thé Stüdïö lïnk döés nöt shöw ïn ýöür ménü, thén pléäsé çöntäçt ýöür "
+"ädmïnïsträtör tö gïvé ýöü äççéss Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт α#"
+
+#: cms/templates/login_page.html
+msgid "Forgot password?"
+msgstr "Förgöt pässwörd? Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αм#"
+
+#: lms/templates/header/user_dropdown.html
+msgid "Studio"
+msgstr "Stüdïö Ⱡ'σяєм ιρѕυ#"
+
+#: lms/templates/logout.html
+msgid "To delete your single signed on (SSO) session:"
+msgstr ""
+"Tö délété ýöür sïnglé sïgnéd ön (SSÖ) séssïön: Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тєтυя α#"
+
+#: lms/templates/logout.html
+msgid "Click here"
+msgstr "Çlïçk héré Ⱡ'σяєм ιρѕυм ∂σłσ#"
+
+#: lms/templates/logout.html
+msgid "If you are not redirected within 5 seconds:"
+msgstr ""
+"Ìf ýöü äré nöt rédïréçtéd wïthïn 5 séçönds: Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тєтυя #"
+
+#: lms/templates/logout.html
+msgid "click here to go to the home page"
+msgstr ""
+"çlïçk héré tö gö tö thé hömé pägé Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тє#"

@@ -8,26 +8,26 @@ msgstr ""
 "Language: es\n"
 
 #: lms/templates/discovery/_course-tile-01.underscore:18
-#: lms/templates/discovery/_course-tile-02.underscore:9
-#: lms/templates/discovery/_course-tile-03.underscore:9
+#: lms/templates/discovery/_course-tile-02.underscore:18
+#: lms/templates/discovery/_course-tile-03.underscore:15
 msgid "Self-paced"
 msgstr ""
 
 #: lms/templates/discovery/_course-tile-01.underscore:18
-#: lms/templates/discovery/_course-tile-02.underscore:9
-#: lms/templates/discovery/_course-tile-03.underscore:9
+#: lms/templates/discovery/_course-tile-02.underscore:18
+#: lms/templates/discovery/_course-tile-03.underscore:15
 msgid "Self-Paced"
 msgstr ""
 
 #: lms/templates/discovery/_course-tile-01.underscore:18
-#: lms/templates/discovery/_course-tile-02.underscore:9
-#: lms/templates/discovery/_course-tile-03.underscore:9
+#: lms/templates/discovery/_course-tile-02.underscore:18
+#: lms/templates/discovery/_course-tile-03.underscore:15
 msgid "self-paced"
 msgstr ""
 
 #: lms/templates/discovery/_course-tile-01.underscore:18
-#: lms/templates/discovery/_course-tile-02.underscore:9
-#: lms/templates/discovery/_course-tile-03.underscore:9
+#: lms/templates/discovery/_course-tile-02.underscore:18
+#: lms/templates/discovery/_course-tile-03.underscore:15
 msgid "SELF-PACED"
 msgstr ""
 
@@ -39,7 +39,7 @@ msgstr ""
 msgid "Sign in with:"
 msgstr ""
 
-#: lms/templates/discovery/_course-tile-03.underscore:18
+#: lms/templates/discovery/_course-tile-03.underscore:24
 msgid "%(start_date)s"
 msgstr ""
 

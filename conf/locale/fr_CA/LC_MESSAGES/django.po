@@ -55,10 +55,10 @@ msgstr "Embargo"
 msgid "Press"
 msgstr "Presse"
 
-#: customer_specific/cms/templates/widgets/header.html:230
-#: customer_specific/cms/templates/widgets/header.html:256
+#: customer_specific/cms/templates/widgets/header.html:225
+#: customer_specific/cms/templates/widgets/header.html:251
 msgid "Appsembler Online Knowledgebase"
-msgstr ""
+msgstr "Base de connaissances en ligne d’Appsembler"
 
 #: customer_specific/lms/templates/certificates/server-error.html:16
 msgid "The institution&#39;s logo."
@@ -70,11 +70,11 @@ msgstr "S'inscrire"
 
 #: lms/templates/design-templates/pages/course-catalogue/_course-catalogue-01.html:20
 msgid "Hide search filters"
-msgstr ""
+msgstr "Masquer les filtres de recherche"
 
 #: lms/templates/design-templates/pages/course-catalogue/_course-catalogue-01.html:21
 msgid "Show search filters"
-msgstr ""
+msgstr "Afficher les filtres de recherche"
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html:63
 msgid "Course Display Name:"
@@ -84,49 +84,56 @@ msgstr "Nom d'affichage du cours:"
 msgid "Terms of Service and Privacy Policy"
 msgstr "Charte de Service et Règles de Confidentialité"
 
-#: customer_specific/lms/templates/theme-variables.html:163
+#: customer_specific/lms/templates/theme-variables.html:285
+#: customer_specific/lms/templates/theme-variables.html:296
 msgid "edX, Open edX and the edX and Open edX logos are trademarks or registered trademarks of edX Inc."
 msgstr "edX, Open edX, ainsi que les logos edX et Open edX sont des marques déposées ou marques de edX Inc."
 
-#: customer_specific/lms/templates/theme-variables.html:370
+#: customer_specific/lms/templates/theme-variables.html:504
+#: customer_specific/lms/templates/theme-variables.html:529
 msgid "Platform Name"
 msgstr "Nom de la plateforme"
 
-#: customer_specific/lms/templates/theme-variables.html:374
+#: customer_specific/lms/templates/theme-variables.html:508
+#: customer_specific/lms/templates/theme-variables.html:533
 msgid "We hereby certify that:"
-msgstr ""
+msgstr "Nous certifions par la présente que :"
 
-#: customer_specific/lms/templates/theme-variables.html:375
+#: customer_specific/lms/templates/theme-variables.html:509
+#: customer_specific/lms/templates/theme-variables.html:534
 msgid "successfully completed, received a passing grade, and was awarded this platform's Honor Code Certificate of Completion in:"
-msgstr ""
+msgstr "a réussi le cours suivant et reçoit ainsi le certificat de réussite :"
 
-#: customer_specific/lms/templates/theme-variables.html:377
+#: customer_specific/lms/templates/theme-variables.html:511
+#: customer_specific/lms/templates/theme-variables.html:536
 msgid "Our platform offers interactive online classes and MOOCs."
-msgstr ""
+msgstr "Notre plateforme propose des cours en ligne interactifs."
 
-#: customer_specific/lms/templates/theme-variables.html:379
+#: customer_specific/lms/templates/theme-variables.html:513
+#: customer_specific/lms/templates/theme-variables.html:538
 msgid "Our platform acknowledges achievements through certificates, which are awarded for course activities that our platform students complete."
-msgstr ""
+msgstr "Vous recevrez un certificat à la fin de chaque cours réussi sur notre plateforme."
 
-#: customer_specific/lms/templates/theme-variables.html:151
+#: customer_specific/lms/templates/theme-variables.html:266
+#: customer_specific/lms/templates/theme-variables.html:272
 msgid "{copy_sign} {year} {platform_name}. All rights reserved."
 msgstr "{copy_sign} {year} {platform_name}. Tous droits réservés."
 
 #: customer_specific/cms/templates/site-unavailable.html:19
 msgid "The site for {organization_name} is currently unavailable. Please contact your administrator."
-msgstr ""
+msgstr "Il est actuellement impossible d’accéder au site de {organization_name}. Veuillez contacter votre administrateur."
 
 #: customer_specific/lms/templates/static_templates/site-unavailable.html:9
 msgid "Site unavailable"
-msgstr ""
+msgstr "Site non disponible"
 
 #: customer_specific/lms/templates/static_templates/site-unavailable.html:15
 msgid "{platform_name} Page Unavailable"
-msgstr ""
+msgstr "Page non disponible sur {platform_name}"
 
 #: customer_specific/lms/templates/static_templates/site-unavailable.html:26
 msgid "The site {platform_name} is currently unavailable. Please contact your administrator."
-msgstr ""
+msgstr "Il est actuellement impossible d’accéder à la plateforme {platform_name}. Veuillez contacter votre administrateur."
 
 #: customer_specific/lms/templates/emails/activation_email.txt:3
 msgid "Thank you for creating an account with {platform_name}!"
@@ -144,119 +151,122 @@ msgstr "Si vous n'avez pas créé de compte, vous n'avez rien à faire ; vous ne
 msgid "We have sent you an activation email - please click the link in the email to activate your account, as you will not be able to sign in again without activating."
 msgstr "Nous vous avons envoyé votre courriel d’activation – merci de cliquer sur le lien dans ce courriel afin d’activer votre compte, car vous ne pourrez plus vous connecter sans avoir complété l’activation."
 
+#: cms/templates/login_page.html:44
 #: customer_specific/cms/templates/login.html:18
 #: customer_specific/cms/templates/login.html:46
 msgid "Sign In to {studio_name}"
-msgstr ""
+msgstr "Connexion à {studio_name}"
 
 #: customer_specific/cms/templates/login.html:21
 msgid "Don't have a {studio_name} Account? Sign up!"
-msgstr ""
+msgstr "Vous n’avez pas de compte {studio_name}? Inscrivez-vous!"
 
 #: customer_specific/cms/templates/login.html:29
 msgid "Required Information to Sign In to {studio_name}"
-msgstr ""
+msgstr "Renseignements requis pour se connecter à {studio_name}"
 
 #: customer_specific/lms/templates/emails/add_beta_tester_email_message.txt:8
 #: customer_specific/lms/templates/emails/enroll_email_enrolledmessage.txt:7
 msgid "Dear {full_name}"
-msgstr ""
+msgstr "Bonjour {full_name}"
 
 #: customer_specific/lms/templates/emails/add_beta_tester_email_message.txt:10
 msgid "You have been invited to be a beta tester for {course_name} at {site_name} by a member of the course staff."
-msgstr ""
+msgstr "Un membre de l’équipe de formation vous invite à tester le cours {course_name} de {site_name}."
 
 #: customer_specific/lms/templates/emails/add_beta_tester_email_message.txt:17
 #: customer_specific/lms/templates/emails/enroll_email_enrolledmessage.txt:16
 msgid "To start accessing course materials, please visit {course_url}"
-msgstr ""
+msgstr "Pour accéder au cours, visitez {course_url}."
 
 #: customer_specific/lms/templates/emails/add_beta_tester_email_message.txt:21
 msgid "Visit {course_about_url} to join the course and begin the beta test."
-msgstr ""
+msgstr "Visitez {course_about_url} pour accéder au cours et commencer le test."
 
 #: customer_specific/lms/templates/emails/add_beta_tester_email_message.txt:23
 msgid "Visit {site_name} to enroll in the course and begin the beta test."
-msgstr ""
+msgstr "Visitez {site_name} pour vous inscrire au cours et commencer le test."
 
 #: customer_specific/lms/templates/emails/add_beta_tester_email_message.txt:27
 #: customer_specific/lms/templates/emails/enroll_email_allowedmessage.txt:46
 msgid "This email was automatically sent from {site_name} to {email_address}"
-msgstr ""
+msgstr "Ce courriel a été automatiquement envoyé de {site_name} à {email_address}."
 
 #: customer_specific/lms/templates/emails/confirm_email_change.txt:4
 msgid "This is to confirm that you changed the e-mail associated with {platform_name} from {old_email} to {new_email}. If you did not make this request, please contact us immediately. Contact information is listed at:"
-msgstr ""
+msgstr "Le courriel associé à votre compte sur {platform_name} a bien été changé de {old_email} à {new_email}. Si vous n’avez pas fait cette demande, contactez-nous immédiatement. Vous trouverez nos coordonnées à :"
 
 #: customer_specific/lms/templates/emails/email_change.txt:19
 msgid "If you didn't request this, you don't need to do anything; you won't receive any more email from us. Please do not reply to this e-mail; if you require assistance, check the help section of the {platform_name} web site."
-msgstr ""
+msgstr "Si vous n’avez pas fait cette demande, vous n’avez rien à faire; vous ne recevrez plus de courriel de notre part. Ne répondez pas à ce courriel. Si vous avez besoin d’aide, consultez la section d’aide du site Web de {platform_name}."
 
 #: customer_specific/lms/templates/emails/enroll_email_allowedmessage.txt:11
 msgid "You have been invited to join {course_name} at {site_name} by a member of the course staff."
-msgstr ""
+msgstr "Un membre de l’équipe de formation vous invite à suivre le cours {course_name} sur {site_name}."
 
 #: customer_specific/lms/templates/emails/enroll_email_allowedmessage.txt:19
 msgid "To access the course visit {course_url} and login."
-msgstr ""
+msgstr "Pour accéder au cours, visitez {course_url} et connectez-vous."
 
 #: customer_specific/lms/templates/emails/enroll_email_allowedmessage.txt:22
 msgid "To access the course visit {course_about_url} and register for the course."
-msgstr ""
+msgstr "Pour accéder au cours, visitez {course_about_url} et inscrivez-vous au cours."
 
 #: customer_specific/lms/templates/emails/enroll_email_allowedmessage.txt:27
 msgid "To finish your registration, please visit {registration_url} and fill out the registration form making sure to use {email_address} in the E-mail field."
-msgstr ""
+msgstr "Pour terminer votre inscription, visitez {registration_url} et remplissez le formulaire d’inscription en inscrivant {email_address} dans le champ courriel."
 
 #: customer_specific/lms/templates/emails/enroll_email_allowedmessage.txt:33
 msgid "Once you have registered and activated your account, you will see {course_name} listed on your dashboard."
-msgstr ""
+msgstr "Une fois votre inscription terminée et votre compte activé, le cours {course_name} apparaîtra sur votre tableau de bord."
 
 #: customer_specific/lms/templates/emails/enroll_email_allowedmessage.txt:38
 msgid "Once you have registered and activated your account, visit {course_about_url} to join the course."
-msgstr ""
+msgstr "Une fois votre inscription terminée et votre compte activé, visitez {course_about_url} pour accéder au cours."
 
 #: customer_specific/lms/templates/emails/enroll_email_allowedmessage.txt:41
 msgid "You can then enroll in {course_name}."
-msgstr ""
+msgstr "Vous pourrez alors vous inscrire à {course_name}."
 
 #: customer_specific/lms/templates/emails/enroll_email_enrolledmessage.txt:9
 msgid "You have been enrolled in {course_name} at {site_name} by a member of the course staff. The course should now appear on your {site_name} dashboard."
-msgstr ""
+msgstr "Un membre de l’équipe de formation vous a inscrit à {course_name} sur {site_name}. Le cours devrait maintenant apparaître sur votre tableau de bord de {site_name}.."
 
 #: customer_specific/lms/templates/emails/enroll_email_enrolledmessage.txt:21
 msgid "This email was automatically sent from {site_name} to {full_name}"
-msgstr ""
+msgstr "Ce courriel a été automatiquement envoyé de {site_name} à {full_name}."
 
 #: lms/templates/vert_module.html:22
 msgid "Due {date}"
-msgstr ""
+msgstr "Échéance {date}"
 
 #: lms/templates/courseware/course_about.html:66
 msgid "The currently logged-in user account does not have permission to enroll in this course. You may need to {start_logout_tag}log out{end_tag} then try the enroll button again. Please visit the {start_help_tag}help page{end_tag} for a possible solution."
-msgstr ""
+msgstr "Vous n’avez pas l’autorisation de vous inscrire à ce cours à partir de ce compte. Cliquez sur {start_logout_tag}Déconnexion{end_tag} puis sur le bouton d’inscription. Consultez la {start_help_tag}page d’aide{end_tag} pour trouver une solution."
 
 #: lms/templates/design-templates/live-blocks/dashboard-course-listing/_dashboard-course-listing-01.html:299
 msgid "You will see a message on your dashboard when the verification process is complete (usually within 1-2 days)."
-msgstr ""
+msgstr "Vous verrez un message sur votre tableau de bord lorsque la vérification sera terminée (généralement dans un délai de 1 ou 2 jours)."
 
 #: lms/templates/design-templates/live-blocks/dashboard-course-listing/_dashboard-course-listing-01.html:302
 msgid "You have submitted your reverification information. You will see a message on your dashboard when the verification process is complete (usually within 1-2 days)."
-msgstr ""
+msgstr "Vos renseignements pour la vérification ont bien été soumis. Vous verrez un message sur votre tableau de bord lorsque la vérification sera terminée (généralement dans un délai de 1 ou 2 jours)."
 
-#: lms/templates/header/navbar-authenticated.html:23
+#: lms/templates/header/navbar-authenticated.html:22
 msgid "Discover New Courses"
-msgstr ""
+msgstr "Explorer de nouveaux cours"
 
 #: lms/templates/static_templates/tracks.html:8
 msgid "Tracks"
-msgstr ""
+msgstr "Pistes"
 
-#: lms/templates/logout.html:33
+#: lms/templates/logout.html:31
 msgid "\n"
 "                    This may take a minute. If you are not redirected, go to the home page.\n"
 "                    "
-msgstr ""
+msgstr "\n"
+"Cela peut prendre une minute. Si vous n’êtes pas redirigé, \n"
+"allez sur la page d’accueil.                    "
 
 #: customer_specific/lms/templates/certificates/_accomplishment-rendering.html:77
 msgid "Certificate ID number"
@@ -269,4 +279,48 @@ msgstr "Date d’émission"
 #: customer_specific/lms/templates/certificates/_accomplishment-rendering.html:85
 msgid "Verify the authenticity of this certificate at"
 msgstr "Vérifiez l’authenticité de ce certificat à"
+
+#: cms/templates/login_page.html:28
+msgid "Redirecting to LMS login..."
+msgstr "Redirection vers la connexion au LMS..."
+
+#: cms/templates/login_page.html:33
+msgid "if the page doesn't redirect automatically, then please "
+msgstr "si vous n’est pas redirigé automatiquement, veuillez "
+
+#: cms/templates/login_page.html:48
+msgid "You’re not logged into studio yet."
+msgstr "Vous n’êtes pas encore connecté au Studio."
+
+#: cms/templates/login_page.html:50
+msgid "If you’re authorized to access Studio, then please go to LMS and open studio from the menu."
+msgstr "Si vous avez l’autorisation d’accéder au Studio, rendez-vous sur le SGA et ouvrez Studio à partir du menu."
+
+#: cms/templates/login_page.html:51
+msgid "If the Studio link does not show in your menu, then please contact your administrator to give you access"
+msgstr "Si l’option Studio n’apparaît pas dans votre menu, veuillez contacter votre administrateur pour qu’il vous y donne accès."
+
+#: cms/templates/login_page.html:76
+msgid "Forgot password?"
+msgstr "Mot de passe oublié?"
+
+#: lms/templates/header/user_dropdown.html:62
+msgid "Studio"
+msgstr "Studio"
+
+#: lms/templates/logout.html:15
+msgid "To delete your single signed on (SSO) session:"
+msgstr "Pour supprimer votre session d’authentification unique :"
+
+#: lms/templates/logout.html:16
+msgid "Click here"
+msgstr "Cliquez ici"
+
+#: lms/templates/logout.html:40
+msgid "If you are not redirected within 5 seconds:"
+msgstr "Si vous n’êtes pas redirigé en 5 secondes :"
+
+#: lms/templates/logout.html:41
+msgid "click here to go to the home page"
+msgstr "rendez-vous à la page d’accueil"
 
