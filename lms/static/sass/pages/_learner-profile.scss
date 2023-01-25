@@ -129,6 +129,17 @@
                 }
             }
         }
+
+        .learner-achievements .learner-message .message-actions .btn-brand {
+            color: $brand-primary-color;
+            background: none;
+            border: 2px solid $brand-primary-color;
+
+            &:hover, &:focus {
+                color: #fff;
+                background: $brand-primary-color;
+            }
+        }
     }
 }
 
