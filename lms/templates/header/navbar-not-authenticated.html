@@ -27,7 +27,7 @@ from six import text_type
   <div class="main">
 
     % if get_global_settings().get('course-catalogue_enabled', True) and get_global_settings().get('enable_course_catalogue_for_non-auth_users', True):
-      <div class="mobile-nav-item hidden-mobile nav-item">
+      <div class="mobile-nav-item hidden-mobile nav-item" id="header-course-catalogue-cta">
         <a href="/courses">${_('Explore courses')}</a>
       </div>
     % endif
