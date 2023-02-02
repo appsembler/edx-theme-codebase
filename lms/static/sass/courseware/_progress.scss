@@ -45,3 +45,17 @@
     }
   }
 }
+
+// fix centering of cert message and actions
+.profile-wrapper .course-info {
+
+  .wrapper-msg.wrapper-auto-cert .auto-cert-message .has-actions .msg-content {
+    width: 100%;
+  }
+
+  .wrapper-msg.wrapper-auto-cert .auto-cert-message .has-actions .msg-actions {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
