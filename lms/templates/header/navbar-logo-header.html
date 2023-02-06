@@ -16,8 +16,8 @@ from branding import api as branding_api
 <div class="header-logo-section">
   % if course:
     <a href="${get_global_settings().get('header_logo_target','/')}">
-      <img class="logo logo-positive" src="${get_brand_logos()['icon_color']}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
-      <img class="logo logo-negative" src="${get_brand_logos()['icon_white']}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
+      <img class="logo logo-positive" src="${get_brand_logos()['icon_color']}" alt="${_("{platform_name} logo").format(platform_name=static.get_platform_name())}"/>
+      <img class="logo logo-negative" src="${get_brand_logos()['icon_white']}" alt="${_("{platform_name} logo for dark backgrounds").format(platform_name=static.get_platform_name())}"/>
     </a>
     <div class="course-header">
       <span class="provider">${course.display_org_with_default}:</span>
@@ -33,8 +33,8 @@ from branding import api as branding_api
     </div>
   % else:
     <a href="${get_global_settings().get('header_logo_target','/')}">
-      <img  class="logo logo-positive" src="${get_brand_logos()['logo_positive']}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
-      <img  class="logo logo-negative" src="${get_brand_logos()['logo_negative']}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
+      <img  class="logo logo-positive" src="${get_brand_logos()['logo_positive']}" alt="${_("{platform_name} logo").format(platform_name=static.get_platform_name())}"/>
+      <img  class="logo logo-negative" src="${get_brand_logos()['logo_negative']}" alt="${_("{platform_name} logo for dark backgrounds").format(platform_name=static.get_platform_name())}"/>
     </a>
   % endif
 </div>
