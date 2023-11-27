@@ -215,12 +215,17 @@
             min-width: calcRem(180);
             max-width: 80%;
 
+            // RTL specific styles
+            &:dir(rtl) {
+              right: auto;
+              left: 0;
+            }
+
             .dropdown-item {
               white-space: unset;
             }
 
             .dropdown-nav-item {
-              
               a {
                 padding: calcRem(20);
                 color: $base-text-color;
@@ -363,14 +368,6 @@
         border: none;
       }
     }
-  }
-}
-
-// Targeting RTL language (e.g., Arabic)
-body.rtl {
-  .window-wrap .global-header .main-header .nav-links .nav-item.nav-item-dropdown .dropdown-user-menu {
-    right: auto; // Reset the right property
-    left: 0;    // Set left to 0 for RTL layout
   }
 }
 
