@@ -215,8 +215,8 @@
             min-width: calcRem(180);
             max-width: 80%;
 
-            // RTL specific styles
-            &:dir(rtl) {
+            // Targeting RTL language using dir attribute
+            [dir="rtl"] & {
               right: auto;
               left: 0;
             }
