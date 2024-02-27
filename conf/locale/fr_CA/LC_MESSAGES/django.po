@@ -33,7 +33,7 @@ msgstr "Ajouter à votre panier / Prix: "
 
 #: lms/templates/design-templates/pages/course-about/_course-about-01.html:20
 msgid "Enroll in "
-msgstr "S'inscrire au "
+msgstr "S'inscrire au cours "
 
 #: lms/templates/design-templates/pages/dashboard/_dashboard-01.html:140
 msgid "promote_course_catalog_text"
