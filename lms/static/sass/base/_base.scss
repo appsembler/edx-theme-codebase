@@ -273,3 +273,8 @@ a.nav-skip {
 .fa {
 	font-family: 'FontAwesome' !important;
 }
+
+// Hide element when rendered in iFrame
+.hidden-element {
+    display: none !important;
+}
